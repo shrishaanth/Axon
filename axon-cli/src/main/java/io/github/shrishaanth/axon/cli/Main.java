@@ -2,6 +2,7 @@ package io.github.shrishaanth.axon.cli;
 
 import io.github.shrishaanth.axon.spec.ApiSpec;
 import io.github.shrishaanth.axon.spec.Explorer;
+import io.github.shrishaanth.axon.spec.Operation;
 import io.github.shrishaanth.axon.spec.SpecParseException;
 import io.github.shrishaanth.axon.spec.SpecParser;
 import java.io.PrintStream;
@@ -48,7 +49,21 @@ public final class Main {
 
     private static int explore(Args a, PrintStream out) throws SpecParseException, java.io.IOException {
         ApiSpec spec = SpecParser.parse(Path.of(a.positional(0, "spec file")));
-        write(a.option("out"), Explorer.toJson(Explorer.describe(spec)), out);
+        String wanted = a.option("operation");
+        if (wanted == null) {
+            write(a.option("out"), Explorer.toJson(Explorer.describe(spec)), out);
+            return 0;
+        }
+        int space = wanted.indexOf(' ');
+        if (space < 0) {
+            throw new IllegalArgumentException("--operation takes \"METHOD /path\", for example \"GET /users/{id}\"");
+        }
+        Operation op = spec.operation(wanted.substring(0, space).toUpperCase(java.util.Locale.ROOT),
+                wanted.substring(space + 1).trim());
+        if (op == null) {
+            throw new IllegalArgumentException("no such operation in the spec: " + wanted);
+        }
+        write(a.option("out"), Explorer.toJson(Explorer.describe(op)), out);
         return 0;
     }
 
@@ -68,7 +83,8 @@ public final class Main {
         return String.join(System.lineSeparator(),
                 "axon: API change-impact analysis",
                 "",
-                "  axon explore <spec> [--out file]",
-                "      Print what the spec declares: operations, fields, unsupported constructs.");
+                "  axon explore <spec> [--operation \"METHOD /path\"] [--out file]",
+                "      Print what the spec declares: operations and unsupported constructs,",
+                "      or with --operation the parameters and fields of one operation.");
     }
 }

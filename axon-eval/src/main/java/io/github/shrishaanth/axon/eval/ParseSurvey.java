@@ -55,6 +55,9 @@ final class ParseSurvey {
                 ApiSpec spec = SpecParser.parse(file);
                 // exercise the explorer too: a spec that parses but cannot be described is a failure
                 int described = Explorer.describe(spec).path("operations").size();
+                for (Operation op : spec.operations()) {
+                    Explorer.describe(op);
+                }
                 row.put("ok", true);
                 row.put("ms", (System.nanoTime() - start) / 1_000_000);
                 row.put("openapi", spec.openapi());

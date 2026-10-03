@@ -29,8 +29,12 @@ import java.util.Set;
  */
 public final class SpecParser {
 
-    /** Larger inputs are rejected before parsing; the deployed API runs in 512 MB. */
-    public static final long MAX_BYTES = 64L * 1024 * 1024;
+    /**
+     * Larger inputs are rejected before parsing. 32 MB is set from measurement: the largest spec tried below it
+     * (25.8 MB of YAML, 11,422 operations) parses in a 256 MB heap, and a 58 MB one does not fit in 384 MB.
+     * Override with the system property {@code axon.maxSpecBytes} when memory is not a concern.
+     */
+    public static final long MAX_BYTES = Long.getLong("axon.maxSpecBytes", 32L * 1024 * 1024);
 
     private static final List<String> METHODS =
             List.of("get", "put", "post", "delete", "options", "head", "patch", "trace");

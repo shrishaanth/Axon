@@ -37,13 +37,18 @@ final class MemoryProbe {
             long retained = usedAfterGc() - before;
             long describeStart = System.nanoTime();
             int chars = Explorer.toJson(Explorer.describe(spec)).length();
+            int largestDetail = 0;
+            for (io.github.shrishaanth.axon.spec.Operation op : spec.operations()) {
+                largestDetail = Math.max(largestDetail, Explorer.toJson(Explorer.describe(op)).length());
+            }
+            row.put("largest_operation_detail_chars", largestDetail);
             row.put("ok", true);
             row.put("operations", spec.operations().size());
             row.put("component_schemas", spec.componentSchemas());
             row.put("retained_model_mb", retained / (1024.0 * 1024.0));
             row.put("peak_heap_during_parse_mb", peak / (1024.0 * 1024.0));
             row.put("describe_ms", (System.nanoTime() - describeStart) / 1_000_000);
-            row.put("explorer_json_chars", chars);
+            row.put("explorer_summary_chars", chars);
             row.put("peak_heap_total_mb", peakHeap() / (1024.0 * 1024.0));
         } catch (Exception | OutOfMemoryError e) {
             row.put("ok", false);
