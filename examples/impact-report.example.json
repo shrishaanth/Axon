@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1",
+  "schema_version": "0.2",
   "generated_at": "2026-10-01T09:00:00Z",
   "inputs": {
     "baseline": { "path": "specs/users-v1.yaml", "sha256": "0000000000000000000000000000000000000000000000000000000000000001", "title": "Users API", "version": "1.0.0", "openapi": "3.0.3" },
@@ -98,7 +98,7 @@
     }
   ],
   "unsupported": [
-    { "construct": "callbacks", "location": "/paths/~1users/post/callbacks", "reason": "Callbacks are not modelled." }
+    { "construct": "callbacks", "location": "/paths/~1users/post/callbacks", "reason": "Callbacks are not modelled.", "handling": "ignored" }
   ],
   "limitations": [
     "Response-field changes are 'potential': traffic shows who calls the operation, not who reads the field.",

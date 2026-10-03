@@ -6,7 +6,7 @@
   "required": ["schema_version", "generated_at", "inputs", "config", "summary", "changes", "drift", "unsupported", "limitations"],
   "additionalProperties": false,
   "properties": {
-    "schema_version": { "const": "0.1" },
+    "schema_version": { "const": "0.2" },
     "generated_at": { "type": "string", "format": "date-time" },
     "inputs": {
       "type": "object",
@@ -103,10 +103,12 @@
         "properties": {
           "construct": { "type": "string" },
           "location": { "type": "string", "description": "JSON pointer into the spec file." },
-          "reason": { "type": "string" }
+          "reason": { "type": "string" },
+          "handling": { "enum": ["ignored", "approximated"], "description": "ignored: no effect on the model. approximated: modelled loosely, e.g. oneOf as a union." }
         }
       }
     },
+    "unsupported_total": { "type": "integer", "minimum": 0, "description": "The list above is capped at 200 entries; this is the full count." },
     "limitations": {
       "type": "array",
       "items": { "type": "string" },
@@ -197,26 +199,24 @@
       "properties": {
         "id": { "type": "string" },
         "kind": {
-          "enum": [
-            "operation_removed", "operation_added",
-            "request_field_removed", "request_field_added_optional", "request_field_added_required",
-            "request_field_made_required", "request_field_made_optional",
-            "request_field_type_changed", "request_enum_narrowed", "request_enum_widened",
-            "response_field_removed", "response_field_added",
-            "response_field_type_changed", "response_enum_widened", "response_enum_narrowed",
-            "response_status_removed", "response_status_added",
-            "other"
-          ]
+          "enum": ["operation_removed", "operation_added", "request_field_removed", "request_field_added_optional", "request_field_added_required", "request_field_made_required", "request_field_made_optional", "request_field_type_changed", "request_enum_narrowed", "request_enum_widened", "request_body_added", "request_body_removed", "request_body_made_required", "request_body_made_optional", "response_field_removed", "response_field_added", "response_field_made_optional", "response_field_made_required", "response_field_type_changed", "response_enum_widened", "response_enum_narrowed", "response_status_removed", "response_status_added", "media_type_removed", "media_type_added"]
         },
         "breaking": { "type": "boolean" },
-        "partially_analysed": { "type": "boolean", "description": "True when the operation touches an unsupported construct." },
+        "partially_analysed": { "type": "boolean", "description": "True when the operation reaches a construct the model ignores." },
+        "approximated": { "type": "boolean", "description": "True when the operation reaches a construct the model approximates (oneOf, anyOf, discriminator)." },
+        "from": { "type": "string", "description": "Baseline value: types as 'a|b', enum values as a JSON array, or required/optional." },
+        "to": { "type": "string" },
+        "source": { "type": "string", "description": "JSON pointer of the baseline schema where the change was found. Rows sharing a source are one edit seen from several operations." },
+        "evidence_note": { "type": "string", "description": "A caveat about how this row's affected set was computed." },
+        "operations_touched": { "type": "integer", "minimum": 1, "description": "Operations affected by the same edit; drives the spec-only baseline." },
         "operation": { "$ref": "#/$defs/operationKey" },
         "location": {
           "type": "object",
           "required": ["part"],
           "additionalProperties": false,
           "properties": {
-            "part": { "enum": ["request.path", "request.query", "request.body", "response.body", "response.status", "operation"] },
+            "part": { "enum": ["request.path", "request.query", "request.header", "request.cookie", "request.body", "response.body", "response.status", "operation"] },
+            "media_type": { "type": "string" },
             "status": { "type": "string", "description": "Response status code or 'default'." },
             "field": { "type": "string", "description": "Field path in $.a.b[].c form." }
           }

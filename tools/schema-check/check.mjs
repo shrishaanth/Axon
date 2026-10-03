@@ -30,6 +30,21 @@ readFileSync(join(root, "examples/traffic-events.example.jsonl"), "utf8")
   .split("\n").filter(Boolean)
   .forEach((line, i) => accepts(`examples/traffic-events.example.jsonl line ${i + 1}`, eventValidate, JSON.parse(line)));
 
+// the real demo artefacts produced by the CLI must conform too
+accepts("eval/demo/report.json", reportValidate, readJson("eval/demo/report.json"));
+{
+  const lines = readFileSync(join(root, "eval/demo/usage.jsonl"), "utf8").split("\n").filter(Boolean);
+  let bad = 0;
+  let firstError = null;
+  for (const line of lines) {
+    if (!eventValidate(JSON.parse(line))) {
+      bad++;
+      firstError = firstError ?? eventValidate.errors;
+    }
+  }
+  expect(`accepts all ${lines.length} events of eval/demo/usage.jsonl`, bad === 0, firstError);
+}
+
 // negative cases: the non-blending rule and sanitiser guarantees must be enforced
 const clone = () => structuredClone(report);
 

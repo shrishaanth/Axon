@@ -20,5 +20,14 @@ jobs:
       - run: npm run check
         working-directory: tools/schema-check
 
-# The Java build and test job is added in M1, when the first pom.xml exists.
-# A placeholder job that always passes would only pretend to test something.
+  java:
+    name: Build and test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+          cache: maven
+      - run: mvn -B -q verify
