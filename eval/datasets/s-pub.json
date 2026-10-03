@@ -1,0 +1,1040 @@
+{
+  "source": "https://api.apis.guru/v2/list.json",
+  "list_sha256": "dfac835d2d1f13dfdb82723d72be1acf567df53c1b710bf6d68e28b795696e66",
+  "seed": 20261003,
+  "directory_size": 2529,
+  "directory_by_declared_version": {
+    "2.0": 1008,
+    "3.0": 1486,
+    "3.1": 35
+  },
+  "eligible_openapi_3": 1521,
+  "specs": [
+    {
+      "index": 0,
+      "api": "amazonaws.com:appmesh",
+      "version": "2019-01-25",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/appmesh/2019-01-25/openapi.json",
+      "file": "000-amazonaws.com__appmesh.json",
+      "bytes": 435779,
+      "sha256": "b30d71eb8a69aafe2c562eabc8f4d86a560cf6a6912151f13b2bbad46a1a41ad"
+    },
+    {
+      "index": 1,
+      "api": "personio.de:personnel",
+      "version": "1.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/personio.de/personnel/1.0/openapi.yaml",
+      "file": "001-personio.de__personnel.yaml",
+      "bytes": 60183,
+      "sha256": "1e9abfc2d7efd8bf48d96f88076aef37b1702f6aa7665cd27b64e4613f1fdf0a"
+    },
+    {
+      "index": 2,
+      "api": "adyen.com:BalancePlatformPaymentNotification-v1",
+      "version": "1",
+      "declared": "3.1.0",
+      "url": "https://api.apis.guru/v2/specs/adyen.com/BalancePlatformPaymentNotification-v1/1/openapi.json",
+      "file": "002-adyen.com__BalancePlatformPaymentNotification-v1.json",
+      "bytes": 84740,
+      "sha256": "1f5a690680381218ffca7754d1fa4cfde76d14ec1c8737b1930324591df40ce7"
+    },
+    {
+      "index": 3,
+      "api": "getthedata.com:bng2latlong",
+      "version": "1.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/getthedata.com/bng2latlong/1.0/openapi.yaml",
+      "file": "003-getthedata.com__bng2latlong.yaml",
+      "bytes": 3080,
+      "sha256": "0c02d123a5ac6d5980532c0524f4d66cd8c3f2fca48ab16644acd0f67b24e8c5"
+    },
+    {
+      "index": 4,
+      "api": "amazonaws.com:swf",
+      "version": "2012-01-25",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/swf/2012-01-25/openapi.json",
+      "file": "004-amazonaws.com__swf.json",
+      "bytes": 499306,
+      "sha256": "c2962640fcf119d041551f464d33e86ae1e5e5933c27e33c96e3dd7ebdc077e5"
+    },
+    {
+      "index": 5,
+      "api": "hetzner.cloud",
+      "version": "1.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/hetzner.cloud/1.0.0/openapi.yaml",
+      "file": "005-hetzner.cloud.yaml",
+      "bytes": 1127776,
+      "sha256": "7e20bd87d561e76568556c5059691e525f14da0b05fbe973dbf04062b7aafdaf"
+    },
+    {
+      "index": 6,
+      "api": "cloudmersive.com:ocr",
+      "version": "v1",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/cloudmersive.com/ocr/v1/openapi.json",
+      "file": "006-cloudmersive.com__ocr.json",
+      "bytes": 90539,
+      "sha256": "de82d9d4e8dc691134e4e7cdcfaf44255a8c553a6820ede6f679a923e062c3ca"
+    },
+    {
+      "index": 7,
+      "api": "iqualify.com",
+      "version": "v1",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/iqualify.com/v1/openapi.yaml",
+      "file": "007-iqualify.com.yaml",
+      "bytes": 139817,
+      "sha256": "dc1ffd6b3fffffb074bec28c261815f064ccfd09c8c94392845e0b155a08e385"
+    },
+    {
+      "index": 8,
+      "api": "amazonaws.com:monitoring",
+      "version": "2010-08-01",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/monitoring/2010-08-01/openapi.json",
+      "file": "008-amazonaws.com__monitoring.json",
+      "bytes": 566042,
+      "sha256": "7a42b529cc972a58366bae6b29f450bddc63aafc71f6c7158708e870361138b1"
+    },
+    {
+      "index": 9,
+      "api": "rapidapi.com:spellcheckpro",
+      "version": "1.0.0",
+      "declared": "3.0.3",
+      "url": "https://api.apis.guru/v2/specs/rapidapi.com/spellcheckpro/1.0.0/openapi.yaml",
+      "file": "009-rapidapi.com__spellcheckpro.yaml",
+      "bytes": 1348,
+      "sha256": "30270ffa769548b7450ca043ade6cda75838e2c1a91da47ff925f17e13ffe771"
+    },
+    {
+      "index": 10,
+      "api": "googleapis.com:cloudshell",
+      "version": "v1",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/googleapis.com/cloudshell/v1/openapi.json",
+      "file": "010-googleapis.com__cloudshell.json",
+      "bytes": 34432,
+      "sha256": "875fda0d13b765ad2901049ec460d2457f4f5d65d3307f217f5f8541e0b9510b"
+    },
+    {
+      "index": 11,
+      "api": "interzoid.com:getemailinfo",
+      "version": "1.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/interzoid.com/getemailinfo/1.0.0/openapi.yaml",
+      "file": "011-interzoid.com__getemailinfo.yaml",
+      "bytes": 3206,
+      "sha256": "452d7bbcbb24a7fc493e4c200ad5965c3d386f2a27f02859bc874e200a3b28fc"
+    },
+    {
+      "index": 12,
+      "api": "cowin.gov.cin:cowincert",
+      "version": "1.0.0",
+      "declared": "3.0.1",
+      "url": "https://api.apis.guru/v2/specs/cowin.gov.cin/cowincert/1.0.0/openapi.json",
+      "file": "012-cowin.gov.cin__cowincert.json",
+      "bytes": 2596,
+      "sha256": "967c00eb070b97bc489cd521e067ae3688b211fba0eee3ff3994a080b56be95d"
+    },
+    {
+      "index": 13,
+      "api": "amazonaws.com:datapipeline",
+      "version": "2012-10-29",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/datapipeline/2012-10-29/openapi.yaml",
+      "file": "013-amazonaws.com__datapipeline.yaml",
+      "bytes": 89915,
+      "sha256": "40dda32d456f34f1f19f9016e4d0999734aa3fe76129d98f4973d79d42302afb"
+    },
+    {
+      "index": 14,
+      "api": "amadeus.com:amadeus-location-score",
+      "version": "1.0.2",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-location-score/1.0.2/openapi.json",
+      "file": "014-amadeus.com__amadeus-location-score.json",
+      "bytes": 21139,
+      "sha256": "b9ee3d77f0074ec42626055c427985dd8e44a08a0d416caa74d18d4c95b87a2a"
+    },
+    {
+      "index": 15,
+      "api": "symanto.net",
+      "version": "1.0",
+      "declared": "3.0.3",
+      "url": "https://api.apis.guru/v2/specs/symanto.net/1.0/openapi.yaml",
+      "file": "015-symanto.net.yaml",
+      "bytes": 12816,
+      "sha256": "8f60031bee8e06065045ee2ce5372c17a4af063f90a47f461625c84a223760a3"
+    },
+    {
+      "index": 16,
+      "api": "googleapis.com:testing",
+      "version": "v1",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/googleapis.com/testing/v1/openapi.json",
+      "file": "016-googleapis.com__testing.json",
+      "bytes": 95125,
+      "sha256": "5d9d956fa11c89f2511e862a60ae30b7855540f4e1111f45a2cbfc5d2afb662c"
+    },
+    {
+      "index": 17,
+      "api": "googleapis.com:chromemanagement",
+      "version": "v1",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/googleapis.com/chromemanagement/v1/openapi.yaml",
+      "file": "017-googleapis.com__chromemanagement.yaml",
+      "bytes": 111485,
+      "sha256": "fe94687ab3d92b6d804dbc5b2b3de289b96e4813aad60e03eac199277e55756c"
+    },
+    {
+      "index": 18,
+      "api": "amazonaws.com:runtime.lex",
+      "version": "2016-11-28",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/runtime.lex/2016-11-28/openapi.json",
+      "file": "018-amazonaws.com__runtime.lex.json",
+      "bytes": 96168,
+      "sha256": "5f139a39cd318c51c350a1dfd65d6171ee0b3a10b08585de556984e8699b11c6"
+    },
+    {
+      "index": 19,
+      "api": "shorten.rest",
+      "version": "1.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/shorten.rest/1.0.0/openapi.yaml",
+      "file": "019-shorten.rest.yaml",
+      "bytes": 18631,
+      "sha256": "de261f5da8866e01836aeba1be2eb6c208979b76de72268e6d65adb7d4377ab6"
+    },
+    {
+      "index": 20,
+      "api": "amazonaws.com:sagemaker",
+      "version": "2017-07-24",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/sagemaker/2017-07-24/openapi.json",
+      "file": "020-amazonaws.com__sagemaker.json",
+      "bytes": 2743239,
+      "sha256": "e73a5464793dcce45abf9b403427d024b433f01adb8597fba0eabc70bf8be36c"
+    },
+    {
+      "index": 21,
+      "api": "rapidapi.com:idealspot-geodata",
+      "version": "1.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/rapidapi.com/idealspot-geodata/1.0/openapi.yaml",
+      "file": "021-rapidapi.com__idealspot-geodata.yaml",
+      "bytes": 194604,
+      "sha256": "325cc8c4b89a73b38439e9ffbe6e742aeaf487afdfa3babe29c5c243558d8d55"
+    },
+    {
+      "index": 22,
+      "api": "interzoid.com:convertcurrency",
+      "version": "1.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/interzoid.com/convertcurrency/1.0.0/openapi.json",
+      "file": "022-interzoid.com__convertcurrency.json",
+      "bytes": 4078,
+      "sha256": "69c5b7709828c3b1f5171fdd5faef54af9ebad57fb0d7c4ea7eb3e6b27fcad27"
+    },
+    {
+      "index": 23,
+      "api": "amazonaws.com:dynamodb",
+      "version": "2012-08-10",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/dynamodb/2012-08-10/openapi.yaml",
+      "file": "023-amazonaws.com__dynamodb.yaml",
+      "bytes": 509494,
+      "sha256": "43fcd3acda6f5336c73ca3b66be9fec8178645ae2a9843507610efccee88ae07"
+    },
+    {
+      "index": 24,
+      "api": "trashnothing.com",
+      "version": "1.3",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/trashnothing.com/1.3/openapi.json",
+      "file": "024-trashnothing.com.json",
+      "bytes": 254588,
+      "sha256": "edbecc6159452637615fc079a6013ede1e66f7dcbae30037f824e0e0a3cea829"
+    },
+    {
+      "index": 25,
+      "api": "apisetu.gov.in:orientalinsurance",
+      "version": "3.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/orientalinsurance/3.0.0/openapi.yaml",
+      "file": "025-apisetu.gov.in__orientalinsurance.yaml",
+      "bytes": 48704,
+      "sha256": "7a85af79d33d323007ae8748c94a9c77f3dfa4de0c4889c0c3c17475e76cb3fd"
+    },
+    {
+      "index": 26,
+      "api": "nexmo.com:conversation",
+      "version": "2.0.1",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/nexmo.com/conversation/2.0.1/openapi.json",
+      "file": "026-nexmo.com__conversation.json",
+      "bytes": 61277,
+      "sha256": "ab57cb9aca2385417f56db6b7d4d1036fe6641301c1b8c9738164ce1c839f19e"
+    },
+    {
+      "index": 27,
+      "api": "gov.bc.ca:geomark",
+      "version": "4.1.2",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/gov.bc.ca/geomark/4.1.2/openapi.yaml",
+      "file": "027-gov.bc.ca__geomark.yaml",
+      "bytes": 24847,
+      "sha256": "c2a12cb1f008aec4c1c1777733ed7863895f43305f8ddbc3a73a833712113db1"
+    },
+    {
+      "index": 28,
+      "api": "amazonaws.com:synthetics",
+      "version": "2017-10-11",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/synthetics/2017-10-11/openapi.json",
+      "file": "028-amazonaws.com__synthetics.json",
+      "bytes": 196739,
+      "sha256": "0d23b5bb00c11bba03fe8dfbae8997f741117d0de25ed591552a52dea6c43592"
+    },
+    {
+      "index": 29,
+      "api": "apisetu.gov.in:rajasthanrajeduboard",
+      "version": "3.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/rajasthanrajeduboard/3.0.0/openapi.yaml",
+      "file": "029-apisetu.gov.in__rajasthanrajeduboard.yaml",
+      "bytes": 29060,
+      "sha256": "65a0c001efb04a48d5231c86b79079c2306dbe8da215762ba5dfc50dd8aa62cd"
+    },
+    {
+      "index": 30,
+      "api": "digitalnz.org",
+      "version": "3",
+      "declared": "3.0.1",
+      "url": "https://api.apis.guru/v2/specs/digitalnz.org/3/openapi.json",
+      "file": "030-digitalnz.org.json",
+      "bytes": 40805,
+      "sha256": "9cdf46ecbfa0ed72788796b5dae04393e091e1c37593f90280eff52d00d850d3"
+    },
+    {
+      "index": 31,
+      "api": "github.com:api.github.com",
+      "version": "1.1.4",
+      "declared": "3.0.3",
+      "url": "https://api.apis.guru/v2/specs/github.com/api.github.com/1.1.4/openapi.yaml",
+      "file": "031-github.com__api.github.com.yaml",
+      "bytes": 8802506,
+      "sha256": "33fb7661038b34e90c5dd9845344a1ae642a8511a5f234960eb7a901583406e0"
+    },
+    {
+      "index": 32,
+      "api": "sportsdata.io:lol-v3-stats",
+      "version": "1.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/sportsdata.io/lol-v3-stats/1.0/openapi.json",
+      "file": "032-sportsdata.io__lol-v3-stats.json",
+      "bytes": 75607,
+      "sha256": "08379b6308a00c1d2b66fa63575988418cfd01a1435d8de8d212bb9348597207"
+    },
+    {
+      "index": 33,
+      "api": "fulfillment.com",
+      "version": "2.0",
+      "declared": "3.0.1",
+      "url": "https://api.apis.guru/v2/specs/fulfillment.com/2.0/openapi.yaml",
+      "file": "033-fulfillment.com.yaml",
+      "bytes": 78362,
+      "sha256": "60e2e969a1a57ab54f77e0fa337c79e7dc6f9b02c8c983033daef7a8aa842d7f"
+    },
+    {
+      "index": 34,
+      "api": "amazonaws.com:cloudformation",
+      "version": "2010-05-15",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/cloudformation/2010-05-15/openapi.json",
+      "file": "034-amazonaws.com__cloudformation.json",
+      "bytes": 1092600,
+      "sha256": "b1c23965bd66b02d452519e7c1e3ef9af4f6376e7852f05c48938c74d452e07e"
+    },
+    {
+      "index": 35,
+      "api": "apisetu.gov.in:transportsk",
+      "version": "3.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/transportsk/3.0.0/openapi.yaml",
+      "file": "035-apisetu.gov.in__transportsk.yaml",
+      "bytes": 54187,
+      "sha256": "6e14c46e6aaa6c0d13f2ee153885f62c041fc47b8758debe8ef332aee95cfacc"
+    },
+    {
+      "index": 36,
+      "api": "apisetu.gov.in:dbraitandaman",
+      "version": "3.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/dbraitandaman/3.0.0/openapi.json",
+      "file": "036-apisetu.gov.in__dbraitandaman.json",
+      "bytes": 38167,
+      "sha256": "d15f1c7603fc73c62870b57f2891ee557b28e15325d0aa09fd31814a76ea6912"
+    },
+    {
+      "index": 37,
+      "api": "impala.travel:hotels",
+      "version": "1.003",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/impala.travel/hotels/1.003/openapi.yaml",
+      "file": "037-impala.travel__hotels.yaml",
+      "bytes": 325298,
+      "sha256": "569ad77a96505dcc9bd92a6ccaafa753b88897f4f9ffee770c9eab347638d782"
+    },
+    {
+      "index": 38,
+      "api": "twilio.com:twilio_numbers_v2",
+      "version": "1.42.0",
+      "declared": "3.0.1",
+      "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_numbers_v2/1.42.0/openapi.json",
+      "file": "038-twilio.com__twilio_numbers_v2.json",
+      "bytes": 97353,
+      "sha256": "511e3a95b078eb651125ee93bdd25dae76ae804864611e3f6a4c154ebb6fc3c5"
+    },
+    {
+      "index": 39,
+      "api": "amazonaws.com:cloudtrail",
+      "version": "2013-11-01",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/cloudtrail/2013-11-01/openapi.yaml",
+      "file": "039-amazonaws.com__cloudtrail.yaml",
+      "bytes": 320913,
+      "sha256": "333784bd9c096a6cf5887036795ba47777a7ae1ec22ab79dfc11db7f0889db0c"
+    },
+    {
+      "index": 40,
+      "api": "enode.io",
+      "version": "1.3.10",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/enode.io/1.3.10/openapi.json",
+      "file": "040-enode.io.json",
+      "bytes": 73409,
+      "sha256": "b7e513e2be60e55178d56fd35b76f82ebda6eea1c4188bc1aada07cd5135883e"
+    },
+    {
+      "index": 41,
+      "api": "googleapis.com:poly",
+      "version": "v1",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/googleapis.com/poly/v1/openapi.yaml",
+      "file": "041-googleapis.com__poly.yaml",
+      "bytes": 28036,
+      "sha256": "45e25cc7f850fa41b22ef83068a5f1a7806233d136fc654a8d94ee23e8e992dc"
+    },
+    {
+      "index": 42,
+      "api": "googleapis.com:analyticsdata",
+      "version": "v1beta",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/googleapis.com/analyticsdata/v1beta/openapi.json",
+      "file": "042-googleapis.com__analyticsdata.json",
+      "bytes": 98693,
+      "sha256": "b1a576a31965d45732593633fae04c061f682c659db61e3ec669953738396c3e"
+    },
+    {
+      "index": 43,
+      "api": "amazonaws.com:autoscaling-plans",
+      "version": "2018-01-06",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/autoscaling-plans/2018-01-06/openapi.yaml",
+      "file": "043-amazonaws.com__autoscaling-plans.yaml",
+      "bytes": 66718,
+      "sha256": "79dcb9cf1b60c35777a33df1844dc1cf53079c5b31621d2a72620beea2b35368"
+    },
+    {
+      "index": 44,
+      "api": "apisetu.gov.in:edistrictpb",
+      "version": "3.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/edistrictpb/3.0.0/openapi.json",
+      "file": "044-apisetu.gov.in__edistrictpb.json",
+      "bytes": 58914,
+      "sha256": "21806d2b3343f4063728a5cb249e061b58dd3095f30525012f2cafb85a4a2140"
+    },
+    {
+      "index": 45,
+      "api": "amazonaws.com:iotsitewise",
+      "version": "2019-12-02",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/iotsitewise/2019-12-02/openapi.yaml",
+      "file": "045-amazonaws.com__iotsitewise.yaml",
+      "bytes": 453700,
+      "sha256": "9d7c50ab9e8e1571521cb5c17d9f2a49974a1c022e9f6e1c6a90d2a5e364057f"
+    },
+    {
+      "index": 46,
+      "api": "twilio.com:twilio_chat_v1",
+      "version": "1.42.0",
+      "declared": "3.0.1",
+      "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_chat_v1/1.42.0/openapi.json",
+      "file": "046-twilio.com__twilio_chat_v1.json",
+      "bytes": 153441,
+      "sha256": "415a6706e7a354a39a4b6f213e712b07904b64640391764f8c8ad9e109fd24ed"
+    },
+    {
+      "index": 47,
+      "api": "exavault.com",
+      "version": "2.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/exavault.com/2.0/openapi.yaml",
+      "file": "047-exavault.com.yaml",
+      "bytes": 382318,
+      "sha256": "e9bab0e7c687c0d93c739f633a502f5b9c35e34d884969db2c2278aea56785ef"
+    },
+    {
+      "index": 48,
+      "api": "opentargets.io",
+      "version": "19.02.1",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/opentargets.io/19.02.1/openapi.json",
+      "file": "048-opentargets.io.json",
+      "bytes": 41817,
+      "sha256": "80c795b4097974aade99a6d11a2a4822792a7342f5ed8c9887e92c16bb156e52"
+    },
+    {
+      "index": 49,
+      "api": "unicourt.com",
+      "version": "1.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/unicourt.com/1.0.0/openapi.yaml",
+      "file": "049-unicourt.com.yaml",
+      "bytes": 4502644,
+      "sha256": "f2d3392bcffc74f75cba7679467e3d405ad9692d40e2d30ea5a56dd63d3d445c"
+    },
+    {
+      "index": 50,
+      "api": "codat.io:accounting",
+      "version": "2.1.0",
+      "declared": "3.1.0",
+      "url": "https://api.apis.guru/v2/specs/codat.io/accounting/2.1.0/openapi.json",
+      "file": "050-codat.io__accounting.json",
+      "bytes": 3026752,
+      "sha256": "98aa125c5c85dd78e72acd5f2e3e4fda62825b8ff074dee7332fd2bfc7f657f9"
+    },
+    {
+      "index": 51,
+      "api": "datasette.local",
+      "version": "v1",
+      "declared": "3.0.1",
+      "url": "https://api.apis.guru/v2/specs/datasette.local/v1/openapi.yaml",
+      "file": "051-datasette.local.yaml",
+      "bytes": 1481,
+      "sha256": "2c43eb01ed2f61fcde606d4e3ebf189827f93553a022e59389af6808aa263a28"
+    },
+    {
+      "index": 52,
+      "api": "googleapis.com:replicapool",
+      "version": "v1beta1",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/googleapis.com/replicapool/v1beta1/openapi.json",
+      "file": "052-googleapis.com__replicapool.json",
+      "bytes": 57976,
+      "sha256": "1899b09966a4f39ef508c76a3d2690ca863edf92cb3544cb9c291c8f080fae88"
+    },
+    {
+      "index": 53,
+      "api": "apisetu.gov.in:mbse",
+      "version": "3.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/mbse/3.0.0/openapi.yaml",
+      "file": "053-apisetu.gov.in__mbse.yaml",
+      "bytes": 33874,
+      "sha256": "936c37942cea1f19cb684657d07e3dbdc64262a7c6dd9b069214441d98fbff04"
+    },
+    {
+      "index": 54,
+      "api": "amazonaws.com:runtime.sagemaker",
+      "version": "2017-05-13",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/runtime.sagemaker/2017-05-13/openapi.json",
+      "file": "054-amazonaws.com__runtime.sagemaker.json",
+      "bytes": 28548,
+      "sha256": "91430d6cb2047c5560a1779818bf76b994c844ba4c6c1687715c82c1684ca16e"
+    },
+    {
+      "index": 55,
+      "api": "interzoid.com:getstateabbreviation",
+      "version": "1.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/interzoid.com/getstateabbreviation/1.0.0/openapi.yaml",
+      "file": "055-interzoid.com__getstateabbreviation.yaml",
+      "bytes": 2624,
+      "sha256": "08a0c9f03d70d48d26b5da042d28cccc05da817dcc2bc7c88429db63e9084c24"
+    },
+    {
+      "index": 56,
+      "api": "ebay.com:sell-account",
+      "version": "v1.9.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/ebay.com/sell-account/v1.9.0/openapi.json",
+      "file": "056-ebay.com__sell-account.json",
+      "bytes": 250377,
+      "sha256": "bb4a24ae018f2548b73d08a2a995bd7eacfb69be96266ae6482f5b7fc4e2fced"
+    },
+    {
+      "index": 57,
+      "api": "googleapis.com:domains",
+      "version": "v1beta1",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/googleapis.com/domains/v1beta1/openapi.yaml",
+      "file": "057-googleapis.com__domains.yaml",
+      "bytes": 98351,
+      "sha256": "fb01161b374f5007c1b3e46baecb8ddd47b7d10660f965da9ca7380e0cf4552e"
+    },
+    {
+      "index": 58,
+      "api": "stellastra.com",
+      "version": "1.0",
+      "declared": "3.0.3",
+      "url": "https://api.apis.guru/v2/specs/stellastra.com/1.0/openapi.json",
+      "file": "058-stellastra.com.json",
+      "bytes": 9198,
+      "sha256": "c75ec96017a319da210d725fbfd6b9336d65bd83a78d46153f67799ce7a454b1"
+    },
+    {
+      "index": 59,
+      "api": "amazonaws.com:translate",
+      "version": "2017-07-01",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/translate/2017-07-01/openapi.yaml",
+      "file": "059-amazonaws.com__translate.yaml",
+      "bytes": 108888,
+      "sha256": "6bd7335b2989b72ff7182b1a5be3c016b82c44fcb386a374ad37f2b2623e6343"
+    },
+    {
+      "index": 60,
+      "api": "domainsdb.info",
+      "version": "1.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/domainsdb.info/1.0/openapi.json",
+      "file": "060-domainsdb.info.json",
+      "bytes": 28648,
+      "sha256": "98c0f020b93d59004067f93c466c45472827a3dbff4de22aa0ea711de9b51eec"
+    },
+    {
+      "index": 61,
+      "api": "interzoid.com:getfullnameparsedmatch",
+      "version": "1.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/interzoid.com/getfullnameparsedmatch/1.0.0/openapi.yaml",
+      "file": "061-interzoid.com__getfullnameparsedmatch.yaml",
+      "bytes": 3140,
+      "sha256": "189802d8332534781c11b853cb46774fa6ad848e5a5c403b9afd24c3fdc02abf"
+    },
+    {
+      "index": 62,
+      "api": "apisetu.gov.in:gujaratvidyapith",
+      "version": "3.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/gujaratvidyapith/3.0.0/openapi.json",
+      "file": "062-apisetu.gov.in__gujaratvidyapith.json",
+      "bytes": 38271,
+      "sha256": "360d2e92cd594dd7a2b3fae33baa2df9db57b39041283a917fbfcdd3f3ef856f"
+    },
+    {
+      "index": 63,
+      "api": "ebay.com:commerce-translation",
+      "version": "1",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/ebay.com/commerce-translation/1/openapi.yaml",
+      "file": "063-ebay.com__commerce-translation.yaml",
+      "bytes": 6315,
+      "sha256": "261fb2e12f64815f0c0d663d926f3fa772aec484c4739de5b6284e401f13b7e7"
+    },
+    {
+      "index": 64,
+      "api": "apisetu.gov.in:transportmp",
+      "version": "3.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/transportmp/3.0.0/openapi.json",
+      "file": "064-apisetu.gov.in__transportmp.json",
+      "bytes": 77802,
+      "sha256": "2f26b916403af7c2bc6c71a5be23180857890457e3210956390ecb62229d839f"
+    },
+    {
+      "index": 65,
+      "api": "apisetu.gov.in:cpctmp",
+      "version": "3.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/cpctmp/3.0.0/openapi.yaml",
+      "file": "065-apisetu.gov.in__cpctmp.yaml",
+      "bytes": 26728,
+      "sha256": "6cf7b46f8cda0bfd4e4c64166274e21826ad44a158033c89d33058d2736aaa98"
+    },
+    {
+      "index": 66,
+      "api": "amazonaws.com:redshift-data",
+      "version": "2019-12-20",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/redshift-data/2019-12-20/openapi.json",
+      "file": "066-amazonaws.com__redshift-data.json",
+      "bytes": 117016,
+      "sha256": "d67e12ff048af3da3abbea2bd7e692717d41526468eddf97fb2b096c2a4bede6"
+    },
+    {
+      "index": 67,
+      "api": "meshery.local",
+      "version": "0.4.27",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/meshery.local/0.4.27/openapi.yaml",
+      "file": "067-meshery.local.yaml",
+      "bytes": 151822,
+      "sha256": "5c385e7518ba62017190ada323b55d0b2833d167d4ee45915d46f3b87164b960"
+    },
+    {
+      "index": 68,
+      "api": "amazonaws.com:cloudsearchdomain",
+      "version": "2013-01-01",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/cloudsearchdomain/2013-01-01/openapi.json",
+      "file": "068-amazonaws.com__cloudsearchdomain.json",
+      "bytes": 61887,
+      "sha256": "ccc7f5fd7710013314f87d86619d5b21e826206b5000a27568a5f93cbde3a986"
+    },
+    {
+      "index": 69,
+      "api": "microsoft.com:cognitiveservices-Prediction",
+      "version": "3.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/microsoft.com/cognitiveservices-Prediction/3.0/openapi.yaml",
+      "file": "069-microsoft.com__cognitiveservices-Prediction.yaml",
+      "bytes": 36426,
+      "sha256": "a01b316d039e81b481ec326475e84aa7b8e5132acd17cbc4479c3b21ec2bbe38"
+    },
+    {
+      "index": 70,
+      "api": "amazonaws.com:importexport",
+      "version": "2010-06-01",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/importexport/2010-06-01/openapi.json",
+      "file": "070-amazonaws.com__importexport.json",
+      "bytes": 95211,
+      "sha256": "fd86f30dc8cfb4169ec7f314d15bd49f5d658930c4e9d265d0d12b4080012d81"
+    },
+    {
+      "index": 71,
+      "api": "interzoid.com:getcitymatch",
+      "version": "1.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/interzoid.com/getcitymatch/1.0.0/openapi.yaml",
+      "file": "071-interzoid.com__getcitymatch.yaml",
+      "bytes": 2535,
+      "sha256": "5c2c4f27065588e0898f2508f94110f48006c6f9c5242a04d807cd8216795568"
+    },
+    {
+      "index": 72,
+      "api": "apisetu.gov.in:bhartiaxagi",
+      "version": "3.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/bhartiaxagi/3.0.0/openapi.json",
+      "file": "072-apisetu.gov.in__bhartiaxagi.json",
+      "bytes": 50257,
+      "sha256": "9b246e83d6a9556a0b197cafd5c2ac6d12ecd7d96c58511296fce31264a2c313"
+    },
+    {
+      "index": 73,
+      "api": "googleapis.com:homegraph",
+      "version": "v1",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/googleapis.com/homegraph/v1/openapi.yaml",
+      "file": "073-googleapis.com__homegraph.yaml",
+      "bytes": 24721,
+      "sha256": "08d7f23cfb06c33b5dba75d691c55e9fe68e17c00a5367fbb6c8166eb4f57a42"
+    },
+    {
+      "index": 74,
+      "api": "adyen.com:DataProtectionService",
+      "version": "1",
+      "declared": "3.1.0",
+      "url": "https://api.apis.guru/v2/specs/adyen.com/DataProtectionService/1/openapi.json",
+      "file": "074-adyen.com__DataProtectionService.json",
+      "bytes": 7378,
+      "sha256": "919b94583e7c57236419ab6ec94fc4fac6a759643fef3a3aceafec6f4bd7bae8"
+    },
+    {
+      "index": 75,
+      "api": "dodo.ac",
+      "version": "1.5.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/dodo.ac/1.5.0/openapi.yaml",
+      "file": "075-dodo.ac.yaml",
+      "bytes": 166303,
+      "sha256": "03e1d25bd2e358bedcb9c602328e77646241daf0f5e5eccc2dd537523a8d96fd"
+    },
+    {
+      "index": 76,
+      "api": "amazonaws.com:autoscaling",
+      "version": "2011-01-01",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/autoscaling/2011-01-01/openapi.json",
+      "file": "076-amazonaws.com__autoscaling.json",
+      "bytes": 913860,
+      "sha256": "cf7a84f315d6589a7724bdf8672b4635b8b23426258ab5ab1b76888f450738aa"
+    },
+    {
+      "index": 77,
+      "api": "twilio.com:twilio_pricing_v2",
+      "version": "1.42.0",
+      "declared": "3.0.1",
+      "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_pricing_v2/1.42.0/openapi.yaml",
+      "file": "077-twilio.com__twilio_pricing_v2.yaml",
+      "bytes": 21693,
+      "sha256": "7f91294e7587c7b57428c736029c3124fe8c695767bf213629673d9ec9cbfc0e"
+    },
+    {
+      "index": 78,
+      "api": "apisetu.gov.in:pan",
+      "version": "3.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/pan/3.0.0/openapi.json",
+      "file": "078-apisetu.gov.in__pan.json",
+      "bytes": 53638,
+      "sha256": "8cbe5c9d8bc0594482597726aa4b2538a06ce67b6d433a768620bce2a8896b8d"
+    },
+    {
+      "index": 79,
+      "api": "apisetu.gov.in:transportar",
+      "version": "3.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/transportar/3.0.0/openapi.yaml",
+      "file": "079-apisetu.gov.in__transportar.yaml",
+      "bytes": 54239,
+      "sha256": "02b3cabe7cfb6c4ca162d802c67f1aab42929639a6cc4ca044c02972aeee325d"
+    },
+    {
+      "index": 80,
+      "api": "motaword.com",
+      "version": "1.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/motaword.com/1.0/openapi.json",
+      "file": "080-motaword.com.json",
+      "bytes": 466627,
+      "sha256": "85afa6258284a8618d31149c43d5bc676df01d4a1789f7d00a617e2732af490a"
+    },
+    {
+      "index": 81,
+      "api": "vtex.local:Subscriptions-API-(v3)",
+      "version": "1.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/vtex.local/Subscriptions-API-(v3)/1.0/openapi.yaml",
+      "file": "081-vtex.local__Subscriptions-API-(v3).yaml",
+      "bytes": 74282,
+      "sha256": "a4fd53549a557fca726f3e3385691e8d30ea0929f363b03a99ab97091f2a7532"
+    },
+    {
+      "index": 82,
+      "api": "urlbox.io",
+      "version": "v1",
+      "declared": "3.1.0",
+      "url": "https://api.apis.guru/v2/specs/urlbox.io/v1/openapi.json",
+      "file": "082-urlbox.io.json",
+      "bytes": 11445,
+      "sha256": "aad17b47891d5d897fe31e8c32a6b78cd418f7fdda833190ade89d0d1fd56745"
+    },
+    {
+      "index": 83,
+      "api": "amazonaws.com:kms",
+      "version": "2014-11-01",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/kms/2014-11-01/openapi.yaml",
+      "file": "083-amazonaws.com__kms.yaml",
+      "bytes": 501260,
+      "sha256": "3f42f17222cfeda31b3c4627f28c4c12a1679bc842854736cb77eea867fc573b"
+    },
+    {
+      "index": 84,
+      "api": "sportsdata.io:nba-v3-play-by-play",
+      "version": "1.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/sportsdata.io/nba-v3-play-by-play/1.0/openapi.json",
+      "file": "084-sportsdata.io__nba-v3-play-by-play.json",
+      "bytes": 13813,
+      "sha256": "52c6d077d5a2cb461f84a324f95f814f3e3d2cbec8bf2cef3bdead2b78e0f8a2"
+    },
+    {
+      "index": 85,
+      "api": "hubapi.com:analytics",
+      "version": "v3",
+      "declared": "3.0.1",
+      "url": "https://api.apis.guru/v2/specs/hubapi.com/analytics/v3/openapi.yaml",
+      "file": "085-hubapi.com__analytics.yaml",
+      "bytes": 5588,
+      "sha256": "388958eaf8d5ab86534b385df45ec1c7b1d664dc052274226c3574ca574d3a92"
+    },
+    {
+      "index": 86,
+      "api": "amazonaws.com:codeguru-reviewer",
+      "version": "2019-09-19",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/codeguru-reviewer/2019-09-19/openapi.json",
+      "file": "086-amazonaws.com__codeguru-reviewer.json",
+      "bytes": 157627,
+      "sha256": "b187233156a382e2685be1f3429cfabcbce32d67b218f61d9b534794c97f2d6e"
+    },
+    {
+      "index": 87,
+      "api": "googleapis.com:file",
+      "version": "v1",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/googleapis.com/file/v1/openapi.yaml",
+      "file": "087-googleapis.com__file.yaml",
+      "bytes": 72946,
+      "sha256": "89bd9036733417768f2ba0ba70ef8a6fb6eeb36f48b4c8343cf9adf29b5ae486"
+    },
+    {
+      "index": 88,
+      "api": "graphhopper.com",
+      "version": "1.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/graphhopper.com/1.0.0/openapi.json",
+      "file": "088-graphhopper.com.json",
+      "bytes": 281463,
+      "sha256": "928c94fb4bd35bc2a26038453ec27cdf14656536e30df6fd43783be5d11566b8"
+    },
+    {
+      "index": 89,
+      "api": "hubapi.com:automation",
+      "version": "v4",
+      "declared": "3.0.1",
+      "url": "https://api.apis.guru/v2/specs/hubapi.com/automation/v4/openapi.yaml",
+      "file": "089-hubapi.com__automation.yaml",
+      "bytes": 63446,
+      "sha256": "5a0c48beea5610c933347004bc82ff53f4d335e70f7462ec45d4ec68e4de2dd0"
+    },
+    {
+      "index": 90,
+      "api": "interzoid.com:globalpageload",
+      "version": "1.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/interzoid.com/globalpageload/1.0.0/openapi.json",
+      "file": "090-interzoid.com__globalpageload.json",
+      "bytes": 4106,
+      "sha256": "28fcac9f731fae2aedbc5fb55408bbdc4609ddfd16258c60ae936b2c7d6ef6ad"
+    },
+    {
+      "index": 91,
+      "api": "apisetu.gov.in:transportjk",
+      "version": "3.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/transportjk/3.0.0/openapi.yaml",
+      "file": "091-apisetu.gov.in__transportjk.yaml",
+      "bytes": 54154,
+      "sha256": "76c2eb816ff07876bab66ebac189f7263f6fd197ecb90d35a60031555c3ef113"
+    },
+    {
+      "index": 92,
+      "api": "keycloak.local",
+      "version": "1",
+      "declared": "3.0.2",
+      "url": "https://api.apis.guru/v2/specs/keycloak.local/1/openapi.json",
+      "file": "092-keycloak.local.json",
+      "bytes": 323574,
+      "sha256": "a4b3bbcdb59659f48d83b26b448e81bed56201828a00d6b58e792e29d562230f"
+    },
+    {
+      "index": 93,
+      "api": "fraudlabspro.com:fraud-detection",
+      "version": "1.1",
+      "declared": "3.0.1",
+      "url": "https://api.apis.guru/v2/specs/fraudlabspro.com/fraud-detection/1.1/openapi.yaml",
+      "file": "093-fraudlabspro.com__fraud-detection.yaml",
+      "bytes": 7823,
+      "sha256": "ad7b76e5df13c1e43a8911ab69a18a68b2fa8125cd4f52f29831278d7d970cd3"
+    },
+    {
+      "index": 94,
+      "api": "openpolicy.local",
+      "version": "0.28.0",
+      "declared": "3.0.3",
+      "url": "https://api.apis.guru/v2/specs/openpolicy.local/0.28.0/openapi.json",
+      "file": "094-openpolicy.local.json",
+      "bytes": 58876,
+      "sha256": "fa631e752f368468c5d6462366984ec942d31adacbfa364a4db4603f0391a7de"
+    },
+    {
+      "index": 95,
+      "api": "googleapis.com:gkehub",
+      "version": "v1beta1",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/googleapis.com/gkehub/v1beta1/openapi.yaml",
+      "file": "095-googleapis.com__gkehub.yaml",
+      "bytes": 77212,
+      "sha256": "decd89e930b2c6993ccf047991f04268803180a7b661219f79c8612dfcd53c11"
+    },
+    {
+      "index": 96,
+      "api": "apiz.ebay.com:sell-finances",
+      "version": "v1.15.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/apiz.ebay.com/sell-finances/v1.15.0/openapi.json",
+      "file": "096-apiz.ebay.com__sell-finances.json",
+      "bytes": 117056,
+      "sha256": "d4c21d3231e27ce20bc99d176c96e7ea5541771d6a1cb81bb1148e9c04a4658e"
+    },
+    {
+      "index": 97,
+      "api": "twilio.com:twilio_serverless_v1",
+      "version": "1.42.0",
+      "declared": "3.0.1",
+      "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_serverless_v1/1.42.0/openapi.yaml",
+      "file": "097-twilio.com__twilio_serverless_v1.yaml",
+      "bytes": 91709,
+      "sha256": "3fb1e7694b4ae7b1d896f48a9efc3dd81eee47ea2e47ad8de23c76e07ded4d93"
+    },
+    {
+      "index": 98,
+      "api": "amazonaws.com:license-manager",
+      "version": "2018-08-01",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/amazonaws.com/license-manager/2018-08-01/openapi.json",
+      "file": "098-amazonaws.com__license-manager.json",
+      "bytes": 371617,
+      "sha256": "7319789d8313c5564393a6c05870ce1c5b1d7073ad1d8ac0e70fdf4a723cf2d4"
+    },
+    {
+      "index": 99,
+      "api": "apisetu.gov.in:aharakar",
+      "version": "3.0.0",
+      "declared": "3.0.0",
+      "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/aharakar/3.0.0/openapi.yaml",
+      "file": "099-apisetu.gov.in__aharakar.yaml",
+      "bytes": 26533,
+      "sha256": "2cdeadf41aa93bbf07bf336d88c45761d93bbdfb42f3e589d0df9d2b11b2857d"
+    }
+  ],
+  "large": [
+    {
+      "file": "large/github.json",
+      "url": "https://raw.githubusercontent.com/github/rest-api-description/main/descriptions/api.github.com/api.github.com.json",
+      "bytes": 13014127,
+      "sha256": "f3efa055b46b43f5f133ecf792a36a7f50cf8a4378cbd177390bc2bf8c6097cd"
+    },
+    {
+      "file": "large/stripe.json",
+      "url": "https://raw.githubusercontent.com/stripe/openapi/master/openapi/spec3.json",
+      "bytes": 8317513,
+      "sha256": "7cff4cc46d0654101a36a3302f7544640f5f73e4f3cad6f264f0e23c19fa1776"
+    },
+    {
+      "file": "large/msgraph.yaml",
+      "url": "https://api.apis.guru/v2/specs/microsoft.com/graph/1.0.1/openapi.yaml",
+      "bytes": 25827057,
+      "sha256": "6b45ca004db511a34c40c20d42672fbab4843bf090e727e8cd088ecca735ac34"
+    },
+    {
+      "file": "large/msgraph-beta.yaml",
+      "url": "https://api.apis.guru/v2/specs/microsoft.com/graph-beta/1.0.1/openapi.yaml",
+      "bytes": 58443865,
+      "sha256": "534cf24d8fdeab8a958fd0f806a0ab1b5e49aa10ec7dac21161753386c98d56e"
+    }
+  ]
+}

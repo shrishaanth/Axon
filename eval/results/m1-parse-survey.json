@@ -1,0 +1,1161 @@
+{
+  "specs" : [ {
+    "file" : "000-amazonaws.com__appmesh.json",
+    "bytes" : 435779,
+    "ok" : true,
+    "ms" : 294,
+    "openapi" : "3.0.0",
+    "operations" : 38,
+    "component_schemas" : 333,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "001-personio.de__personnel.yaml",
+    "bytes" : 60183,
+    "ok" : true,
+    "ms" : 135,
+    "openapi" : "3.0.0",
+    "operations" : 13,
+    "component_schemas" : 23,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "002-adyen.com__BalancePlatformPaymentNotification-v1.json",
+    "bytes" : 84740,
+    "ok" : true,
+    "ms" : 37,
+    "openapi" : "3.1.0",
+    "operations" : 0,
+    "component_schemas" : 25,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : {
+      "webhooks (ignored)" : 1
+    }
+  }, {
+    "file" : "003-getthedata.com__bng2latlong.yaml",
+    "bytes" : 3080,
+    "ok" : true,
+    "ms" : 7,
+    "openapi" : "3.0.0",
+    "operations" : 1,
+    "component_schemas" : 0,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "004-amazonaws.com__swf.json",
+    "bytes" : 499306,
+    "ok" : true,
+    "ms" : 49,
+    "openapi" : "3.0.0",
+    "operations" : 37,
+    "component_schemas" : 225,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "005-hetzner.cloud.yaml",
+    "bytes" : 1127776,
+    "ok" : true,
+    "ms" : 356,
+    "openapi" : "3.0.0",
+    "operations" : 144,
+    "component_schemas" : 0,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 2,
+    "unsupported" : {
+      "oneOf (approximated)" : 2
+    }
+  }, {
+    "file" : "006-cloudmersive.com__ocr.json",
+    "bytes" : 90539,
+    "ok" : true,
+    "ms" : 10,
+    "openapi" : "3.0.0",
+    "operations" : 19,
+    "component_schemas" : 27,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "007-iqualify.com.yaml",
+    "bytes" : 139817,
+    "ok" : true,
+    "ms" : 96,
+    "openapi" : "3.0.0",
+    "operations" : 84,
+    "component_schemas" : 70,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 2,
+    "unsupported" : {
+      "oneOf (approximated)" : 2
+    }
+  }, {
+    "file" : "008-amazonaws.com__monitoring.json",
+    "bytes" : 566042,
+    "ok" : true,
+    "ms" : 53,
+    "openapi" : "3.0.0",
+    "operations" : 76,
+    "component_schemas" : 259,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "009-rapidapi.com__spellcheckpro.yaml",
+    "bytes" : 1348,
+    "ok" : true,
+    "ms" : 3,
+    "openapi" : "3.0.3",
+    "operations" : 1,
+    "component_schemas" : 0,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "010-googleapis.com__cloudshell.json",
+    "bytes" : 34432,
+    "ok" : true,
+    "ms" : 4,
+    "openapi" : "3.0.0",
+    "operations" : 7,
+    "component_schemas" : 20,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "011-interzoid.com__getemailinfo.yaml",
+    "bytes" : 3206,
+    "ok" : true,
+    "ms" : 3,
+    "openapi" : "3.0.0",
+    "operations" : 1,
+    "component_schemas" : 0,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "012-cowin.gov.cin__cowincert.json",
+    "bytes" : 2596,
+    "ok" : true,
+    "ms" : 2,
+    "openapi" : "3.0.1",
+    "operations" : 1,
+    "component_schemas" : 1,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "013-amazonaws.com__datapipeline.yaml",
+    "bytes" : 89915,
+    "ok" : true,
+    "ms" : 22,
+    "openapi" : "3.0.0",
+    "operations" : 19,
+    "component_schemas" : 89,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "014-amadeus.com__amadeus-location-score.json",
+    "bytes" : 21139,
+    "ok" : true,
+    "ms" : 5,
+    "openapi" : "3.0.0",
+    "operations" : 1,
+    "component_schemas" : 5,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "015-symanto.net.yaml",
+    "bytes" : 12816,
+    "ok" : true,
+    "ms" : 7,
+    "openapi" : "3.0.3",
+    "operations" : 7,
+    "component_schemas" : 16,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "016-googleapis.com__testing.json",
+    "bytes" : 95125,
+    "ok" : true,
+    "ms" : 10,
+    "openapi" : "3.0.0",
+    "operations" : 5,
+    "component_schemas" : 74,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "017-googleapis.com__chromemanagement.yaml",
+    "bytes" : 111485,
+    "ok" : true,
+    "ms" : 25,
+    "openapi" : "3.0.0",
+    "operations" : 12,
+    "component_schemas" : 65,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "018-amazonaws.com__runtime.lex.json",
+    "bytes" : 96168,
+    "ok" : true,
+    "ms" : 7,
+    "openapi" : "3.0.0",
+    "operations" : 5,
+    "component_schemas" : 70,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "019-shorten.rest.yaml",
+    "bytes" : 18631,
+    "ok" : true,
+    "ms" : 6,
+    "openapi" : "3.0.0",
+    "operations" : 7,
+    "component_schemas" : 12,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "020-amazonaws.com__sagemaker.json",
+    "bytes" : 2743239,
+    "ok" : true,
+    "ms" : 152,
+    "openapi" : "3.0.0",
+    "operations" : 302,
+    "component_schemas" : 1986,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "021-rapidapi.com__idealspot-geodata.yaml",
+    "bytes" : 194604,
+    "ok" : true,
+    "ms" : 34,
+    "openapi" : "3.0.0",
+    "operations" : 7,
+    "component_schemas" : 35,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "022-interzoid.com__convertcurrency.json",
+    "bytes" : 4078,
+    "ok" : true,
+    "ms" : 1,
+    "openapi" : "3.0.0",
+    "operations" : 1,
+    "component_schemas" : 0,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "023-amazonaws.com__dynamodb.yaml",
+    "bytes" : 509494,
+    "ok" : true,
+    "ms" : 93,
+    "openapi" : "3.0.0",
+    "operations" : 53,
+    "component_schemas" : 442,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "024-trashnothing.com.json",
+    "bytes" : 254588,
+    "ok" : true,
+    "ms" : 12,
+    "openapi" : "3.0.0",
+    "operations" : 76,
+    "component_schemas" : 15,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "025-apisetu.gov.in__orientalinsurance.yaml",
+    "bytes" : 48704,
+    "ok" : true,
+    "ms" : 10,
+    "openapi" : "3.0.0",
+    "operations" : 10,
+    "component_schemas" : 2,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "026-nexmo.com__conversation.json",
+    "bytes" : 61277,
+    "ok" : true,
+    "ms" : 6,
+    "openapi" : "3.0.0",
+    "operations" : 23,
+    "component_schemas" : 52,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 4,
+    "unsupported" : {
+      "oneOf (approximated)" : 2
+    }
+  }, {
+    "file" : "027-gov.bc.ca__geomark.yaml",
+    "bytes" : 24847,
+    "ok" : true,
+    "ms" : 6,
+    "openapi" : "3.0.0",
+    "operations" : 7,
+    "component_schemas" : 0,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "028-amazonaws.com__synthetics.json",
+    "bytes" : 196739,
+    "ok" : true,
+    "ms" : 11,
+    "openapi" : "3.0.0",
+    "operations" : 21,
+    "component_schemas" : 129,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "029-apisetu.gov.in__rajasthanrajeduboard.yaml",
+    "bytes" : 29060,
+    "ok" : true,
+    "ms" : 5,
+    "openapi" : "3.0.0",
+    "operations" : 2,
+    "component_schemas" : 2,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "030-digitalnz.org.json",
+    "bytes" : 40805,
+    "ok" : true,
+    "ms" : 5,
+    "openapi" : "3.0.1",
+    "operations" : 3,
+    "component_schemas" : 1,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "031-github.com__api.github.com.yaml",
+    "bytes" : 8802506,
+    "ok" : true,
+    "ms" : 894,
+    "openapi" : "3.0.3",
+    "operations" : 845,
+    "component_schemas" : 582,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 215,
+    "unsupported" : {
+      "anyOf (approximated)" : 20,
+      "oneOf (approximated)" : 39
+    }
+  }, {
+    "file" : "032-sportsdata.io__lol-v3-stats.json",
+    "bytes" : 75607,
+    "ok" : true,
+    "ms" : 34,
+    "openapi" : "3.0.0",
+    "operations" : 21,
+    "component_schemas" : 24,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "033-fulfillment.com.yaml",
+    "bytes" : 78362,
+    "ok" : true,
+    "ms" : 12,
+    "openapi" : "3.0.1",
+    "operations" : 13,
+    "component_schemas" : 0,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 4,
+    "unsupported" : {
+      "oneOf (approximated)" : 3
+    }
+  }, {
+    "file" : "034-amazonaws.com__cloudformation.json",
+    "bytes" : 1092600,
+    "ok" : true,
+    "ms" : 32,
+    "openapi" : "3.0.0",
+    "operations" : 132,
+    "component_schemas" : 465,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "035-apisetu.gov.in__transportsk.yaml",
+    "bytes" : 54187,
+    "ok" : true,
+    "ms" : 8,
+    "openapi" : "3.0.0",
+    "operations" : 2,
+    "component_schemas" : 4,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "036-apisetu.gov.in__dbraitandaman.json",
+    "bytes" : 38167,
+    "ok" : true,
+    "ms" : 3,
+    "openapi" : "3.0.0",
+    "operations" : 1,
+    "component_schemas" : 2,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "037-impala.travel__hotels.yaml",
+    "bytes" : 325298,
+    "ok" : true,
+    "ms" : 32,
+    "openapi" : "3.0.0",
+    "operations" : 10,
+    "component_schemas" : 46,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "038-twilio.com__twilio_numbers_v2.json",
+    "bytes" : 97353,
+    "ok" : true,
+    "ms" : 4,
+    "openapi" : "3.0.1",
+    "operations" : 31,
+    "component_schemas" : 23,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "039-amazonaws.com__cloudtrail.yaml",
+    "bytes" : 320913,
+    "ok" : true,
+    "ms" : 36,
+    "openapi" : "3.0.0",
+    "operations" : 44,
+    "component_schemas" : 270,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "040-enode.io.json",
+    "bytes" : 73409,
+    "ok" : true,
+    "ms" : 8,
+    "openapi" : "3.0.0",
+    "operations" : 28,
+    "component_schemas" : 0,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "041-googleapis.com__poly.yaml",
+    "bytes" : 28036,
+    "ok" : true,
+    "ms" : 5,
+    "openapi" : "3.0.0",
+    "operations" : 4,
+    "component_schemas" : 15,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "042-googleapis.com__analyticsdata.json",
+    "bytes" : 98693,
+    "ok" : true,
+    "ms" : 7,
+    "openapi" : "3.0.0",
+    "operations" : 7,
+    "component_schemas" : 54,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "043-amazonaws.com__autoscaling-plans.yaml",
+    "bytes" : 66718,
+    "ok" : true,
+    "ms" : 7,
+    "openapi" : "3.0.0",
+    "operations" : 6,
+    "component_schemas" : 76,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "044-apisetu.gov.in__edistrictpb.json",
+    "bytes" : 58914,
+    "ok" : true,
+    "ms" : 3,
+    "openapi" : "3.0.0",
+    "operations" : 7,
+    "component_schemas" : 2,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "045-amazonaws.com__iotsitewise.yaml",
+    "bytes" : 453700,
+    "ok" : true,
+    "ms" : 57,
+    "openapi" : "3.0.0",
+    "operations" : 73,
+    "component_schemas" : 397,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "046-twilio.com__twilio_chat_v1.json",
+    "bytes" : 153441,
+    "ok" : true,
+    "ms" : 6,
+    "openapi" : "3.0.1",
+    "operations" : 40,
+    "component_schemas" : 14,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "047-exavault.com.yaml",
+    "bytes" : 382318,
+    "ok" : true,
+    "ms" : 51,
+    "openapi" : "3.0.0",
+    "operations" : 59,
+    "component_schemas" : 65,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 31,
+    "unsupported" : {
+      "anyOf (approximated)" : 11,
+      "discriminator (approximated)" : 12,
+      "oneOf (approximated)" : 1
+    }
+  }, {
+    "file" : "048-opentargets.io.json",
+    "bytes" : 41817,
+    "ok" : true,
+    "ms" : 3,
+    "openapi" : "3.0.0",
+    "operations" : 31,
+    "component_schemas" : 0,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "049-unicourt.com.yaml",
+    "bytes" : 4502644,
+    "ok" : true,
+    "ms" : 310,
+    "openapi" : "3.0.0",
+    "operations" : 158,
+    "component_schemas" : 220,
+    "partially_analysed_operations" : 4,
+    "approximated_operations" : 1,
+    "unsupported" : {
+      "callbacks (ignored)" : 4,
+      "oneOf (approximated)" : 1
+    }
+  }, {
+    "file" : "050-codat.io__accounting.json",
+    "bytes" : 3026752,
+    "ok" : true,
+    "ms" : 48,
+    "openapi" : "3.1.0",
+    "operations" : 127,
+    "component_schemas" : 94,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "051-datasette.local.yaml",
+    "bytes" : 1481,
+    "ok" : true,
+    "ms" : 2,
+    "openapi" : "3.0.1",
+    "operations" : 1,
+    "component_schemas" : 0,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "052-googleapis.com__replicapool.json",
+    "bytes" : 57976,
+    "ok" : true,
+    "ms" : 4,
+    "openapi" : "3.0.0",
+    "operations" : 10,
+    "component_schemas" : 23,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "053-apisetu.gov.in__mbse.yaml",
+    "bytes" : 33874,
+    "ok" : true,
+    "ms" : 8,
+    "openapi" : "3.0.0",
+    "operations" : 4,
+    "component_schemas" : 2,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "054-amazonaws.com__runtime.sagemaker.json",
+    "bytes" : 28548,
+    "ok" : true,
+    "ms" : 2,
+    "openapi" : "3.0.0",
+    "operations" : 2,
+    "component_schemas" : 22,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "055-interzoid.com__getstateabbreviation.yaml",
+    "bytes" : 2624,
+    "ok" : true,
+    "ms" : 2,
+    "openapi" : "3.0.0",
+    "operations" : 1,
+    "component_schemas" : 0,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "056-ebay.com__sell-account.json",
+    "bytes" : 250377,
+    "ok" : true,
+    "ms" : 6,
+    "openapi" : "3.0.0",
+    "operations" : 36,
+    "component_schemas" : 48,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "057-googleapis.com__domains.yaml",
+    "bytes" : 98351,
+    "ok" : true,
+    "ms" : 12,
+    "openapi" : "3.0.0",
+    "operations" : 22,
+    "component_schemas" : 42,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "058-stellastra.com.json",
+    "bytes" : 9198,
+    "ok" : true,
+    "ms" : 2,
+    "openapi" : "3.0.3",
+    "operations" : 1,
+    "component_schemas" : 0,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : {
+      "links (ignored)" : 1
+    }
+  }, {
+    "file" : "059-amazonaws.com__translate.yaml",
+    "bytes" : 108888,
+    "ok" : true,
+    "ms" : 14,
+    "openapi" : "3.0.0",
+    "operations" : 18,
+    "component_schemas" : 114,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "060-domainsdb.info.json",
+    "bytes" : 28648,
+    "ok" : true,
+    "ms" : 2,
+    "openapi" : "3.0.0",
+    "operations" : 14,
+    "component_schemas" : 9,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "061-interzoid.com__getfullnameparsedmatch.yaml",
+    "bytes" : 3140,
+    "ok" : true,
+    "ms" : 1,
+    "openapi" : "3.0.0",
+    "operations" : 1,
+    "component_schemas" : 0,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "062-apisetu.gov.in__gujaratvidyapith.json",
+    "bytes" : 38271,
+    "ok" : true,
+    "ms" : 2,
+    "openapi" : "3.0.0",
+    "operations" : 1,
+    "component_schemas" : 2,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "063-ebay.com__commerce-translation.yaml",
+    "bytes" : 6315,
+    "ok" : true,
+    "ms" : 2,
+    "openapi" : "3.0.0",
+    "operations" : 1,
+    "component_schemas" : 5,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "064-apisetu.gov.in__transportmp.json",
+    "bytes" : 77802,
+    "ok" : true,
+    "ms" : 4,
+    "openapi" : "3.0.0",
+    "operations" : 2,
+    "component_schemas" : 4,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "065-apisetu.gov.in__cpctmp.yaml",
+    "bytes" : 26728,
+    "ok" : true,
+    "ms" : 4,
+    "openapi" : "3.0.0",
+    "operations" : 1,
+    "component_schemas" : 2,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "066-amazonaws.com__redshift-data.json",
+    "bytes" : 117016,
+    "ok" : true,
+    "ms" : 4,
+    "openapi" : "3.0.0",
+    "operations" : 10,
+    "component_schemas" : 68,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "067-meshery.local.yaml",
+    "bytes" : 151822,
+    "ok" : true,
+    "ms" : 20,
+    "openapi" : "3.0.0",
+    "operations" : 75,
+    "component_schemas" : 136,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "068-amazonaws.com__cloudsearchdomain.json",
+    "bytes" : 61887,
+    "ok" : true,
+    "ms" : 3,
+    "openapi" : "3.0.0",
+    "operations" : 3,
+    "component_schemas" : 51,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "069-microsoft.com__cognitiveservices-Prediction.yaml",
+    "bytes" : 36426,
+    "ok" : true,
+    "ms" : 5,
+    "openapi" : "3.0.0",
+    "operations" : 8,
+    "component_schemas" : 5,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "070-amazonaws.com__importexport.json",
+    "bytes" : 95211,
+    "ok" : true,
+    "ms" : 4,
+    "openapi" : "3.0.0",
+    "operations" : 12,
+    "component_schemas" : 76,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "071-interzoid.com__getcitymatch.yaml",
+    "bytes" : 2535,
+    "ok" : true,
+    "ms" : 2,
+    "openapi" : "3.0.0",
+    "operations" : 1,
+    "component_schemas" : 0,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "072-apisetu.gov.in__bhartiaxagi.json",
+    "bytes" : 50257,
+    "ok" : true,
+    "ms" : 3,
+    "openapi" : "3.0.0",
+    "operations" : 5,
+    "component_schemas" : 2,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "073-googleapis.com__homegraph.yaml",
+    "bytes" : 24721,
+    "ok" : true,
+    "ms" : 3,
+    "openapi" : "3.0.0",
+    "operations" : 5,
+    "component_schemas" : 20,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "074-adyen.com__DataProtectionService.json",
+    "bytes" : 7378,
+    "ok" : true,
+    "ms" : 1,
+    "openapi" : "3.1.0",
+    "operations" : 1,
+    "component_schemas" : 3,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "075-dodo.ac.yaml",
+    "bytes" : 166303,
+    "ok" : true,
+    "ms" : 17,
+    "openapi" : "3.0.0",
+    "operations" : 30,
+    "component_schemas" : 21,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "076-amazonaws.com__autoscaling.json",
+    "bytes" : 913860,
+    "ok" : true,
+    "ms" : 26,
+    "openapi" : "3.0.0",
+    "operations" : 130,
+    "component_schemas" : 373,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "077-twilio.com__twilio_pricing_v2.yaml",
+    "bytes" : 21693,
+    "ok" : true,
+    "ms" : 3,
+    "openapi" : "3.0.1",
+    "operations" : 6,
+    "component_schemas" : 7,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "078-apisetu.gov.in__pan.json",
+    "bytes" : 53638,
+    "ok" : true,
+    "ms" : 3,
+    "openapi" : "3.0.0",
+    "operations" : 1,
+    "component_schemas" : 3,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "079-apisetu.gov.in__transportar.yaml",
+    "bytes" : 54239,
+    "ok" : true,
+    "ms" : 7,
+    "openapi" : "3.0.0",
+    "operations" : 2,
+    "component_schemas" : 4,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "080-motaword.com.json",
+    "bytes" : 466627,
+    "ok" : true,
+    "ms" : 21,
+    "openapi" : "3.0.0",
+    "operations" : 222,
+    "component_schemas" : 193,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 1,
+    "unsupported" : {
+      "oneOf (approximated)" : 1
+    }
+  }, {
+    "file" : "081-vtex.local__Subscriptions-API-(v3).yaml",
+    "bytes" : 74282,
+    "ok" : true,
+    "ms" : 11,
+    "openapi" : "3.0.0",
+    "operations" : 20,
+    "component_schemas" : 51,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "082-urlbox.io.json",
+    "bytes" : 11445,
+    "ok" : true,
+    "ms" : 2,
+    "openapi" : "3.1.0",
+    "operations" : 1,
+    "component_schemas" : 4,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 1,
+    "unsupported" : {
+      "oneOf (approximated)" : 1
+    }
+  }, {
+    "file" : "083-amazonaws.com__kms.yaml",
+    "bytes" : 501260,
+    "ok" : true,
+    "ms" : 39,
+    "openapi" : "3.0.0",
+    "operations" : 50,
+    "component_schemas" : 214,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "084-sportsdata.io__nba-v3-play-by-play.json",
+    "bytes" : 13813,
+    "ok" : true,
+    "ms" : 3,
+    "openapi" : "3.0.0",
+    "operations" : 2,
+    "component_schemas" : 5,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "085-hubapi.com__analytics.yaml",
+    "bytes" : 5588,
+    "ok" : true,
+    "ms" : 2,
+    "openapi" : "3.0.1",
+    "operations" : 1,
+    "component_schemas" : 3,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "086-amazonaws.com__codeguru-reviewer.json",
+    "bytes" : 157627,
+    "ok" : true,
+    "ms" : 4,
+    "openapi" : "3.0.0",
+    "operations" : 14,
+    "component_schemas" : 128,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "087-googleapis.com__file.yaml",
+    "bytes" : 72946,
+    "ok" : true,
+    "ms" : 7,
+    "openapi" : "3.0.0",
+    "operations" : 14,
+    "component_schemas" : 37,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "088-graphhopper.com.json",
+    "bytes" : 281463,
+    "ok" : true,
+    "ms" : 9,
+    "openapi" : "3.0.0",
+    "operations" : 16,
+    "component_schemas" : 56,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 7,
+    "unsupported" : {
+      "anyOf (approximated)" : 4,
+      "links (ignored)" : 2,
+      "oneOf (approximated)" : 2
+    }
+  }, {
+    "file" : "089-hubapi.com__automation.yaml",
+    "bytes" : 63446,
+    "ok" : true,
+    "ms" : 11,
+    "openapi" : "3.0.1",
+    "operations" : 16,
+    "component_schemas" : 23,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 6,
+    "unsupported" : {
+      "oneOf (approximated)" : 3
+    }
+  }, {
+    "file" : "090-interzoid.com__globalpageload.json",
+    "bytes" : 4106,
+    "ok" : true,
+    "ms" : 2,
+    "openapi" : "3.0.0",
+    "operations" : 1,
+    "component_schemas" : 0,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "091-apisetu.gov.in__transportjk.yaml",
+    "bytes" : 54154,
+    "ok" : true,
+    "ms" : 5,
+    "openapi" : "3.0.0",
+    "operations" : 2,
+    "component_schemas" : 4,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "092-keycloak.local.json",
+    "bytes" : 323574,
+    "ok" : true,
+    "ms" : 13,
+    "openapi" : "3.0.2",
+    "operations" : 281,
+    "component_schemas" : 65,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "093-fraudlabspro.com__fraud-detection.yaml",
+    "bytes" : 7823,
+    "ok" : true,
+    "ms" : 2,
+    "openapi" : "3.0.1",
+    "operations" : 2,
+    "component_schemas" : 0,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "094-openpolicy.local.json",
+    "bytes" : 58876,
+    "ok" : true,
+    "ms" : 5,
+    "openapi" : "3.0.3",
+    "operations" : 16,
+    "component_schemas" : 14,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "095-googleapis.com__gkehub.yaml",
+    "bytes" : 77212,
+    "ok" : true,
+    "ms" : 7,
+    "openapi" : "3.0.0",
+    "operations" : 14,
+    "component_schemas" : 36,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "096-apiz.ebay.com__sell-finances.json",
+    "bytes" : 117056,
+    "ok" : true,
+    "ms" : 3,
+    "openapi" : "3.0.0",
+    "operations" : 7,
+    "component_schemas" : 21,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "097-twilio.com__twilio_serverless_v1.yaml",
+    "bytes" : 91709,
+    "ok" : true,
+    "ms" : 11,
+    "openapi" : "3.0.1",
+    "operations" : 39,
+    "component_schemas" : 18,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "098-amazonaws.com__license-manager.json",
+    "bytes" : 371617,
+    "ok" : true,
+    "ms" : 13,
+    "openapi" : "3.0.0",
+    "operations" : 50,
+    "component_schemas" : 227,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  }, {
+    "file" : "099-apisetu.gov.in__aharakar.yaml",
+    "bytes" : 26533,
+    "ok" : true,
+    "ms" : 3,
+    "openapi" : "3.0.0",
+    "operations" : 1,
+    "component_schemas" : 2,
+    "partially_analysed_operations" : 0,
+    "approximated_operations" : 0,
+    "unsupported" : { }
+  } ],
+  "summary" : {
+    "files" : 100,
+    "parsed" : 100,
+    "failed" : 0,
+    "failures_by_category" : { },
+    "operations" : 3795,
+    "partially_analysed_operations" : 4,
+    "approximated_operations" : 274,
+    "specs_with_construct" : {
+      "anyOf (approximated)" : 3,
+      "callbacks (ignored)" : 1,
+      "discriminator (approximated)" : 1,
+      "links (ignored)" : 2,
+      "oneOf (approximated)" : 11,
+      "webhooks (ignored)" : 1
+    },
+    "occurrences_of_construct" : {
+      "anyOf (approximated)" : 35,
+      "callbacks (ignored)" : 4,
+      "discriminator (approximated)" : 12,
+      "links (ignored)" : 3,
+      "oneOf (approximated)" : 57,
+      "webhooks (ignored)" : 1
+    },
+    "java" : "17.0.20.1"
+  }
+}
