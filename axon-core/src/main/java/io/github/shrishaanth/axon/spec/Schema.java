@@ -50,6 +50,13 @@ public final class Schema {
         this.pointer = pointer;
     }
 
+    /** A fresh schema that accepts anything; stands in for "no schema declared". */
+    public static Schema any() {
+        Schema s = new Schema("");
+        s.unresolved = true;
+        return s;
+    }
+
     /** JSON pointer of the definition in the source document; identifies the node. */
     public String pointer() {
         return pointer;
