@@ -61,11 +61,36 @@ public final class Sanitiser {
 
     private final Config config;
     private final Matcher matcher;
+    private String timeHeader;
 
     /** {@code spec} may be null. */
     public Sanitiser(Config config, ApiSpec spec) {
         this.config = config;
         this.matcher = spec == null ? null : new Matcher(spec);
+    }
+
+    /**
+     * Takes each event's time from this request header (an ISO-8601 instant) instead of the capture time. For
+     * replayed or simulated traffic whose real send time is not the time it stands for.
+     */
+    public Sanitiser withTimeHeader(String header) {
+        this.timeHeader = header;
+        return this;
+    }
+
+    private Instant time(RawExchange raw) {
+        if (timeHeader != null && raw.requestHeaders() != null) {
+            for (Map.Entry<String, String> e : raw.requestHeaders().entrySet()) {
+                if (e.getKey().equalsIgnoreCase(timeHeader)) {
+                    try {
+                        return Instant.parse(e.getValue().trim());
+                    } catch (java.time.format.DateTimeParseException ex) {
+                        return raw.ts();
+                    }
+                }
+            }
+        }
+        return raw.ts();
     }
 
     public TrafficEvent sanitise(RawExchange raw) {
@@ -88,7 +113,7 @@ public final class Sanitiser {
         ShapeExtractor.Shape request = shape(raw.requestContentType(), raw.requestBody(), requestSchema);
         ShapeExtractor.Shape response = shape(raw.responseContentType(), raw.responseBody(), responseSchema);
         return new TrafficEvent(
-                raw.ts(),
+                time(raw),
                 method,
                 op == null ? null : op.key(),
                 op == null ? redact(path) : null,
