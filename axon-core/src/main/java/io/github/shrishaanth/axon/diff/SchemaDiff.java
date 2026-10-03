@@ -98,8 +98,9 @@ final class SchemaDiff {
         if (enumA != null || enumB != null) {
             boolean restricted = enumB != null && (enumA == null || !enumB.containsAll(enumA));
             boolean widened = enumA != null && (enumB == null || !enumA.containsAll(enumB));
-            String from = enumA == null ? "any value" : String.join(", ", enumA);
-            String to = enumB == null ? "any value" : String.join(", ", enumB);
+            // JSON arrays of the allowed values; null stands for "any value"
+            String from = enumA == null ? null : "[" + String.join(",", enumA) + "]";
+            String to = enumB == null ? null : "[" + String.join(",", enumB) + "]";
             if (request && restricted) {
                 add(out, new Rel(ChangeKind.REQUEST_ENUM_NARROWED, true, FieldPath.ROOT, from, to, a.pointer()));
             } else if (request && widened) {
