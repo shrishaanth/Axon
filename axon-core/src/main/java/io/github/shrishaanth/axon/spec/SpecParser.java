@@ -66,6 +66,11 @@ public final class SpecParser {
         return parse(Files.readString(file, StandardCharsets.UTF_8));
     }
 
+    /** The raw JSON tree of a JSON or YAML document, before any modelling. */
+    public static JsonNode loadTree(String text) throws SpecParseException {
+        return SpecLoader.load(text);
+    }
+
     public static ApiSpec parse(String text) throws SpecParseException {
         if (text.length() > MAX_BYTES) {
             throw new SpecParseException(SpecParseException.Category.TOO_LARGE,

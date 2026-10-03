@@ -1,0 +1,3528 @@
+{
+  "seed": 20261003,
+  "sources": {
+    "stripe": {
+      "repo": "https://github.com/stripe/openapi.git",
+      "path": "openapi/spec3.json",
+      "commits_touching_file": 1228,
+      "window_start": 962
+    },
+    "github": {
+      "repo": "https://github.com/github/rest-api-description.git",
+      "path": "descriptions/api.github.com/api.github.com.json",
+      "commits_touching_file": 881,
+      "window_start": 583
+    },
+    "twilio": {
+      "repo": "https://github.com/twilio/twilio-oai.git",
+      "path": "spec/json/twilio_api_v2010.json",
+      "commits_touching_file": 160,
+      "window_start": 57
+    },
+    "apisguru": {
+      "adjacent_version_pairs_available": 278
+    }
+  },
+  "pairs": [
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/000-c19b49bd4f04.json",
+        "commit": "c19b49bd4f04861390bf7d450454ba1bc3eac2f0",
+        "date": "2024-04-15T21:47:09Z",
+        "sha256": "e69032685f4a63e0fd71633ac146a263901cf3627296c5103aa7d46dfd0720bb",
+        "bytes": 6025948
+      },
+      "revision": {
+        "file": "stripe/001-23b7663f05d4.json",
+        "commit": "23b7663f05d45cc6fce67ddcdaf57eaf29b44563",
+        "date": "2024-04-15T22:11:13Z",
+        "sha256": "76deab4117c5f90e707704a115cd2ef07d59ddd92b31bb2521e79912cf9476f9",
+        "bytes": 6025234
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/001-23b7663f05d4.json",
+        "commit": "23b7663f05d45cc6fce67ddcdaf57eaf29b44563",
+        "date": "2024-04-15T22:11:13Z",
+        "sha256": "76deab4117c5f90e707704a115cd2ef07d59ddd92b31bb2521e79912cf9476f9",
+        "bytes": 6025234
+      },
+      "revision": {
+        "file": "stripe/002-137588292d77.json",
+        "commit": "137588292d77df0d2c9e065e225dc4230350d6ca",
+        "date": "2024-04-17T17:22:19Z",
+        "sha256": "d7286e1feab3bdea1346d08bdc7b7b9c49902c3255437a2efa7e2779fea9a426",
+        "bytes": 6029064
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/002-137588292d77.json",
+        "commit": "137588292d77df0d2c9e065e225dc4230350d6ca",
+        "date": "2024-04-17T17:22:19Z",
+        "sha256": "d7286e1feab3bdea1346d08bdc7b7b9c49902c3255437a2efa7e2779fea9a426",
+        "bytes": 6029064
+      },
+      "revision": {
+        "file": "stripe/003-d166cf522089.json",
+        "commit": "d166cf522089925063ed08af31e156780bba808a",
+        "date": "2024-04-17T17:57:24Z",
+        "sha256": "1f776c6743fb732530b19f63ae7ec0589a08c560e9bb036ccbef9572ee22f429",
+        "bytes": 6029592
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/003-d166cf522089.json",
+        "commit": "d166cf522089925063ed08af31e156780bba808a",
+        "date": "2024-04-17T17:57:24Z",
+        "sha256": "1f776c6743fb732530b19f63ae7ec0589a08c560e9bb036ccbef9572ee22f429",
+        "bytes": 6029592
+      },
+      "revision": {
+        "file": "stripe/004-0e81df6ac67c.json",
+        "commit": "0e81df6ac67cf23734660c1c424c5488a4edc546",
+        "date": "2024-04-17T18:56:23Z",
+        "sha256": "70db5fc293cc8860b599207bd26c3b5f010b44927f96699e54d09be64115b06a",
+        "bytes": 6033051
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/004-0e81df6ac67c.json",
+        "commit": "0e81df6ac67cf23734660c1c424c5488a4edc546",
+        "date": "2024-04-17T18:56:23Z",
+        "sha256": "70db5fc293cc8860b599207bd26c3b5f010b44927f96699e54d09be64115b06a",
+        "bytes": 6033051
+      },
+      "revision": {
+        "file": "stripe/005-517ee75b3132.json",
+        "commit": "517ee75b313283e35173c2db94f0009ad713bd00",
+        "date": "2024-04-17T19:55:52Z",
+        "sha256": "82c7c4e5acb1df99e717af23e982dde2fc4a34695883572c861b463c5ef698b4",
+        "bytes": 6033178
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/005-517ee75b3132.json",
+        "commit": "517ee75b313283e35173c2db94f0009ad713bd00",
+        "date": "2024-04-17T19:55:52Z",
+        "sha256": "82c7c4e5acb1df99e717af23e982dde2fc4a34695883572c861b463c5ef698b4",
+        "bytes": 6033178
+      },
+      "revision": {
+        "file": "stripe/006-9dec34c36eaa.json",
+        "commit": "9dec34c36eaa5305fa1097766849a99d5f260b9a",
+        "date": "2024-04-18T01:26:26Z",
+        "sha256": "1e46549ba12dbe2127157ffab615995d4c376372ad710a652cc582e31dc9724b",
+        "bytes": 6156905
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/006-9dec34c36eaa.json",
+        "commit": "9dec34c36eaa5305fa1097766849a99d5f260b9a",
+        "date": "2024-04-18T01:26:26Z",
+        "sha256": "1e46549ba12dbe2127157ffab615995d4c376372ad710a652cc582e31dc9724b",
+        "bytes": 6156905
+      },
+      "revision": {
+        "file": "stripe/007-3c46b98ebe32.json",
+        "commit": "3c46b98ebe32ac6db455b933ad8db77296e417b4",
+        "date": "2024-04-18T16:50:08Z",
+        "sha256": "ab62418d39072b94b3b42a7b41917d0a4b581a4b5a0539cebc660d00f38cab5f",
+        "bytes": 6157429
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/007-3c46b98ebe32.json",
+        "commit": "3c46b98ebe32ac6db455b933ad8db77296e417b4",
+        "date": "2024-04-18T16:50:08Z",
+        "sha256": "ab62418d39072b94b3b42a7b41917d0a4b581a4b5a0539cebc660d00f38cab5f",
+        "bytes": 6157429
+      },
+      "revision": {
+        "file": "stripe/008-4155bcd1dcda.json",
+        "commit": "4155bcd1dcda7fee265c14af22cb0cf9728ed70a",
+        "date": "2024-04-18T17:13:18Z",
+        "sha256": "83b05630ba53951f74c53be321bce3f81e82f15d7848a8a3ef170c1905d9a866",
+        "bytes": 6159234
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/008-4155bcd1dcda.json",
+        "commit": "4155bcd1dcda7fee265c14af22cb0cf9728ed70a",
+        "date": "2024-04-18T17:13:18Z",
+        "sha256": "83b05630ba53951f74c53be321bce3f81e82f15d7848a8a3ef170c1905d9a866",
+        "bytes": 6159234
+      },
+      "revision": {
+        "file": "stripe/009-db5819e3650b.json",
+        "commit": "db5819e3650bd3386de7cfe6c2ecd9500b882c82",
+        "date": "2024-04-18T18:15:52Z",
+        "sha256": "b93d28745648664dd8821539aba7d8770181b7b86dd6bb29f8aaf731a8101426",
+        "bytes": 6159309
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/009-db5819e3650b.json",
+        "commit": "db5819e3650bd3386de7cfe6c2ecd9500b882c82",
+        "date": "2024-04-18T18:15:52Z",
+        "sha256": "b93d28745648664dd8821539aba7d8770181b7b86dd6bb29f8aaf731a8101426",
+        "bytes": 6159309
+      },
+      "revision": {
+        "file": "stripe/010-35e48554efab.json",
+        "commit": "35e48554efab68000a77cdb3aa176725157550e8",
+        "date": "2024-04-19T17:25:21Z",
+        "sha256": "af5c6516efd9137705f41d773b4ff64f9e797db2634376eb3689f7773a592d4c",
+        "bytes": 6160809
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/010-35e48554efab.json",
+        "commit": "35e48554efab68000a77cdb3aa176725157550e8",
+        "date": "2024-04-19T17:25:21Z",
+        "sha256": "af5c6516efd9137705f41d773b4ff64f9e797db2634376eb3689f7773a592d4c",
+        "bytes": 6160809
+      },
+      "revision": {
+        "file": "stripe/011-675fdd79ee7c.json",
+        "commit": "675fdd79ee7cb05bd65a565931d4610b877150c2",
+        "date": "2024-04-19T23:13:03Z",
+        "sha256": "0599900ada1746dc99e1272e78a2f1fdb2e94075bd784961eef6c77fed33d556",
+        "bytes": 6161141
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/011-675fdd79ee7c.json",
+        "commit": "675fdd79ee7cb05bd65a565931d4610b877150c2",
+        "date": "2024-04-19T23:13:03Z",
+        "sha256": "0599900ada1746dc99e1272e78a2f1fdb2e94075bd784961eef6c77fed33d556",
+        "bytes": 6161141
+      },
+      "revision": {
+        "file": "stripe/012-664c6ac47231.json",
+        "commit": "664c6ac47231808fbc9ffb30902b9bb1f5f73a76",
+        "date": "2024-04-19T23:42:17Z",
+        "sha256": "ffdb2ccbbf1a477161fe883f1cba56e36a64f671aa942613cd61f9287f922e6c",
+        "bytes": 6162715
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/012-664c6ac47231.json",
+        "commit": "664c6ac47231808fbc9ffb30902b9bb1f5f73a76",
+        "date": "2024-04-19T23:42:17Z",
+        "sha256": "ffdb2ccbbf1a477161fe883f1cba56e36a64f671aa942613cd61f9287f922e6c",
+        "bytes": 6162715
+      },
+      "revision": {
+        "file": "stripe/013-d375605a6089.json",
+        "commit": "d375605a6089eed65e10f536463dea6f119a6685",
+        "date": "2024-04-22T16:03:28Z",
+        "sha256": "c97ee1994186c5c71160b74178541b1fe09a7913fc1299ee1c14405e561e5839",
+        "bytes": 6160070
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/013-d375605a6089.json",
+        "commit": "d375605a6089eed65e10f536463dea6f119a6685",
+        "date": "2024-04-22T16:03:28Z",
+        "sha256": "c97ee1994186c5c71160b74178541b1fe09a7913fc1299ee1c14405e561e5839",
+        "bytes": 6160070
+      },
+      "revision": {
+        "file": "stripe/014-2511fedbeeab.json",
+        "commit": "2511fedbeeabf09d9169627a4c491f8d2e45e777",
+        "date": "2024-04-22T17:27:00Z",
+        "sha256": "89631f461e8b2205f067034333ab03022c4d624ed37f6b9174b3a8ce4619ff9b",
+        "bytes": 6160007
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/014-2511fedbeeab.json",
+        "commit": "2511fedbeeabf09d9169627a4c491f8d2e45e777",
+        "date": "2024-04-22T17:27:00Z",
+        "sha256": "89631f461e8b2205f067034333ab03022c4d624ed37f6b9174b3a8ce4619ff9b",
+        "bytes": 6160007
+      },
+      "revision": {
+        "file": "stripe/015-855c1c2ebb88.json",
+        "commit": "855c1c2ebb8812653eba2a8afbe66340929affe3",
+        "date": "2024-04-22T22:14:21Z",
+        "sha256": "8e0f02c517355003a0f23742019070bcb14e4b9fbe57de1570c4162baeeac383",
+        "bytes": 6164447
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/015-855c1c2ebb88.json",
+        "commit": "855c1c2ebb8812653eba2a8afbe66340929affe3",
+        "date": "2024-04-22T22:14:21Z",
+        "sha256": "8e0f02c517355003a0f23742019070bcb14e4b9fbe57de1570c4162baeeac383",
+        "bytes": 6164447
+      },
+      "revision": {
+        "file": "stripe/016-35a32d43e470.json",
+        "commit": "35a32d43e4706e46261f4c5c6aaa95a075d96928",
+        "date": "2024-04-23T17:39:13Z",
+        "sha256": "3f629ec470dac50f5080ef96af6d001b852950ef342e953f597bbafc3adf703f",
+        "bytes": 6164906
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/016-35a32d43e470.json",
+        "commit": "35a32d43e4706e46261f4c5c6aaa95a075d96928",
+        "date": "2024-04-23T17:39:13Z",
+        "sha256": "3f629ec470dac50f5080ef96af6d001b852950ef342e953f597bbafc3adf703f",
+        "bytes": 6164906
+      },
+      "revision": {
+        "file": "stripe/017-7b749db4ecf6.json",
+        "commit": "7b749db4ecf6778fc6e80efac32067b6e35c4e98",
+        "date": "2024-04-23T18:44:59Z",
+        "sha256": "22c65bcf7f45f111d143c1ea24c3c5d435b35e8edc825f2b972e3733c04c3a44",
+        "bytes": 6164925
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/017-7b749db4ecf6.json",
+        "commit": "7b749db4ecf6778fc6e80efac32067b6e35c4e98",
+        "date": "2024-04-23T18:44:59Z",
+        "sha256": "22c65bcf7f45f111d143c1ea24c3c5d435b35e8edc825f2b972e3733c04c3a44",
+        "bytes": 6164925
+      },
+      "revision": {
+        "file": "stripe/018-efac38969ddf.json",
+        "commit": "efac38969ddf1f7eb98cbd5450fc2145184f9e4c",
+        "date": "2024-04-24T12:59:39Z",
+        "sha256": "9e29ca04bc4ae64f6e9c0b9ec1fb50ed2ede6ff6b5289dbdc6abdecbf58fa6b5",
+        "bytes": 6164943
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/018-efac38969ddf.json",
+        "commit": "efac38969ddf1f7eb98cbd5450fc2145184f9e4c",
+        "date": "2024-04-24T12:59:39Z",
+        "sha256": "9e29ca04bc4ae64f6e9c0b9ec1fb50ed2ede6ff6b5289dbdc6abdecbf58fa6b5",
+        "bytes": 6164943
+      },
+      "revision": {
+        "file": "stripe/019-ef29c531cb76.json",
+        "commit": "ef29c531cb76c8548efd46cad708ddd6e39a6316",
+        "date": "2024-04-24T16:35:01Z",
+        "sha256": "b8186f1d841db95772c8b3154790c68f34e88e8039af006bb519a7f38184a477",
+        "bytes": 6170871
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/019-ef29c531cb76.json",
+        "commit": "ef29c531cb76c8548efd46cad708ddd6e39a6316",
+        "date": "2024-04-24T16:35:01Z",
+        "sha256": "b8186f1d841db95772c8b3154790c68f34e88e8039af006bb519a7f38184a477",
+        "bytes": 6170871
+      },
+      "revision": {
+        "file": "stripe/020-5809d562ed55.json",
+        "commit": "5809d562ed55434d3fa6b3f2f6ac8d18a107eb08",
+        "date": "2024-04-24T18:21:45Z",
+        "sha256": "cfe9ce38fc1c30a62906808edffa44616b8a1cc03fa4fc54ff01d65c65535955",
+        "bytes": 6171193
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/020-5809d562ed55.json",
+        "commit": "5809d562ed55434d3fa6b3f2f6ac8d18a107eb08",
+        "date": "2024-04-24T18:21:45Z",
+        "sha256": "cfe9ce38fc1c30a62906808edffa44616b8a1cc03fa4fc54ff01d65c65535955",
+        "bytes": 6171193
+      },
+      "revision": {
+        "file": "stripe/021-0ae3306207f0.json",
+        "commit": "0ae3306207f09791f1ba135035620c6de9da652f",
+        "date": "2024-04-24T21:56:28Z",
+        "sha256": "beb0a5b9cfd7010a8a4b846a53464b63f2770e773f3cf71c452f6bb9df36bfad",
+        "bytes": 6171209
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/021-0ae3306207f0.json",
+        "commit": "0ae3306207f09791f1ba135035620c6de9da652f",
+        "date": "2024-04-24T21:56:28Z",
+        "sha256": "beb0a5b9cfd7010a8a4b846a53464b63f2770e773f3cf71c452f6bb9df36bfad",
+        "bytes": 6171209
+      },
+      "revision": {
+        "file": "stripe/022-a2b558159121.json",
+        "commit": "a2b558159121084bb0ad8be681c280a7b61f69f9",
+        "date": "2024-04-25T00:05:40Z",
+        "sha256": "e1f6af2f43131c47dfedecf85068bfdce7b0cefc22802723bf698a1f7e39d08f",
+        "bytes": 6171331
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/022-a2b558159121.json",
+        "commit": "a2b558159121084bb0ad8be681c280a7b61f69f9",
+        "date": "2024-04-25T00:05:40Z",
+        "sha256": "e1f6af2f43131c47dfedecf85068bfdce7b0cefc22802723bf698a1f7e39d08f",
+        "bytes": 6171331
+      },
+      "revision": {
+        "file": "stripe/023-3650b77f7b87.json",
+        "commit": "3650b77f7b8722cf072f418727bba1737c50e275",
+        "date": "2024-04-25T01:10:08Z",
+        "sha256": "883531f83acbd51dde1bc9f929313c1569a17b98443f85f4cf7a4554279e5df9",
+        "bytes": 6171355
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/023-3650b77f7b87.json",
+        "commit": "3650b77f7b8722cf072f418727bba1737c50e275",
+        "date": "2024-04-25T01:10:08Z",
+        "sha256": "883531f83acbd51dde1bc9f929313c1569a17b98443f85f4cf7a4554279e5df9",
+        "bytes": 6171355
+      },
+      "revision": {
+        "file": "stripe/024-fb0a979d6822.json",
+        "commit": "fb0a979d6822794668c82e53a80f7ee3ad0c1a60",
+        "date": "2024-04-25T18:19:34Z",
+        "sha256": "11a90e34a56bdb9fe0190b5cbc7d0c983c0a1e73b08dbeb6b0a2e5fa2dd87034",
+        "bytes": 6174056
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/024-fb0a979d6822.json",
+        "commit": "fb0a979d6822794668c82e53a80f7ee3ad0c1a60",
+        "date": "2024-04-25T18:19:34Z",
+        "sha256": "11a90e34a56bdb9fe0190b5cbc7d0c983c0a1e73b08dbeb6b0a2e5fa2dd87034",
+        "bytes": 6174056
+      },
+      "revision": {
+        "file": "stripe/025-33d742be43ed.json",
+        "commit": "33d742be43edbbbb4eeec1d73b531d5d43e0af97",
+        "date": "2024-04-26T10:37:02Z",
+        "sha256": "07f898244645d3b6ad9dcab12f8bc7782a1e4bcea22989331d69a42d774ec0f4",
+        "bytes": 6178851
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/025-33d742be43ed.json",
+        "commit": "33d742be43edbbbb4eeec1d73b531d5d43e0af97",
+        "date": "2024-04-26T10:37:02Z",
+        "sha256": "07f898244645d3b6ad9dcab12f8bc7782a1e4bcea22989331d69a42d774ec0f4",
+        "bytes": 6178851
+      },
+      "revision": {
+        "file": "stripe/026-bf4837c4be7e.json",
+        "commit": "bf4837c4be7e14c6e15f68796adda52b1c8cfc48",
+        "date": "2024-04-26T15:41:28Z",
+        "sha256": "cc3a13cd712f89d9f4ed6265fbdd842dcc9ed437c2c2335de857c7ad3e9d07f1",
+        "bytes": 6179213
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/026-bf4837c4be7e.json",
+        "commit": "bf4837c4be7e14c6e15f68796adda52b1c8cfc48",
+        "date": "2024-04-26T15:41:28Z",
+        "sha256": "cc3a13cd712f89d9f4ed6265fbdd842dcc9ed437c2c2335de857c7ad3e9d07f1",
+        "bytes": 6179213
+      },
+      "revision": {
+        "file": "stripe/027-b0491b0b453a.json",
+        "commit": "b0491b0b453a0722b2fad74be672e1b0764f6e2f",
+        "date": "2024-04-26T16:53:37Z",
+        "sha256": "d07fd8ca2c7ee17858f7d38f0137792c5e13a505a5d5bc8ce4cef4a11bdd1e61",
+        "bytes": 6179370
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/027-b0491b0b453a.json",
+        "commit": "b0491b0b453a0722b2fad74be672e1b0764f6e2f",
+        "date": "2024-04-26T16:53:37Z",
+        "sha256": "d07fd8ca2c7ee17858f7d38f0137792c5e13a505a5d5bc8ce4cef4a11bdd1e61",
+        "bytes": 6179370
+      },
+      "revision": {
+        "file": "stripe/028-f513366b6b96.json",
+        "commit": "f513366b6b96ec728bc66375df8dbb114e3d1e5a",
+        "date": "2024-04-29T18:22:47Z",
+        "sha256": "33e0c591ec763d282a26af94e1145f9b6f13761fb387aed75f3341e6b2715664",
+        "bytes": 6173724
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/028-f513366b6b96.json",
+        "commit": "f513366b6b96ec728bc66375df8dbb114e3d1e5a",
+        "date": "2024-04-29T18:22:47Z",
+        "sha256": "33e0c591ec763d282a26af94e1145f9b6f13761fb387aed75f3341e6b2715664",
+        "bytes": 6173724
+      },
+      "revision": {
+        "file": "stripe/029-8e1bc8818e2b.json",
+        "commit": "8e1bc8818e2bcf524ae6d59cec5c58f499830c90",
+        "date": "2024-04-30T17:37:39Z",
+        "sha256": "5cbf654190b18f629837457167fec7a010008dec82d594a6e88ea15147a01cdd",
+        "bytes": 6173776
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/029-8e1bc8818e2b.json",
+        "commit": "8e1bc8818e2bcf524ae6d59cec5c58f499830c90",
+        "date": "2024-04-30T17:37:39Z",
+        "sha256": "5cbf654190b18f629837457167fec7a010008dec82d594a6e88ea15147a01cdd",
+        "bytes": 6173776
+      },
+      "revision": {
+        "file": "stripe/030-5a4948f39925.json",
+        "commit": "5a4948f39925a22468ad4d4b617d5247f39bad30",
+        "date": "2024-04-30T21:44:46Z",
+        "sha256": "7260cb83cfa538da791b76e629424438dcfc5793799e9953029ff53a9f748c35",
+        "bytes": 6174287
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/030-5a4948f39925.json",
+        "commit": "5a4948f39925a22468ad4d4b617d5247f39bad30",
+        "date": "2024-04-30T21:44:46Z",
+        "sha256": "7260cb83cfa538da791b76e629424438dcfc5793799e9953029ff53a9f748c35",
+        "bytes": 6174287
+      },
+      "revision": {
+        "file": "stripe/031-00515cc65569.json",
+        "commit": "00515cc655697f385a1cc40960d64a728bbc4695",
+        "date": "2024-05-01T15:52:17Z",
+        "sha256": "14a8ec93880588570d22dff28afd4d4f1ce0fcee1f465e8a2797c7f7f47bf912",
+        "bytes": 6179038
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/031-00515cc65569.json",
+        "commit": "00515cc655697f385a1cc40960d64a728bbc4695",
+        "date": "2024-05-01T15:52:17Z",
+        "sha256": "14a8ec93880588570d22dff28afd4d4f1ce0fcee1f465e8a2797c7f7f47bf912",
+        "bytes": 6179038
+      },
+      "revision": {
+        "file": "stripe/032-cf807e2323af.json",
+        "commit": "cf807e2323af284470546be5c196c49b7c5a351d",
+        "date": "2024-05-01T19:12:00Z",
+        "sha256": "393bd303ec72a38ade094be3d06d3577102f51c1219020dc276d276d7ea73bba",
+        "bytes": 6178881
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/032-cf807e2323af.json",
+        "commit": "cf807e2323af284470546be5c196c49b7c5a351d",
+        "date": "2024-05-01T19:12:00Z",
+        "sha256": "393bd303ec72a38ade094be3d06d3577102f51c1219020dc276d276d7ea73bba",
+        "bytes": 6178881
+      },
+      "revision": {
+        "file": "stripe/033-4e334fdc857c.json",
+        "commit": "4e334fdc857c597ec98685c18dd7e1aaa66dcdef",
+        "date": "2024-05-02T15:45:55Z",
+        "sha256": "7995ee47a280d4df8876b75435ab63361151eb769eabc2fb9026c2d8710a28d9",
+        "bytes": 6179624
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/033-4e334fdc857c.json",
+        "commit": "4e334fdc857c597ec98685c18dd7e1aaa66dcdef",
+        "date": "2024-05-02T15:45:55Z",
+        "sha256": "7995ee47a280d4df8876b75435ab63361151eb769eabc2fb9026c2d8710a28d9",
+        "bytes": 6179624
+      },
+      "revision": {
+        "file": "stripe/034-d228ba90ba26.json",
+        "commit": "d228ba90ba2639d1d37fcf4a6d119da81e17a1ce",
+        "date": "2024-05-02T15:50:37Z",
+        "sha256": "80dc0fbab34a0177b9d8d0ac463eff55d0d6f600f6434dfa44cf96c654e15728",
+        "bytes": 6179921
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/034-d228ba90ba26.json",
+        "commit": "d228ba90ba2639d1d37fcf4a6d119da81e17a1ce",
+        "date": "2024-05-02T15:50:37Z",
+        "sha256": "80dc0fbab34a0177b9d8d0ac463eff55d0d6f600f6434dfa44cf96c654e15728",
+        "bytes": 6179921
+      },
+      "revision": {
+        "file": "stripe/035-2dc00110e3ed.json",
+        "commit": "2dc00110e3eddf649152499ad366b5e785fc86aa",
+        "date": "2024-05-03T23:36:05Z",
+        "sha256": "1f3c6a8de67661a463ad48d904a62d1cd4c812a7a1048493228445229cba9acf",
+        "bytes": 6179843
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/035-2dc00110e3ed.json",
+        "commit": "2dc00110e3eddf649152499ad366b5e785fc86aa",
+        "date": "2024-05-03T23:36:05Z",
+        "sha256": "1f3c6a8de67661a463ad48d904a62d1cd4c812a7a1048493228445229cba9acf",
+        "bytes": 6179843
+      },
+      "revision": {
+        "file": "stripe/036-dce6c4bbd3cf.json",
+        "commit": "dce6c4bbd3cf10a680328da255baf93badcf33f1",
+        "date": "2024-05-06T20:13:39Z",
+        "sha256": "06518f16d3cabd1f70af0b3742511c1958943643dc17af4db41e02f588de5239",
+        "bytes": 6193452
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/036-dce6c4bbd3cf.json",
+        "commit": "dce6c4bbd3cf10a680328da255baf93badcf33f1",
+        "date": "2024-05-06T20:13:39Z",
+        "sha256": "06518f16d3cabd1f70af0b3742511c1958943643dc17af4db41e02f588de5239",
+        "bytes": 6193452
+      },
+      "revision": {
+        "file": "stripe/037-724b87bbae5e.json",
+        "commit": "724b87bbae5e8b500f109b2337650e3f8c6dedd1",
+        "date": "2024-05-06T20:29:32Z",
+        "sha256": "958b5cf750b4781ebe2803b76cca9c4db57676edc1b81e9b58b049a4970a8889",
+        "bytes": 6194492
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/037-724b87bbae5e.json",
+        "commit": "724b87bbae5e8b500f109b2337650e3f8c6dedd1",
+        "date": "2024-05-06T20:29:32Z",
+        "sha256": "958b5cf750b4781ebe2803b76cca9c4db57676edc1b81e9b58b049a4970a8889",
+        "bytes": 6194492
+      },
+      "revision": {
+        "file": "stripe/038-026c8bcf6689.json",
+        "commit": "026c8bcf6689ce4f6be4f2f803e2a3f74396e3b6",
+        "date": "2024-05-07T17:24:34Z",
+        "sha256": "0cf5a1f59c9b5636c89cc0b83a6f4b5f4f37e4611e8cd7f9aaba9b1f6231b91e",
+        "bytes": 6195294
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/038-026c8bcf6689.json",
+        "commit": "026c8bcf6689ce4f6be4f2f803e2a3f74396e3b6",
+        "date": "2024-05-07T17:24:34Z",
+        "sha256": "0cf5a1f59c9b5636c89cc0b83a6f4b5f4f37e4611e8cd7f9aaba9b1f6231b91e",
+        "bytes": 6195294
+      },
+      "revision": {
+        "file": "stripe/039-8153ea81c8dc.json",
+        "commit": "8153ea81c8dc5ecebdd371e9a0344889a2b4d0b5",
+        "date": "2024-05-07T18:50:59Z",
+        "sha256": "05af13e04597cf2c1f54a5a10cd082ed76da1fbef4e0efc7a92949619c439ecf",
+        "bytes": 6195425
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/039-8153ea81c8dc.json",
+        "commit": "8153ea81c8dc5ecebdd371e9a0344889a2b4d0b5",
+        "date": "2024-05-07T18:50:59Z",
+        "sha256": "05af13e04597cf2c1f54a5a10cd082ed76da1fbef4e0efc7a92949619c439ecf",
+        "bytes": 6195425
+      },
+      "revision": {
+        "file": "stripe/040-c5d37000bab5.json",
+        "commit": "c5d37000bab5113ee36bab0ed810d962cdc35584",
+        "date": "2024-05-08T00:50:40Z",
+        "sha256": "89db133216d37ca6ae0852953c32c628b36aeb3e4b5db3155dc28bd0dffffa6e",
+        "bytes": 6195417
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/040-c5d37000bab5.json",
+        "commit": "c5d37000bab5113ee36bab0ed810d962cdc35584",
+        "date": "2024-05-08T00:50:40Z",
+        "sha256": "89db133216d37ca6ae0852953c32c628b36aeb3e4b5db3155dc28bd0dffffa6e",
+        "bytes": 6195417
+      },
+      "revision": {
+        "file": "stripe/041-beefe241cf8b.json",
+        "commit": "beefe241cf8b1ff6e073d1897e0434bf209607f0",
+        "date": "2024-05-08T20:59:28Z",
+        "sha256": "e984ffc189091ea13e3f9ece556f861f42af5ce4ecb32052e669465e782b8c76",
+        "bytes": 6196667
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/041-beefe241cf8b.json",
+        "commit": "beefe241cf8b1ff6e073d1897e0434bf209607f0",
+        "date": "2024-05-08T20:59:28Z",
+        "sha256": "e984ffc189091ea13e3f9ece556f861f42af5ce4ecb32052e669465e782b8c76",
+        "bytes": 6196667
+      },
+      "revision": {
+        "file": "stripe/042-2c79185aa99d.json",
+        "commit": "2c79185aa99d0f9c05973523754341674d1ced8d",
+        "date": "2024-05-09T14:04:12Z",
+        "sha256": "49ab8a2681bde8fbb5cbde8250226579b05109cd513c8b29956a21b6ddd9534f",
+        "bytes": 6196659
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/042-2c79185aa99d.json",
+        "commit": "2c79185aa99d0f9c05973523754341674d1ced8d",
+        "date": "2024-05-09T14:04:12Z",
+        "sha256": "49ab8a2681bde8fbb5cbde8250226579b05109cd513c8b29956a21b6ddd9534f",
+        "bytes": 6196659
+      },
+      "revision": {
+        "file": "stripe/043-a2500ad1f0f8.json",
+        "commit": "a2500ad1f0f8198cc492abb8d3927a657dfa9cb7",
+        "date": "2024-05-09T17:54:25Z",
+        "sha256": "e7ca422e9778bf897d944529161114fb2d048832a3137440849c7b93e4175713",
+        "bytes": 6196680
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/043-a2500ad1f0f8.json",
+        "commit": "a2500ad1f0f8198cc492abb8d3927a657dfa9cb7",
+        "date": "2024-05-09T17:54:25Z",
+        "sha256": "e7ca422e9778bf897d944529161114fb2d048832a3137440849c7b93e4175713",
+        "bytes": 6196680
+      },
+      "revision": {
+        "file": "stripe/044-7de8118fd3fa.json",
+        "commit": "7de8118fd3faed533020444e96e8e18ef596e5d6",
+        "date": "2024-05-09T19:11:10Z",
+        "sha256": "f629109674be606642f6771db6b06ec57530bf3d4f91ff00bfc51db41a21f550",
+        "bytes": 6195878
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/044-7de8118fd3fa.json",
+        "commit": "7de8118fd3faed533020444e96e8e18ef596e5d6",
+        "date": "2024-05-09T19:11:10Z",
+        "sha256": "f629109674be606642f6771db6b06ec57530bf3d4f91ff00bfc51db41a21f550",
+        "bytes": 6195878
+      },
+      "revision": {
+        "file": "stripe/045-decfc3314a69.json",
+        "commit": "decfc3314a697d434588446423a3af8440be0cf0",
+        "date": "2024-05-09T19:59:41Z",
+        "sha256": "2d8e9ea2c983e9c03af12ae3487786ac3a4fb5f6ef1274d823d9601005a5142e",
+        "bytes": 6195696
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/045-decfc3314a69.json",
+        "commit": "decfc3314a697d434588446423a3af8440be0cf0",
+        "date": "2024-05-09T19:59:41Z",
+        "sha256": "2d8e9ea2c983e9c03af12ae3487786ac3a4fb5f6ef1274d823d9601005a5142e",
+        "bytes": 6195696
+      },
+      "revision": {
+        "file": "stripe/046-b292197fa5b6.json",
+        "commit": "b292197fa5b67363a1531c535f6d9fbb2014e2be",
+        "date": "2024-05-09T22:40:54Z",
+        "sha256": "923b3f0b70ca1a54d037a1b1c904698466789f40b306320e5623147f4d806d7d",
+        "bytes": 6201228
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/046-b292197fa5b6.json",
+        "commit": "b292197fa5b67363a1531c535f6d9fbb2014e2be",
+        "date": "2024-05-09T22:40:54Z",
+        "sha256": "923b3f0b70ca1a54d037a1b1c904698466789f40b306320e5623147f4d806d7d",
+        "bytes": 6201228
+      },
+      "revision": {
+        "file": "stripe/047-d17d69de476b.json",
+        "commit": "d17d69de476b2038e97d9b4967b4813b588b6a2a",
+        "date": "2024-05-10T15:53:12Z",
+        "sha256": "a1547f2a19cd1a5e45581fff955b5bf539e08e573b3811c15f670f59a459dfbc",
+        "bytes": 6201521
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/047-d17d69de476b.json",
+        "commit": "d17d69de476b2038e97d9b4967b4813b588b6a2a",
+        "date": "2024-05-10T15:53:12Z",
+        "sha256": "a1547f2a19cd1a5e45581fff955b5bf539e08e573b3811c15f670f59a459dfbc",
+        "bytes": 6201521
+      },
+      "revision": {
+        "file": "stripe/048-b755cd0a3272.json",
+        "commit": "b755cd0a3272eb6f3eb4c5c0b357f1dee6097284",
+        "date": "2024-05-10T21:23:15Z",
+        "sha256": "541ce9149925b9489b46a31bed33cf9baad5e99479070bd5b9d5b8a344e32c82",
+        "bytes": 6202197
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/048-b755cd0a3272.json",
+        "commit": "b755cd0a3272eb6f3eb4c5c0b357f1dee6097284",
+        "date": "2024-05-10T21:23:15Z",
+        "sha256": "541ce9149925b9489b46a31bed33cf9baad5e99479070bd5b9d5b8a344e32c82",
+        "bytes": 6202197
+      },
+      "revision": {
+        "file": "stripe/049-dd3a380ab7cb.json",
+        "commit": "dd3a380ab7cbdb2b869b7c70e8000c94044b1842",
+        "date": "2024-05-13T18:28:54Z",
+        "sha256": "d1ec81f8017c33adf5dc9f4d25d9fb2d9069521dc7280988ed73812dafdfa7bd",
+        "bytes": 6223068
+      }
+    },
+    {
+      "source": "stripe",
+      "base": {
+        "file": "stripe/049-dd3a380ab7cb.json",
+        "commit": "dd3a380ab7cbdb2b869b7c70e8000c94044b1842",
+        "date": "2024-05-13T18:28:54Z",
+        "sha256": "d1ec81f8017c33adf5dc9f4d25d9fb2d9069521dc7280988ed73812dafdfa7bd",
+        "bytes": 6223068
+      },
+      "revision": {
+        "file": "stripe/050-a13e5211fc74.json",
+        "commit": "a13e5211fc74a557ec97e564e3d6eb205c05a072",
+        "date": "2024-05-13T18:34:00Z",
+        "sha256": "541ce9149925b9489b46a31bed33cf9baad5e99479070bd5b9d5b8a344e32c82",
+        "bytes": 6202197
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/000-9848500c1f03.json",
+        "commit": "9848500c1f03975ed01d7d7de0d156ccdfaf2493",
+        "date": "2024-08-13T09:36:37-07:00",
+        "sha256": "5e5a8fc9e5ebe59aab5c58569fb059734831d861a752cbd4044cc3b539904a5a",
+        "bytes": 10848750
+      },
+      "revision": {
+        "file": "github/001-f43ca418b3b9.json",
+        "commit": "f43ca418b3b9d6887c19f133286dea7f2393d0b4",
+        "date": "2024-08-15T10:35:02-07:00",
+        "sha256": "8da71930ba7d763293e081a6d480b63de3035ae625e5c75bcf91a1c28b1dadf7",
+        "bytes": 10848832
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/001-f43ca418b3b9.json",
+        "commit": "f43ca418b3b9d6887c19f133286dea7f2393d0b4",
+        "date": "2024-08-15T10:35:02-07:00",
+        "sha256": "8da71930ba7d763293e081a6d480b63de3035ae625e5c75bcf91a1c28b1dadf7",
+        "bytes": 10848832
+      },
+      "revision": {
+        "file": "github/002-996716b2184e.json",
+        "commit": "996716b2184e820957eb4148619a93e23a7e5599",
+        "date": "2024-08-16T06:04:25-07:00",
+        "sha256": "d086af13e0870ea5b06d5da6f13488fcce29e98f240a7c55d2e414b596937b8f",
+        "bytes": 10853159
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/002-996716b2184e.json",
+        "commit": "996716b2184e820957eb4148619a93e23a7e5599",
+        "date": "2024-08-16T06:04:25-07:00",
+        "sha256": "d086af13e0870ea5b06d5da6f13488fcce29e98f240a7c55d2e414b596937b8f",
+        "bytes": 10853159
+      },
+      "revision": {
+        "file": "github/003-b384a45cab10.json",
+        "commit": "b384a45cab10b248436cc8f2e3a7e69cf69a1492",
+        "date": "2024-08-19T05:04:30-07:00",
+        "sha256": "54ede6dc47d697d223b2c5d0c79020b0eff7ded164407c8137b2c5ff33a5a3de",
+        "bytes": 10854095
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/003-b384a45cab10.json",
+        "commit": "b384a45cab10b248436cc8f2e3a7e69cf69a1492",
+        "date": "2024-08-19T05:04:30-07:00",
+        "sha256": "54ede6dc47d697d223b2c5d0c79020b0eff7ded164407c8137b2c5ff33a5a3de",
+        "bytes": 10854095
+      },
+      "revision": {
+        "file": "github/004-d3b0e7f40fff.json",
+        "commit": "d3b0e7f40fffd7ee8203d420b17e3b8da8964fdf",
+        "date": "2024-08-20T15:05:11-07:00",
+        "sha256": "9e2a2cbb81d2fc5b25227f6afa811cad4cc25cc8f89394988c353beae801637c",
+        "bytes": 10856158
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/004-d3b0e7f40fff.json",
+        "commit": "d3b0e7f40fffd7ee8203d420b17e3b8da8964fdf",
+        "date": "2024-08-20T15:05:11-07:00",
+        "sha256": "9e2a2cbb81d2fc5b25227f6afa811cad4cc25cc8f89394988c353beae801637c",
+        "bytes": 10856158
+      },
+      "revision": {
+        "file": "github/005-d80d0ea7f2f3.json",
+        "commit": "d80d0ea7f2f32e7776980c9a3abef965cd575864",
+        "date": "2024-08-26T18:04:27-07:00",
+        "sha256": "f385f78ead42f1ed5d22ae527d7f98334defa4d8cfafbaee6067354f4b6a66eb",
+        "bytes": 10875075
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/005-d80d0ea7f2f3.json",
+        "commit": "d80d0ea7f2f32e7776980c9a3abef965cd575864",
+        "date": "2024-08-26T18:04:27-07:00",
+        "sha256": "f385f78ead42f1ed5d22ae527d7f98334defa4d8cfafbaee6067354f4b6a66eb",
+        "bytes": 10875075
+      },
+      "revision": {
+        "file": "github/006-d9fba795e3d2.json",
+        "commit": "d9fba795e3d23899b6a80495b5759047ca0911b5",
+        "date": "2024-08-30T14:04:29-07:00",
+        "sha256": "e74562604d58ac6f9f40a8dfbfe96df803f8340914734aef53cdb24519243acb",
+        "bytes": 10875113
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/006-d9fba795e3d2.json",
+        "commit": "d9fba795e3d23899b6a80495b5759047ca0911b5",
+        "date": "2024-08-30T14:04:29-07:00",
+        "sha256": "e74562604d58ac6f9f40a8dfbfe96df803f8340914734aef53cdb24519243acb",
+        "bytes": 10875113
+      },
+      "revision": {
+        "file": "github/007-f645703d2aed.json",
+        "commit": "f645703d2aedd2b05048b6fd62e56ef365197cd1",
+        "date": "2024-09-04T06:35:45-07:00",
+        "sha256": "ad137724841c1922cb808e06738d7d699ab99c09a0197b6cb3ef5dd3f109bb69",
+        "bytes": 10875111
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/007-f645703d2aed.json",
+        "commit": "f645703d2aedd2b05048b6fd62e56ef365197cd1",
+        "date": "2024-09-04T06:35:45-07:00",
+        "sha256": "ad137724841c1922cb808e06738d7d699ab99c09a0197b6cb3ef5dd3f109bb69",
+        "bytes": 10875111
+      },
+      "revision": {
+        "file": "github/008-a506eabf317d.json",
+        "commit": "a506eabf317d04d81765273b9c53fc9ee927cb13",
+        "date": "2024-09-04T10:05:03-07:00",
+        "sha256": "44718d31181dd8054f86758970d4f1ba27bf5dcf40d7cc0ec71f0b34370084cd",
+        "bytes": 10875097
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/008-a506eabf317d.json",
+        "commit": "a506eabf317d04d81765273b9c53fc9ee927cb13",
+        "date": "2024-09-04T10:05:03-07:00",
+        "sha256": "44718d31181dd8054f86758970d4f1ba27bf5dcf40d7cc0ec71f0b34370084cd",
+        "bytes": 10875097
+      },
+      "revision": {
+        "file": "github/009-8ad34a0b04c9.json",
+        "commit": "8ad34a0b04c9417f3adcb72f6c3ab7deec1d6944",
+        "date": "2024-09-05T05:36:13-07:00",
+        "sha256": "53d010d2039d09604d35a098bec136c33296bf1ebd2ac6ea00308908723ad537",
+        "bytes": 10875089
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/009-8ad34a0b04c9.json",
+        "commit": "8ad34a0b04c9417f3adcb72f6c3ab7deec1d6944",
+        "date": "2024-09-05T05:36:13-07:00",
+        "sha256": "53d010d2039d09604d35a098bec136c33296bf1ebd2ac6ea00308908723ad537",
+        "bytes": 10875089
+      },
+      "revision": {
+        "file": "github/010-8e6057d10944.json",
+        "commit": "8e6057d10944a3f818ee8a6870d855f63fef4bee",
+        "date": "2024-09-06T19:35:14-07:00",
+        "sha256": "52593b07098863db56d62c7e1190a3e88bf93af8caf092e685cc62ebbc1afd97",
+        "bytes": 10876176
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/010-8e6057d10944.json",
+        "commit": "8e6057d10944a3f818ee8a6870d855f63fef4bee",
+        "date": "2024-09-06T19:35:14-07:00",
+        "sha256": "52593b07098863db56d62c7e1190a3e88bf93af8caf092e685cc62ebbc1afd97",
+        "bytes": 10876176
+      },
+      "revision": {
+        "file": "github/011-75aed0da97e8.json",
+        "commit": "75aed0da97e8290a89191e7e774290febb77f6cd",
+        "date": "2024-09-09T02:06:17-07:00",
+        "sha256": "fecc82c086908edaf2b6c6a65d517c356a176c26a2b43ea0e5915329c35894d7",
+        "bytes": 10876714
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/011-75aed0da97e8.json",
+        "commit": "75aed0da97e8290a89191e7e774290febb77f6cd",
+        "date": "2024-09-09T02:06:17-07:00",
+        "sha256": "fecc82c086908edaf2b6c6a65d517c356a176c26a2b43ea0e5915329c35894d7",
+        "bytes": 10876714
+      },
+      "revision": {
+        "file": "github/012-6e8a8518e2e2.json",
+        "commit": "6e8a8518e2e26f7cf126f00f3aeb4054765020e2",
+        "date": "2024-09-11T03:37:08-07:00",
+        "sha256": "df5e9e742234ccdba33c7666c7fddcbb6e86d190fc4c82908abd57a1afc740e1",
+        "bytes": 10876067
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/012-6e8a8518e2e2.json",
+        "commit": "6e8a8518e2e26f7cf126f00f3aeb4054765020e2",
+        "date": "2024-09-11T03:37:08-07:00",
+        "sha256": "df5e9e742234ccdba33c7666c7fddcbb6e86d190fc4c82908abd57a1afc740e1",
+        "bytes": 10876067
+      },
+      "revision": {
+        "file": "github/013-5237a2c29ac6.json",
+        "commit": "5237a2c29ac684b90d879841ea417712e44e009c",
+        "date": "2024-09-11T21:35:24-07:00",
+        "sha256": "288f43905ed560220a1a189dbe3c872ae2b7d04689cd0a18bfdecc6dcb0e75fc",
+        "bytes": 10876096
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/013-5237a2c29ac6.json",
+        "commit": "5237a2c29ac684b90d879841ea417712e44e009c",
+        "date": "2024-09-11T21:35:24-07:00",
+        "sha256": "288f43905ed560220a1a189dbe3c872ae2b7d04689cd0a18bfdecc6dcb0e75fc",
+        "bytes": 10876096
+      },
+      "revision": {
+        "file": "github/014-20b403e69b2c.json",
+        "commit": "20b403e69b2c0f33937f2da882a878587321357f",
+        "date": "2024-09-13T16:34:46-07:00",
+        "sha256": "95575d8f76c573aef8e9e739335ea2382082e9678da9aea0fb5bd071a8b82f13",
+        "bytes": 10882327
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/014-20b403e69b2c.json",
+        "commit": "20b403e69b2c0f33937f2da882a878587321357f",
+        "date": "2024-09-13T16:34:46-07:00",
+        "sha256": "95575d8f76c573aef8e9e739335ea2382082e9678da9aea0fb5bd071a8b82f13",
+        "bytes": 10882327
+      },
+      "revision": {
+        "file": "github/015-44885880e3cd.json",
+        "commit": "44885880e3cd73537a92190a29db22f2fcd182c1",
+        "date": "2024-09-16T09:37:43-07:00",
+        "sha256": "5d185798fe1d7c3c1b5178566637da34b40fb3dc9c5e2e45b7723feb6f28c549",
+        "bytes": 10882529
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/015-44885880e3cd.json",
+        "commit": "44885880e3cd73537a92190a29db22f2fcd182c1",
+        "date": "2024-09-16T09:37:43-07:00",
+        "sha256": "5d185798fe1d7c3c1b5178566637da34b40fb3dc9c5e2e45b7723feb6f28c549",
+        "bytes": 10882529
+      },
+      "revision": {
+        "file": "github/016-b50b528f3988.json",
+        "commit": "b50b528f3988aacf5b26ca84c1e1b2fd18316324",
+        "date": "2024-09-16T13:35:25-07:00",
+        "sha256": "4a06cd01df23c824037689779eb1e1a83d9ffb87773c0b591243f8e51984f316",
+        "bytes": 10882529
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/016-b50b528f3988.json",
+        "commit": "b50b528f3988aacf5b26ca84c1e1b2fd18316324",
+        "date": "2024-09-16T13:35:25-07:00",
+        "sha256": "4a06cd01df23c824037689779eb1e1a83d9ffb87773c0b591243f8e51984f316",
+        "bytes": 10882529
+      },
+      "revision": {
+        "file": "github/017-1020cb003cf3.json",
+        "commit": "1020cb003cf377018ddb37ff3a1e6580f92f40a2",
+        "date": "2024-09-17T08:37:46-07:00",
+        "sha256": "2853e01934dd0747cb713d07f97d623151bcf5bd927395320df625cbb267e0a2",
+        "bytes": 10882726
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/017-1020cb003cf3.json",
+        "commit": "1020cb003cf377018ddb37ff3a1e6580f92f40a2",
+        "date": "2024-09-17T08:37:46-07:00",
+        "sha256": "2853e01934dd0747cb713d07f97d623151bcf5bd927395320df625cbb267e0a2",
+        "bytes": 10882726
+      },
+      "revision": {
+        "file": "github/018-e70dd0d0d43a.json",
+        "commit": "e70dd0d0d43a430ed976fe0056a0a8b4f7fedcae",
+        "date": "2024-09-17T15:05:38-07:00",
+        "sha256": "40d288ee0cb41783c1deb34f9f58c9215c585364a204920e52afce0734def544",
+        "bytes": 10883112
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/018-e70dd0d0d43a.json",
+        "commit": "e70dd0d0d43a430ed976fe0056a0a8b4f7fedcae",
+        "date": "2024-09-17T15:05:38-07:00",
+        "sha256": "40d288ee0cb41783c1deb34f9f58c9215c585364a204920e52afce0734def544",
+        "bytes": 10883112
+      },
+      "revision": {
+        "file": "github/019-129d610a96aa.json",
+        "commit": "129d610a96aaa0eb10627a3a8078708997d4512b",
+        "date": "2024-09-17T17:07:26-07:00",
+        "sha256": "6bf34654102ede84c3ad27bacf1bdae1e306acc59034959cb4c216fa4abbfb8a",
+        "bytes": 10883137
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/019-129d610a96aa.json",
+        "commit": "129d610a96aaa0eb10627a3a8078708997d4512b",
+        "date": "2024-09-17T17:07:26-07:00",
+        "sha256": "6bf34654102ede84c3ad27bacf1bdae1e306acc59034959cb4c216fa4abbfb8a",
+        "bytes": 10883137
+      },
+      "revision": {
+        "file": "github/020-ae492d449da9.json",
+        "commit": "ae492d449da9e9fd8830e7d8cc4736669ce91593",
+        "date": "2024-09-23T03:37:35-07:00",
+        "sha256": "dcaa6caf0baaad45903a381ad7962b62a311e0a50a20f67539187b76afe06ad3",
+        "bytes": 10883120
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/020-ae492d449da9.json",
+        "commit": "ae492d449da9e9fd8830e7d8cc4736669ce91593",
+        "date": "2024-09-23T03:37:35-07:00",
+        "sha256": "dcaa6caf0baaad45903a381ad7962b62a311e0a50a20f67539187b76afe06ad3",
+        "bytes": 10883120
+      },
+      "revision": {
+        "file": "github/021-b7a2bcaf7d49.json",
+        "commit": "b7a2bcaf7d49ff06a44f94b8a625764f0d26482d",
+        "date": "2024-09-25T17:06:35-07:00",
+        "sha256": "91940d03f2fb0b6b354224115fac9094d40c396001498a0ed4f09e24845cf3fc",
+        "bytes": 10883256
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/021-b7a2bcaf7d49.json",
+        "commit": "b7a2bcaf7d49ff06a44f94b8a625764f0d26482d",
+        "date": "2024-09-25T17:06:35-07:00",
+        "sha256": "91940d03f2fb0b6b354224115fac9094d40c396001498a0ed4f09e24845cf3fc",
+        "bytes": 10883256
+      },
+      "revision": {
+        "file": "github/022-9410e8cd11e8.json",
+        "commit": "9410e8cd11e8eef2b040c0eda014e9c203b66bf3",
+        "date": "2024-09-26T11:07:37-07:00",
+        "sha256": "2af2532cede3a5f7efcc69513e5a1416dc9ba6635da5b8225cbdc39ed4cf1ff0",
+        "bytes": 10883666
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/022-9410e8cd11e8.json",
+        "commit": "9410e8cd11e8eef2b040c0eda014e9c203b66bf3",
+        "date": "2024-09-26T11:07:37-07:00",
+        "sha256": "2af2532cede3a5f7efcc69513e5a1416dc9ba6635da5b8225cbdc39ed4cf1ff0",
+        "bytes": 10883666
+      },
+      "revision": {
+        "file": "github/023-8faa30a4c4e2.json",
+        "commit": "8faa30a4c4e2f62a847d21aaea161d30a0a67649",
+        "date": "2024-09-26T22:05:20-07:00",
+        "sha256": "9915cf2656e0deb038cc6935bde8254b928c88c0bd5261007c2ab63b2b97c372",
+        "bytes": 10877904
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/023-8faa30a4c4e2.json",
+        "commit": "8faa30a4c4e2f62a847d21aaea161d30a0a67649",
+        "date": "2024-09-26T22:05:20-07:00",
+        "sha256": "9915cf2656e0deb038cc6935bde8254b928c88c0bd5261007c2ab63b2b97c372",
+        "bytes": 10877904
+      },
+      "revision": {
+        "file": "github/024-fae193bbf6d8.json",
+        "commit": "fae193bbf6d87c178bbb824eed3320932b3f2543",
+        "date": "2024-09-27T13:06:59-07:00",
+        "sha256": "ff125d8549767557c0ed8feb6009429a1a3ceb40a8dcfc6c2f2f184ff36c3a7c",
+        "bytes": 10878625
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/024-fae193bbf6d8.json",
+        "commit": "fae193bbf6d87c178bbb824eed3320932b3f2543",
+        "date": "2024-09-27T13:06:59-07:00",
+        "sha256": "ff125d8549767557c0ed8feb6009429a1a3ceb40a8dcfc6c2f2f184ff36c3a7c",
+        "bytes": 10878625
+      },
+      "revision": {
+        "file": "github/025-4ee99a019a65.json",
+        "commit": "4ee99a019a6564ef3ba003277567a1a161ac543c",
+        "date": "2024-09-30T11:38:04-07:00",
+        "sha256": "8a7309379a32b94a769c35dfb3015587827166ab6b98cad2889d9f60d8c5dec2",
+        "bytes": 10878997
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/025-4ee99a019a65.json",
+        "commit": "4ee99a019a6564ef3ba003277567a1a161ac543c",
+        "date": "2024-09-30T11:38:04-07:00",
+        "sha256": "8a7309379a32b94a769c35dfb3015587827166ab6b98cad2889d9f60d8c5dec2",
+        "bytes": 10878997
+      },
+      "revision": {
+        "file": "github/026-7288cb3efec8.json",
+        "commit": "7288cb3efec8970bee0ca8f3c8caa9d268ad1595",
+        "date": "2024-10-02T11:35:17-07:00",
+        "sha256": "cd9fdc2a881872d824fc90349394fcac0befec59675b8586f9984c4c514ce4d2",
+        "bytes": 10879012
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/026-7288cb3efec8.json",
+        "commit": "7288cb3efec8970bee0ca8f3c8caa9d268ad1595",
+        "date": "2024-10-02T11:35:17-07:00",
+        "sha256": "cd9fdc2a881872d824fc90349394fcac0befec59675b8586f9984c4c514ce4d2",
+        "bytes": 10879012
+      },
+      "revision": {
+        "file": "github/027-be5a8fb349ff.json",
+        "commit": "be5a8fb349ffbe6a5d574bd3cc4460e3219f9332",
+        "date": "2024-10-03T08:06:46-07:00",
+        "sha256": "c974d36e004939518eb5d24d766a7bad09b7365f46c090d96786a6faef13b88c",
+        "bytes": 10878983
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/027-be5a8fb349ff.json",
+        "commit": "be5a8fb349ffbe6a5d574bd3cc4460e3219f9332",
+        "date": "2024-10-03T08:06:46-07:00",
+        "sha256": "c974d36e004939518eb5d24d766a7bad09b7365f46c090d96786a6faef13b88c",
+        "bytes": 10878983
+      },
+      "revision": {
+        "file": "github/028-6649960e56a1.json",
+        "commit": "6649960e56a1152253dbbc7a75cedad82f33fed0",
+        "date": "2024-10-03T15:37:20-07:00",
+        "sha256": "340405e8ded3b88fa7ee5faeba3897d4a4cae7b4754c6977837bcafc17825afa",
+        "bytes": 10879678
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/028-6649960e56a1.json",
+        "commit": "6649960e56a1152253dbbc7a75cedad82f33fed0",
+        "date": "2024-10-03T15:37:20-07:00",
+        "sha256": "340405e8ded3b88fa7ee5faeba3897d4a4cae7b4754c6977837bcafc17825afa",
+        "bytes": 10879678
+      },
+      "revision": {
+        "file": "github/029-227e87514267.json",
+        "commit": "227e87514267188de8ecbabb4413f1026f2d1fc7",
+        "date": "2024-10-08T16:07:01-07:00",
+        "sha256": "70f4c2127c18b4cf919ee07d8efc6345ee72a3880bd83f62bde11d9901eb06d5",
+        "bytes": 10880130
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/029-227e87514267.json",
+        "commit": "227e87514267188de8ecbabb4413f1026f2d1fc7",
+        "date": "2024-10-08T16:07:01-07:00",
+        "sha256": "70f4c2127c18b4cf919ee07d8efc6345ee72a3880bd83f62bde11d9901eb06d5",
+        "bytes": 10880130
+      },
+      "revision": {
+        "file": "github/030-b2e22f415597.json",
+        "commit": "b2e22f41559791b55c4d54414a07ed560b23d2e9",
+        "date": "2024-10-17T04:07:37-07:00",
+        "sha256": "5ea44e8d64f77d23c7d7f40e97b97ee571c9c29abd89c643e98bd7a506560fe0",
+        "bytes": 10880341
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/030-b2e22f415597.json",
+        "commit": "b2e22f41559791b55c4d54414a07ed560b23d2e9",
+        "date": "2024-10-17T04:07:37-07:00",
+        "sha256": "5ea44e8d64f77d23c7d7f40e97b97ee571c9c29abd89c643e98bd7a506560fe0",
+        "bytes": 10880341
+      },
+      "revision": {
+        "file": "github/031-e73e358d7540.json",
+        "commit": "e73e358d7540832e78428b130d497f733bdc48a0",
+        "date": "2024-10-17T14:05:29-07:00",
+        "sha256": "906f8c025530009b32596fad4dc315bbc2a0b10993cfbcfeee10dedf20f12ca6",
+        "bytes": 10916118
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/031-e73e358d7540.json",
+        "commit": "e73e358d7540832e78428b130d497f733bdc48a0",
+        "date": "2024-10-17T14:05:29-07:00",
+        "sha256": "906f8c025530009b32596fad4dc315bbc2a0b10993cfbcfeee10dedf20f12ca6",
+        "bytes": 10916118
+      },
+      "revision": {
+        "file": "github/032-d1dadab7e606.json",
+        "commit": "d1dadab7e606818c5dcefc5f8d9f823a5061e2c6",
+        "date": "2024-10-18T18:06:36-07:00",
+        "sha256": "8a85f83b9e131f59a9c140867bc1806eed896cec4001bd352b499600f9f2b5fd",
+        "bytes": 10963169
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/032-d1dadab7e606.json",
+        "commit": "d1dadab7e606818c5dcefc5f8d9f823a5061e2c6",
+        "date": "2024-10-18T18:06:36-07:00",
+        "sha256": "8a85f83b9e131f59a9c140867bc1806eed896cec4001bd352b499600f9f2b5fd",
+        "bytes": 10963169
+      },
+      "revision": {
+        "file": "github/033-a06ac50edcb4.json",
+        "commit": "a06ac50edcb4b102ea1be1031460a5ae2ba0a4eb",
+        "date": "2024-10-21T13:38:45-07:00",
+        "sha256": "8b7e1412bda58feb47b91253292b1c1e6dfe424592cc7f1ba09823179ba21743",
+        "bytes": 10963309
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/033-a06ac50edcb4.json",
+        "commit": "a06ac50edcb4b102ea1be1031460a5ae2ba0a4eb",
+        "date": "2024-10-21T13:38:45-07:00",
+        "sha256": "8b7e1412bda58feb47b91253292b1c1e6dfe424592cc7f1ba09823179ba21743",
+        "bytes": 10963309
+      },
+      "revision": {
+        "file": "github/034-d245b49062bb.json",
+        "commit": "d245b49062bba39cd4b3eeeb8ac4c063d3ca3f39",
+        "date": "2024-10-21T20:09:08-07:00",
+        "sha256": "8383a9d56d41b1ed56ae8fc5cdb8b13dd734e87317791aac7a8972d00a44d34a",
+        "bytes": 10970987
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/034-d245b49062bb.json",
+        "commit": "d245b49062bba39cd4b3eeeb8ac4c063d3ca3f39",
+        "date": "2024-10-21T20:09:08-07:00",
+        "sha256": "8383a9d56d41b1ed56ae8fc5cdb8b13dd734e87317791aac7a8972d00a44d34a",
+        "bytes": 10970987
+      },
+      "revision": {
+        "file": "github/035-d64437aede4c.json",
+        "commit": "d64437aede4c48e6bbedef8db54fdef5a34ade04",
+        "date": "2024-10-22T12:06:55-07:00",
+        "sha256": "581b4e06748e394a7c1d1dc6e253bc7d065bb8311e91a2ea0fb212902b81184d",
+        "bytes": 10976976
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/035-d64437aede4c.json",
+        "commit": "d64437aede4c48e6bbedef8db54fdef5a34ade04",
+        "date": "2024-10-22T12:06:55-07:00",
+        "sha256": "581b4e06748e394a7c1d1dc6e253bc7d065bb8311e91a2ea0fb212902b81184d",
+        "bytes": 10976976
+      },
+      "revision": {
+        "file": "github/036-7477fc11877f.json",
+        "commit": "7477fc11877f3d88efd98ddd887aa4462a9c4712",
+        "date": "2024-10-22T14:07:56-07:00",
+        "sha256": "87191e06fecde634c1dba7c13d1360d06e0109f64ec722e73eef38c9e2b8d495",
+        "bytes": 10977035
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/036-7477fc11877f.json",
+        "commit": "7477fc11877f3d88efd98ddd887aa4462a9c4712",
+        "date": "2024-10-22T14:07:56-07:00",
+        "sha256": "87191e06fecde634c1dba7c13d1360d06e0109f64ec722e73eef38c9e2b8d495",
+        "bytes": 10977035
+      },
+      "revision": {
+        "file": "github/037-efe2c4564b2d.json",
+        "commit": "efe2c4564b2d60d360d744c90bca7fd6315588f0",
+        "date": "2024-10-23T04:06:05-07:00",
+        "sha256": "28e6a6333ef6650786c0b615563ec8cfd09ca979daa13c84f88406fa91472d42",
+        "bytes": 10977164
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/037-efe2c4564b2d.json",
+        "commit": "efe2c4564b2d60d360d744c90bca7fd6315588f0",
+        "date": "2024-10-23T04:06:05-07:00",
+        "sha256": "28e6a6333ef6650786c0b615563ec8cfd09ca979daa13c84f88406fa91472d42",
+        "bytes": 10977164
+      },
+      "revision": {
+        "file": "github/038-c9116e6074a0.json",
+        "commit": "c9116e6074a05ce96240e2484bb7a40b2b9cd69e",
+        "date": "2024-10-23T12:35:50-07:00",
+        "sha256": "9527234a2d7127eb4bab9f6592aecb81530ab8b680f286571564bd199fde6b5b",
+        "bytes": 10939917
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/038-c9116e6074a0.json",
+        "commit": "c9116e6074a05ce96240e2484bb7a40b2b9cd69e",
+        "date": "2024-10-23T12:35:50-07:00",
+        "sha256": "9527234a2d7127eb4bab9f6592aecb81530ab8b680f286571564bd199fde6b5b",
+        "bytes": 10939917
+      },
+      "revision": {
+        "file": "github/039-d8b335cf977d.json",
+        "commit": "d8b335cf977d20c4c988e3f24fc331344194e218",
+        "date": "2024-10-24T04:37:56-07:00",
+        "sha256": "82d012fdcd6275ff1d40a271d66b3110e9ea16dcc12bb146d1f7d799533c621c",
+        "bytes": 10939977
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/039-d8b335cf977d.json",
+        "commit": "d8b335cf977d20c4c988e3f24fc331344194e218",
+        "date": "2024-10-24T04:37:56-07:00",
+        "sha256": "82d012fdcd6275ff1d40a271d66b3110e9ea16dcc12bb146d1f7d799533c621c",
+        "bytes": 10939977
+      },
+      "revision": {
+        "file": "github/040-fccd04065df4.json",
+        "commit": "fccd04065df4f8e8fc611fc1da69080b2993ce7e",
+        "date": "2024-10-24T08:36:31-07:00",
+        "sha256": "7ac4b2ff4bfe161197ef2abb1d81be83337c15a9db670ca52b0d7ec961d5afc7",
+        "bytes": 10940029
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/040-fccd04065df4.json",
+        "commit": "fccd04065df4f8e8fc611fc1da69080b2993ce7e",
+        "date": "2024-10-24T08:36:31-07:00",
+        "sha256": "7ac4b2ff4bfe161197ef2abb1d81be83337c15a9db670ca52b0d7ec961d5afc7",
+        "bytes": 10940029
+      },
+      "revision": {
+        "file": "github/041-37f5e8ab8c85.json",
+        "commit": "37f5e8ab8c851ef91d17c51145959ed0e4222d17",
+        "date": "2024-10-25T08:39:14-07:00",
+        "sha256": "03a5cc0c9fb41eba7474e4f3e5a92da3139174238adef51b8e089a49448e2d62",
+        "bytes": 10940146
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/041-37f5e8ab8c85.json",
+        "commit": "37f5e8ab8c851ef91d17c51145959ed0e4222d17",
+        "date": "2024-10-25T08:39:14-07:00",
+        "sha256": "03a5cc0c9fb41eba7474e4f3e5a92da3139174238adef51b8e089a49448e2d62",
+        "bytes": 10940146
+      },
+      "revision": {
+        "file": "github/042-0a1f68fde44a.json",
+        "commit": "0a1f68fde44a0d5eca169214a2ce6178e0c47e4e",
+        "date": "2024-10-29T14:36:25-07:00",
+        "sha256": "7779cf3332717499a3eab9b1f310ea7e6f8590f4b4a8aafda7395a7053e629cb",
+        "bytes": 10977689
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/042-0a1f68fde44a.json",
+        "commit": "0a1f68fde44a0d5eca169214a2ce6178e0c47e4e",
+        "date": "2024-10-29T14:36:25-07:00",
+        "sha256": "7779cf3332717499a3eab9b1f310ea7e6f8590f4b4a8aafda7395a7053e629cb",
+        "bytes": 10977689
+      },
+      "revision": {
+        "file": "github/043-21c2e2de31ed.json",
+        "commit": "21c2e2de31edeb9e5005b59ff743f5e91a113166",
+        "date": "2024-10-31T08:10:17-07:00",
+        "sha256": "f625bdd783474b1f7148b032ba39b2fda9b1996c86fdbfd2366a8f34fb751da1",
+        "bytes": 10979406
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/043-21c2e2de31ed.json",
+        "commit": "21c2e2de31edeb9e5005b59ff743f5e91a113166",
+        "date": "2024-10-31T08:10:17-07:00",
+        "sha256": "f625bdd783474b1f7148b032ba39b2fda9b1996c86fdbfd2366a8f34fb751da1",
+        "bytes": 10979406
+      },
+      "revision": {
+        "file": "github/044-ab89dcd0edba.json",
+        "commit": "ab89dcd0edba7e6ec25f1a3d9a5153155f67beb8",
+        "date": "2024-10-31T16:38:18-07:00",
+        "sha256": "8d2284169dffc8db7ad9a92d19d4191428f17c1a54ce67cfb9502233de413c14",
+        "bytes": 11001613
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/044-ab89dcd0edba.json",
+        "commit": "ab89dcd0edba7e6ec25f1a3d9a5153155f67beb8",
+        "date": "2024-10-31T16:38:18-07:00",
+        "sha256": "8d2284169dffc8db7ad9a92d19d4191428f17c1a54ce67cfb9502233de413c14",
+        "bytes": 11001613
+      },
+      "revision": {
+        "file": "github/045-901c4dfb66dc.json",
+        "commit": "901c4dfb66dc4924f51efcbf1229596365474a42",
+        "date": "2024-11-01T11:07:34-07:00",
+        "sha256": "941bd969ca9795e05ec8aa3eee473557749948eaf0f8e01190e49693111afcf0",
+        "bytes": 11001708
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/045-901c4dfb66dc.json",
+        "commit": "901c4dfb66dc4924f51efcbf1229596365474a42",
+        "date": "2024-11-01T11:07:34-07:00",
+        "sha256": "941bd969ca9795e05ec8aa3eee473557749948eaf0f8e01190e49693111afcf0",
+        "bytes": 11001708
+      },
+      "revision": {
+        "file": "github/046-5ba5154ec7ea.json",
+        "commit": "5ba5154ec7ea05944a9a8f73390bee2181dae141",
+        "date": "2024-11-04T22:19:41-08:00",
+        "sha256": "09d4f4dc9d8a0e31e5cfbb068342a3896c15795b66a558866e53d8821a2c4766",
+        "bytes": 11005834
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/046-5ba5154ec7ea.json",
+        "commit": "5ba5154ec7ea05944a9a8f73390bee2181dae141",
+        "date": "2024-11-04T22:19:41-08:00",
+        "sha256": "09d4f4dc9d8a0e31e5cfbb068342a3896c15795b66a558866e53d8821a2c4766",
+        "bytes": 11005834
+      },
+      "revision": {
+        "file": "github/047-3fb3eb4399a9.json",
+        "commit": "3fb3eb4399a95fd3208ac8dd0354c01b76e6b786",
+        "date": "2024-11-06T02:17:30-08:00",
+        "sha256": "649cc8e7dd13e1198a4d440eb6be2333591bb1e2dd88b435fe94effe9a999a2c",
+        "bytes": 11009824
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/047-3fb3eb4399a9.json",
+        "commit": "3fb3eb4399a95fd3208ac8dd0354c01b76e6b786",
+        "date": "2024-11-06T02:17:30-08:00",
+        "sha256": "649cc8e7dd13e1198a4d440eb6be2333591bb1e2dd88b435fe94effe9a999a2c",
+        "bytes": 11009824
+      },
+      "revision": {
+        "file": "github/048-b6076e02410f.json",
+        "commit": "b6076e02410fb15727f4917c7a1dee925e3a2405",
+        "date": "2024-11-06T14:16:59-08:00",
+        "sha256": "b2e1c0031e71417707406eae9462304d95d31b26f91a95feb2bd53bfd8caa287",
+        "bytes": 11009860
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/048-b6076e02410f.json",
+        "commit": "b6076e02410fb15727f4917c7a1dee925e3a2405",
+        "date": "2024-11-06T14:16:59-08:00",
+        "sha256": "b2e1c0031e71417707406eae9462304d95d31b26f91a95feb2bd53bfd8caa287",
+        "bytes": 11009860
+      },
+      "revision": {
+        "file": "github/049-e41fd1af0811.json",
+        "commit": "e41fd1af0811c985b7143ea4c6e1927f37a6c36a",
+        "date": "2024-11-12T17:18:06-08:00",
+        "sha256": "78c70fd0a106b9b1cc06f742f43b9a393d2df5eeff5d8062f8772ff103c822f1",
+        "bytes": 11016670
+      }
+    },
+    {
+      "source": "github",
+      "base": {
+        "file": "github/049-e41fd1af0811.json",
+        "commit": "e41fd1af0811c985b7143ea4c6e1927f37a6c36a",
+        "date": "2024-11-12T17:18:06-08:00",
+        "sha256": "78c70fd0a106b9b1cc06f742f43b9a393d2df5eeff5d8062f8772ff103c822f1",
+        "bytes": 11016670
+      },
+      "revision": {
+        "file": "github/050-533458c46a8c.json",
+        "commit": "533458c46a8c7a2bc984132c91f132105ac063af",
+        "date": "2024-11-19T11:18:39-08:00",
+        "sha256": "f74a066575c2c1752e02a459f18f2e3410ab52935786e13f65ea1e1c3d579edb",
+        "bytes": 11016994
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/000-a18400fe5cbe.json",
+        "commit": "a18400fe5cbe295abcfcd7718eef6bdb78274b52",
+        "date": "2022-06-29T11:50:35-07:00",
+        "sha256": "2ca337189019424eb2246cdc328a94c879b58816d7585c6f03a5c710bc53acb4",
+        "bytes": 1219038
+      },
+      "revision": {
+        "file": "twilio/001-ed2c9b58d631.json",
+        "commit": "ed2c9b58d6318552be33e4fb8eef7657ab029b17",
+        "date": "2022-06-29T15:36:10-05:00",
+        "sha256": "273301542562e02cb7b16316bca6597d99715aa62f601beaae448b0ab18b0b34",
+        "bytes": 1219140
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/001-ed2c9b58d631.json",
+        "commit": "ed2c9b58d6318552be33e4fb8eef7657ab029b17",
+        "date": "2022-06-29T15:36:10-05:00",
+        "sha256": "273301542562e02cb7b16316bca6597d99715aa62f601beaae448b0ab18b0b34",
+        "bytes": 1219140
+      },
+      "revision": {
+        "file": "twilio/002-981a215e2590.json",
+        "commit": "981a215e2590986a646966211cd83cf2de6df2ec",
+        "date": "2022-07-13T11:37:39-07:00",
+        "sha256": "eed34292deb129b06aa50fa75a9bef2967f6e6b75e1093719b810c5ec341603c",
+        "bytes": 1219140
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/002-981a215e2590.json",
+        "commit": "981a215e2590986a646966211cd83cf2de6df2ec",
+        "date": "2022-07-13T11:37:39-07:00",
+        "sha256": "eed34292deb129b06aa50fa75a9bef2967f6e6b75e1093719b810c5ec341603c",
+        "bytes": 1219140
+      },
+      "revision": {
+        "file": "twilio/003-783430bd19ef.json",
+        "commit": "783430bd19ef38c5c72b1176bcfb136de6c559da",
+        "date": "2022-07-21T13:48:01-07:00",
+        "sha256": "56f7f3763489c4df5be68762d62f5c3b5a203c95f2dc5c6c19a88403eb55e7d6",
+        "bytes": 1097342
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/003-783430bd19ef.json",
+        "commit": "783430bd19ef38c5c72b1176bcfb136de6c559da",
+        "date": "2022-07-21T13:48:01-07:00",
+        "sha256": "56f7f3763489c4df5be68762d62f5c3b5a203c95f2dc5c6c19a88403eb55e7d6",
+        "bytes": 1097342
+      },
+      "revision": {
+        "file": "twilio/004-7cca12ef880b.json",
+        "commit": "7cca12ef880b8be4e6544528d16c2b343bfac3f6",
+        "date": "2022-08-10T11:37:33-07:00",
+        "sha256": "e37e2bd411ee6eede4f6478d171d743a0eb9ad6b2d85e9d04cec44ec6bac3849",
+        "bytes": 1097347
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/004-7cca12ef880b.json",
+        "commit": "7cca12ef880b8be4e6544528d16c2b343bfac3f6",
+        "date": "2022-08-10T11:37:33-07:00",
+        "sha256": "e37e2bd411ee6eede4f6478d171d743a0eb9ad6b2d85e9d04cec44ec6bac3849",
+        "bytes": 1097347
+      },
+      "revision": {
+        "file": "twilio/005-c31cb81bb5fa.json",
+        "commit": "c31cb81bb5fa223632c5e2c121a9106c886aebeb",
+        "date": "2022-08-24T13:07:05-07:00",
+        "sha256": "a9c241d7dc322c2d69007b3da7afed145439f3dfb40c042223b4e96dda5f2e16",
+        "bytes": 1097347
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/005-c31cb81bb5fa.json",
+        "commit": "c31cb81bb5fa223632c5e2c121a9106c886aebeb",
+        "date": "2022-08-24T13:07:05-07:00",
+        "sha256": "a9c241d7dc322c2d69007b3da7afed145439f3dfb40c042223b4e96dda5f2e16",
+        "bytes": 1097347
+      },
+      "revision": {
+        "file": "twilio/006-bfcd919beeff.json",
+        "commit": "bfcd919beeff13f953a3ddd2fb8307376b5c4a4d",
+        "date": "2022-09-07T11:43:01-07:00",
+        "sha256": "2022a26f2d725c42708f2a15415a28d5d11dfb1e555ff1f0c0f0c1c3230e7499",
+        "bytes": 1096013
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/006-bfcd919beeff.json",
+        "commit": "bfcd919beeff13f953a3ddd2fb8307376b5c4a4d",
+        "date": "2022-09-07T11:43:01-07:00",
+        "sha256": "2022a26f2d725c42708f2a15415a28d5d11dfb1e555ff1f0c0f0c1c3230e7499",
+        "bytes": 1096013
+      },
+      "revision": {
+        "file": "twilio/007-e28808c61ba0.json",
+        "commit": "e28808c61ba00180676f1395845765271289d6d4",
+        "date": "2022-10-05T11:00:08-07:00",
+        "sha256": "58731c083e655b839bc05e62f65d7304cef346ae0e4a4481a6f0e047c9649f8b",
+        "bytes": 1099134
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/007-e28808c61ba0.json",
+        "commit": "e28808c61ba00180676f1395845765271289d6d4",
+        "date": "2022-10-05T11:00:08-07:00",
+        "sha256": "58731c083e655b839bc05e62f65d7304cef346ae0e4a4481a6f0e047c9649f8b",
+        "bytes": 1099134
+      },
+      "revision": {
+        "file": "twilio/008-a5038748eb26.json",
+        "commit": "a5038748eb26c365c7b16e5ac4e545ea19f9977f",
+        "date": "2022-10-14T15:46:21-05:00",
+        "sha256": "825f3729f14330f8849b69cd864d5ec5cc23c3227830f43779776691e3d6a972",
+        "bytes": 1099223
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/008-a5038748eb26.json",
+        "commit": "a5038748eb26c365c7b16e5ac4e545ea19f9977f",
+        "date": "2022-10-14T15:46:21-05:00",
+        "sha256": "825f3729f14330f8849b69cd864d5ec5cc23c3227830f43779776691e3d6a972",
+        "bytes": 1099223
+      },
+      "revision": {
+        "file": "twilio/009-887162a30cad.json",
+        "commit": "887162a30cade8bafcf818773e41bdff4caacb3b",
+        "date": "2022-10-19T12:00:15-07:00",
+        "sha256": "60df19213a2fdb925041364d0ad1ccb46fa204fdf909cc5fc43042e3f1f6a5ea",
+        "bytes": 1099978
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/009-887162a30cad.json",
+        "commit": "887162a30cade8bafcf818773e41bdff4caacb3b",
+        "date": "2022-10-19T12:00:15-07:00",
+        "sha256": "60df19213a2fdb925041364d0ad1ccb46fa204fdf909cc5fc43042e3f1f6a5ea",
+        "bytes": 1099978
+      },
+      "revision": {
+        "file": "twilio/010-8aad0019f41c.json",
+        "commit": "8aad0019f41c002e77009c095bc80e7565baf2c5",
+        "date": "2022-10-27T09:12:28-05:00",
+        "sha256": "c4511feb41f5d8376cbd4d1a633e51e4919115dbed0c9d0a1bb786b174994a17",
+        "bytes": 1100550
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/010-8aad0019f41c.json",
+        "commit": "8aad0019f41c002e77009c095bc80e7565baf2c5",
+        "date": "2022-10-27T09:12:28-05:00",
+        "sha256": "c4511feb41f5d8376cbd4d1a633e51e4919115dbed0c9d0a1bb786b174994a17",
+        "bytes": 1100550
+      },
+      "revision": {
+        "file": "twilio/011-d0918510429a.json",
+        "commit": "d0918510429ac5097dd534a44ac334c83b2cf18d",
+        "date": "2022-10-31T12:05:27-07:00",
+        "sha256": "41e4d477955182c2bd52e7282ad28f19f5a112ffee708ce7833b98ede94aa226",
+        "bytes": 1112547
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/011-d0918510429a.json",
+        "commit": "d0918510429ac5097dd534a44ac334c83b2cf18d",
+        "date": "2022-10-31T12:05:27-07:00",
+        "sha256": "41e4d477955182c2bd52e7282ad28f19f5a112ffee708ce7833b98ede94aa226",
+        "bytes": 1112547
+      },
+      "revision": {
+        "file": "twilio/012-3b31e589f77f.json",
+        "commit": "3b31e589f77fc429d68c1ed100a1aff78569b37a",
+        "date": "2022-11-10T08:04:00-08:00",
+        "sha256": "cdf22a07601e7e4c751dc45cb00020b5b9b2c2e4ff20a04e487ea95c0c4bab54",
+        "bytes": 1112486
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/012-3b31e589f77f.json",
+        "commit": "3b31e589f77fc429d68c1ed100a1aff78569b37a",
+        "date": "2022-11-10T08:04:00-08:00",
+        "sha256": "cdf22a07601e7e4c751dc45cb00020b5b9b2c2e4ff20a04e487ea95c0c4bab54",
+        "bytes": 1112486
+      },
+      "revision": {
+        "file": "twilio/013-45e567d0ceb4.json",
+        "commit": "45e567d0ceb44c9d03d6934cb5cd36bdaefc5d7d",
+        "date": "2022-11-16T11:43:15-08:00",
+        "sha256": "f13981c91f9ba77735cc35f1f9c32d54f580c1873a719f681259ef1b811e0065",
+        "bytes": 1112486
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/013-45e567d0ceb4.json",
+        "commit": "45e567d0ceb44c9d03d6934cb5cd36bdaefc5d7d",
+        "date": "2022-11-16T11:43:15-08:00",
+        "sha256": "f13981c91f9ba77735cc35f1f9c32d54f580c1873a719f681259ef1b811e0065",
+        "bytes": 1112486
+      },
+      "revision": {
+        "file": "twilio/014-13f971db9f33.json",
+        "commit": "13f971db9f33d269d96a5c1fe3cedc651d403c70",
+        "date": "2022-11-30T11:35:34-08:00",
+        "sha256": "50ce5761f4158ad102910b87d7dccdd947227d6b445129eabf8359262ccca2ea",
+        "bytes": 1112486
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/014-13f971db9f33.json",
+        "commit": "13f971db9f33d269d96a5c1fe3cedc651d403c70",
+        "date": "2022-11-30T11:35:34-08:00",
+        "sha256": "50ce5761f4158ad102910b87d7dccdd947227d6b445129eabf8359262ccca2ea",
+        "bytes": 1112486
+      },
+      "revision": {
+        "file": "twilio/015-230d217f9fd9.json",
+        "commit": "230d217f9fd96ff017456ea71621bf5818b78906",
+        "date": "2022-12-14T13:54:33-08:00",
+        "sha256": "bbc62792b9b79c9126f5fd15cbc1f43646e961c41447e9a4657744bfca237cd3",
+        "bytes": 1113032
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/015-230d217f9fd9.json",
+        "commit": "230d217f9fd96ff017456ea71621bf5818b78906",
+        "date": "2022-12-14T13:54:33-08:00",
+        "sha256": "bbc62792b9b79c9126f5fd15cbc1f43646e961c41447e9a4657744bfca237cd3",
+        "bytes": 1113032
+      },
+      "revision": {
+        "file": "twilio/016-3b8eb85532a5.json",
+        "commit": "3b8eb85532a5857048f88aa8cc7048259367c8bd",
+        "date": "2022-12-16T12:26:09-06:00",
+        "sha256": "546708e78ca704225871f5bd7366d29f48755f950705bf723788bac9cfd23584",
+        "bytes": 1113031
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/016-3b8eb85532a5.json",
+        "commit": "3b8eb85532a5857048f88aa8cc7048259367c8bd",
+        "date": "2022-12-16T12:26:09-06:00",
+        "sha256": "546708e78ca704225871f5bd7366d29f48755f950705bf723788bac9cfd23584",
+        "bytes": 1113031
+      },
+      "revision": {
+        "file": "twilio/017-2b0415bc1cad.json",
+        "commit": "2b0415bc1cad1a3591b427e932fc189c40092c45",
+        "date": "2022-12-28T11:17:57-08:00",
+        "sha256": "517e85bfddf92603779aa4d0dfbfb4df4be00a79d361c1e1ab8601d690c1e7ee",
+        "bytes": 1113031
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/017-2b0415bc1cad.json",
+        "commit": "2b0415bc1cad1a3591b427e932fc189c40092c45",
+        "date": "2022-12-28T11:17:57-08:00",
+        "sha256": "517e85bfddf92603779aa4d0dfbfb4df4be00a79d361c1e1ab8601d690c1e7ee",
+        "bytes": 1113031
+      },
+      "revision": {
+        "file": "twilio/018-e426c7ee9bb5.json",
+        "commit": "e426c7ee9bb530b2316530d207bbb114b03d977b",
+        "date": "2023-01-11T05:29:17-08:00",
+        "sha256": "e85c8736a7137e9091aa806da62bd79841140091019d4f9dbdb392ac30ba9a55",
+        "bytes": 1113031
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/018-e426c7ee9bb5.json",
+        "commit": "e426c7ee9bb530b2316530d207bbb114b03d977b",
+        "date": "2023-01-11T05:29:17-08:00",
+        "sha256": "e85c8736a7137e9091aa806da62bd79841140091019d4f9dbdb392ac30ba9a55",
+        "bytes": 1113031
+      },
+      "revision": {
+        "file": "twilio/019-268b6d159407.json",
+        "commit": "268b6d15940791304dcfdd4f5b3261f9f24e1d27",
+        "date": "2023-01-13T11:36:04-07:00",
+        "sha256": "a472f2bd6810ea5acdce13d00389a2ae4e4cd6b9773a126c5128205f188f49c9",
+        "bytes": 1117911
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/019-268b6d159407.json",
+        "commit": "268b6d15940791304dcfdd4f5b3261f9f24e1d27",
+        "date": "2023-01-13T11:36:04-07:00",
+        "sha256": "a472f2bd6810ea5acdce13d00389a2ae4e4cd6b9773a126c5128205f188f49c9",
+        "bytes": 1117911
+      },
+      "revision": {
+        "file": "twilio/020-603ec36e1305.json",
+        "commit": "603ec36e1305b627daa94010ca5b8a27459230ca",
+        "date": "2023-01-24T11:53:45-06:00",
+        "sha256": "50846f690d706d2f07e53121b2cddba5d483a318efecfd8ed0413b7a66ecbd9e",
+        "bytes": 1174978
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/020-603ec36e1305.json",
+        "commit": "603ec36e1305b627daa94010ca5b8a27459230ca",
+        "date": "2023-01-24T11:53:45-06:00",
+        "sha256": "50846f690d706d2f07e53121b2cddba5d483a318efecfd8ed0413b7a66ecbd9e",
+        "bytes": 1174978
+      },
+      "revision": {
+        "file": "twilio/021-0a8aeea47f23.json",
+        "commit": "0a8aeea47f23fdcc9b9286f0688ab00eb0c2af8a",
+        "date": "2023-01-25T11:05:42-08:00",
+        "sha256": "252cd7e5bf6500905fb6204448cf4f81cc70b7e7c8ec15d1d0f500cab674aac8",
+        "bytes": 1175775
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/021-0a8aeea47f23.json",
+        "commit": "0a8aeea47f23fdcc9b9286f0688ab00eb0c2af8a",
+        "date": "2023-01-25T11:05:42-08:00",
+        "sha256": "252cd7e5bf6500905fb6204448cf4f81cc70b7e7c8ec15d1d0f500cab674aac8",
+        "bytes": 1175775
+      },
+      "revision": {
+        "file": "twilio/022-62e42a6aead8.json",
+        "commit": "62e42a6aead85d0ae08450fad6bc27b0005b865e",
+        "date": "2023-02-02T16:01:51-06:00",
+        "sha256": "6c9c13bc01357ba36e478e4b88428d4367d3254808c048cafff437cd2fd1ead9",
+        "bytes": 1205787
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/022-62e42a6aead8.json",
+        "commit": "62e42a6aead85d0ae08450fad6bc27b0005b865e",
+        "date": "2023-02-02T16:01:51-06:00",
+        "sha256": "6c9c13bc01357ba36e478e4b88428d4367d3254808c048cafff437cd2fd1ead9",
+        "bytes": 1205787
+      },
+      "revision": {
+        "file": "twilio/023-124f8080a99f.json",
+        "commit": "124f8080a99ff7ac376cb9977a3f9234d3951330",
+        "date": "2023-02-08T11:37:15-08:00",
+        "sha256": "8a836ef2a56c12bb08f72f59d1a24a2e358db1901189c5644546d72c9cab359b",
+        "bytes": 1205787
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/023-124f8080a99f.json",
+        "commit": "124f8080a99ff7ac376cb9977a3f9234d3951330",
+        "date": "2023-02-08T11:37:15-08:00",
+        "sha256": "8a836ef2a56c12bb08f72f59d1a24a2e358db1901189c5644546d72c9cab359b",
+        "bytes": 1205787
+      },
+      "revision": {
+        "file": "twilio/024-5a3336751d58.json",
+        "commit": "5a3336751d58de5b9fde95f4cc22a0eebc0de920",
+        "date": "2023-02-22T11:29:15-08:00",
+        "sha256": "9ce661835402d052d04a711eae4e37950e4b76ff9ab0ae6c4af8f52b4c963e84",
+        "bytes": 1205822
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/024-5a3336751d58.json",
+        "commit": "5a3336751d58de5b9fde95f4cc22a0eebc0de920",
+        "date": "2023-02-22T11:29:15-08:00",
+        "sha256": "9ce661835402d052d04a711eae4e37950e4b76ff9ab0ae6c4af8f52b4c963e84",
+        "bytes": 1205822
+      },
+      "revision": {
+        "file": "twilio/025-d7d565cdbf26.json",
+        "commit": "d7d565cdbf2634ead145d676dac81e06cc389540",
+        "date": "2023-03-09T04:58:22-08:00",
+        "sha256": "aca6183136b9a95107e5266d138344ac5f862ac9409761c0289b1457b7a35d90",
+        "bytes": 1205822
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/025-d7d565cdbf26.json",
+        "commit": "d7d565cdbf2634ead145d676dac81e06cc389540",
+        "date": "2023-03-09T04:58:22-08:00",
+        "sha256": "aca6183136b9a95107e5266d138344ac5f862ac9409761c0289b1457b7a35d90",
+        "bytes": 1205822
+      },
+      "revision": {
+        "file": "twilio/026-a14853bf9db3.json",
+        "commit": "a14853bf9db3da57ee1117eb7dcc6f586a6abdbd",
+        "date": "2023-03-22T11:45:07-07:00",
+        "sha256": "9605c4212d7c7dd11ce4f0ec66ee86394ee1b5b281a6edbc090604abe214588d",
+        "bytes": 1205825
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/026-a14853bf9db3.json",
+        "commit": "a14853bf9db3da57ee1117eb7dcc6f586a6abdbd",
+        "date": "2023-03-22T11:45:07-07:00",
+        "sha256": "9605c4212d7c7dd11ce4f0ec66ee86394ee1b5b281a6edbc090604abe214588d",
+        "bytes": 1205825
+      },
+      "revision": {
+        "file": "twilio/027-04b1d8c83a3a.json",
+        "commit": "04b1d8c83a3ac7b5dc09b11dd7a6e503adb06e42",
+        "date": "2023-04-05T11:37:18-07:00",
+        "sha256": "1c9b600aa31867aac36e1e2c3412b1a4f9f693f58f450037273cd277574c06a3",
+        "bytes": 1205825
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/027-04b1d8c83a3a.json",
+        "commit": "04b1d8c83a3ac7b5dc09b11dd7a6e503adb06e42",
+        "date": "2023-04-05T11:37:18-07:00",
+        "sha256": "1c9b600aa31867aac36e1e2c3412b1a4f9f693f58f450037273cd277574c06a3",
+        "bytes": 1205825
+      },
+      "revision": {
+        "file": "twilio/028-46ec5aa2406f.json",
+        "commit": "46ec5aa2406f1230e56a9c304624ce1fc8e5cade",
+        "date": "2023-04-19T23:27:02-07:00",
+        "sha256": "7aaf33d93b07c43c3ee436968cb71f7b52be1d71048e5341a0b4a6c758748a38",
+        "bytes": 1205825
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/028-46ec5aa2406f.json",
+        "commit": "46ec5aa2406f1230e56a9c304624ce1fc8e5cade",
+        "date": "2023-04-19T23:27:02-07:00",
+        "sha256": "7aaf33d93b07c43c3ee436968cb71f7b52be1d71048e5341a0b4a6c758748a38",
+        "bytes": 1205825
+      },
+      "revision": {
+        "file": "twilio/029-f5ca84676bc3.json",
+        "commit": "f5ca84676bc377fc83d2f6b7e707293c0c6fab70",
+        "date": "2023-05-04T00:41:23-07:00",
+        "sha256": "49ddfa75c674a6e08d58c5d023c69007fcef979c737cef6bb8f9d20630037699",
+        "bytes": 1217220
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/029-f5ca84676bc3.json",
+        "commit": "f5ca84676bc377fc83d2f6b7e707293c0c6fab70",
+        "date": "2023-05-04T00:41:23-07:00",
+        "sha256": "49ddfa75c674a6e08d58c5d023c69007fcef979c737cef6bb8f9d20630037699",
+        "bytes": 1217220
+      },
+      "revision": {
+        "file": "twilio/030-f88c9a74abdb.json",
+        "commit": "f88c9a74abdb2d13030adf1f75fae01587d40639",
+        "date": "2023-05-18T00:31:28-07:00",
+        "sha256": "f3df5398354351fb9d67154553767e7dc868357d81a13b494f9365f54766f100",
+        "bytes": 1215494
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/030-f88c9a74abdb.json",
+        "commit": "f88c9a74abdb2d13030adf1f75fae01587d40639",
+        "date": "2023-05-18T00:31:28-07:00",
+        "sha256": "f3df5398354351fb9d67154553767e7dc868357d81a13b494f9365f54766f100",
+        "bytes": 1215494
+      },
+      "revision": {
+        "file": "twilio/031-26c06c637874.json",
+        "commit": "26c06c637874cec611dfa2d30d847bb3329dd7b2",
+        "date": "2023-06-01T03:10:05-07:00",
+        "sha256": "a08f3c916b0184534ebaacaa9fc4987f939dcc0b3c99b4a5cea401454898b86d",
+        "bytes": 1215762
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/031-26c06c637874.json",
+        "commit": "26c06c637874cec611dfa2d30d847bb3329dd7b2",
+        "date": "2023-06-01T03:10:05-07:00",
+        "sha256": "a08f3c916b0184534ebaacaa9fc4987f939dcc0b3c99b4a5cea401454898b86d",
+        "bytes": 1215762
+      },
+      "revision": {
+        "file": "twilio/032-0a08e46cfcf3.json",
+        "commit": "0a08e46cfcf37ab892cb300c4e8a3ea178f02726",
+        "date": "2023-06-15T00:08:24-07:00",
+        "sha256": "91d6d6ec83200d22525eed37172d15b62c873af9c6a4e1e4ca270d22149134ed",
+        "bytes": 1215791
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/032-0a08e46cfcf3.json",
+        "commit": "0a08e46cfcf37ab892cb300c4e8a3ea178f02726",
+        "date": "2023-06-15T00:08:24-07:00",
+        "sha256": "91d6d6ec83200d22525eed37172d15b62c873af9c6a4e1e4ca270d22149134ed",
+        "bytes": 1215791
+      },
+      "revision": {
+        "file": "twilio/033-47e61901678e.json",
+        "commit": "47e61901678eea8b5eb032f8e6a1f9f96a3dbf60",
+        "date": "2023-06-28T03:59:49-07:00",
+        "sha256": "f76b557058635b8ad89fa20adbdefc6ede4960d12567d75f02500abea7258418",
+        "bytes": 1215791
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/033-47e61901678e.json",
+        "commit": "47e61901678eea8b5eb032f8e6a1f9f96a3dbf60",
+        "date": "2023-06-28T03:59:49-07:00",
+        "sha256": "f76b557058635b8ad89fa20adbdefc6ede4960d12567d75f02500abea7258418",
+        "bytes": 1215791
+      },
+      "revision": {
+        "file": "twilio/034-7f9508915fa1.json",
+        "commit": "7f9508915fa1f81d7e6d231cdf4d3998976d79e4",
+        "date": "2023-07-13T08:02:46-07:00",
+        "sha256": "fce063b484fbc5348a5c3483fe9ff7a89d08097d991c231b870476b3741f2523",
+        "bytes": 1215791
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/034-7f9508915fa1.json",
+        "commit": "7f9508915fa1f81d7e6d231cdf4d3998976d79e4",
+        "date": "2023-07-13T08:02:46-07:00",
+        "sha256": "fce063b484fbc5348a5c3483fe9ff7a89d08097d991c231b870476b3741f2523",
+        "bytes": 1215791
+      },
+      "revision": {
+        "file": "twilio/035-4d8a52cab3a3.json",
+        "commit": "4d8a52cab3a31bea6d02329ac55a080fdd66d98d",
+        "date": "2023-07-27T02:26:43-07:00",
+        "sha256": "bf0527ea86d3713494bab63beacbe6c79ef8908ffdd05e0cd2446bc1ce083baf",
+        "bytes": 1218422
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/035-4d8a52cab3a3.json",
+        "commit": "4d8a52cab3a31bea6d02329ac55a080fdd66d98d",
+        "date": "2023-07-27T02:26:43-07:00",
+        "sha256": "bf0527ea86d3713494bab63beacbe6c79ef8908ffdd05e0cd2446bc1ce083baf",
+        "bytes": 1218422
+      },
+      "revision": {
+        "file": "twilio/036-66730900f75c.json",
+        "commit": "66730900f75cd90d0059e626fc1c43b56c8acf0b",
+        "date": "2023-08-10T09:51:50Z",
+        "sha256": "dfd997183d514436bc0efb17a8e5709e8e4240cb73bb17a6dff670037593ab39",
+        "bytes": 1234831
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/036-66730900f75c.json",
+        "commit": "66730900f75cd90d0059e626fc1c43b56c8acf0b",
+        "date": "2023-08-10T09:51:50Z",
+        "sha256": "dfd997183d514436bc0efb17a8e5709e8e4240cb73bb17a6dff670037593ab39",
+        "bytes": 1234831
+      },
+      "revision": {
+        "file": "twilio/037-8fdee58266be.json",
+        "commit": "8fdee58266bec0e179598fa356442bcba38e6e21",
+        "date": "2023-08-24T07:03:51Z",
+        "sha256": "eed4b9fdf002072c348d5904a793230fc1e010a400cf47f0775078951988d509",
+        "bytes": 1235313
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/037-8fdee58266be.json",
+        "commit": "8fdee58266bec0e179598fa356442bcba38e6e21",
+        "date": "2023-08-24T07:03:51Z",
+        "sha256": "eed4b9fdf002072c348d5904a793230fc1e010a400cf47f0775078951988d509",
+        "bytes": 1235313
+      },
+      "revision": {
+        "file": "twilio/038-c99358b8e010.json",
+        "commit": "c99358b8e010ed4b7ae2b5f26bcda16087b614da",
+        "date": "2023-09-07T18:48:34Z",
+        "sha256": "9ba1a125a7022ed91e20c5e9cf4748f1d38762867ecb56b60806c701165a2dbd",
+        "bytes": 1236304
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/038-c99358b8e010.json",
+        "commit": "c99358b8e010ed4b7ae2b5f26bcda16087b614da",
+        "date": "2023-09-07T18:48:34Z",
+        "sha256": "9ba1a125a7022ed91e20c5e9cf4748f1d38762867ecb56b60806c701165a2dbd",
+        "bytes": 1236304
+      },
+      "revision": {
+        "file": "twilio/039-91c257db5235.json",
+        "commit": "91c257db523539871c80b489dfd87d3dfdc2aa2a",
+        "date": "2023-09-21T08:04:57Z",
+        "sha256": "4c67340bab575d3010f82141f27114495fb12fad04dc02b88479f3bc54a16212",
+        "bytes": 1260755
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/039-91c257db5235.json",
+        "commit": "91c257db523539871c80b489dfd87d3dfdc2aa2a",
+        "date": "2023-09-21T08:04:57Z",
+        "sha256": "4c67340bab575d3010f82141f27114495fb12fad04dc02b88479f3bc54a16212",
+        "bytes": 1260755
+      },
+      "revision": {
+        "file": "twilio/040-314015713378.json",
+        "commit": "314015713378576a8cd582f0908a461496b82a31",
+        "date": "2023-10-05T08:11:40Z",
+        "sha256": "a660e5d7ba332fb4a72eccef877a349e76f34edee93436438db76c6bdffbd272",
+        "bytes": 1260283
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/040-314015713378.json",
+        "commit": "314015713378576a8cd582f0908a461496b82a31",
+        "date": "2023-10-05T08:11:40Z",
+        "sha256": "a660e5d7ba332fb4a72eccef877a349e76f34edee93436438db76c6bdffbd272",
+        "bytes": 1260283
+      },
+      "revision": {
+        "file": "twilio/041-7ab55a129d14.json",
+        "commit": "7ab55a129d149dd639e1d0df64b57216f3d6498e",
+        "date": "2023-10-19T11:23:53Z",
+        "sha256": "d8643e09ba9b4c0c410635a579ae916a691ae187d22b2e1e90a60e7ffd477904",
+        "bytes": 1380960
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/041-7ab55a129d14.json",
+        "commit": "7ab55a129d149dd639e1d0df64b57216f3d6498e",
+        "date": "2023-10-19T11:23:53Z",
+        "sha256": "d8643e09ba9b4c0c410635a579ae916a691ae187d22b2e1e90a60e7ffd477904",
+        "bytes": 1380960
+      },
+      "revision": {
+        "file": "twilio/042-6c89cd16fb6f.json",
+        "commit": "6c89cd16fb6ff8d9c48beb3232261db5c85a5940",
+        "date": "2023-11-06T14:41:29Z",
+        "sha256": "4dad79edf34e1386f17b39357c3a84a1e8f3328a136d4488d3fbb189e6c8942d",
+        "bytes": 1380960
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/042-6c89cd16fb6f.json",
+        "commit": "6c89cd16fb6ff8d9c48beb3232261db5c85a5940",
+        "date": "2023-11-06T14:41:29Z",
+        "sha256": "4dad79edf34e1386f17b39357c3a84a1e8f3328a136d4488d3fbb189e6c8942d",
+        "bytes": 1380960
+      },
+      "revision": {
+        "file": "twilio/043-b6a05f4078e8.json",
+        "commit": "b6a05f4078e85203b9a24495cb86b330293deb99",
+        "date": "2023-11-17T10:30:09Z",
+        "sha256": "73291bddf5170da9924073b299812bd282fd31dc54f2ec2b912bc43fb37c46a7",
+        "bytes": 1380925
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/043-b6a05f4078e8.json",
+        "commit": "b6a05f4078e85203b9a24495cb86b330293deb99",
+        "date": "2023-11-17T10:30:09Z",
+        "sha256": "73291bddf5170da9924073b299812bd282fd31dc54f2ec2b912bc43fb37c46a7",
+        "bytes": 1380925
+      },
+      "revision": {
+        "file": "twilio/044-96611ec0cc05.json",
+        "commit": "96611ec0cc059889e701a5e1e848c3858c90ee1a",
+        "date": "2023-12-01T05:13:42Z",
+        "sha256": "57e1a53c95a739137af3b5ea37263575267e7888372e7e8f65a3dc6b189df52c",
+        "bytes": 1390189
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/044-96611ec0cc05.json",
+        "commit": "96611ec0cc059889e701a5e1e848c3858c90ee1a",
+        "date": "2023-12-01T05:13:42Z",
+        "sha256": "57e1a53c95a739137af3b5ea37263575267e7888372e7e8f65a3dc6b189df52c",
+        "bytes": 1390189
+      },
+      "revision": {
+        "file": "twilio/045-496e1df3c4f3.json",
+        "commit": "496e1df3c4f33a27379b4b6a6d03d81a7544ee74",
+        "date": "2023-12-14T08:48:35Z",
+        "sha256": "7dd7c11ed5489ba9fdc8ec2f44c460f7e21be3b6a80a87b1fabd1860bfe62fe4",
+        "bytes": 1389586
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/045-496e1df3c4f3.json",
+        "commit": "496e1df3c4f33a27379b4b6a6d03d81a7544ee74",
+        "date": "2023-12-14T08:48:35Z",
+        "sha256": "7dd7c11ed5489ba9fdc8ec2f44c460f7e21be3b6a80a87b1fabd1860bfe62fe4",
+        "bytes": 1389586
+      },
+      "revision": {
+        "file": "twilio/046-45eef8d415c9.json",
+        "commit": "45eef8d415c95ba25f6556b7e71c5f45afc0973c",
+        "date": "2024-01-14T14:36:41Z",
+        "sha256": "c28bd97117e54d9f6888b8a924852c58ac9c9f0b1f798696b1296981967aaea7",
+        "bytes": 1391358
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/046-45eef8d415c9.json",
+        "commit": "45eef8d415c95ba25f6556b7e71c5f45afc0973c",
+        "date": "2024-01-14T14:36:41Z",
+        "sha256": "c28bd97117e54d9f6888b8a924852c58ac9c9f0b1f798696b1296981967aaea7",
+        "bytes": 1391358
+      },
+      "revision": {
+        "file": "twilio/047-16ddcfd29264.json",
+        "commit": "16ddcfd292649dda07f3d9495fcbd4c52a559628",
+        "date": "2024-01-25T11:19:32Z",
+        "sha256": "1ec936b462af7d6762a4beef64b03f165aca6ddb9c38b28af2f5517efc70b28f",
+        "bytes": 1256189
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/047-16ddcfd29264.json",
+        "commit": "16ddcfd292649dda07f3d9495fcbd4c52a559628",
+        "date": "2024-01-25T11:19:32Z",
+        "sha256": "1ec936b462af7d6762a4beef64b03f165aca6ddb9c38b28af2f5517efc70b28f",
+        "bytes": 1256189
+      },
+      "revision": {
+        "file": "twilio/048-e514460a3087.json",
+        "commit": "e514460a30875157c7d2f607edc97d92c416bcc1",
+        "date": "2024-02-09T11:09:21Z",
+        "sha256": "c1b85c24e04b7270e806d0dfdc0a96ba70fcdc2477ece184fc07a05c10593e4d",
+        "bytes": 1391682
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/048-e514460a3087.json",
+        "commit": "e514460a30875157c7d2f607edc97d92c416bcc1",
+        "date": "2024-02-09T11:09:21Z",
+        "sha256": "c1b85c24e04b7270e806d0dfdc0a96ba70fcdc2477ece184fc07a05c10593e4d",
+        "bytes": 1391682
+      },
+      "revision": {
+        "file": "twilio/049-40e295907066.json",
+        "commit": "40e2959070662068eb6e8e51c5e8fd57a43ff5af",
+        "date": "2024-02-27T12:11:33Z",
+        "sha256": "69c8055e7486414df00550cf4bc41dbd00615e6df1bc5d3b641d3030f4c62128",
+        "bytes": 1372717
+      }
+    },
+    {
+      "source": "twilio",
+      "base": {
+        "file": "twilio/049-40e295907066.json",
+        "commit": "40e2959070662068eb6e8e51c5e8fd57a43ff5af",
+        "date": "2024-02-27T12:11:33Z",
+        "sha256": "69c8055e7486414df00550cf4bc41dbd00615e6df1bc5d3b641d3030f4c62128",
+        "bytes": 1372717
+      },
+      "revision": {
+        "file": "twilio/050-d99b777f10ae.json",
+        "commit": "d99b777f10ae5be7301192751678f9e4a560db24",
+        "date": "2024-03-12T08:50:54Z",
+        "sha256": "8671d708d525f81b7f6da491d18d9f9fd6ff85adee87fd4df76b65414d0d3a35",
+        "bytes": 1372536
+      }
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:dialogflow",
+      "base": {
+        "file": "apisguru/000-base-googleapis.com_dialogflow__v2.json",
+        "version": "v2",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/dialogflow/v2/openapi.json",
+        "sha256": "f5bf7510349f97e574dd06d006b446d4af904aef072f366a42e6655b5f7bb09f",
+        "bytes": 712521
+      },
+      "revision": {
+        "file": "apisguru/000-revision-googleapis.com_dialogflow__v2beta1.json",
+        "version": "v2beta1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/dialogflow/v2beta1/openapi.json",
+        "sha256": "c9e15365df9cf640a8c016b2d4f98137583ab611ac23a5a487aee9a5209ac189",
+        "bytes": 711454
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:gkehub",
+      "base": {
+        "file": "apisguru/001-base-googleapis.com_gkehub__v1beta.json",
+        "version": "v1beta",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/gkehub/v1beta/openapi.json",
+        "sha256": "7baa61d8bd08dd66001157751dcff8aa77416a7a9dbf4e227a9a0bfc625700fc",
+        "bytes": 164412
+      },
+      "revision": {
+        "file": "apisguru/001-revision-googleapis.com_gkehub__v1beta1.json",
+        "version": "v1beta1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/gkehub/v1beta1/openapi.json",
+        "sha256": "ef8712fcfd110913cc0d02f537c8836a1a94366c202fbad62b9d97f41aac0efb",
+        "bytes": 94908
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:analyticsadmin",
+      "base": {
+        "file": "apisguru/002-base-googleapis.com_analyticsadmin__v1alpha.json",
+        "version": "v1alpha",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/analyticsadmin/v1alpha/openapi.json",
+        "sha256": "f92fd17db7bfaa432c0ecf196cbe5fce14437e7bfbe7bf18cca660b1dfb53f5c",
+        "bytes": 295198
+      },
+      "revision": {
+        "file": "apisguru/002-revision-googleapis.com_analyticsadmin__v1beta.json",
+        "version": "v1beta",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/analyticsadmin/v1beta/openapi.json",
+        "sha256": "7dfcc4c7e37945196f261e1f499eb63ea25b9598736824d90588344aacbf5828",
+        "bytes": 133231
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:datamigration",
+      "base": {
+        "file": "apisguru/003-base-googleapis.com_datamigration__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/datamigration/v1/openapi.json",
+        "sha256": "cdbd7804f889ad28e23762a22df279809a50db78c5737d8b2f8e82087a564f42",
+        "bytes": 203793
+      },
+      "revision": {
+        "file": "apisguru/003-revision-googleapis.com_datamigration__v1beta1.json",
+        "version": "v1beta1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/datamigration/v1beta1/openapi.json",
+        "sha256": "ccfe2224f81e439a8dbb1572580a2539cac415517854121ced0bb8d12e410bce",
+        "bytes": 107977
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:pagespeedonline",
+      "base": {
+        "file": "apisguru/004-base-googleapis.com_pagespeedonline__v2.json",
+        "version": "v2",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/pagespeedonline/v2/openapi.json",
+        "sha256": "5ad9ff68004917896a3466b2c907f175972ab2735a8c9ace702101c7babd0f00",
+        "bytes": 22277
+      },
+      "revision": {
+        "file": "apisguru/004-revision-googleapis.com_pagespeedonline__v4.json",
+        "version": "v4",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/pagespeedonline/v4/openapi.json",
+        "sha256": "032a6bfd3f0da2f87dbad225b2d5c32cd7b437ec617c894543e16d84cd99b320",
+        "bytes": 26202
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:cloudresourcemanager",
+      "base": {
+        "file": "apisguru/005-base-googleapis.com_cloudresourcemanager__v2.json",
+        "version": "v2",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/cloudresourcemanager/v2/openapi.json",
+        "sha256": "0fc34ed4a6fc4f8aebfbc66a1138598efa84c48511cb4297bc75e14181a9f89e",
+        "bytes": 72412
+      },
+      "revision": {
+        "file": "apisguru/005-revision-googleapis.com_cloudresourcemanager__v2beta1.json",
+        "version": "v2beta1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/cloudresourcemanager/v2beta1/openapi.json",
+        "sha256": "15bc69024e86d1c5272a9691184f8179e6c1e03656dab9cc9f9deb0745c43333",
+        "bytes": 72424
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:pubsub",
+      "base": {
+        "file": "apisguru/006-base-googleapis.com_pubsub__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/pubsub/v1/openapi.json",
+        "sha256": "4034f9af45ad4210ec1b572e073139fcc0a8f4bea3279fa2b653ab5a2fff3ce2",
+        "bytes": 144496
+      },
+      "revision": {
+        "file": "apisguru/006-revision-googleapis.com_pubsub__v1beta1a.json",
+        "version": "v1beta1a",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/pubsub/v1beta1a/openapi.json",
+        "sha256": "6e2ef2616c45a1272d1c8e589d9d0e5a0e01b81a6c5bb69ba07503743a0ab6b5",
+        "bytes": 50662
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:apigateway",
+      "base": {
+        "file": "apisguru/007-base-googleapis.com_apigateway__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/apigateway/v1/openapi.json",
+        "sha256": "287aa9caf634930d716bb27c133b55da83c44fb256fe2bd70234893ceae0f160",
+        "bytes": 77841
+      },
+      "revision": {
+        "file": "apisguru/007-revision-googleapis.com_apigateway__v1beta.json",
+        "version": "v1beta",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/apigateway/v1beta/openapi.json",
+        "sha256": "a9537cc67ac90fdc694b4d367897c2b582cc1a89689d0dda81f5cbe5621893cc",
+        "bytes": 79512
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:container",
+      "base": {
+        "file": "apisguru/008-base-googleapis.com_container__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/container/v1/openapi.json",
+        "sha256": "f3c9c51314b6dfcf1010e57db1455e9560de06725c0b30e3ef7b4a399c60d298",
+        "bytes": 364285
+      },
+      "revision": {
+        "file": "apisguru/008-revision-googleapis.com_container__v1beta1.json",
+        "version": "v1beta1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/container/v1beta1/openapi.json",
+        "sha256": "063a7a82c9a341170d87e25cb93763604bada93ad3f2421589f7f61e2c70d8b6",
+        "bytes": 384935
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "adyen.com:PaymentService",
+      "base": {
+        "file": "apisguru/009-base-adyen.com_PaymentService__51.json",
+        "version": "51",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/PaymentService/51/openapi.json",
+        "sha256": "faad0ab4f9d4cceb1395d28f2479cdf3f1b8495ebc86484e93af1e1cd52e90a8",
+        "bytes": 296456
+      },
+      "revision": {
+        "file": "apisguru/009-revision-adyen.com_PaymentService__52.json",
+        "version": "52",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/PaymentService/52/openapi.json",
+        "sha256": "b18ce86f3ee68691cde5fb74a00b0044ea8507168c59289a1f43a65c78b95f2a",
+        "bytes": 296841
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:appengine",
+      "base": {
+        "file": "apisguru/010-base-googleapis.com_appengine__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/appengine/v1/openapi.json",
+        "sha256": "fa4ce430a188b0eeef29de643063233c1c34916e9847dcd86752d6a8738ce924",
+        "bytes": 209710
+      },
+      "revision": {
+        "file": "apisguru/010-revision-googleapis.com_appengine__v1alpha.json",
+        "version": "v1alpha",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/appengine/v1alpha/openapi.json",
+        "sha256": "1bd2b0b3eb4668ced9885dadd33e2f22d2cc3dc9bab4dc4ce4b2275a2e9e9eb9",
+        "bytes": 88636
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:appengine",
+      "base": {
+        "file": "apisguru/011-base-googleapis.com_appengine__v1alpha.json",
+        "version": "v1alpha",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/appengine/v1alpha/openapi.json",
+        "sha256": "1bd2b0b3eb4668ced9885dadd33e2f22d2cc3dc9bab4dc4ce4b2275a2e9e9eb9",
+        "bytes": 88636
+      },
+      "revision": {
+        "file": "apisguru/011-revision-googleapis.com_appengine__v1beta.json",
+        "version": "v1beta",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/appengine/v1beta/openapi.json",
+        "sha256": "e6f135671ad05b262878dde114f24fe09971498d60ddb8ae70423f249e883046",
+        "bytes": 228277
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:workflows",
+      "base": {
+        "file": "apisguru/012-base-googleapis.com_workflows__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/workflows/v1/openapi.json",
+        "sha256": "4738d33c77fcb1abc578bd6b80a6bef59c0cd6f45ae602d3e35dfc5e297d2a6e",
+        "bytes": 35447
+      },
+      "revision": {
+        "file": "apisguru/012-revision-googleapis.com_workflows__v1beta.json",
+        "version": "v1beta",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/workflows/v1beta/openapi.json",
+        "sha256": "4a4591d694c867d740421361f653b392dce76b2638c2bf2ac39116453603def1",
+        "bytes": 33057
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:vmmigration",
+      "base": {
+        "file": "apisguru/013-base-googleapis.com_vmmigration__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/vmmigration/v1/openapi.json",
+        "sha256": "3daebae1eab5c03e573b7f7259ef2fef71b31e34e9b1a0e1d7eaa2db97ad7ce5",
+        "bytes": 175645
+      },
+      "revision": {
+        "file": "apisguru/013-revision-googleapis.com_vmmigration__v1alpha1.json",
+        "version": "v1alpha1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/vmmigration/v1alpha1/openapi.json",
+        "sha256": "7cd3faa4c7e05ed84ba5221c7d075ade82bb6e632882be46b800e8fb29c60417",
+        "bytes": 184330
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "adyen.com:CheckoutService",
+      "base": {
+        "file": "apisguru/014-base-adyen.com_CheckoutService__41.json",
+        "version": "41",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/CheckoutService/41/openapi.json",
+        "sha256": "1f4e57877ea13b6abeb78435257db391d4e6f4802391ba1e820c322cafce5147",
+        "bytes": 626354
+      },
+      "revision": {
+        "file": "apisguru/014-revision-adyen.com_CheckoutService__46.json",
+        "version": "46",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/CheckoutService/46/openapi.json",
+        "sha256": "834362bac5dd965d949c89c65a40625b50423f690d2beea55b6e76fe9d8e9a21",
+        "bytes": 626891
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:compute",
+      "base": {
+        "file": "apisguru/015-base-googleapis.com_compute__beta.json",
+        "version": "beta",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/compute/beta/openapi.json",
+        "sha256": "a16328c7de46656e182a125c0e97e80886d7e1890cbdbbf5367d27393fc3270d",
+        "bytes": 4719646
+      },
+      "revision": {
+        "file": "apisguru/015-revision-googleapis.com_compute__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/compute/v1/openapi.json",
+        "sha256": "b818cd1090e75f82af714248749cfc9757b31ad8066f57d1aec942ebf4c0f9a5",
+        "bytes": 4334792
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "adyen.com:PayoutService",
+      "base": {
+        "file": "apisguru/016-base-adyen.com_PayoutService__67.json",
+        "version": "67",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/PayoutService/67/openapi.json",
+        "sha256": "81f839ec584067e5e082b900eda7e8030e8bff612f567e04b7645d7a4244b7a9",
+        "bytes": 102648
+      },
+      "revision": {
+        "file": "apisguru/016-revision-adyen.com_PayoutService__68.json",
+        "version": "68",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/PayoutService/68/openapi.json",
+        "sha256": "647c4d36bccd00bb6c4e4ecba282615c3ab395a6cb93b8c16a653054e284f7ef",
+        "bytes": 102647
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "amazonaws.com:rds",
+      "base": {
+        "file": "apisguru/017-base-amazonaws.com_rds__2014-10-31.json",
+        "version": "2014-10-31",
+        "url": "https://api.apis.guru/v2/specs/amazonaws.com/rds/2014-10-31/openapi.json",
+        "sha256": "ce6022e5f3faaf499e881633f8f9b1ed52a63b8470577b8bb86bb7c2823e313c",
+        "bytes": 2592266
+      },
+      "revision": {
+        "file": "apisguru/017-revision-amazonaws.com_rds__2013-01-10.json",
+        "version": "2013-01-10",
+        "url": "https://api.apis.guru/v2/specs/amazonaws.com/rds/2013-01-10/openapi.json",
+        "sha256": "1ed148fc96e27316b0e84518593bc64755dcdd93c59844abedd58c3ad70bf698",
+        "bytes": 387241
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:integrations",
+      "base": {
+        "file": "apisguru/018-base-googleapis.com_integrations__v1alpha.json",
+        "version": "v1alpha",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/integrations/v1alpha/openapi.json",
+        "sha256": "a09fba956fe4a8c85cf64c39bb364aaa09dc8be71973593e3ad03da4ef827c19",
+        "bytes": 359999
+      },
+      "revision": {
+        "file": "apisguru/018-revision-googleapis.com_integrations__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/integrations/v1/openapi.json",
+        "sha256": "c7029c5cd64ec5b87c0719694fa86b30d1a2bd14b82e8cf75c6335d2e7017d12",
+        "bytes": 383547
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "adyen.com:NotificationConfigurationService",
+      "base": {
+        "file": "apisguru/019-base-adyen.com_NotificationConfigurationService__2.json",
+        "version": "2",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/NotificationConfigurationService/2/openapi.json",
+        "sha256": "31bd5fb8f0ec5071c69aa002878684c68abed0c2f92040bb621ee4b42f97c1a0",
+        "bytes": 49303
+      },
+      "revision": {
+        "file": "apisguru/019-revision-adyen.com_NotificationConfigurationService__3.json",
+        "version": "3",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/NotificationConfigurationService/3/openapi.json",
+        "sha256": "73dfab5f4199c8581c615e3010a23d83da2653b26fe6a887252c43d2a317badc",
+        "bytes": 49303
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:composer",
+      "base": {
+        "file": "apisguru/020-base-googleapis.com_composer__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/composer/v1/openapi.json",
+        "sha256": "2c03f2fe8bb14ac17916505e0265456c551b6c73e0d0c43ebc54205202dccd90",
+        "bytes": 80362
+      },
+      "revision": {
+        "file": "apisguru/020-revision-googleapis.com_composer__v1beta1.json",
+        "version": "v1beta1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/composer/v1beta1/openapi.json",
+        "sha256": "d4c66b4b91041073effd2a8a46bd0763e901715fa797f2c6173c40d036f11b25",
+        "bytes": 93225
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "adyen.com:FundService",
+      "base": {
+        "file": "apisguru/021-base-adyen.com_FundService__3.json",
+        "version": "3",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/FundService/3/openapi.json",
+        "sha256": "001f330a17d1d7e669a5f29dd560a57afdc8814f6069b3ce8b73a9ce8653bc62",
+        "bytes": 77104
+      },
+      "revision": {
+        "file": "apisguru/021-revision-adyen.com_FundService__5.json",
+        "version": "5",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/FundService/5/openapi.json",
+        "sha256": "09c045fe338fb10e5b31158e435194f18d5015cc51e5a52e2f473b3e16b2f2c2",
+        "bytes": 82290
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "adyen.com:CheckoutService",
+      "base": {
+        "file": "apisguru/022-base-adyen.com_CheckoutService__37.json",
+        "version": "37",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/CheckoutService/37/openapi.json",
+        "sha256": "b2d52457bdfc14aaac225490fab67d05c2d75e167c65318091add852240cf375",
+        "bytes": 719655
+      },
+      "revision": {
+        "file": "apisguru/022-revision-adyen.com_CheckoutService__40.json",
+        "version": "40",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/CheckoutService/40/openapi.json",
+        "sha256": "c81f33d936b5fbb159f47fb8e75fee00b9c82a397beae1a6836e63483b31e936",
+        "bytes": 620320
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:securitycenter",
+      "base": {
+        "file": "apisguru/023-base-googleapis.com_securitycenter__v1p1alpha1.json",
+        "version": "v1p1alpha1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/securitycenter/v1p1alpha1/openapi.json",
+        "sha256": "2194a85514c31a0301ea71b11f823595ddd13df069f17d0c0547049403ba658f",
+        "bytes": 105181
+      },
+      "revision": {
+        "file": "apisguru/023-revision-googleapis.com_securitycenter__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/securitycenter/v1/openapi.json",
+        "sha256": "eade713c7c9875b1afa9501660d9b8e140d657c245f898264b3a2625ae363724",
+        "bytes": 230488
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "microsoft.com:cognitiveservices-Training",
+      "base": {
+        "file": "apisguru/024-base-microsoft.com_cognitiveservices-Training__1.2.json",
+        "version": "1.2",
+        "url": "https://api.apis.guru/v2/specs/microsoft.com/cognitiveservices-Training/1.2/openapi.json",
+        "sha256": "8f400f6d632ce4b6b5b5beca76b96dcdddf610f9b9dbe78fc8200851898a3181",
+        "bytes": 149048
+      },
+      "revision": {
+        "file": "apisguru/024-revision-microsoft.com_cognitiveservices-Training__2.0.json",
+        "version": "2.0",
+        "url": "https://api.apis.guru/v2/specs/microsoft.com/cognitiveservices-Training/2.0/openapi.json",
+        "sha256": "e25ef9ce60550ae348f257c8f6fdcb4cd2aa636234bd269e6913d186d80adb74",
+        "bytes": 184697
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:domains",
+      "base": {
+        "file": "apisguru/025-base-googleapis.com_domains__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/domains/v1/openapi.json",
+        "sha256": "847e02c2209df9fe2343c4bfd8a2ae683347df1e412082424224b3307df39bb4",
+        "bytes": 123128
+      },
+      "revision": {
+        "file": "apisguru/025-revision-googleapis.com_domains__v1alpha2.json",
+        "version": "v1alpha2",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/domains/v1alpha2/openapi.json",
+        "sha256": "964490270e64d8385908c7c486cce54fdfde8083a2d756542bdaa51ce64193f0",
+        "bytes": 123262
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "adyen.com:CheckoutService",
+      "base": {
+        "file": "apisguru/026-base-adyen.com_CheckoutService__40.json",
+        "version": "40",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/CheckoutService/40/openapi.json",
+        "sha256": "c81f33d936b5fbb159f47fb8e75fee00b9c82a397beae1a6836e63483b31e936",
+        "bytes": 620320
+      },
+      "revision": {
+        "file": "apisguru/026-revision-adyen.com_CheckoutService__41.json",
+        "version": "41",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/CheckoutService/41/openapi.json",
+        "sha256": "1f4e57877ea13b6abeb78435257db391d4e6f4802391ba1e820c322cafce5147",
+        "bytes": 626354
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:bigqueryreservation",
+      "base": {
+        "file": "apisguru/027-base-googleapis.com_bigqueryreservation__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/bigqueryreservation/v1/openapi.json",
+        "sha256": "02a415d8ed4f4fbc570ceff5f9e14dd60614d5a5d79bb37b0027bf18208f3f69",
+        "bytes": 63594
+      },
+      "revision": {
+        "file": "apisguru/027-revision-googleapis.com_bigqueryreservation__v1beta1.json",
+        "version": "v1beta1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/bigqueryreservation/v1beta1/openapi.json",
+        "sha256": "758c5e3a5986dbe55e8e2fa0325c20bdcdd1ceafba69d298ff671ed60f65ee73",
+        "bytes": 57435
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "microsoft.com:cognitiveservices-Training",
+      "base": {
+        "file": "apisguru/028-base-microsoft.com_cognitiveservices-Training__2.2.json",
+        "version": "2.2",
+        "url": "https://api.apis.guru/v2/specs/microsoft.com/cognitiveservices-Training/2.2/openapi.json",
+        "sha256": "007f5784cc1f8fc0514cad1d0e51b39d57f0619bce29cbaac789f04e97705c82",
+        "bytes": 190879
+      },
+      "revision": {
+        "file": "apisguru/028-revision-microsoft.com_cognitiveservices-Training__3.0.json",
+        "version": "3.0",
+        "url": "https://api.apis.guru/v2/specs/microsoft.com/cognitiveservices-Training/3.0/openapi.json",
+        "sha256": "bcc8477e2fe3619d6adf64ca64a304a73e6d33008dbe794410a474f7f83820f2",
+        "bytes": 218481
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:androidpublisher",
+      "base": {
+        "file": "apisguru/029-base-googleapis.com_androidpublisher__v1.1.json",
+        "version": "v1.1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/androidpublisher/v1.1/openapi.json",
+        "sha256": "0cfb8bd515216fb608e66fe62a74a9499f1a77ef6fa5d45131fabc8357bace70",
+        "bytes": 14058
+      },
+      "revision": {
+        "file": "apisguru/029-revision-googleapis.com_androidpublisher__v3.json",
+        "version": "v3",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/androidpublisher/v3/openapi.json",
+        "sha256": "6f6e89eb1a4c401df89e92fc16a0db57c84a56f99e2deaae805e0e456e37b7af",
+        "bytes": 363703
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:servicecontrol",
+      "base": {
+        "file": "apisguru/030-base-googleapis.com_servicecontrol__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/servicecontrol/v1/openapi.json",
+        "sha256": "53e4cc1b0cfd991652c13f4caa4797feb6f1fb0d7cdb03f17ee7d2116efce345",
+        "bytes": 109634
+      },
+      "revision": {
+        "file": "apisguru/030-revision-googleapis.com_servicecontrol__v2.json",
+        "version": "v2",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/servicecontrol/v2/openapi.json",
+        "sha256": "67ef8d08079a0fc21dc9c8abfdb77e7afe623554eaa35a98adc2db67a313b753",
+        "bytes": 63736
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "adyen.com:PaymentService",
+      "base": {
+        "file": "apisguru/031-base-adyen.com_PaymentService__40.json",
+        "version": "40",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/PaymentService/40/openapi.json",
+        "sha256": "902ee8d5d0c276933d7e734472b2b57aed1bd69d93723f8f3f8deac350f7a438",
+        "bytes": 282464
+      },
+      "revision": {
+        "file": "apisguru/031-revision-adyen.com_PaymentService__46.json",
+        "version": "46",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/PaymentService/46/openapi.json",
+        "sha256": "3030861b103025cb6c0d45c715347005f568ec109a9550a611e7df59a7541105",
+        "bytes": 284698
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "adyen.com:BalancePlatformService",
+      "base": {
+        "file": "apisguru/032-base-adyen.com_BalancePlatformService__1.json",
+        "version": "1",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/BalancePlatformService/1/openapi.json",
+        "sha256": "6de9a687fbb42c32d781341daf74110a339db4348e4dafac9323013700f72efd",
+        "bytes": 332652
+      },
+      "revision": {
+        "file": "apisguru/032-revision-adyen.com_BalancePlatformService__2.json",
+        "version": "2",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/BalancePlatformService/2/openapi.json",
+        "sha256": "b9b512fa0dab50c9664a49b0e28d503dfd26e05ff854a17ba81202ac6e882142",
+        "bytes": 311733
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "adyen.com:PaymentService",
+      "base": {
+        "file": "apisguru/033-base-adyen.com_PaymentService__64.json",
+        "version": "64",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/PaymentService/64/openapi.json",
+        "sha256": "550dec9a3542e233392756ae28d06e090022258e99622cdfd14d09820bc59be7",
+        "bytes": 302210
+      },
+      "revision": {
+        "file": "apisguru/033-revision-adyen.com_PaymentService__67.json",
+        "version": "67",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/PaymentService/67/openapi.json",
+        "sha256": "256e93b304a975cfabea5edde454f25404b61c27f2e8f8adbad49ea204739967",
+        "bytes": 303965
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:firestore",
+      "base": {
+        "file": "apisguru/034-base-googleapis.com_firestore__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/firestore/v1/openapi.json",
+        "sha256": "940b8fd6ee8045d024fc06fd7b425fe6bc36a6f99a6fc4dec6d023a86917bd6c",
+        "bytes": 171987
+      },
+      "revision": {
+        "file": "apisguru/034-revision-googleapis.com_firestore__v1beta1.json",
+        "version": "v1beta1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/firestore/v1beta1/openapi.json",
+        "sha256": "2825d48c20a0bde1391aa86ea11f6082432ae99583165675a445c6b987862041",
+        "bytes": 136533
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:jobs",
+      "base": {
+        "file": "apisguru/035-base-googleapis.com_jobs__v4.json",
+        "version": "v4",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/jobs/v4/openapi.json",
+        "sha256": "5e6c05e927eb0ec3100fed16ca9614d4f06e64b1ac78d28d2247361e13c1502f",
+        "bytes": 154867
+      },
+      "revision": {
+        "file": "apisguru/035-revision-googleapis.com_jobs__v3.json",
+        "version": "v3",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/jobs/v3/openapi.json",
+        "sha256": "d971bae591baa9f1d1bfeb372b1b7a17715c18dd9fcf87a74d52112c7461d9cd",
+        "bytes": 138650
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:realtimebidding",
+      "base": {
+        "file": "apisguru/036-base-googleapis.com_realtimebidding__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/realtimebidding/v1/openapi.json",
+        "sha256": "a8af8e45414b39a01d899d76824dfeda3999518a3850c83d6dfc892410d8a270",
+        "bytes": 153093
+      },
+      "revision": {
+        "file": "apisguru/036-revision-googleapis.com_realtimebidding__v1alpha.json",
+        "version": "v1alpha",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/realtimebidding/v1alpha/openapi.json",
+        "sha256": "b724d2e3691ae9c04512caefdc9cd7962c1a21c29ef870d42f2c3e02ec080238",
+        "bytes": 16354
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:drive",
+      "base": {
+        "file": "apisguru/037-base-googleapis.com_drive__v2.json",
+        "version": "v2",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/drive/v2/openapi.json",
+        "sha256": "7def354d47c14266670a0dc4761d84eec348954d2a245f3dd776480402b09710",
+        "bytes": 354317
+      },
+      "revision": {
+        "file": "apisguru/037-revision-googleapis.com_drive__v3.json",
+        "version": "v3",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/drive/v3/openapi.json",
+        "sha256": "e274823d74b0677ea391d0ea8bbf4c06c2aa6a488554ee0eab88e4e07523c9ca",
+        "bytes": 244332
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:websecurityscanner",
+      "base": {
+        "file": "apisguru/038-base-googleapis.com_websecurityscanner__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/websecurityscanner/v1/openapi.json",
+        "sha256": "62e7e08c591e39b31f3de4974b4a09e01a2c6e18f68a1b774823d0dd12cffcf6",
+        "bytes": 59247
+      },
+      "revision": {
+        "file": "apisguru/038-revision-googleapis.com_websecurityscanner__v1alpha.json",
+        "version": "v1alpha",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/websecurityscanner/v1alpha/openapi.json",
+        "sha256": "b0642f110de260a9271d77c0293ad4a416a5de7feb7bbbb7bcff3f885330a8d4",
+        "bytes": 49895
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:cloudtasks",
+      "base": {
+        "file": "apisguru/039-base-googleapis.com_cloudtasks__v2.json",
+        "version": "v2",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/cloudtasks/v2/openapi.json",
+        "sha256": "6a7622756444b4f42af4ba9bd5952cd698bc02bdf60adf0b78156d12dcdd4d85",
+        "bytes": 101072
+      },
+      "revision": {
+        "file": "apisguru/039-revision-googleapis.com_cloudtasks__v2beta2.json",
+        "version": "v2beta2",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/cloudtasks/v2beta2/openapi.json",
+        "sha256": "8b8294a12a3f4185400354f75bfdeddcb731edefca152d6a9d9ca58486cbe670",
+        "bytes": 138904
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "amazonaws.com:cloudfront",
+      "base": {
+        "file": "apisguru/040-base-amazonaws.com_cloudfront__2016-11-25.json",
+        "version": "2016-11-25",
+        "url": "https://api.apis.guru/v2/specs/amazonaws.com/cloudfront/2016-11-25/openapi.json",
+        "sha256": "c8b2a76e799e597785b6f0c42b548c8bc34ae3e78fcfe37282661b06f2a1f523",
+        "bytes": 355176
+      },
+      "revision": {
+        "file": "apisguru/040-revision-amazonaws.com_cloudfront__2017-03-25.json",
+        "version": "2017-03-25",
+        "url": "https://api.apis.guru/v2/specs/amazonaws.com/cloudfront/2017-03-25/openapi.json",
+        "sha256": "36125f9b8a84462c828e210f1a7418bc5cb6fd3c723431249ae094141902bf2d",
+        "bytes": 366399
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "amazonaws.com:clouddirectory",
+      "base": {
+        "file": "apisguru/041-base-amazonaws.com_clouddirectory__2016-05-10.json",
+        "version": "2016-05-10",
+        "url": "https://api.apis.guru/v2/specs/amazonaws.com/clouddirectory/2016-05-10/openapi.json",
+        "sha256": "2e32c9be90c21ee82ca9e30f8454069bca0db508ec8a969466416a2eacbdcd09",
+        "bytes": 626815
+      },
+      "revision": {
+        "file": "apisguru/041-revision-amazonaws.com_clouddirectory__2017-01-11.json",
+        "version": "2017-01-11",
+        "url": "https://api.apis.guru/v2/specs/amazonaws.com/clouddirectory/2017-01-11/openapi.json",
+        "sha256": "3889127abce86a6d179c959838ab7cfc4e6fb20408ba6119439f7c082025790e",
+        "bytes": 633783
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:datastream",
+      "base": {
+        "file": "apisguru/042-base-googleapis.com_datastream__v1alpha1.json",
+        "version": "v1alpha1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/datastream/v1alpha1/openapi.json",
+        "sha256": "efda5bfb271903fe9b53eeaa8da2c27eea8f3ccd08410bf8ff232a19ac15828b",
+        "bytes": 107047
+      },
+      "revision": {
+        "file": "apisguru/042-revision-googleapis.com_datastream__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/datastream/v1/openapi.json",
+        "sha256": "8da3a55af38d32260dbd7e73580d9ba0a93b1a2bd6562ad3da6e4f6374852160",
+        "bytes": 120331
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "adyen.com:AccountService",
+      "base": {
+        "file": "apisguru/043-base-adyen.com_AccountService__3.json",
+        "version": "3",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/AccountService/3/openapi.json",
+        "sha256": "096686d7519e6cb1a3e7fbccdd30fb7e613db35f5acb7f919254df783b466eac",
+        "bytes": 174980
+      },
+      "revision": {
+        "file": "apisguru/043-revision-adyen.com_AccountService__4.json",
+        "version": "4",
+        "url": "https://api.apis.guru/v2/specs/adyen.com/AccountService/4/openapi.json",
+        "sha256": "5594b2f0eba163688b18c18d5205e8cb635b4085f30c28dc3535a056ff329a97",
+        "bytes": 171934
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:sts",
+      "base": {
+        "file": "apisguru/044-base-googleapis.com_sts__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/sts/v1/openapi.json",
+        "sha256": "1d1383138b243226a55a65058eff52c2228b0774e673cd362322a5f76b34faee",
+        "bytes": 41680
+      },
+      "revision": {
+        "file": "apisguru/044-revision-googleapis.com_sts__v1beta.json",
+        "version": "v1beta",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/sts/v1beta/openapi.json",
+        "sha256": "a9b0c1c4714ac65e0ad351cffb9db28174212d42fcdf321a0704fa837d5bf542",
+        "bytes": 29165
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:analyticshub",
+      "base": {
+        "file": "apisguru/045-base-googleapis.com_analyticshub__v1beta1.json",
+        "version": "v1beta1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/analyticshub/v1beta1/openapi.json",
+        "sha256": "219ad5037a329a922ae50da11e8747ae01c19da66ec940b02c3ae8c550be4309",
+        "bytes": 65563
+      },
+      "revision": {
+        "file": "apisguru/045-revision-googleapis.com_analyticshub__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/analyticshub/v1/openapi.json",
+        "sha256": "08e131faaa0f366a1042c24a4a018932cd0139b52ae226a554f858ee165879ba",
+        "bytes": 65512
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:metastore",
+      "base": {
+        "file": "apisguru/046-base-googleapis.com_metastore__v1alpha.json",
+        "version": "v1alpha",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/metastore/v1alpha/openapi.json",
+        "sha256": "78dc408a10b2f13b7ddbdba408af91a3c566185781dceacd41cffbfad72a8029",
+        "bytes": 132156
+      },
+      "revision": {
+        "file": "apisguru/046-revision-googleapis.com_metastore__v1beta.json",
+        "version": "v1beta",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/metastore/v1beta/openapi.json",
+        "sha256": "63ffa4f98f835833d36aa067ecfe612351837b947e563775356fd7c0304b423c",
+        "bytes": 132134
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:policysimulator",
+      "base": {
+        "file": "apisguru/047-base-googleapis.com_policysimulator__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/policysimulator/v1/openapi.json",
+        "sha256": "eea25508eecf690c6ad8c030131db4530707bae67b3911c43a134e98d9935ea7",
+        "bytes": 52841
+      },
+      "revision": {
+        "file": "apisguru/047-revision-googleapis.com_policysimulator__v1beta1.json",
+        "version": "v1beta1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/policysimulator/v1beta1/openapi.json",
+        "sha256": "d56adc410253621ff8e8025f9629f93995df4aa1d73891bc6ef1ac83449cfc23",
+        "bytes": 37256
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:retail",
+      "base": {
+        "file": "apisguru/048-base-googleapis.com_retail__v2.json",
+        "version": "v2",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/retail/v2/openapi.json",
+        "sha256": "b0e988cedad9eef71defe4950da2af5b500d1699142e4d77a91f7dd13a316944",
+        "bytes": 373916
+      },
+      "revision": {
+        "file": "apisguru/048-revision-googleapis.com_retail__v2beta.json",
+        "version": "v2beta",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/retail/v2beta/openapi.json",
+        "sha256": "2fc5d2bbe904d9c5473a75783ae77919c1df3555d2bd0932fe1a799b387ef7e6",
+        "bytes": 384287
+      },
+      "usable": true
+    },
+    {
+      "source": "apisguru",
+      "api": "googleapis.com:healthcare",
+      "base": {
+        "file": "apisguru/049-base-googleapis.com_healthcare__v1.json",
+        "version": "v1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/healthcare/v1/openapi.json",
+        "sha256": "c805e51ddc469664eeefb9cfaf2aaf266bc68dc01da7e9c0f4e91f9a44474023",
+        "bytes": 333496
+      },
+      "revision": {
+        "file": "apisguru/049-revision-googleapis.com_healthcare__v1beta1.json",
+        "version": "v1beta1",
+        "url": "https://api.apis.guru/v2/specs/googleapis.com/healthcare/v1beta1/openapi.json",
+        "sha256": "1f07783f551343b7d8e6c5a16b0546dfa64c8e1e2b7553d468695014bf78c043",
+        "bytes": 430241
+      },
+      "usable": true
+    }
+  ]
+}

@@ -10,13 +10,15 @@ public final class EvalMain {
 
     public static void main(String[] args) throws Exception {
         if (args.length == 0) {
-            System.err.println("usage: axon-eval <survey|memory> ...");
+            System.err.println("usage: axon-eval <survey|memory|e1a|e1b> ...");
             System.exit(2);
         }
         String[] rest = Arrays.copyOfRange(args, 1, args.length);
         switch (args[0]) {
             case "survey" -> ParseSurvey.main(rest);
             case "memory" -> MemoryProbe.main(rest);
+            case "e1a" -> MutationExperiment.main(rest);
+            case "e1b" -> HistoryAgreement.main(rest);
             default -> {
                 System.err.println("unknown command: " + args[0]);
                 System.exit(2);
