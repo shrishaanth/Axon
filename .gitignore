@@ -24,3 +24,7 @@ Thumbs.db
 # local evaluation scratch (committed results go under eval/results/)
 eval/tmp/
 *.log
+
+# downloaded evaluation data and tools (rebuilt by eval/scripts)
+eval/data/
+eval/tools/
