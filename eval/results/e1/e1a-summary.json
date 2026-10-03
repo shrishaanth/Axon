@@ -1,0 +1,453 @@
+{
+  "seed" : 20261003,
+  "specs" : 100,
+  "oasdiff" : "oasdiff version 1.33.0",
+  "by_mutation" : [ {
+    "mutation" : "REMOVE_RESPONSE_FIELD",
+    "expected_kind" : "response_field_removed",
+    "expected_breaking" : true,
+    "specs_without_a_site" : 11,
+    "axon" : {
+      "n" : 89,
+      "found_expected_kind" : 89,
+      "found_with_expected_class" : 89,
+      "reported_any_breaking" : 89,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    },
+    "oasdiff" : {
+      "n" : 89,
+      "found_expected_kind" : 87,
+      "found_with_expected_class" : 14,
+      "reported_any_breaking" : 14,
+      "instances_with_other_changes" : 3,
+      "errors" : 2
+    },
+    "textdiff" : {
+      "n" : 89,
+      "found_expected_kind" : 0,
+      "found_with_expected_class" : 0,
+      "reported_any_breaking" : 89,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    }
+  }, {
+    "mutation" : "REMOVE_REQUEST_FIELD",
+    "expected_kind" : "request_field_removed",
+    "expected_breaking" : true,
+    "specs_without_a_site" : 33,
+    "axon" : {
+      "n" : 67,
+      "found_expected_kind" : 67,
+      "found_with_expected_class" : 67,
+      "reported_any_breaking" : 67,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    },
+    "oasdiff" : {
+      "n" : 67,
+      "found_expected_kind" : 65,
+      "found_with_expected_class" : 65,
+      "reported_any_breaking" : 65,
+      "instances_with_other_changes" : 0,
+      "errors" : 2
+    },
+    "textdiff" : {
+      "n" : 67,
+      "found_expected_kind" : 0,
+      "found_with_expected_class" : 0,
+      "reported_any_breaking" : 67,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    }
+  }, {
+    "mutation" : "ADD_REQUIRED_REQUEST_FIELD",
+    "expected_kind" : "request_field_added_required",
+    "expected_breaking" : true,
+    "specs_without_a_site" : 33,
+    "axon" : {
+      "n" : 67,
+      "found_expected_kind" : 67,
+      "found_with_expected_class" : 67,
+      "reported_any_breaking" : 67,
+      "instances_with_other_changes" : 1,
+      "errors" : 0
+    },
+    "oasdiff" : {
+      "n" : 67,
+      "found_expected_kind" : 65,
+      "found_with_expected_class" : 65,
+      "reported_any_breaking" : 65,
+      "instances_with_other_changes" : 25,
+      "errors" : 2
+    },
+    "textdiff" : {
+      "n" : 67,
+      "found_expected_kind" : 0,
+      "found_with_expected_class" : 0,
+      "reported_any_breaking" : 67,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    }
+  }, {
+    "mutation" : "CHANGE_REQUEST_FIELD_TYPE",
+    "expected_kind" : "request_field_type_changed",
+    "expected_breaking" : true,
+    "specs_without_a_site" : 44,
+    "axon" : {
+      "n" : 56,
+      "found_expected_kind" : 56,
+      "found_with_expected_class" : 56,
+      "reported_any_breaking" : 56,
+      "instances_with_other_changes" : 1,
+      "errors" : 0
+    },
+    "oasdiff" : {
+      "n" : 56,
+      "found_expected_kind" : 55,
+      "found_with_expected_class" : 55,
+      "reported_any_breaking" : 55,
+      "instances_with_other_changes" : 31,
+      "errors" : 1
+    },
+    "textdiff" : {
+      "n" : 56,
+      "found_expected_kind" : 0,
+      "found_with_expected_class" : 0,
+      "reported_any_breaking" : 56,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    }
+  }, {
+    "mutation" : "CHANGE_RESPONSE_FIELD_TYPE",
+    "expected_kind" : "response_field_type_changed",
+    "expected_breaking" : true,
+    "specs_without_a_site" : 50,
+    "axon" : {
+      "n" : 50,
+      "found_expected_kind" : 50,
+      "found_with_expected_class" : 50,
+      "reported_any_breaking" : 50,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    },
+    "oasdiff" : {
+      "n" : 50,
+      "found_expected_kind" : 48,
+      "found_with_expected_class" : 46,
+      "reported_any_breaking" : 46,
+      "instances_with_other_changes" : 20,
+      "errors" : 2
+    },
+    "textdiff" : {
+      "n" : 50,
+      "found_expected_kind" : 0,
+      "found_with_expected_class" : 0,
+      "reported_any_breaking" : 50,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    }
+  }, {
+    "mutation" : "NARROW_REQUEST_ENUM",
+    "expected_kind" : "request_enum_narrowed",
+    "expected_breaking" : true,
+    "specs_without_a_site" : 79,
+    "axon" : {
+      "n" : 21,
+      "found_expected_kind" : 21,
+      "found_with_expected_class" : 21,
+      "reported_any_breaking" : 21,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    },
+    "oasdiff" : {
+      "n" : 21,
+      "found_expected_kind" : 20,
+      "found_with_expected_class" : 20,
+      "reported_any_breaking" : 20,
+      "instances_with_other_changes" : 10,
+      "errors" : 1
+    },
+    "textdiff" : {
+      "n" : 21,
+      "found_expected_kind" : 0,
+      "found_with_expected_class" : 0,
+      "reported_any_breaking" : 21,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    }
+  }, {
+    "mutation" : "WIDEN_REQUEST_ENUM",
+    "expected_kind" : "request_enum_widened",
+    "expected_breaking" : false,
+    "specs_without_a_site" : 69,
+    "axon" : {
+      "n" : 31,
+      "found_expected_kind" : 31,
+      "found_with_expected_class" : 31,
+      "reported_any_breaking" : 0,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    },
+    "oasdiff" : {
+      "n" : 31,
+      "found_expected_kind" : 30,
+      "found_with_expected_class" : 30,
+      "reported_any_breaking" : 0,
+      "instances_with_other_changes" : 0,
+      "errors" : 1
+    },
+    "textdiff" : {
+      "n" : 31,
+      "found_expected_kind" : 0,
+      "found_with_expected_class" : 0,
+      "reported_any_breaking" : 31,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    }
+  }, {
+    "mutation" : "WIDEN_RESPONSE_ENUM",
+    "expected_kind" : "response_enum_widened",
+    "expected_breaking" : true,
+    "specs_without_a_site" : 65,
+    "axon" : {
+      "n" : 35,
+      "found_expected_kind" : 35,
+      "found_with_expected_class" : 35,
+      "reported_any_breaking" : 35,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    },
+    "oasdiff" : {
+      "n" : 35,
+      "found_expected_kind" : 33,
+      "found_with_expected_class" : 33,
+      "reported_any_breaking" : 33,
+      "instances_with_other_changes" : 22,
+      "errors" : 2
+    },
+    "textdiff" : {
+      "n" : 35,
+      "found_expected_kind" : 0,
+      "found_with_expected_class" : 0,
+      "reported_any_breaking" : 35,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    }
+  }, {
+    "mutation" : "REMOVE_STATUS",
+    "expected_kind" : "response_status_removed",
+    "expected_breaking" : true,
+    "specs_without_a_site" : 30,
+    "axon" : {
+      "n" : 70,
+      "found_expected_kind" : 70,
+      "found_with_expected_class" : 70,
+      "reported_any_breaking" : 70,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    },
+    "oasdiff" : {
+      "n" : 70,
+      "found_expected_kind" : 67,
+      "found_with_expected_class" : 19,
+      "reported_any_breaking" : 19,
+      "instances_with_other_changes" : 7,
+      "errors" : 1
+    },
+    "textdiff" : {
+      "n" : 70,
+      "found_expected_kind" : 0,
+      "found_with_expected_class" : 0,
+      "reported_any_breaking" : 70,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    }
+  }, {
+    "mutation" : "REMOVE_OPERATION",
+    "expected_kind" : "operation_removed",
+    "expected_breaking" : true,
+    "specs_without_a_site" : 1,
+    "axon" : {
+      "n" : 99,
+      "found_expected_kind" : 99,
+      "found_with_expected_class" : 99,
+      "reported_any_breaking" : 99,
+      "instances_with_other_changes" : 1,
+      "errors" : 0
+    },
+    "oasdiff" : {
+      "n" : 99,
+      "found_expected_kind" : 97,
+      "found_with_expected_class" : 97,
+      "reported_any_breaking" : 97,
+      "instances_with_other_changes" : 39,
+      "errors" : 2
+    },
+    "textdiff" : {
+      "n" : 99,
+      "found_expected_kind" : 0,
+      "found_with_expected_class" : 0,
+      "reported_any_breaking" : 99,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    }
+  }, {
+    "mutation" : "MAKE_REQUEST_FIELD_REQUIRED",
+    "expected_kind" : "request_field_made_required",
+    "expected_breaking" : true,
+    "specs_without_a_site" : 36,
+    "axon" : {
+      "n" : 64,
+      "found_expected_kind" : 64,
+      "found_with_expected_class" : 64,
+      "reported_any_breaking" : 64,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    },
+    "oasdiff" : {
+      "n" : 64,
+      "found_expected_kind" : 62,
+      "found_with_expected_class" : 62,
+      "reported_any_breaking" : 62,
+      "instances_with_other_changes" : 25,
+      "errors" : 2
+    },
+    "textdiff" : {
+      "n" : 64,
+      "found_expected_kind" : 0,
+      "found_with_expected_class" : 0,
+      "reported_any_breaking" : 64,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    }
+  }, {
+    "mutation" : "MAKE_REQUEST_FIELD_OPTIONAL",
+    "expected_kind" : "request_field_made_optional",
+    "expected_breaking" : false,
+    "specs_without_a_site" : 51,
+    "axon" : {
+      "n" : 49,
+      "found_expected_kind" : 49,
+      "found_with_expected_class" : 49,
+      "reported_any_breaking" : 0,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    },
+    "oasdiff" : {
+      "n" : 49,
+      "found_expected_kind" : 48,
+      "found_with_expected_class" : 48,
+      "reported_any_breaking" : 0,
+      "instances_with_other_changes" : 0,
+      "errors" : 1
+    },
+    "textdiff" : {
+      "n" : 49,
+      "found_expected_kind" : 0,
+      "found_with_expected_class" : 0,
+      "reported_any_breaking" : 49,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    }
+  }, {
+    "mutation" : "ADD_OPTIONAL_REQUEST_FIELD",
+    "expected_kind" : "request_field_added_optional",
+    "expected_breaking" : false,
+    "specs_without_a_site" : 33,
+    "axon" : {
+      "n" : 67,
+      "found_expected_kind" : 67,
+      "found_with_expected_class" : 67,
+      "reported_any_breaking" : 0,
+      "instances_with_other_changes" : 1,
+      "errors" : 0
+    },
+    "oasdiff" : {
+      "n" : 67,
+      "found_expected_kind" : 65,
+      "found_with_expected_class" : 65,
+      "reported_any_breaking" : 0,
+      "instances_with_other_changes" : 0,
+      "errors" : 2
+    },
+    "textdiff" : {
+      "n" : 67,
+      "found_expected_kind" : 0,
+      "found_with_expected_class" : 0,
+      "reported_any_breaking" : 40,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    }
+  }, {
+    "mutation" : "ADD_RESPONSE_FIELD",
+    "expected_kind" : "response_field_added",
+    "expected_breaking" : false,
+    "specs_without_a_site" : 11,
+    "axon" : {
+      "n" : 89,
+      "found_expected_kind" : 89,
+      "found_with_expected_class" : 89,
+      "reported_any_breaking" : 0,
+      "instances_with_other_changes" : 1,
+      "errors" : 0
+    },
+    "oasdiff" : {
+      "n" : 89,
+      "found_expected_kind" : 87,
+      "found_with_expected_class" : 87,
+      "reported_any_breaking" : 0,
+      "instances_with_other_changes" : 0,
+      "errors" : 2
+    },
+    "textdiff" : {
+      "n" : 89,
+      "found_expected_kind" : 0,
+      "found_with_expected_class" : 0,
+      "reported_any_breaking" : 76,
+      "instances_with_other_changes" : 0,
+      "errors" : 0
+    }
+  } ],
+  "breaking_label" : {
+    "axon" : {
+      "tp" : 618,
+      "fp" : 0,
+      "fn" : 0,
+      "tn" : 236,
+      "precision" : 1.0,
+      "recall" : 1.0,
+      "accuracy" : 1.0
+    },
+    "oasdiff" : {
+      "tp" : 476,
+      "fp" : 0,
+      "fn" : 125,
+      "tn" : 230,
+      "precision" : 1.0,
+      "recall" : 0.7920133111480865,
+      "accuracy" : 0.8495788206979543
+    },
+    "textdiff" : {
+      "tp" : 618,
+      "fp" : 196,
+      "fn" : 0,
+      "tn" : 40,
+      "precision" : 0.7592137592137592,
+      "recall" : 1.0,
+      "accuracy" : 0.7704918032786885
+    }
+  },
+  "oasdiff_unmodelled_ids_seen" : {
+    "api-version-not-bumped" : 173,
+    "request-property-default-value-removed" : 1,
+    "request-property-max-length-unset" : 6,
+    "request-property-min-length-unset" : 6,
+    "request-property-pattern-removed" : 2,
+    "request-required-property-became-not-write-only" : 1,
+    "response-optional-property-became-not-read-only" : 1,
+    "response-property-default-value-removed" : 1,
+    "response-property-max-length-unset" : 1,
+    "response-property-min-length-unset" : 3
+  }
+}
