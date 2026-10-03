@@ -1,0 +1,107 @@
+{
+  "schema_version": "0.1",
+  "generated_at": "2026-10-01T09:00:00Z",
+  "inputs": {
+    "baseline": { "path": "specs/users-v1.yaml", "sha256": "0000000000000000000000000000000000000000000000000000000000000001", "title": "Users API", "version": "1.0.0", "openapi": "3.0.3" },
+    "candidate": { "path": "specs/users-v2.yaml", "sha256": "0000000000000000000000000000000000000000000000000000000000000002", "title": "Users API", "version": "2.0.0", "openapi": "3.0.3" },
+    "usage": { "source": "jsonl", "events": 125000, "matched_events": 124100, "unmatched_events": 900, "first_event": "2026-08-01T00:00:03Z", "last_event": "2026-09-30T23:59:41Z" }
+  },
+  "config": {
+    "window": { "start": "2026-08-01T00:00:00Z", "end": "2026-09-30T23:59:59Z", "days": 60 },
+    "client_identity": { "mode": "header", "header": "X-Client-Id" },
+    "thresholds": { "recent_days": 7, "stale_days": 30, "high_min_clients": 3, "high_share": 0.1, "critical_share": 0.5, "unused_min_requests": 300 },
+    "critical_clients": [],
+    "server_errors": "info"
+  },
+  "summary": {
+    "changes_total": 3,
+    "breaking_total": 2,
+    "active_clients": 24,
+    "by_severity": {
+      "observed": { "CRITICAL": 1 },
+      "potential": { "DORMANT": 1 }
+    }
+  },
+  "changes": [
+    {
+      "id": "c1",
+      "kind": "request_field_removed",
+      "breaking": true,
+      "operation": { "method": "POST", "path": "/users" },
+      "location": { "part": "request.body", "field": "$.phone" },
+      "description": "Request field 'phone' removed from POST /users.",
+      "evidence": "observed",
+      "observed_affected": {
+        "clients": 18, "requests": 9120, "share_recent": 0.75, "k_recent": 18,
+        "first_seen": "2026-08-01T00:02:11Z", "last_seen": "2026-09-30T23:58:02Z",
+        "top_clients": [
+          { "client": "a1b2c3d4e5f60718", "requests": 2210, "last_seen": "2026-09-30T23:58:02Z" }
+        ]
+      },
+      "severity": "CRITICAL",
+      "rank": 1,
+      "spec_only_rank": 2,
+      "confidence": { "events_in_scope": 10400, "window_days": 60, "min_detectable_rate_per_day": 0.05, "unseen_rate_upper_95": 0.00029, "tier": "uncalibrated" }
+    },
+    {
+      "id": "c2",
+      "kind": "response_field_removed",
+      "breaking": true,
+      "operation": { "method": "GET", "path": "/users/{id}" },
+      "location": { "part": "response.body", "status": "200", "field": "$.legacy_id" },
+      "description": "Response field 'legacy_id' removed from GET /users/{id} 200.",
+      "evidence": "potential",
+      "potentially_affected": {
+        "clients": 1, "requests": 40, "share_recent": 0.0, "k_recent": 0,
+        "first_seen": "2026-08-02T10:00:00Z", "last_seen": "2026-08-20T14:30:00Z",
+        "top_clients": [
+          { "client": "0f1e2d3c4b5a6978", "requests": 40, "last_seen": "2026-08-20T14:30:00Z" }
+        ]
+      },
+      "severity": "DORMANT",
+      "rank": 2,
+      "spec_only_rank": 1,
+      "confidence": { "events_in_scope": 40, "window_days": 60, "min_detectable_rate_per_day": 0.05, "unseen_rate_upper_95": 0.0722, "tier": "uncalibrated" }
+    },
+    {
+      "id": "c3",
+      "kind": "response_field_added",
+      "breaking": false,
+      "operation": { "method": "GET", "path": "/users/{id}" },
+      "location": { "part": "response.body", "status": "200", "field": "$.created_at" },
+      "description": "Response field 'created_at' added to GET /users/{id} 200.",
+      "evidence": "none",
+      "severity": null,
+      "rank": null,
+      "spec_only_rank": null,
+      "confidence": { "events_in_scope": 0, "window_days": 60, "min_detectable_rate_per_day": 0.05, "unseen_rate_upper_95": null, "tier": "uncalibrated" }
+    }
+  ],
+  "drift": [
+    {
+      "kind": "undocumented_operation",
+      "severity": "warning",
+      "operation": null,
+      "path": "/orders/{*}/refund",
+      "requests": 900,
+      "detail": "900 requests matched no operation in the baseline spec."
+    },
+    {
+      "kind": "undocumented_field",
+      "severity": "warning",
+      "operation": { "method": "POST", "path": "/users" },
+      "location": "response.201.body",
+      "field": "$.legacy_id",
+      "presence_rate": 0.31,
+      "requests": 10400,
+      "detail": "Field present in 31% of 10400 responses; not in the spec."
+    }
+  ],
+  "unsupported": [
+    { "construct": "callbacks", "location": "/paths/~1users/post/callbacks", "reason": "Callbacks are not modelled." }
+  ],
+  "limitations": [
+    "Response-field changes are 'potential': traffic shows who calls the operation, not who reads the field.",
+    "Clients calling less often than 0.05 times per day may be missing from a 60-day window."
+  ]
+}

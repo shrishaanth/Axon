@@ -1,0 +1,269 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://axon.invalid/schemas/impact-report.schema.json",
+  "title": "Axon impact and drift report",
+  "type": "object",
+  "required": ["schema_version", "generated_at", "inputs", "config", "summary", "changes", "drift", "unsupported", "limitations"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "0.1" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "inputs": {
+      "type": "object",
+      "required": ["baseline", "candidate", "usage"],
+      "additionalProperties": false,
+      "properties": {
+        "baseline": { "$ref": "#/$defs/specRef" },
+        "candidate": { "$ref": "#/$defs/specRef" },
+        "usage": {
+          "type": "object",
+          "required": ["source", "events", "matched_events", "unmatched_events"],
+          "additionalProperties": false,
+          "properties": {
+            "source": { "enum": ["jsonl", "har", "ingest", "none"] },
+            "events": { "type": "integer", "minimum": 0 },
+            "matched_events": { "type": "integer", "minimum": 0 },
+            "unmatched_events": { "type": "integer", "minimum": 0 },
+            "first_event": { "type": ["string", "null"], "format": "date-time" },
+            "last_event": { "type": ["string", "null"], "format": "date-time" }
+          }
+        }
+      }
+    },
+    "config": {
+      "type": "object",
+      "required": ["window", "client_identity", "thresholds", "server_errors"],
+      "additionalProperties": false,
+      "properties": {
+        "window": {
+          "type": "object",
+          "required": ["start", "end", "days"],
+          "additionalProperties": false,
+          "properties": {
+            "start": { "type": "string", "format": "date-time" },
+            "end": { "type": "string", "format": "date-time" },
+            "days": { "type": "number", "exclusiveMinimum": 0 }
+          }
+        },
+        "client_identity": {
+          "type": "object",
+          "required": ["mode"],
+          "additionalProperties": false,
+          "properties": {
+            "mode": { "enum": ["header", "api_key_hash", "none"] },
+            "header": { "type": "string" }
+          }
+        },
+        "thresholds": {
+          "type": "object",
+          "required": ["recent_days", "stale_days", "high_min_clients", "high_share", "critical_share", "unused_min_requests"],
+          "additionalProperties": false,
+          "properties": {
+            "recent_days": { "type": "number", "exclusiveMinimum": 0 },
+            "stale_days": { "type": "number", "exclusiveMinimum": 0 },
+            "high_min_clients": { "type": "integer", "minimum": 1 },
+            "high_share": { "type": "number", "minimum": 0, "maximum": 1 },
+            "critical_share": { "type": "number", "minimum": 0, "maximum": 1 },
+            "unused_min_requests": { "type": "integer", "minimum": 1 }
+          }
+        },
+        "critical_clients": { "type": "array", "items": { "$ref": "#/$defs/clientId" } },
+        "server_errors": { "enum": ["info", "drift"] }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["changes_total", "breaking_total", "active_clients", "by_severity"],
+      "additionalProperties": false,
+      "properties": {
+        "changes_total": { "type": "integer", "minimum": 0 },
+        "breaking_total": { "type": "integer", "minimum": 0 },
+        "active_clients": { "type": ["integer", "null"], "minimum": 0, "description": "Null when client identity mode is 'none'." },
+        "by_severity": {
+          "type": "object",
+          "required": ["observed", "potential"],
+          "additionalProperties": false,
+          "description": "Observed and potential are counted in separate buckets and never summed.",
+          "properties": {
+            "observed": { "$ref": "#/$defs/severityCounts" },
+            "potential": { "$ref": "#/$defs/severityCounts" }
+          }
+        }
+      }
+    },
+    "changes": { "type": "array", "items": { "$ref": "#/$defs/change" } },
+    "drift": { "type": "array", "items": { "$ref": "#/$defs/drift" } },
+    "unsupported": {
+      "type": "array",
+      "description": "Constructs recognised but not modelled. Never silently ignored.",
+      "items": {
+        "type": "object",
+        "required": ["construct", "location", "reason"],
+        "additionalProperties": false,
+        "properties": {
+          "construct": { "type": "string" },
+          "location": { "type": "string", "description": "JSON pointer into the spec file." },
+          "reason": { "type": "string" }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Plain-language limits that apply to this report (e.g. no client identity, short window)."
+    }
+  },
+  "$defs": {
+    "clientId": { "type": "string", "pattern": "^[0-9a-f]{16}$" },
+    "severity": { "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW", "DORMANT", "NONE_OBSERVED", "UNRATED"] },
+    "severityCounts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "CRITICAL": { "type": "integer", "minimum": 0 },
+        "HIGH": { "type": "integer", "minimum": 0 },
+        "MEDIUM": { "type": "integer", "minimum": 0 },
+        "LOW": { "type": "integer", "minimum": 0 },
+        "DORMANT": { "type": "integer", "minimum": 0 },
+        "NONE_OBSERVED": { "type": "integer", "minimum": 0 },
+        "UNRATED": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "specRef": {
+      "type": "object",
+      "required": ["path", "sha256"],
+      "additionalProperties": false,
+      "properties": {
+        "path": { "type": "string" },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "title": { "type": "string" },
+        "version": { "type": "string" },
+        "openapi": { "type": "string" }
+      }
+    },
+    "operationKey": {
+      "type": "object",
+      "required": ["method", "path"],
+      "additionalProperties": false,
+      "properties": {
+        "method": { "type": "string" },
+        "path": { "type": "string" },
+        "operation_id": { "type": "string" }
+      }
+    },
+    "exposure": {
+      "type": "object",
+      "required": ["clients", "requests", "first_seen", "last_seen", "top_clients"],
+      "additionalProperties": false,
+      "properties": {
+        "clients": { "type": ["integer", "null"], "minimum": 0, "description": "Null when client identity mode is 'none'." },
+        "requests": { "type": "integer", "minimum": 0 },
+        "share_recent": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "k_recent": { "type": ["integer", "null"], "minimum": 0 },
+        "first_seen": { "type": ["string", "null"], "format": "date-time" },
+        "last_seen": { "type": ["string", "null"], "format": "date-time" },
+        "top_clients": {
+          "type": "array",
+          "maxItems": 10,
+          "items": {
+            "type": "object",
+            "required": ["client", "requests", "last_seen"],
+            "additionalProperties": false,
+            "properties": {
+              "client": { "$ref": "#/$defs/clientId" },
+              "requests": { "type": "integer", "minimum": 0 },
+              "last_seen": { "type": "string", "format": "date-time" }
+            }
+          }
+        }
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "required": ["events_in_scope", "window_days", "min_detectable_rate_per_day", "tier"],
+      "additionalProperties": false,
+      "properties": {
+        "events_in_scope": { "type": "integer", "minimum": 0 },
+        "window_days": { "type": "number", "exclusiveMinimum": 0 },
+        "min_detectable_rate_per_day": { "type": "number", "minimum": 0, "description": "3 / window_days (metrics.md section 7b)." },
+        "unseen_rate_upper_95": { "type": ["number", "null"], "minimum": 0, "maximum": 1, "description": "1 - 0.05^(1/n); null when n = 0 (metrics.md section 7a)." },
+        "tier": { "enum": ["uncalibrated", "low", "medium", "high"] }
+      }
+    },
+    "change": {
+      "type": "object",
+      "required": ["id", "kind", "breaking", "operation", "location", "description", "evidence", "severity", "spec_only_rank", "rank", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "kind": {
+          "enum": [
+            "operation_removed", "operation_added",
+            "request_field_removed", "request_field_added_optional", "request_field_added_required",
+            "request_field_made_required", "request_field_made_optional",
+            "request_field_type_changed", "request_enum_narrowed", "request_enum_widened",
+            "response_field_removed", "response_field_added",
+            "response_field_type_changed", "response_enum_widened", "response_enum_narrowed",
+            "response_status_removed", "response_status_added",
+            "other"
+          ]
+        },
+        "breaking": { "type": "boolean" },
+        "partially_analysed": { "type": "boolean", "description": "True when the operation touches an unsupported construct." },
+        "operation": { "$ref": "#/$defs/operationKey" },
+        "location": {
+          "type": "object",
+          "required": ["part"],
+          "additionalProperties": false,
+          "properties": {
+            "part": { "enum": ["request.path", "request.query", "request.body", "response.body", "response.status", "operation"] },
+            "status": { "type": "string", "description": "Response status code or 'default'." },
+            "field": { "type": "string", "description": "Field path in $.a.b[].c form." }
+          }
+        },
+        "description": { "type": "string" },
+        "evidence": { "enum": ["observed", "potential", "none"], "description": "Fixed by 'kind' (metrics.md section 2). 'none' for safe changes." },
+        "observed_affected": { "$ref": "#/$defs/exposure" },
+        "potentially_affected": { "$ref": "#/$defs/exposure" },
+        "severity": { "anyOf": [{ "$ref": "#/$defs/severity" }, { "type": "null" }], "description": "Null for safe changes (evidence none); no impact is computed for them." },
+        "rank": { "type": ["integer", "null"], "minimum": 1, "description": "Position among breaking changes by Axon's ranking; null for safe changes." },
+        "spec_only_rank": { "type": ["integer", "null"], "minimum": 1, "description": "Position under the spec-only baseline (metrics.md section 8); null for safe changes." },
+        "confidence": { "$ref": "#/$defs/confidence" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "evidence": { "const": "observed" } }, "required": ["evidence"] },
+          "then": { "required": ["observed_affected"], "not": { "required": ["potentially_affected"] } }
+        },
+        {
+          "if": { "properties": { "evidence": { "const": "potential" } }, "required": ["evidence"] },
+          "then": { "required": ["potentially_affected"], "not": { "required": ["observed_affected"] } }
+        },
+        {
+          "if": { "properties": { "evidence": { "const": "none" } }, "required": ["evidence"] },
+          "then": { "not": { "anyOf": [{ "required": ["observed_affected"] }, { "required": ["potentially_affected"] }] } }
+        }
+      ]
+    },
+    "drift": {
+      "type": "object",
+      "required": ["kind", "severity", "operation", "detail"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": { "enum": ["undocumented_field", "unused_field", "type_mismatch", "undocumented_status", "undocumented_operation", "unused_operation"] },
+        "severity": { "enum": ["warning", "info"] },
+        "operation": { "oneOf": [{ "$ref": "#/$defs/operationKey" }, { "type": "null" }], "description": "Null for undocumented_operation (no operation matched)." },
+        "location": { "type": "string", "description": "e.g. 'response.200.body' or 'request.query'." },
+        "field": { "type": "string" },
+        "status": { "type": "string" },
+        "path": { "type": "string", "description": "Normalised path, for undocumented_operation." },
+        "observed": { "type": "array", "items": { "type": "string" }, "description": "Observed types, for type_mismatch." },
+        "documented": { "type": "array", "items": { "type": "string" } },
+        "presence_rate": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "requests": { "type": "integer", "minimum": 0 },
+        "unseen_rate_upper_95": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "detail": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://axon.invalid/schemas/traffic-event.schema.json",
+  "title": "Sanitised traffic event (one JSONL line)",
+  "description": "One request/response pair after the sanitiser. Values are dropped; shapes remain. Spec-declared enum values may be kept, capped.",
+  "type": "object",
+  "required": ["v", "ts", "method", "status"],
+  "additionalProperties": false,
+  "anyOf": [{ "required": ["operation"] }, { "required": ["path"] }],
+  "properties": {
+    "v": { "const": 1, "description": "Event schema version." },
+    "ts": { "type": "string", "format": "date-time" },
+    "method": { "enum": ["GET", "PUT", "POST", "DELETE", "OPTIONS", "HEAD", "PATCH", "TRACE"] },
+    "operation": {
+      "type": "string",
+      "description": "Operation key 'METHOD /template' when the sanitiser matched locally against a supplied spec. Preferred: the raw path then never leaves the machine."
+    },
+    "path": {
+      "type": "string",
+      "description": "Path with value-like segments (digits, UUIDs, long hex, long tokens) replaced by '{*}'. Used when the sanitiser had no spec to match against."
+    },
+    "status": { "type": "integer", "minimum": 100, "maximum": 599 },
+    "latency_ms": { "type": "number", "minimum": 0 },
+    "client": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{16}$",
+      "description": "hex(sha256(workspace_salt || identity_value))[0:16]. A pseudonym, not anonymisation. Absent when no client identity is configured."
+    },
+    "request": { "$ref": "#/$defs/part" },
+    "response": { "$ref": "#/$defs/part" },
+    "sanitiser": {
+      "type": "object",
+      "required": ["version"],
+      "additionalProperties": false,
+      "properties": {
+        "version": { "type": "string" },
+        "salt_id": { "type": "string", "description": "Identifies which salt hashed the client id; the salt itself never appears." }
+      }
+    }
+  },
+  "$defs": {
+    "type": { "enum": ["string", "integer", "number", "boolean", "null", "object", "array"] },
+    "field": {
+      "type": "object",
+      "required": ["path", "types"],
+      "additionalProperties": false,
+      "properties": {
+        "path": { "type": "string", "pattern": "^\\$", "description": "$.a.b[].c ; arrays collapse indexes to []." },
+        "types": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/type" },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "Types seen at this path within this one event (more than one when array elements differ)."
+        },
+        "values": {
+          "type": "array",
+          "maxItems": 16,
+          "items": { "type": ["string", "integer", "boolean"] },
+          "description": "Only for spec-declared enums; capped at 16. Never present for free-form fields."
+        }
+      }
+    },
+    "part": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "query": { "type": "array", "items": { "$ref": "#/$defs/field" }, "description": "Query parameter names as paths '$.name'." },
+        "body": { "type": "array", "items": { "$ref": "#/$defs/field" }, "maxItems": 500 },
+        "truncated": { "type": "boolean", "description": "True if the sanitiser hit the field-count (500) or depth (10) cap." }
+      }
+    }
+  }
+}
