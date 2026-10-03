@@ -19,6 +19,8 @@ public final class EvalMain {
             case "memory" -> MemoryProbe.main(rest);
             case "e1a" -> MutationExperiment.main(rest);
             case "e1b" -> HistoryAgreement.main(rest);
+            case "demo-service" -> io.github.shrishaanth.axon.eval.demo.DemoService.main(rest);
+            case "demo-clients" -> io.github.shrishaanth.axon.eval.demo.DemoClients.main(rest);
             default -> {
                 System.err.println("unknown command: " + args[0]);
                 System.exit(2);
