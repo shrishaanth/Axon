@@ -1,0 +1,1866 @@
+{
+  "clients" : {
+    "admin-tool" : {
+      "DELETE /recipes/{id}" : {
+        "calls" : 20,
+        "bodies" : 0,
+        "first" : "2026-08-03T13:08:24Z",
+        "last" : "2026-09-26T13:51:31Z",
+        "rate_per_day" : 0.0,
+        "sent" : { },
+        "types" : { },
+        "values" : { },
+        "reads" : { },
+        "statuses" : {
+          "204" : 18,
+          "404" : 2
+        }
+      },
+      "PUT /recipes/{id}" : {
+        "calls" : 20,
+        "bodies" : 20,
+        "first" : "2026-08-03T13:08:24Z",
+        "last" : "2026-09-26T13:51:31Z",
+        "rate_per_day" : 0.0,
+        "sent" : {
+          "$" : 20,
+          "$.difficulty" : 20,
+          "$.minutes" : 20,
+          "$.notes" : 20,
+          "$.servings" : 20,
+          "$.tags" : 20,
+          "$.tags[]" : 20,
+          "$.title" : 20
+        },
+        "types" : {
+          "$" : {
+            "object" : 20
+          },
+          "$.difficulty" : {
+            "string" : 20
+          },
+          "$.minutes" : {
+            "integer" : 20
+          },
+          "$.notes" : {
+            "string" : 20
+          },
+          "$.servings" : {
+            "integer" : 20
+          },
+          "$.tags" : {
+            "array" : 20
+          },
+          "$.tags[]" : {
+            "string" : 20
+          },
+          "$.title" : {
+            "string" : 20
+          }
+        },
+        "values" : {
+          "$.difficulty" : {
+            "medium" : 20
+          },
+          "$.notes" : {
+            "family recipe" : 20
+          },
+          "$.tags[]" : {
+            "veg" : 20
+          },
+          "$.title" : {
+            "Recipe 11" : 1,
+            "Recipe 163" : 1,
+            "Recipe 198" : 1,
+            "Recipe 211" : 1,
+            "Recipe 223" : 1,
+            "Recipe 248" : 1,
+            "Recipe 260" : 1,
+            "Recipe 265" : 1,
+            "Recipe 285" : 1,
+            "Recipe 34" : 1,
+            "Recipe 376" : 1,
+            "Recipe 405" : 1,
+            "Recipe 485" : 1,
+            "Recipe 501" : 1,
+            "Recipe 547" : 1,
+            "Recipe 554" : 1,
+            "Recipe 766" : 1,
+            "Recipe 82" : 1,
+            "Recipe 862" : 1,
+            "Recipe 956" : 1
+          }
+        },
+        "reads" : {
+          "200" : [ "$.id" ]
+        },
+        "statuses" : {
+          "200" : 20
+        }
+      }
+    },
+    "analytics-bot" : {
+      "GET /recipes" : {
+        "calls" : 2400,
+        "bodies" : 0,
+        "first" : "2026-08-02T01:56:15Z",
+        "last" : "2026-09-30T21:54:56Z",
+        "rate_per_day" : 0.0,
+        "sent" : {
+          "?debug" : 2400,
+          "?limit" : 2400
+        },
+        "types" : { },
+        "values" : {
+          "?debug" : {
+            "1" : 2400
+          },
+          "?limit" : {
+            "20" : 2400
+          }
+        },
+        "reads" : {
+          "200" : [ "$.items[].internal_score", "$.items[].rating_avg" ]
+        },
+        "statuses" : {
+          "200" : 2400
+        }
+      }
+    },
+    "android-4" : {
+      "POST /recipes" : {
+        "calls" : 144,
+        "bodies" : 144,
+        "first" : "2026-08-02T02:52:56Z",
+        "last" : "2026-09-18T19:08:48Z",
+        "rate_per_day" : 0.0,
+        "sent" : {
+          "$" : 144,
+          "$.difficulty" : 144,
+          "$.minutes" : 144,
+          "$.servings" : 144,
+          "$.tags" : 144,
+          "$.tags[]" : 144,
+          "$.title" : 144
+        },
+        "types" : {
+          "$" : {
+            "object" : 144
+          },
+          "$.difficulty" : {
+            "string" : 144
+          },
+          "$.minutes" : {
+            "number" : 144
+          },
+          "$.servings" : {
+            "integer" : 144
+          },
+          "$.tags" : {
+            "array" : 144
+          },
+          "$.tags[]" : {
+            "string" : 144
+          },
+          "$.title" : {
+            "string" : 144
+          }
+        },
+        "values" : {
+          "$.difficulty" : {
+            "expert" : 144
+          },
+          "$.tags[]" : {
+            "veg" : 144
+          },
+          "$.title" : {
+            "Recipe 107" : 1,
+            "Recipe 114" : 1,
+            "Recipe 123" : 1,
+            "Recipe 13" : 1,
+            "Recipe 136" : 1,
+            "Recipe 142" : 1,
+            "Recipe 143" : 2,
+            "Recipe 158" : 1,
+            "Recipe 159" : 1,
+            "Recipe 17" : 1,
+            "Recipe 171" : 1,
+            "Recipe 18" : 1,
+            "Recipe 200" : 1,
+            "Recipe 203" : 1,
+            "Recipe 212" : 1,
+            "Recipe 215" : 1,
+            "Recipe 226" : 1,
+            "Recipe 23" : 1,
+            "Recipe 258" : 1,
+            "Recipe 26" : 1,
+            "Recipe 265" : 2,
+            "Recipe 27" : 1,
+            "Recipe 28" : 1,
+            "Recipe 282" : 1,
+            "Recipe 287" : 1,
+            "Recipe 291" : 1,
+            "Recipe 309" : 1,
+            "Recipe 315" : 1,
+            "Recipe 327" : 1,
+            "Recipe 328" : 1,
+            "Recipe 334" : 1,
+            "Recipe 339" : 1,
+            "Recipe 344" : 1,
+            "Recipe 35" : 1,
+            "Recipe 368" : 1,
+            "Recipe 375" : 1,
+            "Recipe 383" : 1,
+            "Recipe 396" : 1,
+            "Recipe 405" : 1,
+            "Recipe 408" : 1,
+            "Recipe 410" : 1,
+            "Recipe 417" : 1,
+            "Recipe 420" : 1,
+            "Recipe 421" : 1,
+            "Recipe 429" : 1,
+            "Recipe 435" : 1,
+            "Recipe 444" : 1,
+            "Recipe 446" : 1,
+            "Recipe 455" : 1,
+            "Recipe 462" : 1,
+            "Recipe 467" : 1,
+            "Recipe 474" : 3,
+            "Recipe 477" : 1,
+            "Recipe 497" : 1,
+            "Recipe 5" : 1,
+            "Recipe 502" : 2,
+            "Recipe 508" : 1,
+            "Recipe 514" : 1,
+            "Recipe 518" : 2,
+            "Recipe 526" : 1,
+            "Recipe 528" : 1,
+            "Recipe 536" : 1,
+            "Recipe 547" : 1,
+            "Recipe 576" : 1,
+            "Recipe 583" : 1,
+            "Recipe 601" : 1,
+            "Recipe 610" : 1,
+            "Recipe 615" : 1,
+            "Recipe 617" : 1,
+            "Recipe 636" : 2,
+            "Recipe 64" : 2,
+            "Recipe 654" : 1,
+            "Recipe 655" : 2,
+            "Recipe 670" : 1,
+            "Recipe 676" : 1,
+            "Recipe 678" : 1,
+            "Recipe 681" : 1,
+            "Recipe 683" : 1,
+            "Recipe 686" : 1,
+            "Recipe 689" : 1,
+            "Recipe 692" : 1,
+            "Recipe 707" : 1,
+            "Recipe 71" : 3,
+            "Recipe 710" : 1,
+            "Recipe 726" : 1,
+            "Recipe 728" : 2,
+            "Recipe 734" : 1,
+            "Recipe 737" : 1,
+            "Recipe 740" : 1,
+            "Recipe 756" : 1,
+            "Recipe 762" : 2,
+            "Recipe 772" : 1,
+            "Recipe 774" : 1,
+            "Recipe 776" : 1,
+            "Recipe 778" : 1,
+            "Recipe 781" : 1,
+            "Recipe 784" : 1,
+            "Recipe 787" : 2,
+            "Recipe 792" : 1,
+            "Recipe 800" : 1,
+            "Recipe 808" : 1,
+            "Recipe 812" : 1,
+            "Recipe 816" : 1,
+            "Recipe 82" : 1,
+            "Recipe 825" : 1,
+            "Recipe 84" : 1,
+            "Recipe 850" : 1,
+            "Recipe 853" : 1,
+            "Recipe 857" : 1,
+            "Recipe 864" : 1,
+            "Recipe 87" : 2,
+            "Recipe 882" : 1,
+            "Recipe 888" : 1,
+            "Recipe 901" : 2,
+            "Recipe 906" : 1,
+            "Recipe 909" : 1,
+            "Recipe 913" : 1,
+            "Recipe 940" : 1,
+            "Recipe 957" : 1,
+            "Recipe 959" : 1,
+            "Recipe 960" : 1,
+            "Recipe 961" : 1,
+            "Recipe 963" : 1,
+            "Recipe 971" : 1,
+            "Recipe 985" : 1,
+            "Recipe 986" : 1,
+            "Recipe 988" : 1,
+            "Recipe 998" : 1
+          }
+        },
+        "reads" : {
+          "201" : [ "$.id", "$.legacy_slug" ],
+          "429" : [ "$.id", "$.legacy_slug" ]
+        },
+        "statuses" : {
+          "201" : 141,
+          "429" : 3
+        }
+      }
+    },
+    "android-5" : {
+      "GET /recipes" : {
+        "calls" : 600,
+        "bodies" : 0,
+        "first" : "2026-08-02T02:42:08Z",
+        "last" : "2026-09-30T18:14:01Z",
+        "rate_per_day" : 0.0,
+        "sent" : {
+          "?limit" : 600
+        },
+        "types" : { },
+        "values" : {
+          "?limit" : {
+            "5" : 600
+          }
+        },
+        "reads" : {
+          "200" : [ "$.items[].id", "$.items[].title" ]
+        },
+        "statuses" : {
+          "200" : 600
+        }
+      },
+      "GET /recipes/{id}/ratings" : {
+        "calls" : 600,
+        "bodies" : 0,
+        "first" : "2026-08-02T02:42:08Z",
+        "last" : "2026-09-30T18:14:01Z",
+        "rate_per_day" : 0.0,
+        "sent" : { },
+        "types" : { },
+        "values" : { },
+        "reads" : {
+          "200" : [ "$[].comment", "$[].stars" ]
+        },
+        "statuses" : {
+          "200" : 600
+        }
+      },
+      "POST /recipes/{id}/ratings" : {
+        "calls" : 600,
+        "bodies" : 600,
+        "first" : "2026-08-02T02:42:08Z",
+        "last" : "2026-09-30T18:14:01Z",
+        "rate_per_day" : 0.0,
+        "sent" : {
+          "$" : 600,
+          "$.stars" : 600
+        },
+        "types" : {
+          "$" : {
+            "object" : 600
+          },
+          "$.stars" : {
+            "integer" : 600
+          }
+        },
+        "values" : { },
+        "reads" : {
+          "201" : [ "$.id", "$.stars" ]
+        },
+        "statuses" : {
+          "201" : 600
+        }
+      }
+    },
+    "cron-nightly" : {
+      "GET /export/recipes" : {
+        "calls" : 60,
+        "bodies" : 0,
+        "first" : "2026-08-02T05:05:30Z",
+        "last" : "2026-09-30T13:12:29Z",
+        "rate_per_day" : 0.0,
+        "sent" : { },
+        "types" : { },
+        "values" : { },
+        "reads" : {
+          "200" : [ "$.generated_at", "$.recipes[].id" ]
+        },
+        "statuses" : {
+          "200" : 60
+        }
+      }
+    },
+    "importer-script" : {
+      "POST /recipes" : {
+        "calls" : 60,
+        "bodies" : 60,
+        "first" : "2026-08-06T00:56:28Z",
+        "last" : "2026-08-20T20:47:48Z",
+        "rate_per_day" : 0.0,
+        "sent" : {
+          "$" : 60,
+          "$.difficulty" : 60,
+          "$.minutes" : 60,
+          "$.notes" : 60,
+          "$.tags" : 60,
+          "$.tags[]" : 60,
+          "$.title" : 60
+        },
+        "types" : {
+          "$" : {
+            "object" : 60
+          },
+          "$.difficulty" : {
+            "string" : 60
+          },
+          "$.minutes" : {
+            "number" : 60
+          },
+          "$.notes" : {
+            "string" : 60
+          },
+          "$.tags" : {
+            "array" : 60
+          },
+          "$.tags[]" : {
+            "string" : 60
+          },
+          "$.title" : {
+            "string" : 60
+          }
+        },
+        "values" : {
+          "$.difficulty" : {
+            "expert" : 60
+          },
+          "$.notes" : {
+            "family recipe" : 60
+          },
+          "$.tags[]" : {
+            "veg" : 60
+          },
+          "$.title" : {
+            "Recipe 1" : 1,
+            "Recipe 103" : 1,
+            "Recipe 104" : 1,
+            "Recipe 119" : 1,
+            "Recipe 12" : 1,
+            "Recipe 166" : 1,
+            "Recipe 168" : 1,
+            "Recipe 169" : 1,
+            "Recipe 172" : 1,
+            "Recipe 174" : 1,
+            "Recipe 196" : 1,
+            "Recipe 204" : 1,
+            "Recipe 209" : 1,
+            "Recipe 215" : 1,
+            "Recipe 23" : 1,
+            "Recipe 239" : 1,
+            "Recipe 287" : 1,
+            "Recipe 292" : 1,
+            "Recipe 309" : 1,
+            "Recipe 316" : 1,
+            "Recipe 377" : 1,
+            "Recipe 388" : 1,
+            "Recipe 390" : 1,
+            "Recipe 396" : 1,
+            "Recipe 401" : 1,
+            "Recipe 402" : 1,
+            "Recipe 428" : 1,
+            "Recipe 432" : 1,
+            "Recipe 437" : 1,
+            "Recipe 48" : 1,
+            "Recipe 505" : 1,
+            "Recipe 506" : 1,
+            "Recipe 518" : 1,
+            "Recipe 530" : 1,
+            "Recipe 559" : 1,
+            "Recipe 589" : 1,
+            "Recipe 597" : 1,
+            "Recipe 614" : 1,
+            "Recipe 615" : 1,
+            "Recipe 647" : 1,
+            "Recipe 657" : 1,
+            "Recipe 677" : 1,
+            "Recipe 689" : 1,
+            "Recipe 690" : 1,
+            "Recipe 721" : 1,
+            "Recipe 724" : 1,
+            "Recipe 74" : 1,
+            "Recipe 743" : 1,
+            "Recipe 754" : 1,
+            "Recipe 766" : 1,
+            "Recipe 800" : 1,
+            "Recipe 803" : 1,
+            "Recipe 824" : 1,
+            "Recipe 871" : 1,
+            "Recipe 875" : 1,
+            "Recipe 895" : 1,
+            "Recipe 912" : 1,
+            "Recipe 914" : 1,
+            "Recipe 959" : 1,
+            "Recipe 961" : 1
+          }
+        },
+        "reads" : {
+          "201" : [ "$.id" ],
+          "429" : [ "$.id" ]
+        },
+        "statuses" : {
+          "201" : 58,
+          "429" : 2
+        }
+      }
+    },
+    "ios-3.9" : {
+      "GET /recipes/{id}" : {
+        "calls" : 228,
+        "bodies" : 0,
+        "first" : "2026-08-02T04:23:32Z",
+        "last" : "2026-09-27T16:18:08Z",
+        "rate_per_day" : 0.0,
+        "sent" : { },
+        "types" : { },
+        "values" : { },
+        "reads" : {
+          "200" : [ "$.id", "$.legacy_slug", "$.title" ]
+        },
+        "statuses" : {
+          "200" : 228
+        }
+      },
+      "POST /recipes" : {
+        "calls" : 228,
+        "bodies" : 228,
+        "first" : "2026-08-02T04:23:32Z",
+        "last" : "2026-09-27T16:18:08Z",
+        "rate_per_day" : 0.0,
+        "sent" : {
+          "$" : 228,
+          "$.difficulty" : 228,
+          "$.minutes" : 228,
+          "$.notes" : 228,
+          "$.tags" : 228,
+          "$.tags[]" : 228,
+          "$.title" : 228
+        },
+        "types" : {
+          "$" : {
+            "object" : 228
+          },
+          "$.difficulty" : {
+            "string" : 228
+          },
+          "$.minutes" : {
+            "integer" : 228
+          },
+          "$.notes" : {
+            "string" : 228
+          },
+          "$.tags" : {
+            "array" : 228
+          },
+          "$.tags[]" : {
+            "string" : 228
+          },
+          "$.title" : {
+            "string" : 228
+          }
+        },
+        "values" : {
+          "$.difficulty" : {
+            "easy" : 102,
+            "expert" : 126
+          },
+          "$.notes" : {
+            "family recipe" : 228
+          },
+          "$.tags[]" : {
+            "veg" : 228
+          },
+          "$.title" : {
+            "Recipe 106" : 1,
+            "Recipe 110" : 1,
+            "Recipe 111" : 1,
+            "Recipe 112" : 1,
+            "Recipe 115" : 1,
+            "Recipe 122" : 1,
+            "Recipe 130" : 1,
+            "Recipe 137" : 1,
+            "Recipe 141" : 2,
+            "Recipe 145" : 1,
+            "Recipe 146" : 1,
+            "Recipe 149" : 1,
+            "Recipe 152" : 1,
+            "Recipe 153" : 1,
+            "Recipe 155" : 1,
+            "Recipe 159" : 1,
+            "Recipe 161" : 1,
+            "Recipe 164" : 1,
+            "Recipe 17" : 1,
+            "Recipe 170" : 1,
+            "Recipe 175" : 1,
+            "Recipe 176" : 1,
+            "Recipe 177" : 2,
+            "Recipe 181" : 2,
+            "Recipe 185" : 1,
+            "Recipe 192" : 1,
+            "Recipe 198" : 1,
+            "Recipe 201" : 1,
+            "Recipe 202" : 1,
+            "Recipe 203" : 1,
+            "Recipe 207" : 2,
+            "Recipe 214" : 1,
+            "Recipe 217" : 1,
+            "Recipe 226" : 1,
+            "Recipe 23" : 1,
+            "Recipe 231" : 1,
+            "Recipe 233" : 1,
+            "Recipe 235" : 1,
+            "Recipe 239" : 2,
+            "Recipe 24" : 1,
+            "Recipe 250" : 1,
+            "Recipe 251" : 1,
+            "Recipe 253" : 1,
+            "Recipe 254" : 1,
+            "Recipe 259" : 1,
+            "Recipe 26" : 1,
+            "Recipe 260" : 1,
+            "Recipe 263" : 1,
+            "Recipe 27" : 1,
+            "Recipe 273" : 2,
+            "Recipe 280" : 2,
+            "Recipe 281" : 1,
+            "Recipe 282" : 1,
+            "Recipe 297" : 1,
+            "Recipe 298" : 1,
+            "Recipe 3" : 1,
+            "Recipe 300" : 1,
+            "Recipe 305" : 1,
+            "Recipe 32" : 1,
+            "Recipe 330" : 1,
+            "Recipe 336" : 1,
+            "Recipe 341" : 1,
+            "Recipe 35" : 1,
+            "Recipe 356" : 1,
+            "Recipe 359" : 1,
+            "Recipe 372" : 1,
+            "Recipe 377" : 1,
+            "Recipe 38" : 1,
+            "Recipe 387" : 1,
+            "Recipe 394" : 1,
+            "Recipe 395" : 1,
+            "Recipe 399" : 1,
+            "Recipe 40" : 2,
+            "Recipe 417" : 1,
+            "Recipe 418" : 1,
+            "Recipe 419" : 1,
+            "Recipe 422" : 1,
+            "Recipe 426" : 1,
+            "Recipe 428" : 1,
+            "Recipe 432" : 1,
+            "Recipe 434" : 1,
+            "Recipe 435" : 1,
+            "Recipe 436" : 1,
+            "Recipe 437" : 1,
+            "Recipe 443" : 1,
+            "Recipe 447" : 1,
+            "Recipe 456" : 1,
+            "Recipe 46" : 1,
+            "Recipe 466" : 1,
+            "Recipe 471" : 2,
+            "Recipe 48" : 1,
+            "Recipe 480" : 1,
+            "Recipe 482" : 1,
+            "Recipe 495" : 1,
+            "Recipe 50" : 1,
+            "Recipe 500" : 1,
+            "Recipe 504" : 1,
+            "Recipe 506" : 1,
+            "Recipe 513" : 1,
+            "Recipe 514" : 1,
+            "Recipe 52" : 2,
+            "Recipe 520" : 1,
+            "Recipe 530" : 2,
+            "Recipe 531" : 1,
+            "Recipe 534" : 2,
+            "Recipe 537" : 1,
+            "Recipe 538" : 1,
+            "Recipe 550" : 1,
+            "Recipe 552" : 2,
+            "Recipe 555" : 1,
+            "Recipe 559" : 1,
+            "Recipe 561" : 1,
+            "Recipe 562" : 1,
+            "Recipe 57" : 1,
+            "Recipe 573" : 1,
+            "Recipe 575" : 2,
+            "Recipe 576" : 1,
+            "Recipe 579" : 1,
+            "Recipe 582" : 2,
+            "Recipe 594" : 1,
+            "Recipe 596" : 1,
+            "Recipe 601" : 1,
+            "Recipe 603" : 1,
+            "Recipe 605" : 1,
+            "Recipe 614" : 1,
+            "Recipe 621" : 2,
+            "Recipe 624" : 1,
+            "Recipe 626" : 1,
+            "Recipe 628" : 1,
+            "Recipe 629" : 1,
+            "Recipe 633" : 1,
+            "Recipe 64" : 1,
+            "Recipe 645" : 1,
+            "Recipe 646" : 1,
+            "Recipe 647" : 2,
+            "Recipe 652" : 1,
+            "Recipe 658" : 1,
+            "Recipe 663" : 1,
+            "Recipe 665" : 1,
+            "Recipe 674" : 1,
+            "Recipe 680" : 1,
+            "Recipe 684" : 1,
+            "Recipe 690" : 1,
+            "Recipe 691" : 1,
+            "Recipe 699" : 1,
+            "Recipe 7" : 1,
+            "Recipe 704" : 1,
+            "Recipe 705" : 1,
+            "Recipe 71" : 1,
+            "Recipe 711" : 1,
+            "Recipe 722" : 1,
+            "Recipe 726" : 1,
+            "Recipe 73" : 2,
+            "Recipe 733" : 1,
+            "Recipe 74" : 1,
+            "Recipe 745" : 1,
+            "Recipe 748" : 1,
+            "Recipe 772" : 1,
+            "Recipe 774" : 1,
+            "Recipe 78" : 1,
+            "Recipe 784" : 1,
+            "Recipe 79" : 1,
+            "Recipe 790" : 1,
+            "Recipe 792" : 1,
+            "Recipe 793" : 1,
+            "Recipe 795" : 1,
+            "Recipe 80" : 1,
+            "Recipe 806" : 1,
+            "Recipe 814" : 1,
+            "Recipe 817" : 2,
+            "Recipe 819" : 1,
+            "Recipe 821" : 1,
+            "Recipe 825" : 1,
+            "Recipe 83" : 1,
+            "Recipe 844" : 1,
+            "Recipe 855" : 2,
+            "Recipe 856" : 1,
+            "Recipe 867" : 1,
+            "Recipe 868" : 1,
+            "Recipe 872" : 1,
+            "Recipe 881" : 1,
+            "Recipe 894" : 2,
+            "Recipe 899" : 1,
+            "Recipe 902" : 2,
+            "Recipe 906" : 1,
+            "Recipe 907" : 1,
+            "Recipe 909" : 1,
+            "Recipe 918" : 1,
+            "Recipe 927" : 2,
+            "Recipe 935" : 1,
+            "Recipe 939" : 1,
+            "Recipe 941" : 1,
+            "Recipe 942" : 1,
+            "Recipe 945" : 1,
+            "Recipe 968" : 1,
+            "Recipe 972" : 1,
+            "Recipe 973" : 1,
+            "Recipe 976" : 1,
+            "Recipe 98" : 1,
+            "Recipe 984" : 1,
+            "Recipe 992" : 1,
+            "Recipe 993" : 1,
+            "Recipe 994" : 1,
+            "Recipe 998" : 1,
+            "Recipe 999" : 1
+          }
+        },
+        "reads" : {
+          "201" : [ "$.id" ],
+          "429" : [ "$.id" ]
+        },
+        "statuses" : {
+          "201" : 222,
+          "429" : 6
+        }
+      }
+    },
+    "ios-4.2" : {
+      "GET /recipes/featured" : {
+        "calls" : 720,
+        "bodies" : 0,
+        "first" : "2026-08-02T02:46:07Z",
+        "last" : "2026-09-30T21:40:54Z",
+        "rate_per_day" : 0.0,
+        "sent" : { },
+        "types" : { },
+        "values" : { },
+        "reads" : {
+          "200" : [ "$.id", "$.minutes", "$.title" ]
+        },
+        "statuses" : {
+          "200" : 720
+        }
+      },
+      "POST /recipes" : {
+        "calls" : 244,
+        "bodies" : 244,
+        "first" : "2026-08-02T06:09:35Z",
+        "last" : "2026-09-30T19:45:45Z",
+        "rate_per_day" : 0.0,
+        "sent" : {
+          "$" : 244,
+          "$.difficulty" : 244,
+          "$.minutes" : 244,
+          "$.servings" : 244,
+          "$.tags" : 244,
+          "$.tags[]" : 244,
+          "$.title" : 244
+        },
+        "types" : {
+          "$" : {
+            "object" : 244
+          },
+          "$.difficulty" : {
+            "string" : 244
+          },
+          "$.minutes" : {
+            "integer" : 244
+          },
+          "$.servings" : {
+            "integer" : 244
+          },
+          "$.tags" : {
+            "array" : 244
+          },
+          "$.tags[]" : {
+            "string" : 244
+          },
+          "$.title" : {
+            "string" : 244
+          }
+        },
+        "values" : {
+          "$.difficulty" : {
+            "easy" : 244
+          },
+          "$.tags[]" : {
+            "veg" : 244
+          },
+          "$.title" : {
+            "Recipe 0" : 1,
+            "Recipe 112" : 1,
+            "Recipe 120" : 1,
+            "Recipe 128" : 1,
+            "Recipe 134" : 1,
+            "Recipe 139" : 2,
+            "Recipe 14" : 1,
+            "Recipe 140" : 1,
+            "Recipe 142" : 3,
+            "Recipe 147" : 2,
+            "Recipe 152" : 1,
+            "Recipe 154" : 1,
+            "Recipe 157" : 2,
+            "Recipe 18" : 1,
+            "Recipe 185" : 1,
+            "Recipe 187" : 1,
+            "Recipe 190" : 1,
+            "Recipe 191" : 1,
+            "Recipe 206" : 1,
+            "Recipe 208" : 1,
+            "Recipe 209" : 1,
+            "Recipe 22" : 1,
+            "Recipe 221" : 1,
+            "Recipe 23" : 1,
+            "Recipe 230" : 1,
+            "Recipe 232" : 1,
+            "Recipe 241" : 1,
+            "Recipe 247" : 1,
+            "Recipe 249" : 1,
+            "Recipe 251" : 1,
+            "Recipe 254" : 1,
+            "Recipe 262" : 1,
+            "Recipe 266" : 1,
+            "Recipe 286" : 1,
+            "Recipe 288" : 1,
+            "Recipe 29" : 1,
+            "Recipe 299" : 1,
+            "Recipe 301" : 1,
+            "Recipe 302" : 1,
+            "Recipe 304" : 1,
+            "Recipe 305" : 1,
+            "Recipe 31" : 1,
+            "Recipe 310" : 1,
+            "Recipe 317" : 1,
+            "Recipe 318" : 1,
+            "Recipe 32" : 1,
+            "Recipe 323" : 2,
+            "Recipe 327" : 1,
+            "Recipe 328" : 2,
+            "Recipe 334" : 1,
+            "Recipe 337" : 1,
+            "Recipe 339" : 1,
+            "Recipe 346" : 2,
+            "Recipe 349" : 1,
+            "Recipe 352" : 1,
+            "Recipe 357" : 1,
+            "Recipe 359" : 1,
+            "Recipe 360" : 1,
+            "Recipe 362" : 1,
+            "Recipe 364" : 1,
+            "Recipe 367" : 1,
+            "Recipe 379" : 2,
+            "Recipe 380" : 1,
+            "Recipe 381" : 1,
+            "Recipe 382" : 1,
+            "Recipe 387" : 1,
+            "Recipe 390" : 1,
+            "Recipe 399" : 1,
+            "Recipe 414" : 1,
+            "Recipe 417" : 1,
+            "Recipe 42" : 1,
+            "Recipe 432" : 1,
+            "Recipe 441" : 1,
+            "Recipe 449" : 1,
+            "Recipe 452" : 1,
+            "Recipe 453" : 1,
+            "Recipe 455" : 1,
+            "Recipe 457" : 1,
+            "Recipe 459" : 2,
+            "Recipe 461" : 1,
+            "Recipe 466" : 1,
+            "Recipe 472" : 1,
+            "Recipe 487" : 1,
+            "Recipe 488" : 1,
+            "Recipe 49" : 1,
+            "Recipe 490" : 1,
+            "Recipe 491" : 1,
+            "Recipe 494" : 1,
+            "Recipe 495" : 1,
+            "Recipe 501" : 1,
+            "Recipe 502" : 1,
+            "Recipe 507" : 1,
+            "Recipe 508" : 2,
+            "Recipe 509" : 1,
+            "Recipe 513" : 1,
+            "Recipe 520" : 2,
+            "Recipe 524" : 1,
+            "Recipe 525" : 1,
+            "Recipe 53" : 1,
+            "Recipe 532" : 2,
+            "Recipe 535" : 1,
+            "Recipe 542" : 2,
+            "Recipe 551" : 1,
+            "Recipe 552" : 1,
+            "Recipe 556" : 1,
+            "Recipe 561" : 1,
+            "Recipe 565" : 1,
+            "Recipe 569" : 1,
+            "Recipe 573" : 1,
+            "Recipe 577" : 1,
+            "Recipe 582" : 2,
+            "Recipe 583" : 1,
+            "Recipe 584" : 1,
+            "Recipe 587" : 1,
+            "Recipe 590" : 2,
+            "Recipe 597" : 1,
+            "Recipe 603" : 1,
+            "Recipe 604" : 2,
+            "Recipe 607" : 1,
+            "Recipe 609" : 1,
+            "Recipe 61" : 1,
+            "Recipe 614" : 2,
+            "Recipe 617" : 1,
+            "Recipe 618" : 2,
+            "Recipe 62" : 1,
+            "Recipe 621" : 1,
+            "Recipe 623" : 1,
+            "Recipe 627" : 1,
+            "Recipe 631" : 1,
+            "Recipe 632" : 1,
+            "Recipe 635" : 1,
+            "Recipe 638" : 2,
+            "Recipe 644" : 1,
+            "Recipe 645" : 1,
+            "Recipe 646" : 2,
+            "Recipe 650" : 1,
+            "Recipe 652" : 1,
+            "Recipe 653" : 1,
+            "Recipe 655" : 1,
+            "Recipe 662" : 2,
+            "Recipe 666" : 1,
+            "Recipe 668" : 1,
+            "Recipe 678" : 1,
+            "Recipe 682" : 1,
+            "Recipe 683" : 1,
+            "Recipe 686" : 2,
+            "Recipe 69" : 2,
+            "Recipe 690" : 1,
+            "Recipe 691" : 1,
+            "Recipe 692" : 1,
+            "Recipe 693" : 1,
+            "Recipe 697" : 1,
+            "Recipe 7" : 1,
+            "Recipe 701" : 1,
+            "Recipe 703" : 2,
+            "Recipe 712" : 1,
+            "Recipe 713" : 1,
+            "Recipe 718" : 2,
+            "Recipe 728" : 1,
+            "Recipe 731" : 1,
+            "Recipe 733" : 1,
+            "Recipe 734" : 1,
+            "Recipe 737" : 1,
+            "Recipe 749" : 1,
+            "Recipe 75" : 1,
+            "Recipe 757" : 1,
+            "Recipe 758" : 1,
+            "Recipe 764" : 1,
+            "Recipe 767" : 1,
+            "Recipe 771" : 1,
+            "Recipe 775" : 1,
+            "Recipe 78" : 1,
+            "Recipe 790" : 1,
+            "Recipe 80" : 1,
+            "Recipe 805" : 1,
+            "Recipe 807" : 1,
+            "Recipe 812" : 1,
+            "Recipe 818" : 1,
+            "Recipe 820" : 1,
+            "Recipe 822" : 1,
+            "Recipe 831" : 2,
+            "Recipe 833" : 1,
+            "Recipe 839" : 1,
+            "Recipe 841" : 1,
+            "Recipe 847" : 1,
+            "Recipe 851" : 1,
+            "Recipe 855" : 1,
+            "Recipe 857" : 2,
+            "Recipe 859" : 1,
+            "Recipe 864" : 1,
+            "Recipe 875" : 1,
+            "Recipe 88" : 1,
+            "Recipe 886" : 1,
+            "Recipe 889" : 1,
+            "Recipe 892" : 1,
+            "Recipe 896" : 1,
+            "Recipe 90" : 1,
+            "Recipe 905" : 1,
+            "Recipe 907" : 1,
+            "Recipe 924" : 1,
+            "Recipe 927" : 1,
+            "Recipe 931" : 2,
+            "Recipe 937" : 1,
+            "Recipe 939" : 1,
+            "Recipe 945" : 1,
+            "Recipe 95" : 1,
+            "Recipe 952" : 1,
+            "Recipe 956" : 1,
+            "Recipe 958" : 1,
+            "Recipe 966" : 1,
+            "Recipe 97" : 1,
+            "Recipe 971" : 2,
+            "Recipe 98" : 1,
+            "Recipe 987" : 1
+          }
+        },
+        "reads" : {
+          "201" : [ "$.id", "$.title" ],
+          "429" : [ "$.id", "$.title" ]
+        },
+        "statuses" : {
+          "201" : 238,
+          "429" : 6
+        }
+      }
+    },
+    "partner-acme" : {
+      "GET /export/recipes" : {
+        "calls" : 120,
+        "bodies" : 0,
+        "first" : "2026-08-02T02:56:37Z",
+        "last" : "2026-09-30T22:00:44Z",
+        "rate_per_day" : 0.0,
+        "sent" : {
+          "?since" : 120
+        },
+        "types" : { },
+        "values" : {
+          "?since" : {
+            "2026-01-01" : 120
+          }
+        },
+        "reads" : {
+          "200" : [ "$.recipes[].id", "$.recipes[].legacy_slug", "$.recipes[].title" ]
+        },
+        "statuses" : {
+          "200" : 120
+        }
+      }
+    },
+    "partner-globex" : {
+      "GET /recipes" : {
+        "calls" : 60,
+        "bodies" : 0,
+        "first" : "2026-08-02T03:48:24Z",
+        "last" : "2026-09-30T19:26:07Z",
+        "rate_per_day" : 0.0,
+        "sent" : {
+          "?sort" : 60,
+          "?tag" : 60
+        },
+        "types" : { },
+        "values" : {
+          "?sort" : {
+            "newest" : 60
+          },
+          "?tag" : {
+            "veg" : 60
+          }
+        },
+        "reads" : {
+          "200" : [ "$.items[].id", "$.items[].legacy_slug" ]
+        },
+        "statuses" : {
+          "200" : 60
+        }
+      }
+    },
+    "qa-smoke" : {
+      "GET /export/recipes" : {
+        "calls" : 1,
+        "bodies" : 0,
+        "first" : "2026-08-31T22:17:19Z",
+        "last" : "2026-08-31T22:17:19Z",
+        "rate_per_day" : 0.0,
+        "sent" : { },
+        "types" : { },
+        "values" : { },
+        "reads" : { },
+        "statuses" : {
+          "200" : 1
+        }
+      },
+      "GET /recipes" : {
+        "calls" : 1,
+        "bodies" : 0,
+        "first" : "2026-08-31T22:17:19Z",
+        "last" : "2026-08-31T22:17:19Z",
+        "rate_per_day" : 0.0,
+        "sent" : { },
+        "types" : { },
+        "values" : { },
+        "reads" : { },
+        "statuses" : {
+          "200" : 1
+        }
+      },
+      "GET /recipes/featured" : {
+        "calls" : 1,
+        "bodies" : 0,
+        "first" : "2026-08-31T22:17:19Z",
+        "last" : "2026-08-31T22:17:19Z",
+        "rate_per_day" : 0.0,
+        "sent" : { },
+        "types" : { },
+        "values" : { },
+        "reads" : { },
+        "statuses" : {
+          "200" : 1
+        }
+      },
+      "GET /recipes/{id}" : {
+        "calls" : 2,
+        "bodies" : 0,
+        "first" : "2026-08-31T22:17:19Z",
+        "last" : "2026-08-31T22:17:19Z",
+        "rate_per_day" : 0.0,
+        "sent" : { },
+        "types" : { },
+        "values" : { },
+        "reads" : { },
+        "statuses" : {
+          "200" : 1,
+          "404" : 1
+        }
+      },
+      "GET /recipes/{id}/ratings" : {
+        "calls" : 1,
+        "bodies" : 0,
+        "first" : "2026-08-31T22:17:19Z",
+        "last" : "2026-08-31T22:17:19Z",
+        "rate_per_day" : 0.0,
+        "sent" : { },
+        "types" : { },
+        "values" : { },
+        "reads" : { },
+        "statuses" : {
+          "200" : 1
+        }
+      }
+    },
+    "web-app" : {
+      "GET /recipes" : {
+        "calls" : 1800,
+        "bodies" : 0,
+        "first" : "2026-08-02T01:21:32Z",
+        "last" : "2026-09-30T22:56:16Z",
+        "rate_per_day" : 0.0,
+        "sent" : {
+          "?limit" : 1800,
+          "?sort" : 1800
+        },
+        "types" : { },
+        "values" : {
+          "?limit" : {
+            "10" : 1800
+          },
+          "?sort" : {
+            "rating" : 1800
+          }
+        },
+        "reads" : {
+          "200" : [ "$.items[].id", "$.items[].rating_avg", "$.items[].tags", "$.items[].title" ]
+        },
+        "statuses" : {
+          "200" : 1800
+        }
+      },
+      "GET /recipes/{id}" : {
+        "calls" : 1800,
+        "bodies" : 0,
+        "first" : "2026-08-02T01:21:32Z",
+        "last" : "2026-09-30T22:56:16Z",
+        "rate_per_day" : 0.0,
+        "sent" : { },
+        "types" : { },
+        "values" : { },
+        "reads" : {
+          "200" : [ "$.difficulty", "$.id", "$.minutes", "$.servings", "$.title" ]
+        },
+        "statuses" : {
+          "200" : 1800
+        }
+      },
+      "POST /recipes" : {
+        "calls" : 448,
+        "bodies" : 448,
+        "first" : "2026-08-02T01:21:32Z",
+        "last" : "2026-09-30T22:56:16Z",
+        "rate_per_day" : 0.0,
+        "sent" : {
+          "$" : 448,
+          "$.difficulty" : 448,
+          "$.minutes" : 448,
+          "$.servings" : 448,
+          "$.tags" : 448,
+          "$.tags[]" : 448,
+          "$.title" : 448
+        },
+        "types" : {
+          "$" : {
+            "object" : 448
+          },
+          "$.difficulty" : {
+            "string" : 448
+          },
+          "$.minutes" : {
+            "integer" : 448
+          },
+          "$.servings" : {
+            "integer" : 448
+          },
+          "$.tags" : {
+            "array" : 448
+          },
+          "$.tags[]" : {
+            "string" : 448
+          },
+          "$.title" : {
+            "string" : 448
+          }
+        },
+        "values" : {
+          "$.difficulty" : {
+            "easy" : 156,
+            "hard" : 148,
+            "medium" : 144
+          },
+          "$.tags[]" : {
+            "veg" : 448
+          },
+          "$.title" : {
+            "Recipe 1" : 2,
+            "Recipe 10" : 1,
+            "Recipe 100" : 1,
+            "Recipe 103" : 1,
+            "Recipe 105" : 2,
+            "Recipe 109" : 1,
+            "Recipe 110" : 1,
+            "Recipe 118" : 1,
+            "Recipe 119" : 1,
+            "Recipe 12" : 1,
+            "Recipe 120" : 1,
+            "Recipe 122" : 2,
+            "Recipe 123" : 1,
+            "Recipe 124" : 1,
+            "Recipe 125" : 2,
+            "Recipe 129" : 1,
+            "Recipe 13" : 1,
+            "Recipe 131" : 1,
+            "Recipe 132" : 1,
+            "Recipe 133" : 1,
+            "Recipe 134" : 1,
+            "Recipe 140" : 1,
+            "Recipe 142" : 2,
+            "Recipe 143" : 2,
+            "Recipe 146" : 1,
+            "Recipe 147" : 1,
+            "Recipe 151" : 1,
+            "Recipe 156" : 1,
+            "Recipe 158" : 1,
+            "Recipe 16" : 1,
+            "Recipe 167" : 1,
+            "Recipe 168" : 1,
+            "Recipe 17" : 1,
+            "Recipe 173" : 1,
+            "Recipe 178" : 1,
+            "Recipe 179" : 1,
+            "Recipe 192" : 1,
+            "Recipe 195" : 1,
+            "Recipe 199" : 1,
+            "Recipe 20" : 1,
+            "Recipe 202" : 1,
+            "Recipe 203" : 1,
+            "Recipe 204" : 1,
+            "Recipe 207" : 1,
+            "Recipe 209" : 1,
+            "Recipe 214" : 1,
+            "Recipe 219" : 1,
+            "Recipe 221" : 1,
+            "Recipe 223" : 1,
+            "Recipe 224" : 2,
+            "Recipe 227" : 1,
+            "Recipe 235" : 1,
+            "Recipe 238" : 2,
+            "Recipe 241" : 1,
+            "Recipe 249" : 2,
+            "Recipe 253" : 1,
+            "Recipe 258" : 1,
+            "Recipe 259" : 1,
+            "Recipe 26" : 1,
+            "Recipe 260" : 2,
+            "Recipe 261" : 1,
+            "Recipe 262" : 1,
+            "Recipe 265" : 1,
+            "Recipe 266" : 1,
+            "Recipe 270" : 3,
+            "Recipe 273" : 1,
+            "Recipe 274" : 3,
+            "Recipe 276" : 1,
+            "Recipe 277" : 1,
+            "Recipe 280" : 1,
+            "Recipe 282" : 1,
+            "Recipe 285" : 1,
+            "Recipe 287" : 1,
+            "Recipe 289" : 1,
+            "Recipe 29" : 1,
+            "Recipe 291" : 1,
+            "Recipe 292" : 1,
+            "Recipe 297" : 2,
+            "Recipe 299" : 1,
+            "Recipe 30" : 3,
+            "Recipe 301" : 1,
+            "Recipe 305" : 1,
+            "Recipe 306" : 1,
+            "Recipe 31" : 2,
+            "Recipe 310" : 2,
+            "Recipe 313" : 1,
+            "Recipe 314" : 1,
+            "Recipe 320" : 1,
+            "Recipe 321" : 1,
+            "Recipe 322" : 1,
+            "Recipe 326" : 1,
+            "Recipe 327" : 1,
+            "Recipe 328" : 1,
+            "Recipe 329" : 1,
+            "Recipe 33" : 1,
+            "Recipe 332" : 3,
+            "Recipe 334" : 1,
+            "Recipe 337" : 1,
+            "Recipe 338" : 1,
+            "Recipe 340" : 1,
+            "Recipe 345" : 1,
+            "Recipe 346" : 1,
+            "Recipe 347" : 1,
+            "Recipe 349" : 3,
+            "Recipe 350" : 1,
+            "Recipe 351" : 1,
+            "Recipe 357" : 1,
+            "Recipe 36" : 2,
+            "Recipe 369" : 2,
+            "Recipe 370" : 2,
+            "Recipe 373" : 1,
+            "Recipe 375" : 1,
+            "Recipe 377" : 1,
+            "Recipe 379" : 2,
+            "Recipe 380" : 1,
+            "Recipe 381" : 1,
+            "Recipe 383" : 1,
+            "Recipe 394" : 1,
+            "Recipe 396" : 1,
+            "Recipe 399" : 1,
+            "Recipe 406" : 3,
+            "Recipe 410" : 1,
+            "Recipe 412" : 1,
+            "Recipe 414" : 1,
+            "Recipe 415" : 1,
+            "Recipe 417" : 1,
+            "Recipe 42" : 1,
+            "Recipe 420" : 1,
+            "Recipe 421" : 1,
+            "Recipe 422" : 2,
+            "Recipe 427" : 1,
+            "Recipe 43" : 1,
+            "Recipe 430" : 1,
+            "Recipe 431" : 1,
+            "Recipe 432" : 1,
+            "Recipe 437" : 2,
+            "Recipe 44" : 1,
+            "Recipe 444" : 2,
+            "Recipe 447" : 1,
+            "Recipe 449" : 1,
+            "Recipe 451" : 1,
+            "Recipe 452" : 3,
+            "Recipe 453" : 2,
+            "Recipe 454" : 2,
+            "Recipe 456" : 1,
+            "Recipe 457" : 1,
+            "Recipe 458" : 1,
+            "Recipe 461" : 2,
+            "Recipe 462" : 1,
+            "Recipe 463" : 1,
+            "Recipe 470" : 1,
+            "Recipe 477" : 1,
+            "Recipe 479" : 1,
+            "Recipe 48" : 2,
+            "Recipe 480" : 1,
+            "Recipe 49" : 1,
+            "Recipe 494" : 3,
+            "Recipe 496" : 1,
+            "Recipe 5" : 1,
+            "Recipe 501" : 1,
+            "Recipe 502" : 1,
+            "Recipe 503" : 1,
+            "Recipe 504" : 1,
+            "Recipe 51" : 2,
+            "Recipe 510" : 1,
+            "Recipe 511" : 2,
+            "Recipe 518" : 2,
+            "Recipe 522" : 2,
+            "Recipe 526" : 1,
+            "Recipe 527" : 2,
+            "Recipe 53" : 1,
+            "Recipe 530" : 1,
+            "Recipe 532" : 1,
+            "Recipe 533" : 1,
+            "Recipe 536" : 1,
+            "Recipe 537" : 1,
+            "Recipe 542" : 1,
+            "Recipe 544" : 2,
+            "Recipe 547" : 1,
+            "Recipe 550" : 1,
+            "Recipe 555" : 1,
+            "Recipe 557" : 1,
+            "Recipe 56" : 1,
+            "Recipe 561" : 1,
+            "Recipe 562" : 1,
+            "Recipe 568" : 2,
+            "Recipe 569" : 1,
+            "Recipe 576" : 1,
+            "Recipe 579" : 1,
+            "Recipe 581" : 1,
+            "Recipe 582" : 1,
+            "Recipe 583" : 1,
+            "Recipe 589" : 1,
+            "Recipe 59" : 1,
+            "Recipe 590" : 3,
+            "Recipe 593" : 1,
+            "Recipe 596" : 1,
+            "Recipe 6" : 1,
+            "Recipe 600" : 1,
+            "Recipe 601" : 2,
+            "Recipe 605" : 1,
+            "Recipe 606" : 1,
+            "Recipe 608" : 1,
+            "Recipe 610" : 1,
+            "Recipe 617" : 1,
+            "Recipe 618" : 1,
+            "Recipe 626" : 1,
+            "Recipe 627" : 1,
+            "Recipe 634" : 1,
+            "Recipe 636" : 2,
+            "Recipe 639" : 1,
+            "Recipe 64" : 1,
+            "Recipe 642" : 2,
+            "Recipe 643" : 1,
+            "Recipe 644" : 1,
+            "Recipe 647" : 3,
+            "Recipe 648" : 1,
+            "Recipe 65" : 1,
+            "Recipe 652" : 1,
+            "Recipe 66" : 1,
+            "Recipe 662" : 1,
+            "Recipe 664" : 1,
+            "Recipe 666" : 2,
+            "Recipe 670" : 1,
+            "Recipe 677" : 1,
+            "Recipe 678" : 2,
+            "Recipe 679" : 1,
+            "Recipe 68" : 1,
+            "Recipe 684" : 1,
+            "Recipe 687" : 1,
+            "Recipe 688" : 1,
+            "Recipe 690" : 3,
+            "Recipe 694" : 1,
+            "Recipe 698" : 1,
+            "Recipe 700" : 1,
+            "Recipe 701" : 1,
+            "Recipe 702" : 2,
+            "Recipe 703" : 1,
+            "Recipe 704" : 2,
+            "Recipe 705" : 1,
+            "Recipe 707" : 1,
+            "Recipe 709" : 1,
+            "Recipe 710" : 1,
+            "Recipe 711" : 1,
+            "Recipe 716" : 2,
+            "Recipe 72" : 1,
+            "Recipe 721" : 1,
+            "Recipe 725" : 1,
+            "Recipe 731" : 1,
+            "Recipe 735" : 1,
+            "Recipe 737" : 2,
+            "Recipe 738" : 1,
+            "Recipe 74" : 1,
+            "Recipe 744" : 1,
+            "Recipe 746" : 2,
+            "Recipe 747" : 1,
+            "Recipe 756" : 1,
+            "Recipe 759" : 1,
+            "Recipe 76" : 1,
+            "Recipe 761" : 1,
+            "Recipe 764" : 1,
+            "Recipe 765" : 1,
+            "Recipe 766" : 1,
+            "Recipe 767" : 1,
+            "Recipe 768" : 1,
+            "Recipe 769" : 1,
+            "Recipe 77" : 1,
+            "Recipe 770" : 1,
+            "Recipe 771" : 1,
+            "Recipe 774" : 2,
+            "Recipe 777" : 1,
+            "Recipe 778" : 1,
+            "Recipe 780" : 2,
+            "Recipe 782" : 1,
+            "Recipe 785" : 1,
+            "Recipe 787" : 1,
+            "Recipe 788" : 1,
+            "Recipe 789" : 1,
+            "Recipe 79" : 1,
+            "Recipe 790" : 3,
+            "Recipe 793" : 1,
+            "Recipe 794" : 2,
+            "Recipe 795" : 1,
+            "Recipe 797" : 1,
+            "Recipe 799" : 3,
+            "Recipe 8" : 1,
+            "Recipe 800" : 1,
+            "Recipe 801" : 1,
+            "Recipe 803" : 1,
+            "Recipe 805" : 1,
+            "Recipe 808" : 2,
+            "Recipe 81" : 1,
+            "Recipe 810" : 1,
+            "Recipe 813" : 1,
+            "Recipe 814" : 1,
+            "Recipe 819" : 1,
+            "Recipe 820" : 3,
+            "Recipe 821" : 1,
+            "Recipe 83" : 1,
+            "Recipe 830" : 1,
+            "Recipe 833" : 1,
+            "Recipe 834" : 1,
+            "Recipe 837" : 1,
+            "Recipe 838" : 1,
+            "Recipe 840" : 1,
+            "Recipe 841" : 1,
+            "Recipe 847" : 2,
+            "Recipe 850" : 1,
+            "Recipe 851" : 1,
+            "Recipe 854" : 1,
+            "Recipe 857" : 1,
+            "Recipe 859" : 1,
+            "Recipe 861" : 2,
+            "Recipe 865" : 1,
+            "Recipe 867" : 1,
+            "Recipe 868" : 4,
+            "Recipe 870" : 1,
+            "Recipe 872" : 1,
+            "Recipe 874" : 1,
+            "Recipe 884" : 3,
+            "Recipe 89" : 1,
+            "Recipe 890" : 1,
+            "Recipe 891" : 1,
+            "Recipe 892" : 1,
+            "Recipe 900" : 2,
+            "Recipe 901" : 1,
+            "Recipe 902" : 1,
+            "Recipe 908" : 1,
+            "Recipe 909" : 1,
+            "Recipe 911" : 1,
+            "Recipe 913" : 1,
+            "Recipe 916" : 1,
+            "Recipe 92" : 1,
+            "Recipe 926" : 1,
+            "Recipe 927" : 2,
+            "Recipe 928" : 1,
+            "Recipe 93" : 2,
+            "Recipe 933" : 1,
+            "Recipe 934" : 1,
+            "Recipe 935" : 1,
+            "Recipe 94" : 2,
+            "Recipe 943" : 1,
+            "Recipe 949" : 3,
+            "Recipe 950" : 1,
+            "Recipe 956" : 2,
+            "Recipe 958" : 1,
+            "Recipe 959" : 1,
+            "Recipe 962" : 1,
+            "Recipe 967" : 1,
+            "Recipe 969" : 1,
+            "Recipe 973" : 1,
+            "Recipe 975" : 1,
+            "Recipe 976" : 1,
+            "Recipe 982" : 2,
+            "Recipe 985" : 1,
+            "Recipe 986" : 1,
+            "Recipe 987" : 1,
+            "Recipe 993" : 1,
+            "Recipe 996" : 1,
+            "Recipe 998" : 1
+          }
+        },
+        "reads" : {
+          "201" : [ "$.id" ],
+          "429" : [ "$.id" ]
+        },
+        "statuses" : {
+          "201" : 437,
+          "429" : 11
+        }
+      },
+      "POST /recipes/{id}/ratings" : {
+        "calls" : 597,
+        "bodies" : 597,
+        "first" : "2026-08-02T01:22:57Z",
+        "last" : "2026-09-30T22:56:16Z",
+        "rate_per_day" : 0.0,
+        "sent" : {
+          "$" : 597,
+          "$.comment" : 597,
+          "$.stars" : 597
+        },
+        "types" : {
+          "$" : {
+            "object" : 597
+          },
+          "$.comment" : {
+            "string" : 597
+          },
+          "$.stars" : {
+            "integer" : 597
+          }
+        },
+        "values" : {
+          "$.comment" : {
+            "ok" : 597
+          }
+        },
+        "reads" : {
+          "201" : [ "$.id" ]
+        },
+        "statuses" : {
+          "201" : 597
+        }
+      }
+    },
+    "web-app-canary" : {
+      "GET /recipes" : {
+        "calls" : 55,
+        "bodies" : 0,
+        "first" : "2026-09-20T04:25:29Z",
+        "last" : "2026-09-30T20:18:49Z",
+        "rate_per_day" : 0.0,
+        "sent" : {
+          "?limit" : 55,
+          "?sort" : 55
+        },
+        "types" : { },
+        "values" : {
+          "?limit" : {
+            "10" : 55
+          },
+          "?sort" : {
+            "rating" : 55
+          }
+        },
+        "reads" : {
+          "200" : [ "$.items[].id", "$.items[].rating_avg", "$.items[].tags", "$.items[].title" ]
+        },
+        "statuses" : {
+          "200" : 55
+        }
+      },
+      "GET /recipes/{id}" : {
+        "calls" : 55,
+        "bodies" : 0,
+        "first" : "2026-09-20T04:25:29Z",
+        "last" : "2026-09-30T20:18:49Z",
+        "rate_per_day" : 0.0,
+        "sent" : { },
+        "types" : { },
+        "values" : { },
+        "reads" : {
+          "200" : [ "$.difficulty", "$.id", "$.minutes", "$.servings", "$.title" ]
+        },
+        "statuses" : {
+          "200" : 55
+        }
+      },
+      "POST /recipes" : {
+        "calls" : 12,
+        "bodies" : 12,
+        "first" : "2026-09-20T04:25:29Z",
+        "last" : "2026-09-30T09:54:01Z",
+        "rate_per_day" : 0.0,
+        "sent" : {
+          "$" : 12,
+          "$.difficulty" : 12,
+          "$.minutes" : 12,
+          "$.servings" : 12,
+          "$.tags" : 12,
+          "$.tags[]" : 12,
+          "$.title" : 12
+        },
+        "types" : {
+          "$" : {
+            "object" : 12
+          },
+          "$.difficulty" : {
+            "string" : 12
+          },
+          "$.minutes" : {
+            "integer" : 12
+          },
+          "$.servings" : {
+            "integer" : 12
+          },
+          "$.tags" : {
+            "array" : 12
+          },
+          "$.tags[]" : {
+            "string" : 12
+          },
+          "$.title" : {
+            "string" : 12
+          }
+        },
+        "values" : {
+          "$.difficulty" : {
+            "easy" : 4,
+            "hard" : 3,
+            "medium" : 5
+          },
+          "$.tags[]" : {
+            "veg" : 12
+          },
+          "$.title" : {
+            "Recipe 158" : 1,
+            "Recipe 19" : 1,
+            "Recipe 279" : 1,
+            "Recipe 429" : 1,
+            "Recipe 439" : 1,
+            "Recipe 473" : 1,
+            "Recipe 504" : 1,
+            "Recipe 567" : 1,
+            "Recipe 610" : 1,
+            "Recipe 710" : 1,
+            "Recipe 750" : 1,
+            "Recipe 793" : 1
+          }
+        },
+        "reads" : {
+          "201" : [ "$.id" ]
+        },
+        "statuses" : {
+          "201" : 12
+        }
+      },
+      "POST /recipes/{id}/ratings" : {
+        "calls" : 21,
+        "bodies" : 21,
+        "first" : "2026-09-21T21:13:40Z",
+        "last" : "2026-09-30T20:18:49Z",
+        "rate_per_day" : 0.0,
+        "sent" : {
+          "$" : 21,
+          "$.comment" : 21,
+          "$.stars" : 21
+        },
+        "types" : {
+          "$" : {
+            "object" : 21
+          },
+          "$.comment" : {
+            "string" : 21
+          },
+          "$.stars" : {
+            "integer" : 21
+          }
+        },
+        "values" : {
+          "$.comment" : {
+            "ok" : 21
+          }
+        },
+        "reads" : {
+          "201" : [ "$.id" ]
+        },
+        "statuses" : {
+          "201" : 21
+        }
+      }
+    }
+  }
+}

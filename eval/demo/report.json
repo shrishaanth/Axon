@@ -1,0 +1,1425 @@
+{
+  "schema_version" : "0.2",
+  "generated_at" : "2026-10-03T18:39:48.709440800Z",
+  "inputs" : {
+    "baseline" : {
+      "path" : "eval/demo/recipes-v1.yaml",
+      "sha256" : "01d2723f66876a950ea7195661ed98f15f894e12271e8866ecf3b340e577f810",
+      "title" : "Recipes API (Axon demo service)",
+      "version" : "1.0.0",
+      "openapi" : "3.0.3"
+    },
+    "candidate" : {
+      "path" : "eval/demo/recipes-v2.yaml",
+      "sha256" : "27c233c51f6e481ff115fd4fe1bfa1f81e4816b18a6c35d3d1498e5a9fa90d35",
+      "title" : "Recipes API (Axon demo service)",
+      "version" : "2.0.0",
+      "openapi" : "3.0.3"
+    },
+    "usage" : {
+      "source" : "jsonl",
+      "events" : 10958,
+      "matched_events" : 10898,
+      "unmatched_events" : 60,
+      "first_event" : "2026-08-02T01:21:32Z",
+      "last_event" : "2026-09-30T22:56:16Z"
+    }
+  },
+  "config" : {
+    "window" : {
+      "start" : "2026-08-02T01:21:32Z",
+      "end" : "2026-09-30T22:56:16Z",
+      "days" : 59.89912037037037
+    },
+    "client_identity" : {
+      "mode" : "header",
+      "header" : "X-Client-Id"
+    },
+    "thresholds" : {
+      "recent_days" : 7.0,
+      "stale_days" : 30.0,
+      "high_min_clients" : 3,
+      "high_share" : 0.1,
+      "critical_share" : 0.5,
+      "unused_min_requests" : 300
+    },
+    "critical_clients" : [ ],
+    "server_errors" : "info"
+  },
+  "summary" : {
+    "changes_total" : 24,
+    "breaking_total" : 17,
+    "active_clients" : 10,
+    "by_severity" : {
+      "observed" : {
+        "HIGH" : 6,
+        "LOW" : 1,
+        "NONE_OBSERVED" : 3
+      },
+      "potential" : {
+        "CRITICAL" : 1,
+        "HIGH" : 6
+      }
+    }
+  },
+  "changes" : [ {
+    "id" : "c1",
+    "kind" : "request_field_removed",
+    "breaking" : true,
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes",
+      "operation_id" : "listRecipes"
+    },
+    "location" : {
+      "part" : "request.query",
+      "field" : "$.sort"
+    },
+    "description" : "Query parameter 'sort' removed from GET /recipes.",
+    "from" : "optional",
+    "evidence" : "observed",
+    "observed_affected" : {
+      "clients" : 3,
+      "requests" : 1915,
+      "share_recent" : 0.3,
+      "k_recent" : 3,
+      "first_seen" : "2026-08-02T01:21:32Z",
+      "last_seen" : "2026-09-30T22:56:16Z",
+      "top_clients" : [ {
+        "client" : "255c413f33ba248e",
+        "requests" : 1800,
+        "last_seen" : "2026-09-30T22:56:16Z"
+      }, {
+        "client" : "ed2f70a8dd431646",
+        "requests" : 60,
+        "last_seen" : "2026-09-30T19:26:07Z"
+      }, {
+        "client" : "ea32c32fe86c1262",
+        "requests" : 55,
+        "last_seen" : "2026-09-30T20:18:49Z"
+      } ]
+    },
+    "severity" : "HIGH",
+    "rank" : 2,
+    "spec_only_rank" : 16,
+    "operations_touched" : 1,
+    "confidence" : {
+      "events_in_scope" : 4916,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 6.091984709351017E-4,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c2",
+    "kind" : "response_field_removed",
+    "breaking" : true,
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes",
+      "operation_id" : "listRecipes"
+    },
+    "location" : {
+      "part" : "response.body",
+      "status" : "200",
+      "media_type" : "application/json",
+      "field" : "$.items[].legacy_slug"
+    },
+    "description" : "Field $.items[].legacy_slug in the response 200 of GET /recipes removed.",
+    "from" : "optional",
+    "source" : "/components/schemas/Recipe",
+    "evidence" : "potential",
+    "potentially_affected" : {
+      "clients" : 6,
+      "requests" : 4916,
+      "share_recent" : 0.5,
+      "k_recent" : 5,
+      "first_seen" : "2026-08-02T01:21:32Z",
+      "last_seen" : "2026-09-30T22:56:16Z",
+      "top_clients" : [ {
+        "client" : "882680f24b75a89b",
+        "requests" : 2400,
+        "last_seen" : "2026-09-30T21:54:56Z"
+      }, {
+        "client" : "255c413f33ba248e",
+        "requests" : 1800,
+        "last_seen" : "2026-09-30T22:56:16Z"
+      }, {
+        "client" : "fe2511335e094368",
+        "requests" : 600,
+        "last_seen" : "2026-09-30T18:14:01Z"
+      }, {
+        "client" : "ed2f70a8dd431646",
+        "requests" : 60,
+        "last_seen" : "2026-09-30T19:26:07Z"
+      }, {
+        "client" : "ea32c32fe86c1262",
+        "requests" : 55,
+        "last_seen" : "2026-09-30T20:18:49Z"
+      }, {
+        "client" : "9c0c531ea3724074",
+        "requests" : 1,
+        "last_seen" : "2026-08-31T22:17:19Z"
+      } ]
+    },
+    "severity" : "CRITICAL",
+    "rank" : 1,
+    "spec_only_rank" : 1,
+    "operations_touched" : 5,
+    "confidence" : {
+      "events_in_scope" : 4916,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 6.091984709351017E-4,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c3",
+    "kind" : "response_field_added",
+    "breaking" : false,
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes",
+      "operation_id" : "listRecipes"
+    },
+    "location" : {
+      "part" : "response.body",
+      "status" : "200",
+      "media_type" : "application/json",
+      "field" : "$.items[].updated_at"
+    },
+    "description" : "Field $.items[].updated_at in the response 200 of GET /recipes added.",
+    "to" : "optional",
+    "source" : "/components/schemas/Recipe",
+    "evidence" : "none",
+    "severity" : null,
+    "rank" : null,
+    "spec_only_rank" : null,
+    "confidence" : {
+      "events_in_scope" : 4916,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 6.091984709351017E-4,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c4",
+    "kind" : "request_field_type_changed",
+    "breaking" : true,
+    "operation" : {
+      "method" : "POST",
+      "path" : "/recipes",
+      "operation_id" : "createRecipe"
+    },
+    "location" : {
+      "part" : "request.body",
+      "media_type" : "application/json",
+      "field" : "$.minutes"
+    },
+    "description" : "Field $.minutes in the request body of POST /recipes changed type from number to integer.",
+    "from" : "number",
+    "to" : "integer",
+    "source" : "/components/schemas/NewRecipe/properties/minutes",
+    "evidence" : "observed",
+    "observed_affected" : {
+      "clients" : 2,
+      "requests" : 204,
+      "share_recent" : 0.0,
+      "k_recent" : 0,
+      "first_seen" : "2026-08-02T02:52:56Z",
+      "last_seen" : "2026-09-18T19:08:48Z",
+      "top_clients" : [ {
+        "client" : "47ede9c0674974c3",
+        "requests" : 144,
+        "last_seen" : "2026-09-18T19:08:48Z"
+      }, {
+        "client" : "ae6291b1140fe752",
+        "requests" : 60,
+        "last_seen" : "2026-08-20T20:47:48Z"
+      } ]
+    },
+    "severity" : "LOW",
+    "rank" : 14,
+    "spec_only_rank" : 6,
+    "operations_touched" : 2,
+    "confidence" : {
+      "events_in_scope" : 1136,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.0026336142061788026,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c5",
+    "kind" : "request_field_made_required",
+    "breaking" : true,
+    "operation" : {
+      "method" : "POST",
+      "path" : "/recipes",
+      "operation_id" : "createRecipe"
+    },
+    "location" : {
+      "part" : "request.body",
+      "media_type" : "application/json",
+      "field" : "$.servings"
+    },
+    "description" : "Field $.servings in the request body of POST /recipes became required.",
+    "from" : "optional",
+    "to" : "required",
+    "source" : "/components/schemas/NewRecipe",
+    "evidence" : "observed",
+    "observed_affected" : {
+      "clients" : 2,
+      "requests" : 288,
+      "share_recent" : 0.1,
+      "k_recent" : 1,
+      "first_seen" : "2026-08-02T04:23:32Z",
+      "last_seen" : "2026-09-27T16:18:08Z",
+      "top_clients" : [ {
+        "client" : "98acb5bb5a18f8ca",
+        "requests" : 228,
+        "last_seen" : "2026-09-27T16:18:08Z"
+      }, {
+        "client" : "ae6291b1140fe752",
+        "requests" : 60,
+        "last_seen" : "2026-08-20T20:47:48Z"
+      } ]
+    },
+    "evidence_note" : "Counts requests whose body had the parent object but not the field. Last seen is the last such body from the client, an upper bound.",
+    "severity" : "HIGH",
+    "rank" : 5,
+    "spec_only_rank" : 7,
+    "operations_touched" : 2,
+    "confidence" : {
+      "events_in_scope" : 1136,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.0026336142061788026,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c6",
+    "kind" : "request_enum_narrowed",
+    "breaking" : true,
+    "operation" : {
+      "method" : "POST",
+      "path" : "/recipes",
+      "operation_id" : "createRecipe"
+    },
+    "location" : {
+      "part" : "request.body",
+      "media_type" : "application/json",
+      "field" : "$.difficulty"
+    },
+    "description" : "Field $.difficulty in the request body of POST /recipes allows fewer values.",
+    "from" : "[\"easy\",\"medium\",\"hard\",\"expert\"]",
+    "to" : "[\"easy\",\"medium\",\"hard\"]",
+    "source" : "/components/schemas/NewRecipe/properties/difficulty",
+    "evidence" : "observed",
+    "observed_affected" : {
+      "clients" : 3,
+      "requests" : 330,
+      "share_recent" : 0.1,
+      "k_recent" : 1,
+      "first_seen" : "2026-08-02T02:52:56Z",
+      "last_seen" : "2026-09-27T16:18:08Z",
+      "top_clients" : [ {
+        "client" : "47ede9c0674974c3",
+        "requests" : 144,
+        "last_seen" : "2026-09-18T19:08:48Z"
+      }, {
+        "client" : "98acb5bb5a18f8ca",
+        "requests" : 126,
+        "last_seen" : "2026-09-27T16:18:08Z"
+      }, {
+        "client" : "ae6291b1140fe752",
+        "requests" : 60,
+        "last_seen" : "2026-08-20T20:47:48Z"
+      } ]
+    },
+    "severity" : "HIGH",
+    "rank" : 4,
+    "spec_only_rank" : 8,
+    "operations_touched" : 2,
+    "confidence" : {
+      "events_in_scope" : 1136,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.0026336142061788026,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c7",
+    "kind" : "request_field_removed",
+    "breaking" : true,
+    "operation" : {
+      "method" : "POST",
+      "path" : "/recipes",
+      "operation_id" : "createRecipe"
+    },
+    "location" : {
+      "part" : "request.body",
+      "media_type" : "application/json",
+      "field" : "$.notes"
+    },
+    "description" : "Field $.notes in the request body of POST /recipes removed.",
+    "from" : "optional",
+    "source" : "/components/schemas/NewRecipe",
+    "evidence" : "observed",
+    "observed_affected" : {
+      "clients" : 2,
+      "requests" : 288,
+      "share_recent" : 0.1,
+      "k_recent" : 1,
+      "first_seen" : "2026-08-02T04:23:32Z",
+      "last_seen" : "2026-09-27T16:18:08Z",
+      "top_clients" : [ {
+        "client" : "98acb5bb5a18f8ca",
+        "requests" : 228,
+        "last_seen" : "2026-09-27T16:18:08Z"
+      }, {
+        "client" : "ae6291b1140fe752",
+        "requests" : 60,
+        "last_seen" : "2026-08-20T20:47:48Z"
+      } ]
+    },
+    "severity" : "HIGH",
+    "rank" : 6,
+    "spec_only_rank" : 9,
+    "operations_touched" : 2,
+    "confidence" : {
+      "events_in_scope" : 1136,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.0026336142061788026,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c8",
+    "kind" : "request_field_added_optional",
+    "breaking" : false,
+    "operation" : {
+      "method" : "POST",
+      "path" : "/recipes",
+      "operation_id" : "createRecipe"
+    },
+    "location" : {
+      "part" : "request.body",
+      "media_type" : "application/json",
+      "field" : "$.cuisine"
+    },
+    "description" : "Field $.cuisine in the request body of POST /recipes added (optional).",
+    "to" : "optional",
+    "source" : "/components/schemas/NewRecipe",
+    "evidence" : "none",
+    "severity" : null,
+    "rank" : null,
+    "spec_only_rank" : null,
+    "confidence" : {
+      "events_in_scope" : 1136,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.0026336142061788026,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c9",
+    "kind" : "response_field_removed",
+    "breaking" : true,
+    "operation" : {
+      "method" : "POST",
+      "path" : "/recipes",
+      "operation_id" : "createRecipe"
+    },
+    "location" : {
+      "part" : "response.body",
+      "status" : "201",
+      "media_type" : "application/json",
+      "field" : "$.legacy_slug"
+    },
+    "description" : "Field $.legacy_slug in the response 201 of POST /recipes removed.",
+    "from" : "optional",
+    "source" : "/components/schemas/Recipe",
+    "evidence" : "potential",
+    "potentially_affected" : {
+      "clients" : 6,
+      "requests" : 1108,
+      "share_recent" : 0.4,
+      "k_recent" : 4,
+      "first_seen" : "2026-08-02T01:21:32Z",
+      "last_seen" : "2026-09-30T22:56:16Z",
+      "top_clients" : [ {
+        "client" : "255c413f33ba248e",
+        "requests" : 437,
+        "last_seen" : "2026-09-30T22:56:16Z"
+      }, {
+        "client" : "3bafe71de43ae87a",
+        "requests" : 238,
+        "last_seen" : "2026-09-30T19:45:45Z"
+      }, {
+        "client" : "98acb5bb5a18f8ca",
+        "requests" : 222,
+        "last_seen" : "2026-09-27T16:18:08Z"
+      }, {
+        "client" : "47ede9c0674974c3",
+        "requests" : 141,
+        "last_seen" : "2026-09-18T19:08:48Z"
+      }, {
+        "client" : "ae6291b1140fe752",
+        "requests" : 58,
+        "last_seen" : "2026-08-20T20:47:48Z"
+      }, {
+        "client" : "ea32c32fe86c1262",
+        "requests" : 12,
+        "last_seen" : "2026-09-30T09:54:01Z"
+      } ]
+    },
+    "severity" : "HIGH",
+    "rank" : 8,
+    "spec_only_rank" : 2,
+    "operations_touched" : 5,
+    "confidence" : {
+      "events_in_scope" : 1136,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.0026336142061788026,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c10",
+    "kind" : "response_field_added",
+    "breaking" : false,
+    "operation" : {
+      "method" : "POST",
+      "path" : "/recipes",
+      "operation_id" : "createRecipe"
+    },
+    "location" : {
+      "part" : "response.body",
+      "status" : "201",
+      "media_type" : "application/json",
+      "field" : "$.updated_at"
+    },
+    "description" : "Field $.updated_at in the response 201 of POST /recipes added.",
+    "to" : "optional",
+    "source" : "/components/schemas/Recipe",
+    "evidence" : "none",
+    "severity" : null,
+    "rank" : null,
+    "spec_only_rank" : null,
+    "confidence" : {
+      "events_in_scope" : 1136,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.0026336142061788026,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c11",
+    "kind" : "response_field_removed",
+    "breaking" : true,
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes/featured",
+      "operation_id" : "featuredRecipe"
+    },
+    "location" : {
+      "part" : "response.body",
+      "status" : "200",
+      "media_type" : "application/json",
+      "field" : "$.legacy_slug"
+    },
+    "description" : "Field $.legacy_slug in the response 200 of GET /recipes/featured removed.",
+    "from" : "optional",
+    "source" : "/components/schemas/Recipe",
+    "evidence" : "potential",
+    "potentially_affected" : {
+      "clients" : 2,
+      "requests" : 721,
+      "share_recent" : 0.1,
+      "k_recent" : 1,
+      "first_seen" : "2026-08-02T02:46:07Z",
+      "last_seen" : "2026-09-30T21:40:54Z",
+      "top_clients" : [ {
+        "client" : "3bafe71de43ae87a",
+        "requests" : 720,
+        "last_seen" : "2026-09-30T21:40:54Z"
+      }, {
+        "client" : "9c0c531ea3724074",
+        "requests" : 1,
+        "last_seen" : "2026-08-31T22:17:19Z"
+      } ]
+    },
+    "severity" : "HIGH",
+    "rank" : 11,
+    "spec_only_rank" : 3,
+    "operations_touched" : 5,
+    "confidence" : {
+      "events_in_scope" : 721,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.004146348540395861,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c12",
+    "kind" : "response_field_added",
+    "breaking" : false,
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes/featured",
+      "operation_id" : "featuredRecipe"
+    },
+    "location" : {
+      "part" : "response.body",
+      "status" : "200",
+      "media_type" : "application/json",
+      "field" : "$.updated_at"
+    },
+    "description" : "Field $.updated_at in the response 200 of GET /recipes/featured added.",
+    "to" : "optional",
+    "source" : "/components/schemas/Recipe",
+    "evidence" : "none",
+    "severity" : null,
+    "rank" : null,
+    "spec_only_rank" : null,
+    "confidence" : {
+      "events_in_scope" : 721,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.004146348540395861,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c13",
+    "kind" : "response_field_removed",
+    "breaking" : true,
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes/{id}",
+      "operation_id" : "getRecipe"
+    },
+    "location" : {
+      "part" : "response.body",
+      "status" : "200",
+      "media_type" : "application/json",
+      "field" : "$.legacy_slug"
+    },
+    "description" : "Field $.legacy_slug in the response 200 of GET /recipes/{id} removed.",
+    "from" : "optional",
+    "source" : "/components/schemas/Recipe",
+    "evidence" : "potential",
+    "potentially_affected" : {
+      "clients" : 4,
+      "requests" : 2084,
+      "share_recent" : 0.3,
+      "k_recent" : 3,
+      "first_seen" : "2026-08-02T01:21:32Z",
+      "last_seen" : "2026-09-30T22:56:16Z",
+      "top_clients" : [ {
+        "client" : "255c413f33ba248e",
+        "requests" : 1800,
+        "last_seen" : "2026-09-30T22:56:16Z"
+      }, {
+        "client" : "98acb5bb5a18f8ca",
+        "requests" : 228,
+        "last_seen" : "2026-09-27T16:18:08Z"
+      }, {
+        "client" : "ea32c32fe86c1262",
+        "requests" : 55,
+        "last_seen" : "2026-09-30T20:18:49Z"
+      }, {
+        "client" : "9c0c531ea3724074",
+        "requests" : 1,
+        "last_seen" : "2026-08-31T22:17:19Z"
+      } ]
+    },
+    "severity" : "HIGH",
+    "rank" : 9,
+    "spec_only_rank" : 4,
+    "operations_touched" : 5,
+    "confidence" : {
+      "events_in_scope" : 2085,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.0014357703437793967,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c14",
+    "kind" : "response_field_added",
+    "breaking" : false,
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes/{id}",
+      "operation_id" : "getRecipe"
+    },
+    "location" : {
+      "part" : "response.body",
+      "status" : "200",
+      "media_type" : "application/json",
+      "field" : "$.updated_at"
+    },
+    "description" : "Field $.updated_at in the response 200 of GET /recipes/{id} added.",
+    "to" : "optional",
+    "source" : "/components/schemas/Recipe",
+    "evidence" : "none",
+    "severity" : null,
+    "rank" : null,
+    "spec_only_rank" : null,
+    "confidence" : {
+      "events_in_scope" : 2085,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.0014357703437793967,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c15",
+    "kind" : "request_field_type_changed",
+    "breaking" : true,
+    "operation" : {
+      "method" : "PUT",
+      "path" : "/recipes/{id}",
+      "operation_id" : "updateRecipe"
+    },
+    "location" : {
+      "part" : "request.body",
+      "media_type" : "application/json",
+      "field" : "$.minutes"
+    },
+    "description" : "Field $.minutes in the request body of PUT /recipes/{id} changed type from number to integer.",
+    "from" : "number",
+    "to" : "integer",
+    "source" : "/components/schemas/NewRecipe/properties/minutes",
+    "evidence" : "observed",
+    "observed_affected" : {
+      "clients" : 0,
+      "requests" : 0,
+      "share_recent" : 0.0,
+      "k_recent" : 0,
+      "first_seen" : null,
+      "last_seen" : null,
+      "top_clients" : [ ]
+    },
+    "severity" : "NONE_OBSERVED",
+    "rank" : 15,
+    "spec_only_rank" : 10,
+    "operations_touched" : 2,
+    "confidence" : {
+      "events_in_scope" : 20,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.13910834066826516,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c16",
+    "kind" : "request_field_made_required",
+    "breaking" : true,
+    "operation" : {
+      "method" : "PUT",
+      "path" : "/recipes/{id}",
+      "operation_id" : "updateRecipe"
+    },
+    "location" : {
+      "part" : "request.body",
+      "media_type" : "application/json",
+      "field" : "$.servings"
+    },
+    "description" : "Field $.servings in the request body of PUT /recipes/{id} became required.",
+    "from" : "optional",
+    "to" : "required",
+    "source" : "/components/schemas/NewRecipe",
+    "evidence" : "observed",
+    "observed_affected" : {
+      "clients" : 0,
+      "requests" : 0,
+      "share_recent" : 0.0,
+      "k_recent" : 0,
+      "first_seen" : null,
+      "last_seen" : null,
+      "top_clients" : [ ]
+    },
+    "evidence_note" : "Counts requests whose body had the parent object but not the field. Last seen is the last such body from the client, an upper bound.",
+    "severity" : "NONE_OBSERVED",
+    "rank" : 16,
+    "spec_only_rank" : 11,
+    "operations_touched" : 2,
+    "confidence" : {
+      "events_in_scope" : 20,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.13910834066826516,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c17",
+    "kind" : "request_enum_narrowed",
+    "breaking" : true,
+    "operation" : {
+      "method" : "PUT",
+      "path" : "/recipes/{id}",
+      "operation_id" : "updateRecipe"
+    },
+    "location" : {
+      "part" : "request.body",
+      "media_type" : "application/json",
+      "field" : "$.difficulty"
+    },
+    "description" : "Field $.difficulty in the request body of PUT /recipes/{id} allows fewer values.",
+    "from" : "[\"easy\",\"medium\",\"hard\",\"expert\"]",
+    "to" : "[\"easy\",\"medium\",\"hard\"]",
+    "source" : "/components/schemas/NewRecipe/properties/difficulty",
+    "evidence" : "observed",
+    "observed_affected" : {
+      "clients" : 0,
+      "requests" : 0,
+      "share_recent" : 0.0,
+      "k_recent" : 0,
+      "first_seen" : null,
+      "last_seen" : null,
+      "top_clients" : [ ]
+    },
+    "severity" : "NONE_OBSERVED",
+    "rank" : 17,
+    "spec_only_rank" : 12,
+    "operations_touched" : 2,
+    "confidence" : {
+      "events_in_scope" : 20,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.13910834066826516,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c18",
+    "kind" : "request_field_removed",
+    "breaking" : true,
+    "operation" : {
+      "method" : "PUT",
+      "path" : "/recipes/{id}",
+      "operation_id" : "updateRecipe"
+    },
+    "location" : {
+      "part" : "request.body",
+      "media_type" : "application/json",
+      "field" : "$.notes"
+    },
+    "description" : "Field $.notes in the request body of PUT /recipes/{id} removed.",
+    "from" : "optional",
+    "source" : "/components/schemas/NewRecipe",
+    "evidence" : "observed",
+    "observed_affected" : {
+      "clients" : 1,
+      "requests" : 20,
+      "share_recent" : 0.1,
+      "k_recent" : 1,
+      "first_seen" : "2026-08-03T13:08:24Z",
+      "last_seen" : "2026-09-26T13:51:31Z",
+      "top_clients" : [ {
+        "client" : "625b3bc926c7a92b",
+        "requests" : 20,
+        "last_seen" : "2026-09-26T13:51:31Z"
+      } ]
+    },
+    "severity" : "HIGH",
+    "rank" : 7,
+    "spec_only_rank" : 13,
+    "operations_touched" : 2,
+    "confidence" : {
+      "events_in_scope" : 20,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.13910834066826516,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c19",
+    "kind" : "request_field_added_optional",
+    "breaking" : false,
+    "operation" : {
+      "method" : "PUT",
+      "path" : "/recipes/{id}",
+      "operation_id" : "updateRecipe"
+    },
+    "location" : {
+      "part" : "request.body",
+      "media_type" : "application/json",
+      "field" : "$.cuisine"
+    },
+    "description" : "Field $.cuisine in the request body of PUT /recipes/{id} added (optional).",
+    "to" : "optional",
+    "source" : "/components/schemas/NewRecipe",
+    "evidence" : "none",
+    "severity" : null,
+    "rank" : null,
+    "spec_only_rank" : null,
+    "confidence" : {
+      "events_in_scope" : 20,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.13910834066826516,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c20",
+    "kind" : "response_field_removed",
+    "breaking" : true,
+    "operation" : {
+      "method" : "PUT",
+      "path" : "/recipes/{id}",
+      "operation_id" : "updateRecipe"
+    },
+    "location" : {
+      "part" : "response.body",
+      "status" : "200",
+      "media_type" : "application/json",
+      "field" : "$.legacy_slug"
+    },
+    "description" : "Field $.legacy_slug in the response 200 of PUT /recipes/{id} removed.",
+    "from" : "optional",
+    "source" : "/components/schemas/Recipe",
+    "evidence" : "potential",
+    "potentially_affected" : {
+      "clients" : 1,
+      "requests" : 20,
+      "share_recent" : 0.1,
+      "k_recent" : 1,
+      "first_seen" : "2026-08-03T13:08:24Z",
+      "last_seen" : "2026-09-26T13:51:31Z",
+      "top_clients" : [ {
+        "client" : "625b3bc926c7a92b",
+        "requests" : 20,
+        "last_seen" : "2026-09-26T13:51:31Z"
+      } ]
+    },
+    "severity" : "HIGH",
+    "rank" : 13,
+    "spec_only_rank" : 5,
+    "operations_touched" : 5,
+    "confidence" : {
+      "events_in_scope" : 20,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.13910834066826516,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c21",
+    "kind" : "response_field_added",
+    "breaking" : false,
+    "operation" : {
+      "method" : "PUT",
+      "path" : "/recipes/{id}",
+      "operation_id" : "updateRecipe"
+    },
+    "location" : {
+      "part" : "response.body",
+      "status" : "200",
+      "media_type" : "application/json",
+      "field" : "$.updated_at"
+    },
+    "description" : "Field $.updated_at in the response 200 of PUT /recipes/{id} added.",
+    "to" : "optional",
+    "source" : "/components/schemas/Recipe",
+    "evidence" : "none",
+    "severity" : null,
+    "rank" : null,
+    "spec_only_rank" : null,
+    "confidence" : {
+      "events_in_scope" : 20,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.13910834066826516,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c22",
+    "kind" : "response_field_type_changed",
+    "breaking" : true,
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes/{id}/ratings",
+      "operation_id" : "listRatings"
+    },
+    "location" : {
+      "part" : "response.body",
+      "status" : "200",
+      "media_type" : "application/json",
+      "field" : "$[].comment"
+    },
+    "description" : "Field $[].comment in the response 200 of GET /recipes/{id}/ratings changed type from string to null|string.",
+    "from" : "string",
+    "to" : "null|string",
+    "source" : "/components/schemas/Rating/properties/comment",
+    "evidence" : "potential",
+    "potentially_affected" : {
+      "clients" : 2,
+      "requests" : 601,
+      "share_recent" : 0.1,
+      "k_recent" : 1,
+      "first_seen" : "2026-08-02T02:42:08Z",
+      "last_seen" : "2026-09-30T18:14:01Z",
+      "top_clients" : [ {
+        "client" : "fe2511335e094368",
+        "requests" : 600,
+        "last_seen" : "2026-09-30T18:14:01Z"
+      }, {
+        "client" : "9c0c531ea3724074",
+        "requests" : 1,
+        "last_seen" : "2026-08-31T22:17:19Z"
+      } ]
+    },
+    "severity" : "HIGH",
+    "rank" : 12,
+    "spec_only_rank" : 14,
+    "operations_touched" : 2,
+    "confidence" : {
+      "events_in_scope" : 601,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.004972177089234475,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c23",
+    "kind" : "response_field_type_changed",
+    "breaking" : true,
+    "operation" : {
+      "method" : "POST",
+      "path" : "/recipes/{id}/ratings",
+      "operation_id" : "rateRecipe"
+    },
+    "location" : {
+      "part" : "response.body",
+      "status" : "201",
+      "media_type" : "application/json",
+      "field" : "$.comment"
+    },
+    "description" : "Field $.comment in the response 201 of POST /recipes/{id}/ratings changed type from string to null|string.",
+    "from" : "string",
+    "to" : "null|string",
+    "source" : "/components/schemas/Rating/properties/comment",
+    "evidence" : "potential",
+    "potentially_affected" : {
+      "clients" : 3,
+      "requests" : 1218,
+      "share_recent" : 0.3,
+      "k_recent" : 3,
+      "first_seen" : "2026-08-02T01:22:57Z",
+      "last_seen" : "2026-09-30T22:56:16Z",
+      "top_clients" : [ {
+        "client" : "fe2511335e094368",
+        "requests" : 600,
+        "last_seen" : "2026-09-30T18:14:01Z"
+      }, {
+        "client" : "255c413f33ba248e",
+        "requests" : 597,
+        "last_seen" : "2026-09-30T22:56:16Z"
+      }, {
+        "client" : "ea32c32fe86c1262",
+        "requests" : 21,
+        "last_seen" : "2026-09-30T20:18:49Z"
+      } ]
+    },
+    "severity" : "HIGH",
+    "rank" : 10,
+    "spec_only_rank" : 15,
+    "operations_touched" : 2,
+    "confidence" : {
+      "events_in_scope" : 1218,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.0024565280911105214,
+      "tier" : "uncalibrated"
+    }
+  }, {
+    "id" : "c24",
+    "kind" : "operation_removed",
+    "breaking" : true,
+    "operation" : {
+      "method" : "GET",
+      "path" : "/export/recipes",
+      "operation_id" : "exportRecipes"
+    },
+    "location" : {
+      "part" : "operation"
+    },
+    "description" : "Operation GET /export/recipes removed.",
+    "evidence" : "observed",
+    "observed_affected" : {
+      "clients" : 3,
+      "requests" : 181,
+      "share_recent" : 0.2,
+      "k_recent" : 2,
+      "first_seen" : "2026-08-02T02:56:37Z",
+      "last_seen" : "2026-09-30T22:00:44Z",
+      "top_clients" : [ {
+        "client" : "092f77b64a536365",
+        "requests" : 120,
+        "last_seen" : "2026-09-30T22:00:44Z"
+      }, {
+        "client" : "123c5fb0dcf774bd",
+        "requests" : 60,
+        "last_seen" : "2026-09-30T13:12:29Z"
+      }, {
+        "client" : "9c0c531ea3724074",
+        "requests" : 1,
+        "last_seen" : "2026-08-31T22:17:19Z"
+      } ]
+    },
+    "severity" : "HIGH",
+    "rank" : 3,
+    "spec_only_rank" : 17,
+    "operations_touched" : 1,
+    "confidence" : {
+      "events_in_scope" : 181,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.01641479165519244,
+      "tier" : "uncalibrated"
+    }
+  } ],
+  "drift" : [ {
+    "kind" : "undocumented_field",
+    "severity" : "warning",
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes"
+    },
+    "location" : "request.query",
+    "field" : "$.debug",
+    "presence_rate" : 0.4882017900732303,
+    "requests" : 4916,
+    "detail" : "Query parameter sent in 2400 of 4916 requests; not in the spec."
+  }, {
+    "kind" : "unused_field",
+    "severity" : "info",
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes"
+    },
+    "location" : "request.query",
+    "field" : "$.cursor",
+    "presence_rate" : 0.0,
+    "requests" : 4916,
+    "unseen_rate_upper_95" : 6.091984709351017E-4,
+    "detail" : "Documented query parameter never sent in 4916 requests."
+  }, {
+    "kind" : "undocumented_field",
+    "severity" : "warning",
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes"
+    },
+    "location" : "response.200.body",
+    "field" : "$.items[].internal_score",
+    "status" : "200",
+    "observed" : [ "integer" ],
+    "presence_rate" : 1.0,
+    "requests" : 4916,
+    "detail" : "Present in 4916 of 4916 bodies; not in the spec."
+  }, {
+    "kind" : "unused_field",
+    "severity" : "info",
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes"
+    },
+    "location" : "response.200.body",
+    "field" : "$.items[].subtitle",
+    "status" : "200",
+    "documented" : [ "string" ],
+    "presence_rate" : 0.0,
+    "requests" : 4916,
+    "unseen_rate_upper_95" : 6.091984709351017E-4,
+    "detail" : "Documented, never present in 4916 occurrences of its parent."
+  }, {
+    "kind" : "unused_field",
+    "severity" : "info",
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes"
+    },
+    "location" : "response.200.body",
+    "field" : "$.items[].author",
+    "status" : "200",
+    "documented" : [ "object" ],
+    "presence_rate" : 0.0,
+    "requests" : 4916,
+    "unseen_rate_upper_95" : 6.091984709351017E-4,
+    "detail" : "Documented, never present in 4916 occurrences of its parent."
+  }, {
+    "kind" : "type_mismatch",
+    "severity" : "warning",
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes"
+    },
+    "location" : "response.200.body",
+    "field" : "$.items[].servings",
+    "status" : "200",
+    "observed" : [ "string" ],
+    "documented" : [ "integer" ],
+    "presence_rate" : 0.8655410903173312,
+    "requests" : 4916,
+    "detail" : "Observed string in 4255 of 4916 occurrences; the spec declares integer."
+  }, {
+    "kind" : "undocumented_status",
+    "severity" : "warning",
+    "operation" : {
+      "method" : "POST",
+      "path" : "/recipes"
+    },
+    "location" : "response.status",
+    "status" : "429",
+    "presence_rate" : 0.02464788732394366,
+    "requests" : 28,
+    "detail" : "Status 429 returned 28 times of 1136; the spec does not declare it."
+  }, {
+    "kind" : "unused_field",
+    "severity" : "info",
+    "operation" : {
+      "method" : "POST",
+      "path" : "/recipes"
+    },
+    "location" : "request.body",
+    "field" : "$.author_email",
+    "documented" : [ "string" ],
+    "presence_rate" : 0.0,
+    "requests" : 1136,
+    "unseen_rate_upper_95" : 0.0026336142061788026,
+    "detail" : "Documented, never present in 1136 occurrences of its parent."
+  }, {
+    "kind" : "undocumented_field",
+    "severity" : "warning",
+    "operation" : {
+      "method" : "POST",
+      "path" : "/recipes"
+    },
+    "location" : "response.201.body",
+    "field" : "$.internal_score",
+    "status" : "201",
+    "observed" : [ "integer" ],
+    "presence_rate" : 1.0,
+    "requests" : 1108,
+    "detail" : "Present in 1108 of 1108 bodies; not in the spec."
+  }, {
+    "kind" : "unused_field",
+    "severity" : "info",
+    "operation" : {
+      "method" : "POST",
+      "path" : "/recipes"
+    },
+    "location" : "response.201.body",
+    "field" : "$.subtitle",
+    "status" : "201",
+    "documented" : [ "string" ],
+    "presence_rate" : 0.0,
+    "requests" : 1108,
+    "unseen_rate_upper_95" : 0.002700077704080317,
+    "detail" : "Documented, never present in 1108 occurrences of its parent."
+  }, {
+    "kind" : "unused_field",
+    "severity" : "info",
+    "operation" : {
+      "method" : "POST",
+      "path" : "/recipes"
+    },
+    "location" : "response.201.body",
+    "field" : "$.author",
+    "status" : "201",
+    "documented" : [ "object" ],
+    "presence_rate" : 0.0,
+    "requests" : 1108,
+    "unseen_rate_upper_95" : 0.002700077704080317,
+    "detail" : "Documented, never present in 1108 occurrences of its parent."
+  }, {
+    "kind" : "type_mismatch",
+    "severity" : "warning",
+    "operation" : {
+      "method" : "POST",
+      "path" : "/recipes"
+    },
+    "location" : "response.201.body",
+    "field" : "$.servings",
+    "status" : "201",
+    "observed" : [ "string" ],
+    "documented" : [ "integer" ],
+    "presence_rate" : 0.09903381642512077,
+    "requests" : 828,
+    "detail" : "Observed string in 82 of 828 occurrences; the spec declares integer."
+  }, {
+    "kind" : "undocumented_field",
+    "severity" : "warning",
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes/featured"
+    },
+    "location" : "response.200.body",
+    "field" : "$.internal_score",
+    "status" : "200",
+    "observed" : [ "integer" ],
+    "presence_rate" : 1.0,
+    "requests" : 721,
+    "detail" : "Present in 721 of 721 bodies; not in the spec."
+  }, {
+    "kind" : "unused_field",
+    "severity" : "info",
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes/featured"
+    },
+    "location" : "response.200.body",
+    "field" : "$.subtitle",
+    "status" : "200",
+    "documented" : [ "string" ],
+    "presence_rate" : 0.0,
+    "requests" : 721,
+    "unseen_rate_upper_95" : 0.004146348540395861,
+    "detail" : "Documented, never present in 721 occurrences of its parent."
+  }, {
+    "kind" : "unused_field",
+    "severity" : "info",
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes/featured"
+    },
+    "location" : "response.200.body",
+    "field" : "$.author",
+    "status" : "200",
+    "documented" : [ "object" ],
+    "presence_rate" : 0.0,
+    "requests" : 721,
+    "unseen_rate_upper_95" : 0.004146348540395861,
+    "detail" : "Documented, never present in 721 occurrences of its parent."
+  }, {
+    "kind" : "undocumented_field",
+    "severity" : "warning",
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes/{id}"
+    },
+    "location" : "response.200.body",
+    "field" : "$.internal_score",
+    "status" : "200",
+    "observed" : [ "integer" ],
+    "presence_rate" : 1.0,
+    "requests" : 2084,
+    "detail" : "Present in 2084 of 2084 bodies; not in the spec."
+  }, {
+    "kind" : "unused_field",
+    "severity" : "info",
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes/{id}"
+    },
+    "location" : "response.200.body",
+    "field" : "$.subtitle",
+    "status" : "200",
+    "documented" : [ "string" ],
+    "presence_rate" : 0.0,
+    "requests" : 2084,
+    "unseen_rate_upper_95" : 0.0014364587980200128,
+    "detail" : "Documented, never present in 2084 occurrences of its parent."
+  }, {
+    "kind" : "unused_field",
+    "severity" : "info",
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes/{id}"
+    },
+    "location" : "response.200.body",
+    "field" : "$.author",
+    "status" : "200",
+    "documented" : [ "object" ],
+    "presence_rate" : 0.0,
+    "requests" : 2084,
+    "unseen_rate_upper_95" : 0.0014364587980200128,
+    "detail" : "Documented, never present in 2084 occurrences of its parent."
+  }, {
+    "kind" : "type_mismatch",
+    "severity" : "warning",
+    "operation" : {
+      "method" : "GET",
+      "path" : "/recipes/{id}"
+    },
+    "location" : "response.200.body",
+    "field" : "$.servings",
+    "status" : "200",
+    "observed" : [ "string" ],
+    "documented" : [ "integer" ],
+    "presence_rate" : 0.08589251439539347,
+    "requests" : 2084,
+    "detail" : "Observed string in 179 of 2084 occurrences; the spec declares integer."
+  }, {
+    "kind" : "undocumented_field",
+    "severity" : "warning",
+    "operation" : {
+      "method" : "PUT",
+      "path" : "/recipes/{id}"
+    },
+    "location" : "response.200.body",
+    "field" : "$.internal_score",
+    "status" : "200",
+    "observed" : [ "integer" ],
+    "presence_rate" : 1.0,
+    "requests" : 20,
+    "detail" : "Present in 20 of 20 bodies; not in the spec."
+  }, {
+    "kind" : "type_mismatch",
+    "severity" : "warning",
+    "operation" : {
+      "method" : "PUT",
+      "path" : "/recipes/{id}"
+    },
+    "location" : "response.200.body",
+    "field" : "$.servings",
+    "status" : "200",
+    "observed" : [ "string" ],
+    "documented" : [ "integer" ],
+    "presence_rate" : 0.1,
+    "requests" : 20,
+    "detail" : "Observed string in 2 of 20 occurrences; the spec declares integer."
+  }, {
+    "kind" : "undocumented_field",
+    "severity" : "warning",
+    "operation" : {
+      "method" : "GET",
+      "path" : "/export/recipes"
+    },
+    "location" : "response.200.body",
+    "field" : "$.recipes[].internal_score",
+    "status" : "200",
+    "observed" : [ "integer" ],
+    "presence_rate" : 1.0,
+    "requests" : 181,
+    "detail" : "Present in 181 of 181 bodies; not in the spec."
+  }, {
+    "kind" : "type_mismatch",
+    "severity" : "warning",
+    "operation" : {
+      "method" : "GET",
+      "path" : "/export/recipes"
+    },
+    "location" : "response.200.body",
+    "field" : "$.recipes[].servings",
+    "status" : "200",
+    "observed" : [ "string" ],
+    "documented" : [ "integer" ],
+    "presence_rate" : 1.0,
+    "requests" : 181,
+    "detail" : "Observed string in 181 of 181 occurrences; the spec declares integer."
+  }, {
+    "kind" : "undocumented_operation",
+    "severity" : "warning",
+    "operation" : null,
+    "path" : "GET /healthz",
+    "requests" : 60,
+    "detail" : "60 requests matched no operation in the spec."
+  } ],
+  "unsupported" : [ ],
+  "unsupported_total" : 0,
+  "limitations" : [ "Response-side changes are 'potential': traffic shows who calls an operation and which status they received, not which response fields they read.", "Clients calling less often than 0.0501 times per day may be missing from a 59.9-day window (assumes steady, Poisson-like calls; periodic batch clients can be missed entirely).", "Not compared by the diff: value constraints (length, range, pattern), defaults, formats, response headers, security." ]
+}

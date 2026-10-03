@@ -1,0 +1,199 @@
+openapi: 3.0.3
+info:
+  title: Recipes API (Axon demo service)
+  version: 1.0.0
+  description: >
+    A small service written for Axon's evaluation. The running service deliberately differs from this document
+    in a few known ways (see eval/demo/README.md) so that drift detection has something to find.
+servers:
+  - url: http://localhost:8087
+paths:
+  /recipes:
+    get:
+      operationId: listRecipes
+      parameters:
+        - { name: tag, in: query, schema: { type: string } }
+        - { name: limit, in: query, schema: { type: integer } }
+        - { name: sort, in: query, schema: { type: string, enum: [newest, rating] } }
+        - { name: cursor, in: query, schema: { type: string } }
+      responses:
+        '200':
+          description: A page of recipes
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [items]
+                properties:
+                  items:
+                    type: array
+                    items: { $ref: '#/components/schemas/Recipe' }
+                  next_cursor: { type: string, nullable: true }
+    post:
+      operationId: createRecipe
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/NewRecipe' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Recipe' }
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+  /recipes/featured:
+    get:
+      operationId: featuredRecipe
+      responses:
+        '200':
+          description: The featured recipe
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Recipe' }
+  /recipes/{id}:
+    parameters:
+      - { name: id, in: path, required: true, schema: { type: integer } }
+    get:
+      operationId: getRecipe
+      responses:
+        '200':
+          description: One recipe
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Recipe' }
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+    put:
+      operationId: updateRecipe
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/NewRecipe' }
+      responses:
+        '200':
+          description: Updated
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Recipe' }
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+    delete:
+      operationId: deleteRecipe
+      responses:
+        '204': { description: Deleted }
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+  /recipes/{id}/ratings:
+    parameters:
+      - { name: id, in: path, required: true, schema: { type: integer } }
+    get:
+      operationId: listRatings
+      responses:
+        '200':
+          description: Ratings of a recipe
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/Rating' }
+    post:
+      operationId: rateRecipe
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [stars]
+              properties:
+                stars: { type: integer }
+                comment: { type: string }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Rating' }
+  /export/recipes:
+    get:
+      operationId: exportRecipes
+      parameters:
+        - { name: since, in: query, schema: { type: string } }
+      responses:
+        '200':
+          description: All recipes, for bulk consumers
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [recipes]
+                properties:
+                  recipes:
+                    type: array
+                    items: { $ref: '#/components/schemas/Recipe' }
+                  generated_at: { type: string }
+components:
+  schemas:
+    NewRecipe:
+      type: object
+      required: [title]
+      properties:
+        title: { type: string }
+        minutes: { type: number }
+        servings: { type: integer }
+        difficulty: { type: string, enum: [easy, medium, hard, expert] }
+        tags:
+          type: array
+          items: { type: string }
+        author_email: { type: string }
+        notes: { type: string }
+    Recipe:
+      type: object
+      required: [id, title]
+      properties:
+        id: { type: integer }
+        title: { type: string }
+        subtitle: { type: string }
+        minutes: { type: number }
+        servings: { type: integer }
+        difficulty: { type: string, enum: [easy, medium, hard, expert] }
+        tags:
+          type: array
+          items: { type: string }
+        author:
+          type: object
+          properties:
+            name: { type: string }
+            email: { type: string }
+        legacy_slug: { type: string }
+        rating_avg: { type: number, nullable: true }
+        created_at: { type: string }
+    Rating:
+      type: object
+      required: [id, stars]
+      properties:
+        id: { type: integer }
+        stars: { type: integer }
+        comment: { type: string }
+    Error:
+      type: object
+      required: [message]
+      properties:
+        message: { type: string }
+        code: { type: string }
