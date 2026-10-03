@@ -1,0 +1,26 @@
+# build output
+target/
+build/
+dist/
+out/
+
+# node
+node_modules/
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# environment and secrets: never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# local evaluation scratch (committed results go under eval/results/)
+eval/tmp/
+*.log

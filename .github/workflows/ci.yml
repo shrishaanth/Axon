@@ -1,0 +1,24 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  schemas:
+    name: Schemas and examples
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: tools/schema-check/package-lock.json
+      - run: npm ci
+        working-directory: tools/schema-check
+      - run: npm run check
+        working-directory: tools/schema-check
+
+# The Java build and test job is added in M1, when the first pom.xml exists.
+# A placeholder job that always passes would only pretend to test something.
