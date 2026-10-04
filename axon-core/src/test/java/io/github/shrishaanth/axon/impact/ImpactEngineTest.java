@@ -226,11 +226,16 @@ class ImpactEngineTest {
         ImpactReport r = analyse(ImpactConfig.defaults());
         List<Row> breaking = r.breaking();
         assertEquals(7, breaking.size());
-        Row first = breaking.stream().filter(x -> x.rank() == 1).findFirst().orElseThrow();
-        assertEquals(Evidence.POTENTIAL, first.evidence(), "POST 201 callers are 2 of 3 active clients: CRITICAL");
-        assertEquals(Severity.CRITICAL, first.severity());
+        List<Row> byRank = breaking.stream().sorted(java.util.Comparator.comparingInt(Row::rank)).toList();
+        Row first = byRank.get(0);
+        assertEquals(Evidence.OBSERVED, first.evidence(), "observed rows come before potential ones");
+        assertEquals(Severity.HIGH, first.severity());
         Row delete = row(r, ChangeKind.OPERATION_REMOVED, "DELETE /users/{id}");
-        assertEquals(7, delete.rank(), "the dormant change is last");
+        assertEquals(5, delete.rank(), "the dormant change is the last of the five observed rows");
+        assertEquals(List.of(Evidence.POTENTIAL, Evidence.POTENTIAL),
+                byRank.subList(5, 7).stream().map(Row::evidence).toList());
+        assertEquals(Severity.CRITICAL, byRank.get(5).severity(),
+                "POST 201 callers are 2 of 3 active clients, but as a potential row it ranks after the observed");
         List<Row> baselineTop = breaking.stream().filter(x -> x.specOnlyRank() <= 2).toList();
         assertTrue(baselineTop.stream().allMatch(x -> x.change().kind() == ChangeKind.RESPONSE_FIELD_REMOVED),
                 "the spec-only baseline puts the edit touching two operations first");

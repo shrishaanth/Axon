@@ -487,10 +487,12 @@ public final class ImpactEngine {
         }
         Comparator<Row> bySpecOrder = Comparator.comparingInt(r -> order.get(r.id()));
 
-        // Axon: severity, observed before potential, recent clients, recency, volume, spec order
+        // Axon: observed before potential, then severity, recent clients, recency, volume, spec order.
+        // Observed rows come first because a potential row lists every caller, most of whom do not depend on
+        // the changed part (docs/metrics.md, amendment of 2026-10-04).
         List<Row> ranked = new ArrayList<>(breaking);
-        ranked.sort(Comparator.<Row>comparingInt(r -> r.severity().ordinal())
-                .thenComparingInt(r -> r.evidence() == Evidence.OBSERVED ? 0 : 1)
+        ranked.sort(Comparator.<Row>comparingInt(r -> r.evidence() == Evidence.OBSERVED ? 0 : 1)
+                .thenComparingInt(r -> r.severity().ordinal())
                 .thenComparing(r -> r.exposure().recent() == null ? 0 : -r.exposure().recent())
                 .thenComparing(r -> r.exposure().lastSeen() == null ? Instant.MIN : r.exposure().lastSeen(),
                         Comparator.reverseOrder())
