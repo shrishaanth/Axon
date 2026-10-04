@@ -1,0 +1,15 @@
+{
+ "092f77b64a536365": "partner-acme",
+ "123c5fb0dcf774bd": "cron-nightly",
+ "255c413f33ba248e": "web-app",
+ "3bafe71de43ae87a": "ios-4.2",
+ "47ede9c0674974c3": "android-4",
+ "625b3bc926c7a92b": "admin-tool",
+ "882680f24b75a89b": "analytics-bot",
+ "98acb5bb5a18f8ca": "ios-3.9",
+ "9c0c531ea3724074": "qa-smoke",
+ "ae6291b1140fe752": "importer-script",
+ "ea32c32fe86c1262": "web-app-canary",
+ "ed2f70a8dd431646": "partner-globex",
+ "fe2511335e094368": "android-5"
+}

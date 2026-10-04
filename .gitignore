@@ -28,3 +28,6 @@ eval/tmp/
 # downloaded evaluation data and tools (rebuilt by eval/scripts)
 eval/data/
 eval/tools/
+
+# local tooling
+.claude/
