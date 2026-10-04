@@ -33,7 +33,7 @@ The spec-only view (what a diff tool gives you) and the usage-aware view disagre
 
 Full output: [`eval/demo/report.txt`](../eval/demo/report.txt).
 
-The two changes the spec-only baseline ranks last (16 and 17 of 17) are the two with the most certainly-affected clients. The three it ranks 10-12 affect nobody: the only `PUT` caller already sends `servings`, whole-number `minutes` and an allowed `difficulty`.
+The two changes the spec-only baseline ranks last (16 and 17 of 17) are the two with the most certainly-affected clients. Three changes it ranks mid-table (10, 12 and 13) affect nobody: the only `PUT` caller already sends `servings`, whole-number `minutes` and an allowed `difficulty`.
 
 The table also shows the rough edge of the current ordering (observed rows first, see [metrics.md](metrics.md) §6): three rows that affect no one sit above the first potential row, which may affect up to six clients and truly affects one. The first version of this report ranked by severity before evidence class and put that potential row at the top instead. Neither is clearly right; E3 compares them.
 

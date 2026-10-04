@@ -72,7 +72,7 @@ record Unit(String tool, String method, String path, String kind, String status,
         String id = entry.path("id").asText();
         String text = entry.path("text").asText();
         String kind = canon(id);
-        if (kind.endsWith("_field_type_changed") && text.contains("`format` changed")) {
+        if (kind.endsWith("_field_type_changed") && text.contains("`format`") && text.contains("changed")) {
             // oasdiff's type-changed rules also fire when only "format" changes, which Axon does not model
             kind = UNMODELLED;
             id = id + ":format";

@@ -56,6 +56,8 @@ final class SchemaDiff {
         final List<Edge> edges = new ArrayList<>();
         final List<Node> parents = new ArrayList<>();
         boolean dirty;
+        /** True when a breaking change exists here or anywhere below. */
+        boolean dirtyBreaking;
 
         Node(Pair pair) {
             this.pair = pair;
@@ -93,9 +95,11 @@ final class SchemaDiff {
         if (!root.dirty) {
             return List.of();
         }
+        // Breaking changes first, each pass with its own budget: when a large shared schema overflows the cap,
+        // what gets cut is safe changes, never the breaking ones behind them.
         List<Rel> out = new ArrayList<>();
-        int[] steps = new int[1];
-        emit(root, FieldPath.ROOT, new HashSet<>(), out, steps);
+        emit(root, FieldPath.ROOT, new HashSet<>(), out, new int[1], true);
+        emit(root, FieldPath.ROOT, new HashSet<>(), out, new int[1], false);
         return out;
     }
 
@@ -118,35 +122,55 @@ final class SchemaDiff {
             n.local = List.copyOf(compute(n));
             fresh.add(n);
         }
+        propagate(fresh, false);
+        propagate(fresh, true);
+    }
+
+    /** Marks every pair from which a change (or, with {@code breakingOnly}, a breaking change) can be reached. */
+    private static void propagate(List<Node> fresh, boolean breakingOnly) {
         java.util.ArrayDeque<Node> queue = new java.util.ArrayDeque<>();
         for (Node n : fresh) {
-            if (!n.local.isEmpty() && !n.dirty) {
-                n.dirty = true;
-                queue.add(n);
-            }
+            boolean own = breakingOnly ? n.local.stream().anyMatch(Rel::breaking) : !n.local.isEmpty();
+            boolean below = false;
             for (Edge e : n.edges) {
-                if (e.child().dirty && !n.dirty) {
-                    n.dirty = true;
-                    queue.add(n);
-                }
+                below |= breakingOnly ? e.child().dirtyBreaking : e.child().dirty;
+            }
+            if ((own || below) && !flag(n, breakingOnly)) {
+                set(n, breakingOnly);
+                queue.add(n);
             }
         }
         while (!queue.isEmpty()) {
             for (Node parent : queue.poll().parents) {
-                if (!parent.dirty) {
-                    parent.dirty = true;
+                if (!flag(parent, breakingOnly)) {
+                    set(parent, breakingOnly);
                     queue.add(parent);
                 }
             }
         }
     }
 
-    private void emit(Node n, String path, Set<Node> onPath, List<Rel> out, int[] steps) {
+    private static boolean flag(Node n, boolean breakingOnly) {
+        return breakingOnly ? n.dirtyBreaking : n.dirty;
+    }
+
+    private static void set(Node n, boolean breakingOnly) {
+        if (breakingOnly) {
+            n.dirtyBreaking = true;
+        } else {
+            n.dirty = true;
+        }
+    }
+
+    private void emit(Node n, String path, Set<Node> onPath, List<Rel> out, int[] steps, boolean breaking) {
         if (++steps[0] > MAX_STEPS) {
             truncated = true;
             return;
         }
         for (Rel rel : n.local) {
+            if (rel.breaking() != breaking) {
+                continue;
+            }
             if (out.size() >= MAX_CHANGES_PER_PAIR) {
                 truncated = true;
                 return;
@@ -155,9 +179,9 @@ final class SchemaDiff {
         }
         onPath.add(n);
         for (Edge e : n.edges) {
-            // skip clean subtrees, and do not re-enter a schema already on this path (recursion)
-            if (e.child().dirty && !onPath.contains(e.child())) {
-                emit(e.child(), path + e.suffix(), onPath, out, steps);
+            // skip subtrees with nothing of this class, and do not re-enter a schema already on this path
+            if (flag(e.child(), breaking) && !onPath.contains(e.child())) {
+                emit(e.child(), path + e.suffix(), onPath, out, steps, breaking);
             }
         }
         onPath.remove(n);
