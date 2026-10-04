@@ -1,6 +1,6 @@
 {
   "schema_version" : "0.2",
-  "generated_at" : "2026-10-04T00:31:20.401055700Z",
+  "generated_at" : "2026-10-04T00:32:11.285533700Z",
   "inputs" : {
     "baseline" : {
       "path" : "eval/demo/recipes-v1.yaml",
@@ -108,7 +108,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 6.091984709351017E-4,
-      "tier" : "uncalibrated"
+      "tier" : "high"
     }
   }, {
     "id" : "c2",
@@ -171,7 +171,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 6.091984709351017E-4,
-      "tier" : "uncalibrated"
+      "tier" : "high"
     }
   }, {
     "id" : "c3",
@@ -200,7 +200,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 6.091984709351017E-4,
-      "tier" : "uncalibrated"
+      "tier" : "high"
     }
   }, {
     "id" : "c4",
@@ -248,7 +248,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.0026336142061788026,
-      "tier" : "uncalibrated"
+      "tier" : "high"
     }
   }, {
     "id" : "c5",
@@ -294,7 +294,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.0026336142061788026,
-      "tier" : "uncalibrated"
+      "tier" : "high"
     }
   }, {
     "id" : "c6",
@@ -322,7 +322,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.0026336142061788026,
-      "tier" : "uncalibrated"
+      "tier" : "high"
     }
   }, {
     "id" : "c7",
@@ -369,7 +369,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.0026336142061788026,
-      "tier" : "uncalibrated"
+      "tier" : "high"
     }
   }, {
     "id" : "c8",
@@ -420,7 +420,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.0026336142061788026,
-      "tier" : "uncalibrated"
+      "tier" : "high"
     }
   }, {
     "id" : "c9",
@@ -483,7 +483,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.0026336142061788026,
-      "tier" : "uncalibrated"
+      "tier" : "high"
     }
   }, {
     "id" : "c10",
@@ -512,7 +512,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.0026336142061788026,
-      "tier" : "uncalibrated"
+      "tier" : "high"
     }
   }, {
     "id" : "c11",
@@ -559,7 +559,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.004146348540395861,
-      "tier" : "uncalibrated"
+      "tier" : "high"
     }
   }, {
     "id" : "c12",
@@ -588,7 +588,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.004146348540395861,
-      "tier" : "uncalibrated"
+      "tier" : "high"
     }
   }, {
     "id" : "c13",
@@ -643,7 +643,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.0014357703437793967,
-      "tier" : "uncalibrated"
+      "tier" : "high"
     }
   }, {
     "id" : "c14",
@@ -672,7 +672,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.0014357703437793967,
-      "tier" : "uncalibrated"
+      "tier" : "high"
     }
   }, {
     "id" : "c15",
@@ -712,7 +712,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.13910834066826516,
-      "tier" : "uncalibrated"
+      "tier" : "low"
     }
   }, {
     "id" : "c16",
@@ -754,7 +754,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.13910834066826516,
-      "tier" : "uncalibrated"
+      "tier" : "low"
     }
   }, {
     "id" : "c17",
@@ -782,7 +782,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.13910834066826516,
-      "tier" : "uncalibrated"
+      "tier" : "low"
     }
   }, {
     "id" : "c18",
@@ -821,7 +821,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.13910834066826516,
-      "tier" : "uncalibrated"
+      "tier" : "low"
     }
   }, {
     "id" : "c19",
@@ -860,7 +860,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.13910834066826516,
-      "tier" : "uncalibrated"
+      "tier" : "low"
     }
   }, {
     "id" : "c20",
@@ -903,7 +903,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.13910834066826516,
-      "tier" : "uncalibrated"
+      "tier" : "low"
     }
   }, {
     "id" : "c21",
@@ -932,7 +932,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.13910834066826516,
-      "tier" : "uncalibrated"
+      "tier" : "low"
     }
   }, {
     "id" : "c22",
@@ -980,7 +980,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.004972177089234475,
-      "tier" : "uncalibrated"
+      "tier" : "high"
     }
   }, {
     "id" : "c23",
@@ -1032,7 +1032,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.0024565280911105214,
-      "tier" : "uncalibrated"
+      "tier" : "high"
     }
   }, {
     "id" : "c24",
@@ -1078,7 +1078,7 @@
       "window_days" : 59.89912037037037,
       "min_detectable_rate_per_day" : 0.050084207939119864,
       "unseen_rate_upper_95" : 0.01641479165519244,
-      "tier" : "uncalibrated"
+      "tier" : "high"
     }
   } ],
   "drift" : [ {

@@ -116,7 +116,7 @@ public final class ImpactEngine {
             OperationStats stats = aggregate.operations().get(c.operationKey());
             long inScope = stats == null ? 0 : stats.calls.count();
             Confidence confidence = new Confidence(inScope, windowDays, windowDays == 0 ? 0 : 3.0 / windowDays,
-                    inScope == 0 ? null : 1 - Math.pow(0.05, 1.0 / inScope), "uncalibrated");
+                    inScope == 0 ? null : 1 - Math.pow(0.05, 1.0 / inScope), tier(inScope));
             if (!c.breaking()) {
                 rows.add(new Row("c" + index, c, Evidence.NONE, null, null, null, null, 1, confidence, null));
                 continue;
@@ -176,6 +176,18 @@ public final class ImpactEngine {
         return new ImpactReport(config, start, end, windowDays, aggregate.events().count(), aggregate.matched(),
                 aggregate.events().count() - aggregate.matched(), aggregate.events().first(),
                 aggregate.events().last(), identity, activeClients.size(), rows, limitations);
+    }
+
+    /** Smallest request count per operation at which E2 measured field recall of 0.99 for fields with p >= 0.01. */
+    public static final int HIGH_CONFIDENCE_REQUESTS = 100;
+
+    /**
+     * The tier rule of docs/metrics.md section 7c with the thresholds E2 gave it. Both the 0.90 and the 0.99
+     * recall targets are already met at 100 requests, the smallest count E2 measured, so "medium" never occurs
+     * and the tier says little; the two numeric bounds beside it are the informative part.
+     */
+    static String tier(long requests) {
+        return requests >= HIGH_CONFIDENCE_REQUESTS ? "high" : "low";
     }
 
     // ------------------------------------------------------------------------------------------------------
