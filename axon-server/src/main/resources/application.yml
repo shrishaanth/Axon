@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: axon
+  datasource:
+    url: ${AXON_DB_URL:jdbc:postgresql://localhost:5432/axon}
+    username: ${AXON_DB_USER:axon}
+    password: ${AXON_DB_PASSWORD:axon}
+    hikari:
+      maximum-pool-size: ${AXON_DB_POOL:5}
+  flyway:
+    enabled: true
+  mvc:
+    format:
+      date: iso
+
+server:
+  port: ${PORT:8080}
+  compression:
+    enabled: true
+    mime-types: application/json
+
+axon:
+  # Limits are sized for a 512 MB instance; see docs/m1-parse-survey.md for the measurement behind the spec cap.
+  max-spec-bytes: ${AXON_MAX_SPEC_BYTES:8388608}
+  max-ingest-bytes: ${AXON_MAX_INGEST_BYTES:2097152}
+  max-events-per-request: ${AXON_MAX_EVENTS_PER_REQUEST:1000}
+  max-events-per-workspace: ${AXON_MAX_EVENTS_PER_WORKSPACE:200000}
+  max-workspaces: ${AXON_MAX_WORKSPACES:200}
+  retention-days: ${AXON_RETENTION_DAYS:90}
+  ingest-requests-per-second: ${AXON_INGEST_RPS:20}
+  cors-origins: ${AXON_CORS_ORIGINS:http://localhost:5173}
