@@ -1,0 +1,510 @@
+{
+  "label" : "test-heavy-tail",
+  "seeds" : "101-200",
+  "tail" : "heavy (held out)",
+  "specs" : [ "recipes-v1.yaml", "019-shorten.rest.yaml", "025-apisetu.gov.in__orientalinsurance.yaml", "040-enode.io.json", "042-googleapis.com__analyticsdata.json", "044-apisetu.gov.in__edistrictpb.json" ],
+  "traffic_days" : 30,
+  "edits_attempted_per_world" : 20,
+  "by_window_days" : [ {
+    "window_days" : 1,
+    "worlds" : 100,
+    "breaking_rows" : 1546,
+    "rows_with_defined_truth" : 1445,
+    "share_of_population_seen_in_window" : {
+      "mean" : 0.2619,
+      "p10" : 0.1779,
+      "median" : 0.252,
+      "p90" : 0.3603,
+      "n" : 100
+    },
+    "observed_rows" : {
+      "client_set_precision" : 1.0,
+      "client_set_recall" : 0.1079,
+      "affected_share_absolute_error" : {
+        "mean" : 0.1995,
+        "p90" : 0.4188,
+        "rows" : 824
+      }
+    },
+    "potential_rows" : {
+      "clients_listed" : 5189,
+      "of_which_truly_read_the_field" : 1338,
+      "reader_share_of_listed" : 0.2579,
+      "readers_found" : 0.0977
+    },
+    "ranking" : {
+      "axon" : {
+        "kendall_tau" : {
+          "mean" : 0.607,
+          "p10" : 0.3464,
+          "median" : 0.6144,
+          "p90" : 0.8517,
+          "n" : 98
+        },
+        "top5_precision" : {
+          "mean" : 0.8208,
+          "p10" : 0.6,
+          "median" : 0.8,
+          "p90" : 1.0,
+          "n" : 96
+        }
+      },
+      "axon_severity_first" : {
+        "kendall_tau" : {
+          "mean" : 0.6609,
+          "p10" : 0.3952,
+          "median" : 0.7166,
+          "p90" : 0.8449,
+          "n" : 98
+        },
+        "top5_precision" : {
+          "mean" : 0.825,
+          "p10" : 0.6,
+          "median" : 0.8,
+          "p90" : 1.0,
+          "n" : 96
+        }
+      },
+      "client_count" : {
+        "kendall_tau" : {
+          "mean" : 0.5412,
+          "p10" : 0.143,
+          "median" : 0.5775,
+          "p90" : 0.8902,
+          "n" : 98
+        },
+        "top5_precision" : {
+          "mean" : 0.7,
+          "p10" : 0.4,
+          "median" : 0.8,
+          "p90" : 1.0,
+          "n" : 96
+        }
+      },
+      "random" : {
+        "kendall_tau" : {
+          "mean" : 0.0,
+          "p10" : -0.0086,
+          "median" : -3.0E-4,
+          "p90" : 0.0095,
+          "n" : 98
+        },
+        "top5_precision" : {
+          "mean" : 0.4296,
+          "p10" : 0.2563,
+          "median" : 0.4202,
+          "p90" : 0.5946,
+          "n" : 96
+        }
+      },
+      "spec_only" : {
+        "kendall_tau" : {
+          "mean" : -0.0336,
+          "p10" : -0.3927,
+          "median" : -0.0433,
+          "p90" : 0.3097,
+          "n" : 98
+        },
+        "top5_precision" : {
+          "mean" : 0.4083,
+          "p10" : 0.0,
+          "median" : 0.4,
+          "p90" : 0.8,
+          "n" : 96
+        }
+      },
+      "volume_only" : {
+        "kendall_tau" : {
+          "mean" : 0.4559,
+          "p10" : 0.0744,
+          "median" : 0.5009,
+          "p90" : 0.7959,
+          "n" : 98
+        },
+        "top5_precision" : {
+          "mean" : 0.65,
+          "p10" : 0.2,
+          "median" : 0.8,
+          "p90" : 1.0,
+          "n" : 96
+        }
+      }
+    },
+    "severity_observed_predicted_vs_truth" : {
+      "CRITICAL" : {
+        "CRITICAL" : 15
+      },
+      "HIGH" : {
+        "CRITICAL" : 219,
+        "HIGH" : 364
+      },
+      "MEDIUM" : {
+        "HIGH" : 37
+      },
+      "NONE_OBSERVED" : {
+        "HIGH" : 14,
+        "NONE_OBSERVED" : 175
+      }
+    },
+    "severity_potential_predicted_vs_truth" : {
+      "CRITICAL" : {
+        "HIGH" : 6,
+        "NONE_OBSERVED" : 4
+      },
+      "HIGH" : {
+        "CRITICAL" : 10,
+        "HIGH" : 197,
+        "NONE_OBSERVED" : 238
+      },
+      "MEDIUM" : {
+        "HIGH" : 8,
+        "NONE_OBSERVED" : 65
+      },
+      "NONE_OBSERVED" : {
+        "HIGH" : 1,
+        "NONE_OBSERVED" : 92
+      }
+    },
+    "severity_agreement_observed" : 0.6723,
+    "severity_agreement_potential" : 0.4654,
+    "undocumented_operation" : {
+      "worlds_where_injected" : 50,
+      "found" : 45
+    }
+  }, {
+    "window_days" : 7,
+    "worlds" : 100,
+    "breaking_rows" : 1546,
+    "rows_with_defined_truth" : 1445,
+    "share_of_population_seen_in_window" : {
+      "mean" : 0.5859,
+      "p10" : 0.4745,
+      "median" : 0.595,
+      "p90" : 0.6778,
+      "n" : 100
+    },
+    "observed_rows" : {
+      "client_set_precision" : 1.0,
+      "client_set_recall" : 0.2793,
+      "affected_share_absolute_error" : {
+        "mean" : 0.1809,
+        "p90" : 0.3815,
+        "rows" : 824
+      }
+    },
+    "potential_rows" : {
+      "clients_listed" : 14001,
+      "of_which_truly_read_the_field" : 3557,
+      "reader_share_of_listed" : 0.2541,
+      "readers_found" : 0.2597
+    },
+    "ranking" : {
+      "axon" : {
+        "kendall_tau" : {
+          "mean" : 0.6334,
+          "p10" : 0.363,
+          "median" : 0.658,
+          "p90" : 0.8581,
+          "n" : 98
+        },
+        "top5_precision" : {
+          "mean" : 0.8438,
+          "p10" : 0.6,
+          "median" : 0.8,
+          "p90" : 1.0,
+          "n" : 96
+        }
+      },
+      "axon_severity_first" : {
+        "kendall_tau" : {
+          "mean" : 0.6974,
+          "p10" : 0.4499,
+          "median" : 0.7486,
+          "p90" : 0.8677,
+          "n" : 98
+        },
+        "top5_precision" : {
+          "mean" : 0.8438,
+          "p10" : 0.6,
+          "median" : 0.8,
+          "p90" : 1.0,
+          "n" : 96
+        }
+      },
+      "client_count" : {
+        "kendall_tau" : {
+          "mean" : 0.5657,
+          "p10" : 0.1924,
+          "median" : 0.6296,
+          "p90" : 0.8862,
+          "n" : 98
+        },
+        "top5_precision" : {
+          "mean" : 0.7167,
+          "p10" : 0.4,
+          "median" : 0.8,
+          "p90" : 1.0,
+          "n" : 96
+        }
+      },
+      "random" : {
+        "kendall_tau" : {
+          "mean" : 9.0E-4,
+          "p10" : -0.008,
+          "median" : 6.0E-4,
+          "p90" : 0.0104,
+          "n" : 98
+        },
+        "top5_precision" : {
+          "mean" : 0.4303,
+          "p10" : 0.2666,
+          "median" : 0.4211,
+          "p90" : 0.5965,
+          "n" : 96
+        }
+      },
+      "spec_only" : {
+        "kendall_tau" : {
+          "mean" : -0.0336,
+          "p10" : -0.3927,
+          "median" : -0.0433,
+          "p90" : 0.3097,
+          "n" : 98
+        },
+        "top5_precision" : {
+          "mean" : 0.4083,
+          "p10" : 0.0,
+          "median" : 0.4,
+          "p90" : 0.8,
+          "n" : 96
+        }
+      },
+      "volume_only" : {
+        "kendall_tau" : {
+          "mean" : 0.4605,
+          "p10" : 0.0532,
+          "median" : 0.5141,
+          "p90" : 0.7852,
+          "n" : 98
+        },
+        "top5_precision" : {
+          "mean" : 0.6604,
+          "p10" : 0.2,
+          "median" : 0.8,
+          "p90" : 1.0,
+          "n" : 96
+        }
+      }
+    },
+    "severity_observed_predicted_vs_truth" : {
+      "CRITICAL" : {
+        "CRITICAL" : 16
+      },
+      "HIGH" : {
+        "CRITICAL" : 217,
+        "HIGH" : 411
+      },
+      "MEDIUM" : {
+        "HIGH" : 4
+      },
+      "NONE_OBSERVED" : {
+        "HIGH" : 1,
+        "NONE_OBSERVED" : 175
+      }
+    },
+    "severity_potential_predicted_vs_truth" : {
+      "CRITICAL" : {
+        "CRITICAL" : 2,
+        "HIGH" : 12,
+        "NONE_OBSERVED" : 9
+      },
+      "HIGH" : {
+        "CRITICAL" : 7,
+        "HIGH" : 201,
+        "NONE_OBSERVED" : 292
+      },
+      "MEDIUM" : {
+        "NONE_OBSERVED" : 23
+      },
+      "NONE_OBSERVED" : {
+        "NONE_OBSERVED" : 75
+      }
+    },
+    "severity_agreement_observed" : 0.7306,
+    "severity_agreement_potential" : 0.4477,
+    "undocumented_operation" : {
+      "worlds_where_injected" : 50,
+      "found" : 50
+    }
+  }, {
+    "window_days" : 30,
+    "worlds" : 100,
+    "breaking_rows" : 1546,
+    "rows_with_defined_truth" : 1445,
+    "share_of_population_seen_in_window" : {
+      "mean" : 0.8462,
+      "p10" : 0.7907,
+      "median" : 0.8575,
+      "p90" : 0.8838,
+      "n" : 100
+    },
+    "observed_rows" : {
+      "client_set_precision" : 1.0,
+      "client_set_recall" : 0.5081,
+      "affected_share_absolute_error" : {
+        "mean" : 0.1386,
+        "p90" : 0.3087,
+        "rows" : 824
+      }
+    },
+    "potential_rows" : {
+      "clients_listed" : 25658,
+      "of_which_truly_read_the_field" : 6506,
+      "reader_share_of_listed" : 0.2536,
+      "readers_found" : 0.4751
+    },
+    "ranking" : {
+      "axon" : {
+        "kendall_tau" : {
+          "mean" : 0.6368,
+          "p10" : 0.3715,
+          "median" : 0.658,
+          "p90" : 0.874,
+          "n" : 98
+        },
+        "top5_precision" : {
+          "mean" : 0.8438,
+          "p10" : 0.6,
+          "median" : 0.8,
+          "p90" : 1.0,
+          "n" : 96
+        }
+      },
+      "axon_severity_first" : {
+        "kendall_tau" : {
+          "mean" : 0.7008,
+          "p10" : 0.4566,
+          "median" : 0.7486,
+          "p90" : 0.8845,
+          "n" : 98
+        },
+        "top5_precision" : {
+          "mean" : 0.8438,
+          "p10" : 0.6,
+          "median" : 0.8,
+          "p90" : 1.0,
+          "n" : 96
+        }
+      },
+      "client_count" : {
+        "kendall_tau" : {
+          "mean" : 0.5709,
+          "p10" : 0.2185,
+          "median" : 0.616,
+          "p90" : 0.899,
+          "n" : 98
+        },
+        "top5_precision" : {
+          "mean" : 0.7188,
+          "p10" : 0.4,
+          "median" : 0.8,
+          "p90" : 1.0,
+          "n" : 96
+        }
+      },
+      "random" : {
+        "kendall_tau" : {
+          "mean" : 1.0E-4,
+          "p10" : -0.0102,
+          "median" : -7.0E-4,
+          "p90" : 0.0109,
+          "n" : 98
+        },
+        "top5_precision" : {
+          "mean" : 0.4294,
+          "p10" : 0.2558,
+          "median" : 0.4236,
+          "p90" : 0.5954,
+          "n" : 96
+        }
+      },
+      "spec_only" : {
+        "kendall_tau" : {
+          "mean" : -0.0336,
+          "p10" : -0.3927,
+          "median" : -0.0433,
+          "p90" : 0.3097,
+          "n" : 98
+        },
+        "top5_precision" : {
+          "mean" : 0.4083,
+          "p10" : 0.0,
+          "median" : 0.4,
+          "p90" : 0.8,
+          "n" : 96
+        }
+      },
+      "volume_only" : {
+        "kendall_tau" : {
+          "mean" : 0.4645,
+          "p10" : 0.0427,
+          "median" : 0.508,
+          "p90" : 0.791,
+          "n" : 98
+        },
+        "top5_precision" : {
+          "mean" : 0.6563,
+          "p10" : 0.2,
+          "median" : 0.8,
+          "p90" : 1.0,
+          "n" : 96
+        }
+      }
+    },
+    "severity_observed_predicted_vs_truth" : {
+      "CRITICAL" : {
+        "CRITICAL" : 16
+      },
+      "HIGH" : {
+        "CRITICAL" : 217,
+        "HIGH" : 411
+      },
+      "LOW" : {
+        "HIGH" : 1
+      },
+      "MEDIUM" : {
+        "HIGH" : 4
+      },
+      "NONE_OBSERVED" : {
+        "NONE_OBSERVED" : 175
+      }
+    },
+    "severity_potential_predicted_vs_truth" : {
+      "CRITICAL" : {
+        "CRITICAL" : 2,
+        "HIGH" : 12,
+        "NONE_OBSERVED" : 9
+      },
+      "HIGH" : {
+        "CRITICAL" : 7,
+        "HIGH" : 201,
+        "NONE_OBSERVED" : 292
+      },
+      "LOW" : {
+        "NONE_OBSERVED" : 4
+      },
+      "MEDIUM" : {
+        "NONE_OBSERVED" : 23
+      },
+      "NONE_OBSERVED" : {
+        "NONE_OBSERVED" : 71
+      }
+    },
+    "severity_agreement_observed" : 0.7306,
+    "severity_agreement_potential" : 0.4412,
+    "undocumented_operation" : {
+      "worlds_where_injected" : 50,
+      "found" : 50
+    }
+  } ]
+}

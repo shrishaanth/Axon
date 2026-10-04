@@ -1,0 +1,354 @@
+{
+  "label" : "test",
+  "seeds" : "101-200",
+  "operations_per_world" : 6,
+  "specs" : [ "recipes-v1.yaml", "019-shorten.rest.yaml", "025-apisetu.gov.in__orientalinsurance.yaml", "040-enode.io.json", "042-googleapis.com__analyticsdata.json", "044-apisetu.gov.in__edistrictpb.json" ],
+  "worlds" : 100,
+  "operation_runs" : 374,
+  "generator_self_check" : {
+    "paths_checked" : 6743,
+    "paths_off_by_more_than_5_standard_errors" : 0,
+    "largest_absolute_error" : 0.0046
+  },
+  "by_requests" : [ {
+    "requests_per_operation" : 100,
+    "field_recall" : {
+      "all" : 0.928,
+      "across_worlds" : {
+        "mean" : 0.9404,
+        "p10" : 0.8903,
+        "median" : 0.9487,
+        "p90" : 0.9935,
+        "n" : 66
+      },
+      "by_true_presence_rate" : {
+        "p<0.01" : {
+          "fields" : 940,
+          "recall" : 0.2777,
+          "predicted_recall" : 0.2739
+        },
+        "0.01<=p<0.1" : {
+          "fields" : 1273,
+          "recall" : 0.9324,
+          "predicted_recall" : 0.9287
+        },
+        "p>=0.1" : {
+          "fields" : 8408,
+          "recall" : 1.0,
+          "predicted_recall" : 1.0
+        }
+      },
+      "rare_fields_across_worlds" : {
+        "mean" : 0.3257,
+        "p10" : 0.0,
+        "median" : 0.2698,
+        "p90" : 0.6667,
+        "n" : 60
+      }
+    },
+    "field_precision" : 1.0,
+    "type_accuracy" : 0.9922,
+    "status_code_recall" : 0.8488,
+    "drift_detection" : {
+      "type_mismatch" : {
+        "injected_found" : 107,
+        "injected_missed" : 90,
+        "false_positives" : 0,
+        "detection_rate" : 0.5431
+      },
+      "undocumented_field" : {
+        "injected_found" : 291,
+        "injected_missed" : 41,
+        "false_positives" : 0,
+        "detection_rate" : 0.8765
+      },
+      "undocumented_status" : {
+        "injected_found" : 105,
+        "injected_missed" : 85,
+        "false_positives" : 0,
+        "detection_rate" : 0.5526
+      },
+      "unused_field" : {
+        "injected_found" : 0,
+        "injected_missed" : 5062,
+        "false_positives" : 0,
+        "detection_rate" : 0.0
+      },
+      "unused_field_without_minimum_requests" : {
+        "injected_found" : 4821,
+        "injected_missed" : 241,
+        "false_positives" : 370,
+        "detection_rate" : 0.9524
+      }
+    },
+    "undocumented_5xx" : {
+      "findings" : 50,
+      "warnings_under_default_rule" : 0,
+      "warnings_if_server_errors_were_drift" : 50
+    },
+    "unseen_bound_calibration" : {
+      "statements" : 0,
+      "coverage" : null,
+      "statements_about_fields_that_do_occur" : 0,
+      "coverage_among_those" : null,
+      "occurring_fields_that_could_have_been_called_unused" : 0,
+      "wrong_statements" : 0,
+      "wrong_statement_rate" : null
+    }
+  }, {
+    "requests_per_operation" : 1000,
+    "field_recall" : {
+      "all" : 0.9828,
+      "across_worlds" : {
+        "mean" : 0.9891,
+        "p10" : 0.9693,
+        "median" : 1.0,
+        "p90" : 1.0,
+        "n" : 66
+      },
+      "by_true_presence_rate" : {
+        "p<0.01" : {
+          "fields" : 940,
+          "recall" : 0.8053,
+          "predicted_recall" : 0.8104
+        },
+        "0.01<=p<0.1" : {
+          "fields" : 1273,
+          "recall" : 1.0,
+          "predicted_recall" : 1.0
+        },
+        "p>=0.1" : {
+          "fields" : 8408,
+          "recall" : 1.0,
+          "predicted_recall" : 1.0
+        }
+      },
+      "rare_fields_across_worlds" : {
+        "mean" : 0.8868,
+        "p10" : 0.6607,
+        "median" : 1.0,
+        "p90" : 1.0,
+        "n" : 60
+      }
+    },
+    "field_precision" : 1.0,
+    "type_accuracy" : 0.9978,
+    "status_code_recall" : 0.9867,
+    "drift_detection" : {
+      "type_mismatch" : {
+        "injected_found" : 167,
+        "injected_missed" : 30,
+        "false_positives" : 0,
+        "detection_rate" : 0.8477
+      },
+      "undocumented_field" : {
+        "injected_found" : 331,
+        "injected_missed" : 1,
+        "false_positives" : 0,
+        "detection_rate" : 0.997
+      },
+      "undocumented_status" : {
+        "injected_found" : 182,
+        "injected_missed" : 8,
+        "false_positives" : 0,
+        "detection_rate" : 0.9579
+      },
+      "unused_field" : {
+        "injected_found" : 2367,
+        "injected_missed" : 2695,
+        "false_positives" : 24,
+        "detection_rate" : 0.4676
+      },
+      "unused_field_without_minimum_requests" : {
+        "injected_found" : 5004,
+        "injected_missed" : 58,
+        "false_positives" : 113,
+        "detection_rate" : 0.9885
+      }
+    },
+    "undocumented_5xx" : {
+      "findings" : 78,
+      "warnings_under_default_rule" : 0,
+      "warnings_if_server_errors_were_drift" : 78
+    },
+    "unseen_bound_calibration" : {
+      "statements" : 2066,
+      "coverage" : 0.9995,
+      "statements_about_fields_that_do_occur" : 24,
+      "coverage_among_those" : 0.9583,
+      "occurring_fields_that_could_have_been_called_unused" : 6486,
+      "wrong_statements" : 1,
+      "wrong_statement_rate" : 2.0E-4
+    }
+  }, {
+    "requests_per_operation" : 10000,
+    "field_recall" : {
+      "all" : 0.9956,
+      "across_worlds" : {
+        "mean" : 0.9981,
+        "p10" : 0.9926,
+        "median" : 1.0,
+        "p90" : 1.0,
+        "n" : 66
+      },
+      "by_true_presence_rate" : {
+        "p<0.01" : {
+          "fields" : 940,
+          "recall" : 0.95,
+          "predicted_recall" : 0.9532
+        },
+        "0.01<=p<0.1" : {
+          "fields" : 1273,
+          "recall" : 1.0,
+          "predicted_recall" : 1.0
+        },
+        "p>=0.1" : {
+          "fields" : 8408,
+          "recall" : 1.0,
+          "predicted_recall" : 1.0
+        }
+      },
+      "rare_fields_across_worlds" : {
+        "mean" : 0.9831,
+        "p10" : 0.9228,
+        "median" : 1.0,
+        "p90" : 1.0,
+        "n" : 60
+      }
+    },
+    "field_precision" : 1.0,
+    "type_accuracy" : 0.999,
+    "status_code_recall" : 1.0,
+    "drift_detection" : {
+      "type_mismatch" : {
+        "injected_found" : 184,
+        "injected_missed" : 13,
+        "false_positives" : 0,
+        "detection_rate" : 0.934
+      },
+      "undocumented_field" : {
+        "injected_found" : 332,
+        "injected_missed" : 0,
+        "false_positives" : 0,
+        "detection_rate" : 1.0
+      },
+      "undocumented_status" : {
+        "injected_found" : 190,
+        "injected_missed" : 0,
+        "false_positives" : 0,
+        "detection_rate" : 1.0
+      },
+      "unused_field" : {
+        "injected_found" : 4469,
+        "injected_missed" : 593,
+        "false_positives" : 1,
+        "detection_rate" : 0.8829
+      },
+      "unused_field_without_minimum_requests" : {
+        "injected_found" : 5043,
+        "injected_missed" : 19,
+        "false_positives" : 31,
+        "detection_rate" : 0.9962
+      }
+    },
+    "undocumented_5xx" : {
+      "findings" : 78,
+      "warnings_under_default_rule" : 0,
+      "warnings_if_server_errors_were_drift" : 78
+    },
+    "unseen_bound_calibration" : {
+      "statements" : 4145,
+      "coverage" : 1.0,
+      "statements_about_fields_that_do_occur" : 1,
+      "coverage_among_those" : 1.0,
+      "occurring_fields_that_could_have_been_called_unused" : 7651,
+      "wrong_statements" : 0,
+      "wrong_statement_rate" : 0.0
+    }
+  }, {
+    "requests_per_operation" : 100000,
+    "field_recall" : {
+      "all" : 0.9983,
+      "across_worlds" : {
+        "mean" : 0.9994,
+        "p10" : 0.9987,
+        "median" : 1.0,
+        "p90" : 1.0,
+        "n" : 66
+      },
+      "by_true_presence_rate" : {
+        "p<0.01" : {
+          "fields" : 940,
+          "recall" : 0.9809,
+          "predicted_recall" : 0.9828
+        },
+        "0.01<=p<0.1" : {
+          "fields" : 1273,
+          "recall" : 1.0,
+          "predicted_recall" : 1.0
+        },
+        "p>=0.1" : {
+          "fields" : 8408,
+          "recall" : 1.0,
+          "predicted_recall" : 1.0
+        }
+      },
+      "rare_fields_across_worlds" : {
+        "mean" : 0.994,
+        "p10" : 0.9783,
+        "median" : 1.0,
+        "p90" : 1.0,
+        "n" : 60
+      }
+    },
+    "field_precision" : 1.0,
+    "type_accuracy" : 0.9997,
+    "status_code_recall" : 1.0,
+    "drift_detection" : {
+      "type_mismatch" : {
+        "injected_found" : 193,
+        "injected_missed" : 4,
+        "false_positives" : 0,
+        "detection_rate" : 0.9797
+      },
+      "undocumented_field" : {
+        "injected_found" : 332,
+        "injected_missed" : 0,
+        "false_positives" : 0,
+        "detection_rate" : 1.0
+      },
+      "undocumented_status" : {
+        "injected_found" : 190,
+        "injected_missed" : 0,
+        "false_positives" : 0,
+        "detection_rate" : 1.0
+      },
+      "unused_field" : {
+        "injected_found" : 4906,
+        "injected_missed" : 156,
+        "false_positives" : 2,
+        "detection_rate" : 0.9692
+      },
+      "unused_field_without_minimum_requests" : {
+        "injected_found" : 5054,
+        "injected_missed" : 8,
+        "false_positives" : 13,
+        "detection_rate" : 0.9984
+      }
+    },
+    "undocumented_5xx" : {
+      "findings" : 78,
+      "warnings_under_default_rule" : 0,
+      "warnings_if_server_errors_were_drift" : 78
+    },
+    "unseen_bound_calibration" : {
+      "statements" : 4583,
+      "coverage" : 1.0,
+      "statements_about_fields_that_do_occur" : 2,
+      "coverage_among_those" : 1.0,
+      "occurring_fields_that_could_have_been_called_unused" : 8041,
+      "wrong_statements" : 0,
+      "wrong_statement_rate" : 0.0
+    }
+  } ]
+}
