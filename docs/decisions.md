@@ -54,7 +54,7 @@ Targets: Vercel (UI) and Render free tier (API, 512 MB).
 
 ## D8. Known risks
 
-1. `oasdiff` may already be enough for diffing. If so, E1 will say so, and the claim shifts to usage-aware ranking.
+1. `oasdiff` may already be enough for diffing. If so, E1 will say so, and the claim shifts to usage-aware ranking. **E1 result: it is.** Axon's diff is a subset of `oasdiff`'s; the ranking is the contribution.
 2. OpenAPI variety (`$ref`, `allOf`, `oneOf`, discriminators) is a time sink. Scope it, document unsupported constructs (metrics.md §11).
 3. Route-matching ambiguity (`/users/me` vs `/users/{id}`): needs dedicated tests.
 4. Real traffic is scarce, hence the simulator **and** the real demo service, reported separately.
@@ -66,10 +66,10 @@ Targets: Vercel (UI) and Render free tier (API, 512 MB).
 | # | Milestone | Done when |
 |---|---|---|
 | M0 | Definitions, metrics, evaluation method, repo, CI | docs written before results ✔ |
-| M1 | OpenAPI model, parser, explorer view | 100 public specs parsed, failure report |
-| M2 | Diff engine and E1 | compared with `oasdiff` |
-| M3 | **Batch slice:** HAR → observed profile → impact on one real change | core idea works end to end |
-| M4 | Drift, inference, E2/E3 | learning curve and impact accuracy published |
+| M1 | OpenAPI model, parser, explorer (CLI; the web view is M6) | 100 public specs parsed, failure report ✔ |
+| M2 | Diff engine and E1 | compared with `oasdiff` ✔ (E1c labels pending) |
+| M3 | **Batch slice:** HAR → observed profile → impact on one real change | core idea works end to end ✔ |
+| M4 | Drift, inference, E2/E3 | learning curve and impact accuracy published ✔ |
 | M5 | Live ingest endpoint, replay, E4 | throughput and replay measured |
 | M6 | Web UI with five views | usable end to end |
 | M7 | CLI gate, README with screenshots, architecture doc | **releasable** |
