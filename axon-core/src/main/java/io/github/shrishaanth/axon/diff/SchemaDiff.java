@@ -15,8 +15,8 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Compares two schema graphs by walking them in step. Results are relative to the pair of schemas compared, so a
- * shared component is compared once and its changes are re-used under every path that reaches it.
+ * Compares two schema graphs. Each pair of schemas is compared once and its own changes are kept apart from the
+ * pairs below it, so a shared or recursive component costs nothing extra however often it is reached.
  *
  * <p>Compatibility rules (integer counts as a subset of number; "no type" accepts everything):
  * <ul>
@@ -34,16 +34,39 @@ final class SchemaDiff {
         }
     }
 
-    /** One pair's change list never grows past this; the result is then flagged truncated. */
+    /** One comparison never reports more changes than this; the result is then flagged truncated. */
     static final int MAX_CHANGES_PER_PAIR = 300;
+    /** Nor does it follow more schema pairs than this while placing changes under their paths. */
+    static final int MAX_STEPS = 50_000;
 
     private record Pair(Schema a, Schema b) {
     }
 
+    /** A step from one pair of schemas to the pair below it: a property, the items, or the map values. */
+    private record Edge(String suffix, Node child) {
+    }
+
+    /**
+     * One compared pair. {@code local} holds the changes found at this level only; {@code dirty} is true when
+     * a change exists here or anywhere below.
+     */
+    private static final class Node {
+        final Pair pair;
+        List<Rel> local = List.of();
+        final List<Edge> edges = new ArrayList<>();
+        final List<Node> parents = new ArrayList<>();
+        boolean dirty;
+
+        Node(Pair pair) {
+            this.pair = pair;
+        }
+    }
+
+    private static final Schema ANY = Schema.any();
+
     private final Direction direction;
-    private final Map<Pair, List<Rel>> done = new HashMap<>();
-    private final Set<Pair> inProgress = new HashSet<>();
-    private Set<Pair> cuts = new HashSet<>();
+    private final Map<Pair, Node> nodes = new HashMap<>();
+    private final java.util.ArrayDeque<Node> pending = new java.util.ArrayDeque<>();
     private boolean truncated;
 
     SchemaDiff(Direction direction) {
@@ -54,34 +77,102 @@ final class SchemaDiff {
         return truncated;
     }
 
+    /**
+     * Changes between two schemas, located by field path from {@code $}.
+     *
+     * <p>Each pair of schemas is compared exactly once, however many operations and paths reach it, which keeps
+     * large mutually recursive specs linear. The changes are then placed under every path that leads to them;
+     * a recursive schema is entered once per path (its changes are not repeated at deeper and deeper paths).
+     */
     List<Rel> diff(Schema a, Schema b) {
         if (a == null && b == null) {
             return List.of();
         }
-        Pair pair = new Pair(a == null ? Schema.any() : a, b == null ? Schema.any() : b);
-        List<Rel> cached = done.get(pair);
-        if (cached != null) {
-            return cached;
-        }
-        if (!inProgress.add(pair)) {
-            // Already comparing this pair further up: a recursive schema. Its changes are reported there.
-            cuts.add(pair);
+        Node root = node(a, b);
+        build();
+        if (!root.dirty) {
             return List.of();
         }
-        Set<Pair> outer = cuts;
-        cuts = new HashSet<>();
-        List<Rel> result = List.copyOf(compute(pair.a(), pair.b()));
-        inProgress.remove(pair);
-        cuts.remove(pair);
-        if (cuts.isEmpty()) {
-            done.put(pair, result); // complete: no cut below depends on a pair still being compared
-        }
-        outer.addAll(cuts);
-        cuts = outer;
-        return result;
+        List<Rel> out = new ArrayList<>();
+        int[] steps = new int[1];
+        emit(root, FieldPath.ROOT, new HashSet<>(), out, steps);
+        return out;
     }
 
-    private List<Rel> compute(Schema a, Schema b) {
+    private Node node(Schema a, Schema b) {
+        Pair pair = new Pair(a == null ? ANY : a, b == null ? ANY : b);
+        Node n = nodes.get(pair);
+        if (n == null) {
+            n = new Node(pair);
+            nodes.put(pair, n);
+            pending.add(n);
+        }
+        return n;
+    }
+
+    /** Compares every pair not yet compared, then marks which pairs lead to a change. */
+    private void build() {
+        List<Node> fresh = new ArrayList<>();
+        while (!pending.isEmpty()) {
+            Node n = pending.poll();
+            n.local = List.copyOf(compute(n));
+            fresh.add(n);
+        }
+        java.util.ArrayDeque<Node> queue = new java.util.ArrayDeque<>();
+        for (Node n : fresh) {
+            if (!n.local.isEmpty() && !n.dirty) {
+                n.dirty = true;
+                queue.add(n);
+            }
+            for (Edge e : n.edges) {
+                if (e.child().dirty && !n.dirty) {
+                    n.dirty = true;
+                    queue.add(n);
+                }
+            }
+        }
+        while (!queue.isEmpty()) {
+            for (Node parent : queue.poll().parents) {
+                if (!parent.dirty) {
+                    parent.dirty = true;
+                    queue.add(parent);
+                }
+            }
+        }
+    }
+
+    private void emit(Node n, String path, Set<Node> onPath, List<Rel> out, int[] steps) {
+        if (++steps[0] > MAX_STEPS) {
+            truncated = true;
+            return;
+        }
+        for (Rel rel : n.local) {
+            if (out.size() >= MAX_CHANGES_PER_PAIR) {
+                truncated = true;
+                return;
+            }
+            out.add(rel.under(path));
+        }
+        onPath.add(n);
+        for (Edge e : n.edges) {
+            // skip clean subtrees, and do not re-enter a schema already on this path (recursion)
+            if (e.child().dirty && !onPath.contains(e.child())) {
+                emit(e.child(), path + e.suffix(), onPath, out, steps);
+            }
+        }
+        onPath.remove(n);
+    }
+
+    private void edge(Node from, String childPath, Schema a, Schema b) {
+        Node child = node(a, b);
+        from.edges.add(new Edge(childPath.substring(1), child));
+        child.parents.add(from);
+    }
+
+    /** Changes at this level only; pairs below become edges. */
+    private List<Rel> compute(Node node) {
+        Schema a = node.pair.a();
+        Schema b = node.pair.b();
         List<Rel> out = new ArrayList<>();
         boolean request = direction == Direction.REQUEST;
 
@@ -140,7 +231,7 @@ final class SchemaDiff {
                             a.pointer()));
                 }
             }
-            addAll(out, diff(e.getValue(), childB), field);
+            edge(node, field, e.getValue(), childB);
         }
         for (Map.Entry<String, Schema> e : propsB.entrySet()) {
             String name = e.getKey();
@@ -160,10 +251,10 @@ final class SchemaDiff {
         }
 
         if (a.additionalSchema() != null && b.additionalSchema() != null) {
-            addAll(out, diff(a.additionalSchema(), b.additionalSchema()), FieldPath.wildcard(FieldPath.ROOT));
+            edge(node, FieldPath.wildcard(FieldPath.ROOT), a.additionalSchema(), b.additionalSchema());
         }
         if (a.items() != null && b.items() != null) {
-            addAll(out, diff(a.items(), b.items()), FieldPath.items(FieldPath.ROOT));
+            edge(node, FieldPath.items(FieldPath.ROOT), a.items(), b.items());
         }
         return out;
     }
@@ -179,17 +270,7 @@ final class SchemaDiff {
     }
 
     private void add(List<Rel> out, Rel rel) {
-        if (out.size() >= MAX_CHANGES_PER_PAIR) {
-            truncated = true;
-            return;
-        }
         out.add(rel);
-    }
-
-    private void addAll(List<Rel> out, List<Rel> children, String under) {
-        for (Rel child : children) {
-            add(out, child.under(under));
-        }
     }
 
     /** The set of JSON types a schema accepts: no declared type means all; number includes integer. */

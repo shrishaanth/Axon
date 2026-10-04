@@ -212,6 +212,27 @@ class SpecDiffTest {
     }
 
     @Test
+    void mutuallyRecursiveSchemasAreReportedFromEveryEntryPoint() throws Exception {
+        String spec = """
+                openapi: 3.0.3
+                info: { title: t, version: '1' }
+                paths:
+                  /a: { get: { responses: { '200': { description: ok, content: { application/json: { schema: { $ref: '#/components/schemas/A' } } } } } } }
+                  /b: { get: { responses: { '200': { description: ok, content: { application/json: { schema: { $ref: '#/components/schemas/B' } } } } } } }
+                components:
+                  schemas:
+                    A: { type: object, properties: { x: { type: string }, b: { $ref: '#/components/schemas/B' }, bs: { type: array, items: { $ref: '#/components/schemas/B' } } } }
+                    B: { type: object, properties: { y: { type: string }, a: { $ref: '#/components/schemas/A' } } }
+                """;
+        SpecDiff.Result r = SpecDiff.diff(SpecParser.parse(spec),
+                SpecParser.parse(spec.replace("y: { type: string }, ", "")));
+        // from /a, B is reached by two paths and both are reported; B's own cycle back through A is not repeated
+        assertEquals(List.of("GET /a $.b.y", "GET /a $.bs[].y", "GET /b $.y"),
+                r.changes().stream().map(c -> c.operationKey() + " " + c.field()).toList());
+        assertFalse(r.truncated());
+    }
+
+    @Test
     void responseFieldAddedIsSafe() throws Exception {
         SpecDiff.Result r = diff(BASE.replace("        legacy_id: { type: string }\n",
                 "        legacy_id: { type: string }\n        created_at: { type: string }\n"));
