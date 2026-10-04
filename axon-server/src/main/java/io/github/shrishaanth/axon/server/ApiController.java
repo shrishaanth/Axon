@@ -316,6 +316,14 @@ public class ApiController {
 
     /** Reads the body, refusing anything over {@code limit} bytes without buffering the excess. */
     private static String read(HttpServletRequest request, int limit) throws IOException {
+        String contentType = request.getContentType();
+        if (contentType != null && contentType.toLowerCase(java.util.Locale.ROOT).startsWith("application/x-www-form-urlencoded")) {
+            // The servlet container reads a form body as parameters, leaving nothing here. curl sends this type by
+            // default with --data-binary.
+            throw new ApiException(HttpStatus.UNSUPPORTED_MEDIA_TYPE, "form_content_type",
+                    "Send the body as text/plain, application/json or application/yaml, not as a form "
+                            + "(with curl: -H 'Content-Type: text/plain').");
+        }
         long declared = request.getContentLengthLong();
         if (declared > limit) {
             throw new ApiException(HttpStatus.PAYLOAD_TOO_LARGE, "too_large", "The body is larger than " + limit + " bytes.");

@@ -203,6 +203,13 @@ class ApiIntegrationTest {
         assertEquals(HttpStatus.UNAUTHORIZED, call(HttpMethod.POST, "/api/ingest", events.get(0), "X-Axon-Key", adminKey).getStatusCode());
         assertEquals(HttpStatus.UNAUTHORIZED, call(HttpMethod.GET, "/api/workspaces/" + UUID.randomUUID(), null, "X-Axon-Admin", adminKey).getStatusCode());
         assertEquals(HttpStatus.BAD_REQUEST, call(HttpMethod.GET, "/api/workspaces/" + id + "/clients?from=yesterday", null, "X-Axon-Admin", adminKey).getStatusCode());
+        // a form content type (curl's default) would have its body eaten as parameters: refuse it with a reason
+        HttpHeaders form = new HttpHeaders();
+        form.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+        form.set("X-Axon-Key", ingestKey);
+        ResponseEntity<String> refused = http.exchange("/api/ingest", HttpMethod.POST, new HttpEntity<>(events.get(0), form), String.class);
+        assertEquals(HttpStatus.UNSUPPORTED_MEDIA_TYPE, refused.getStatusCode());
+        assertTrue(refused.getBody().contains("text/plain"), refused.getBody());
     }
 
     @Test
