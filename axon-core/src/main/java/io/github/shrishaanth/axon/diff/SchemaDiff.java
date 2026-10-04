@@ -37,7 +37,7 @@ final class SchemaDiff {
     /** One comparison never reports more changes than this; the result is then flagged truncated. */
     static final int MAX_CHANGES_PER_PAIR = 300;
     /** Nor does it follow more schema pairs than this while placing changes under their paths. */
-    static final int MAX_STEPS = 50_000;
+    static final int MAX_STEPS = 5_000;
 
     private record Pair(Schema a, Schema b) {
     }
@@ -98,8 +98,8 @@ final class SchemaDiff {
         // Breaking changes first, each pass with its own budget: when a large shared schema overflows the cap,
         // what gets cut is safe changes, never the breaking ones behind them.
         List<Rel> out = new ArrayList<>();
-        emit(root, FieldPath.ROOT, new HashSet<>(), out, new int[1], true);
-        emit(root, FieldPath.ROOT, new HashSet<>(), out, new int[1], false);
+        emit(root, out, true);
+        emit(root, out, false);
         return out;
     }
 
@@ -162,29 +162,50 @@ final class SchemaDiff {
         }
     }
 
-    private void emit(Node n, String path, Set<Node> onPath, List<Rel> out, int[] steps, boolean breaking) {
-        if (++steps[0] > MAX_STEPS) {
-            truncated = true;
-            return;
-        }
-        for (Rel rel : n.local) {
-            if (rel.breaking() != breaking) {
-                continue;
+    /** A position in the walk: a pair reached under {@code path}, with the chain of pairs above it. */
+    private record Frame(Node node, String path, Frame parent) {
+        boolean above(Node candidate) {
+            for (Frame f = this; f != null; f = f.parent) {
+                if (f.node == candidate) {
+                    return true;
+                }
             }
-            if (out.size() >= MAX_CHANGES_PER_PAIR) {
+            return false;
+        }
+    }
+
+    /**
+     * Places changes under their paths breadth-first, so the shortest path to each change comes first. A
+     * depth-first walk spends its whole budget inside the first recursive property of a large spec and never
+     * reaches a change two levels below the root.
+     */
+    private void emit(Node root, List<Rel> out, boolean breaking) {
+        java.util.ArrayDeque<Frame> queue = new java.util.ArrayDeque<>();
+        queue.add(new Frame(root, FieldPath.ROOT, null));
+        int steps = 0;
+        while (!queue.isEmpty()) {
+            if (++steps > MAX_STEPS) {
                 truncated = true;
                 return;
             }
-            out.add(rel.under(path));
-        }
-        onPath.add(n);
-        for (Edge e : n.edges) {
-            // skip subtrees with nothing of this class, and do not re-enter a schema already on this path
-            if (flag(e.child(), breaking) && !onPath.contains(e.child())) {
-                emit(e.child(), path + e.suffix(), onPath, out, steps, breaking);
+            Frame frame = queue.poll();
+            for (Rel rel : frame.node().local) {
+                if (rel.breaking() != breaking) {
+                    continue;
+                }
+                if (out.size() >= MAX_CHANGES_PER_PAIR) {
+                    truncated = true;
+                    return;
+                }
+                out.add(rel.under(frame.path()));
+            }
+            for (Edge e : frame.node().edges) {
+                // skip subtrees with nothing of this class, and do not re-enter a schema already on this path
+                if (flag(e.child(), breaking) && !frame.above(e.child())) {
+                    queue.add(new Frame(e.child(), frame.path() + e.suffix(), frame));
+                }
             }
         }
-        onPath.remove(n);
     }
 
     private void edge(Node from, String childPath, Schema a, Schema b) {
