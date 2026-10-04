@@ -279,6 +279,27 @@ class SpecParserTest {
     }
 
     @Test
+    void aParsedSpecCanBeReadFromManyThreads() throws Exception {
+        // the effective view is computed lazily; a per-object "in progress" flag once made concurrent readers
+        // see an empty schema
+        for (int round = 0; round < 20; round++) {
+            Schema recipe = SpecParser.parse(SPEC).operation("GET", "/recipes/{id}")
+                    .responses().get("200").body().jsonSchema();
+            java.util.concurrent.ExecutorService pool = java.util.concurrent.Executors.newFixedThreadPool(8);
+            List<java.util.concurrent.Future<String>> results = new java.util.ArrayList<>();
+            for (int i = 0; i < 64; i++) {
+                results.add(pool.submit(() -> recipe.properties().keySet() + " " + recipe.required() + " "
+                        + recipe.types() + " " + recipe.properties().get("author").properties().keySet()));
+            }
+            for (java.util.concurrent.Future<String> f : results) {
+                assertEquals("[id, title, note, secret, tags, author, related, labels] [id, title] [OBJECT] "
+                        + "[name, email, version]", f.get());
+            }
+            pool.shutdown();
+        }
+    }
+
+    @Test
     void survivesCompositionCycles() throws Exception {
         ApiSpec spec = SpecParser.parse("""
                 {"openapi":"3.0.0","info":{"title":"t","version":"1"},

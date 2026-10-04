@@ -20,6 +20,9 @@ import java.util.Set;
 public final class Schema {
 
     private static final ThreadLocal<int[]> CUTS = ThreadLocal.withInitial(() -> new int[1]);
+    /** Schemas whose effective view the current thread is computing; per thread, so specs can be shared. */
+    private static final ThreadLocal<Set<Schema>> IN_PROGRESS =
+            ThreadLocal.withInitial(() -> Collections.newSetFromMap(new java.util.IdentityHashMap<>()));
 
     private final String pointer;
 
@@ -39,12 +42,11 @@ public final class Schema {
     /** True when the schema has no constraints we model at all (e.g. {@code {}} or an unresolved ref). */
     boolean unresolved;
 
-    private Set<JsonType> types;
-    private Map<String, Schema> properties;
-    private Set<String> required;
-    private List<String> enumValues;
-    private boolean enumComputed;
-    private int computing;
+    private volatile Set<JsonType> types;
+    private volatile Map<String, Schema> properties;
+    private volatile Set<String> required;
+    private volatile List<String> enumValues;
+    private volatile boolean enumComputed;
 
     Schema(String pointer) {
         this.pointer = pointer;
@@ -237,7 +239,7 @@ public final class Schema {
             }
             return null;
         } finally {
-            computing--;
+            IN_PROGRESS.get().remove(this);
         }
     }
 
@@ -266,7 +268,7 @@ public final class Schema {
             }
             return null;
         } finally {
-            computing--;
+            IN_PROGRESS.get().remove(this);
         }
     }
 
@@ -301,7 +303,7 @@ public final class Schema {
             }
             return false;
         } finally {
-            computing--;
+            IN_PROGRESS.get().remove(this);
         }
     }
 
@@ -371,11 +373,10 @@ public final class Schema {
     // Cycle guard. A composition cycle (allOf pointing back at an ancestor) cuts the recursion; results computed
     // while a cut happened below are not cached unless this node is the outermost one being computed.
     private boolean enter() {
-        if (computing > 0) {
+        if (!IN_PROGRESS.get().add(this)) {
             CUTS.get()[0]++;
             return false;
         }
-        computing++;
         return true;
     }
 
@@ -384,7 +385,7 @@ public final class Schema {
     }
 
     private boolean leave(int cutsBefore) {
-        computing--;
+        IN_PROGRESS.get().remove(this);
         return cuts() == cutsBefore;
     }
 
