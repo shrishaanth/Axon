@@ -37,6 +37,20 @@ public final class Aggregate {
         private Instant first;
         private Instant last;
 
+        /** Folds another counter into this one. */
+        void merge(long n, Instant f, Instant l) {
+            if (n <= 0) {
+                return;
+            }
+            count += n;
+            if (first == null || (f != null && f.isBefore(first))) {
+                first = f;
+            }
+            if (last == null || (l != null && l.isAfter(last))) {
+                last = l;
+            }
+        }
+
         void add(Instant ts) {
             count++;
             if (first == null || ts.isBefore(first)) {
@@ -253,7 +267,7 @@ public final class Aggregate {
         }
     }
 
-    private Operation resolve(TrafficEvent e) {
+    Operation resolve(TrafficEvent e) {
         if (e.operation() != null) {
             Operation op = byKey.get(e.operation());
             if (op != null) {
@@ -272,6 +286,28 @@ public final class Aggregate {
 
     public ApiSpec spec() {
         return spec;
+    }
+
+    // Used by Cells to rebuild an aggregate from stored counters.
+
+    OperationStats operation(String key) {
+        return operations.computeIfAbsent(key, k -> new OperationStats());
+    }
+
+    void event(String client, long n, Instant first, Instant last) {
+        all.merge(n, first, last);
+        if (!client.equals(UNIDENTIFIED)) {
+            identified += n;
+            clients.computeIfAbsent(client, c -> new Stat()).merge(n, first, last);
+        }
+    }
+
+    void unmatched(String where, long n, Instant first, Instant last) {
+        unmatched.computeIfAbsent(where, w -> new Stat()).merge(n, first, last);
+    }
+
+    void matched(long n) {
+        matched += n;
     }
 
     public Map<String, OperationStats> operations() {

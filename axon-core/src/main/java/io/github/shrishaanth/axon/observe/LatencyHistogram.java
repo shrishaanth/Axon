@@ -16,9 +16,18 @@ public final class LatencyHistogram {
     private long count;
 
     public void add(double millis) {
-        int bucket = millis <= 1.0 ? 0 : (int) Math.ceil(Math.log(millis) / Math.log(BASE) - 1e-9);
-        buckets.merge(bucket, 1L, Long::sum);
-        count++;
+        add(bucket(millis), 1);
+    }
+
+    /** The bucket a latency falls in. */
+    public static int bucket(double millis) {
+        return millis <= 1.0 ? 0 : (int) Math.ceil(Math.log(millis) / Math.log(BASE) - 1e-9);
+    }
+
+    /** Adds {@code n} observations to a bucket; this is how two histograms merge. */
+    public void add(int bucket, long n) {
+        buckets.merge(bucket, n, Long::sum);
+        count += n;
     }
 
     public long count() {
