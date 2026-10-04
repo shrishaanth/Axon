@@ -14,6 +14,7 @@ import io.github.shrishaanth.axon.impact.ImpactReport.Evidence;
 import io.github.shrishaanth.axon.impact.ImpactReport.Exposure;
 import io.github.shrishaanth.axon.impact.ImpactReport.Row;
 import io.github.shrishaanth.axon.impact.ReportWriter;
+import io.github.shrishaanth.axon.impact.Severity;
 import io.github.shrishaanth.axon.observe.Aggregate;
 import io.github.shrishaanth.axon.spec.ApiSpec;
 import io.github.shrishaanth.axon.spec.Explorer;
@@ -62,6 +63,8 @@ public final class Main {
                 case "diff" -> diff(a, out);
                 case "sanitise", "sanitize" -> sanitise(a, out, err);
                 case "impact" -> impact(a, out, err);
+                case "check" -> check(a, out, err);
+                case "bundle" -> bundle(a, err);
                 default -> {
                     err.println("unknown command: " + args[0]);
                     err.println(usage());
@@ -177,7 +180,112 @@ public final class Main {
         return new Sanitiser.Config(mode, header, salt);
     }
 
+    private record Analysis(ImpactReport report, List<DriftFinding> drift, ObjectNode json) {
+    }
+
     private static int impact(Args a, PrintStream out, PrintStream err) throws SpecParseException, IOException {
+        Analysis analysis = analyse(a, err);
+        if (a.option("out") != null) {
+            write(a.option("out"), ReportWriter.toJson(analysis.json()), out);
+        }
+        if (a.flag("json")) {
+            out.println(ReportWriter.toJson(analysis.json()));
+        } else {
+            printSummary(analysis.report(), analysis.drift(), out);
+        }
+        return 0;
+    }
+
+    /**
+     * The CI gate. Exit 1 when a breaking change reaches the threshold, 0 otherwise.
+     *
+     * <p>The threshold is a percentage of the clients active in the recent window. Only observed rows count,
+     * unless {@code --include-potential} is given: a potential row lists every caller of an operation, and most
+     * of them do not depend on the changed part.
+     */
+    private static int check(Args a, PrintStream out, PrintStream err) throws SpecParseException, IOException {
+        double threshold;
+        try {
+            threshold = Double.parseDouble(a.option("threshold", "10"));
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("--threshold takes a percentage, for example 10");
+        }
+        if (threshold < 0 || threshold > 100) {
+            throw new IllegalArgumentException("--threshold must be between 0 and 100");
+        }
+        Severity failOn = null;
+        if (a.option("fail-on") != null) {
+            try {
+                failOn = Severity.valueOf(a.option("fail-on").toUpperCase(Locale.ROOT));
+            } catch (IllegalArgumentException e) {
+                throw new IllegalArgumentException("--fail-on takes CRITICAL, HIGH, MEDIUM or LOW");
+            }
+        }
+        boolean includePotential = a.flag("include-potential");
+        Analysis analysis = analyse(a, err);
+        ImpactReport report = analysis.report();
+        if (a.option("out") != null) {
+            write(a.option("out"), ReportWriter.toJson(analysis.json()), out);
+        }
+        List<Row> breaking = report.breaking().stream().sorted(Comparator.comparingInt(Row::rank)).toList();
+        if (breaking.isEmpty()) {
+            out.println("PASS: no breaking changes.");
+            return 0;
+        }
+        List<Row> failing = new java.util.ArrayList<>();
+        String rule;
+        if (report.events() == 0) {
+            // no traffic: nothing can be said about impact, so every breaking change blocks
+            failing.addAll(breaking);
+            rule = "no usage data was given, so any breaking change fails the check";
+        } else if (!report.hasIdentity()) {
+            for (Row r : breaking) {
+                if ((r.evidence() == Evidence.OBSERVED || includePotential) && r.exposure().requests() > 0) {
+                    failing.add(r);
+                }
+            }
+            rule = "the traffic has no client identity, so any breaking change with affected requests fails the check";
+        } else {
+            for (Row r : breaking) {
+                if (r.evidence() != Evidence.OBSERVED && !includePotential) {
+                    continue;
+                }
+                double share = r.exposure().shareRecent() == null ? 0 : r.exposure().shareRecent() * 100;
+                boolean overShare = r.exposure().recent() != null && r.exposure().recent() > 0 && share >= threshold;
+                boolean overSeverity = failOn != null && r.severity().ordinal() <= failOn.ordinal();
+                if (overShare || overSeverity) {
+                    failing.add(r);
+                }
+            }
+            rule = String.format(Locale.ROOT, "a%s breaking change affecting at least %s%% of the %d clients active in "
+                            + "the last %s days%s", includePotential ? "" : "n observed", trim(threshold),
+                    report.activeClients(), trim(report.config().recentDays()),
+                    failOn == null ? "" : ", or rated " + failOn + " or worse");
+        }
+        out.println((failing.isEmpty() ? "PASS" : "FAIL") + ": " + breaking.size() + " breaking changes, "
+                + failing.size() + " over the threshold.");
+        out.println("Rule: " + rule + ".");
+        for (Row r : failing) {
+            Exposure e = r.exposure();
+            out.printf(Locale.ROOT, "  %-10s %s%n", r.evidence() == Evidence.POTENTIAL ? "potential" : r.severity().name(),
+                    r.change().description());
+            if (e.clients() != null) {
+                out.printf(Locale.ROOT, "             %d client%s (%s recently active, %.0f%% of active), %d requests%n",
+                        e.clients(), e.clients() == 1 ? "" : "s", e.recent(),
+                        e.shareRecent() == null ? 0 : e.shareRecent() * 100, e.requests());
+            } else if (report.events() > 0) {
+                out.printf(Locale.ROOT, "             %d requests%n", e.requests());
+            }
+        }
+        long potential = breaking.stream().filter(r -> r.evidence() == Evidence.POTENTIAL).count();
+        if (potential > 0 && !includePotential && report.events() > 0) {
+            out.println(potential + " response-side changes are not gated: traffic shows who calls the operation, "
+                    + "not who reads the field. Use --include-potential to gate on callers.");
+        }
+        return failing.isEmpty() ? 0 : 1;
+    }
+
+    private static Analysis analyse(Args a, PrintStream err) throws SpecParseException, IOException {
         Path baselinePath = Path.of(a.required("baseline"));
         Path candidatePath = Path.of(a.required("candidate"));
         ApiSpec baseline = SpecParser.parse(baselinePath);
@@ -241,14 +349,45 @@ public final class Main {
                 new ReportWriter.SpecRef(baselinePath.toString().replace('\\', '/'), sha256(baselinePath), baseline),
                 new ReportWriter.SpecRef(candidatePath.toString().replace('\\', '/'), sha256(candidatePath), candidate),
                 source, Instant.now());
-        if (a.option("out") != null) {
-            write(a.option("out"), ReportWriter.toJson(json), out);
+        return new Analysis(report, drift, json);
+    }
+
+    /**
+     * Writes everything the web UI shows as static JSON files, so a demo works with no server: report.json,
+     * contract.json, clients.json and explore.json (the spec summary with each operation's detail).
+     */
+    private static int bundle(Args a, PrintStream err) throws SpecParseException, IOException {
+        Path baselinePath = Path.of(a.required("baseline"));
+        Path candidatePath = Path.of(a.required("candidate"));
+        ApiSpec baseline = SpecParser.parse(baselinePath);
+        ApiSpec candidate = SpecParser.parse(candidatePath);
+        Aggregate aggregate = new Aggregate(baseline, null, null);
+        try (BufferedReader r = Files.newBufferedReader(Path.of(a.required("usage")), StandardCharsets.UTF_8)) {
+            String line;
+            while ((line = r.readLine()) != null) {
+                if (!line.isBlank()) {
+                    aggregate.add(TrafficEvent.fromJson(line));
+                }
+            }
         }
-        if (a.flag("json")) {
-            out.println(ReportWriter.toJson(json));
-        } else {
-            printSummary(report, drift, out);
+        ImpactConfig config = ImpactConfig.defaults()
+                .withIdentity(aggregate.hasIdentity() ? "header" : "none", a.option("identity-header"));
+        ImpactReport report = ImpactEngine.analyse(SpecDiff.diff(baseline, candidate), aggregate, config);
+        ObjectNode json = ReportWriter.write(report, DriftEngine.analyse(aggregate, config),
+                new ReportWriter.SpecRef(baselinePath.getFileName().toString(), sha256(baselinePath), baseline),
+                new ReportWriter.SpecRef(candidatePath.getFileName().toString(), sha256(candidatePath), candidate),
+                "jsonl", Instant.now());
+        ObjectNode explore = Explorer.describe(baseline);
+        ObjectNode details = explore.putObject("details");
+        for (Operation op : baseline.operations()) {
+            details.set(op.key(), Explorer.describe(op));
         }
+        String dir = a.required("out");
+        write(dir + "/report.json", ReportWriter.toJson(json), null);
+        write(dir + "/contract.json", JSON.writeValueAsString(io.github.shrishaanth.axon.observe.Views.contract(aggregate)), null);
+        write(dir + "/clients.json", JSON.writeValueAsString(io.github.shrishaanth.axon.observe.Views.clients(aggregate)), null);
+        write(dir + "/explore.json", JSON.writeValueAsString(explore), null);
+        err.println("bundle written to " + dir);
         return 0;
     }
 
@@ -324,10 +463,18 @@ public final class Main {
         return String.join(System.lineSeparator(),
                 "axon: API change-impact analysis",
                 "",
+                "  axon check --baseline v1.yaml --candidate v2.yaml [--usage usage.jsonl | --har traffic.har]",
+                "             [--threshold 10] [--fail-on HIGH] [--include-potential] [--out report.json]",
+                "      CI gate: exit 1 if an observed breaking change affects at least --threshold percent of the",
+                "      recently active clients. Without usage data, any breaking change fails.",
+                "",
                 "  axon impact --baseline v1.yaml --candidate v2.yaml (--usage usage.jsonl | --har traffic.har)",
                 "              [--identity-header NAME] [--salt S] [--critical a,b] [--server-errors info|drift]",
                 "              [--window-start ISO] [--window-end ISO] [--out report.json] [--json]",
                 "      Rank the breaking changes between two specs by who they would affect, and list drift.",
+                "",
+                "  axon bundle --baseline v1.yaml --candidate v2.yaml --usage usage.jsonl --out dir",
+                "      Write the report and the views as static JSON for the web UI.",
                 "",
                 "  axon diff --baseline v1.yaml --candidate v2.yaml [--json] [--out file]",
                 "      List the changes between two specs, breaking or safe.",

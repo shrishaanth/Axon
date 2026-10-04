@@ -1,0 +1,63 @@
+{
+  "started" : "2026-10-04T02:11:45.383900500Z",
+  "seconds_per_configuration" : 600,
+  "postgres" : "17 (Docker, default settings)",
+  "java" : "17.0.20.1",
+  "processors" : 12,
+  "max_heap_mb" : 4022,
+  "os" : "Windows 11 amd64",
+  "traffic" : "eval/demo/usage.jsonl repeated; new client pseudonyms and a one-day shift per repeat",
+  "ingest" : [ {
+    "events_per_request" : 1,
+    "requests" : 66769,
+    "events" : 66769,
+    "seconds" : 600.0,
+    "events_per_second" : 111,
+    "request_latency_p50_ms" : 8.2235,
+    "request_latency_p95_ms" : 13.7867,
+    "request_latency_p99_ms" : 18.5881,
+    "counter_rows_at_end" : 68313,
+    "peak_used_heap_mb_sampled" : 390,
+    "stored_events" : 66769
+  }, {
+    "events_per_request" : 100,
+    "requests" : 15607,
+    "events" : 1560700,
+    "seconds" : 812.7,
+    "events_per_second" : 1920,
+    "request_latency_p50_ms" : 23.561,
+    "request_latency_p95_ms" : 57.138,
+    "request_latency_p99_ms" : 115.0736,
+    "counter_rows_at_end" : 738017,
+    "peak_used_heap_mb_sampled" : 390,
+    "stored_events" : 1560700
+  }, {
+    "events_per_request" : 1000,
+    "requests" : 2847,
+    "events" : 2847000,
+    "seconds" : 600.2,
+    "events_per_second" : 4743,
+    "request_latency_p50_ms" : 149.3706,
+    "request_latency_p95_ms" : 366.2137,
+    "request_latency_p99_ms" : 566.3905,
+    "counter_rows_at_end" : 928870,
+    "peak_used_heap_mb_sampled" : 389,
+    "stored_events" : 2847000
+  } ],
+  "replay" : [ {
+    "events" : 100000,
+    "load_seconds" : 26.0,
+    "replay_seconds" : 16.913,
+    "replay_events_per_second" : 5913,
+    "counter_rows" : 95363,
+    "replay_equals_live" : true
+  }, {
+    "events" : 1000000,
+    "load_seconds" : 205.5,
+    "replay_seconds" : 246.191,
+    "replay_events_per_second" : 4062,
+    "counter_rows" : 603772,
+    "replay_equals_live" : true
+  } ],
+  "finished" : "2026-10-04T02:53:43.945319800Z"
+}
