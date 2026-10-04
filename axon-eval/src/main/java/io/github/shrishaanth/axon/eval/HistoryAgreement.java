@@ -60,11 +60,14 @@ final class HistoryAgreement {
         Path outDir = Path.of(args[2]);
         Path binary = null;
         String only = null;
+        Path dumpKeys = null;
         for (int i = 3; i < args.length - 1; i++) {
             if (args[i].equals("--oasdiff")) {
                 binary = Path.of(args[i + 1]);
             } else if (args[i].equals("--only")) {
                 only = args[i + 1];
+            } else if (args[i].equals("--dump-keys")) {
+                dumpKeys = Path.of(args[i + 1]);
             }
         }
         if (binary == null) {
@@ -77,6 +80,7 @@ final class HistoryAgreement {
         Map<String, Totals> bySource = new LinkedHashMap<>();
         Map<String, DisagreementClass> classes = new TreeMap<>();
 
+        BufferedWriter keys = dumpKeys == null ? null : Files.newBufferedWriter(dumpKeys, StandardCharsets.UTF_8);
         try (BufferedWriter rows = Files.newBufferedWriter(outDir.resolve("e1b-pairs" + suffix + ".jsonl"),
                 StandardCharsets.UTF_8);
              BufferedWriter diffs = Files.newBufferedWriter(outDir.resolve("e1b-disagreements" + suffix + ".jsonl"),
@@ -142,6 +146,29 @@ final class HistoryAgreement {
                 Map<String, List<Unit>> axonByOperation = new HashMap<>();
                 for (Unit u : axon) {
                     axonByOperation.computeIfAbsent(u.method() + " " + u.path(), k -> new ArrayList<>()).add(u);
+                }
+
+                if (keys != null) {
+                    // every change either tool calls breaking, for the hand-labelled sample (E1c)
+                    Set<String> union = new TreeSet<>(axonBreaking);
+                    union.addAll(oasdiffBreaking);
+                    for (String key : union) {
+                        ObjectNode k = JSON.createObjectNode();
+                        k.put("source", source);
+                        k.put("base", pair.get("base").get("file").asText());
+                        k.put("revision", pair.get("revision").get("file").asText());
+                        k.put("key", key);
+                        k.put("axon_breaking", axonBreaking.contains(key));
+                        k.put("oasdiff_breaking", oasdiffBreaking.contains(key));
+                        if (axonByKey.containsKey(key)) {
+                            k.put("axon_text", firstBreaking(axonByKey.get(key)).text());
+                        }
+                        if (oasdiffByKey.containsKey(key)) {
+                            k.put("oasdiff_text", firstBreaking(oasdiffByKey.get(key)).text());
+                        }
+                        keys.write(JSON.writeValueAsString(k));
+                        keys.newLine();
+                    }
                 }
 
                 long agree = 0;
@@ -217,6 +244,10 @@ final class HistoryAgreement {
                 System.err.println(index + " " + source + " agree=" + agree + " axonOnly=" + axonOnly
                         + " oasdiffOnly=" + oasdiffOnly + " (" + axonMillis + " ms / " + run.millis() + " ms)");
             }
+        }
+
+        if (keys != null) {
+            keys.close();
         }
 
         ObjectNode summary = JSON.createObjectNode();

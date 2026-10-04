@@ -37,7 +37,7 @@ final class SchemaDiff {
     /** One comparison never reports more changes than this; the result is then flagged truncated. */
     static final int MAX_CHANGES_PER_PAIR = 300;
     /** Nor does it follow more schema pairs than this while placing changes under their paths. */
-    static final int MAX_STEPS = 5_000;
+    static final int MAX_STEPS = 2_000;
 
     private record Pair(Schema a, Schema b) {
     }
@@ -70,6 +70,8 @@ final class SchemaDiff {
     private final Map<Pair, Node> nodes = new HashMap<>();
     private final java.util.ArrayDeque<Node> pending = new java.util.ArrayDeque<>();
     private boolean truncated;
+    /** Breaking changes already placed for the comparison in hand; safe changes get their own cap on top. */
+    private int breakingPlaced;
 
     SchemaDiff(Direction direction) {
         this.direction = direction;
@@ -98,7 +100,9 @@ final class SchemaDiff {
         // Breaking changes first, each pass with its own budget: when a large shared schema overflows the cap,
         // what gets cut is safe changes, never the breaking ones behind them.
         List<Rel> out = new ArrayList<>();
+        breakingPlaced = 0;
         emit(root, out, true);
+        breakingPlaced = out.size();
         emit(root, out, false);
         return out;
     }
@@ -175,12 +179,31 @@ final class SchemaDiff {
     }
 
     /**
-     * Places changes under their paths breadth-first, so the shortest path to each change comes first. A
-     * depth-first walk spends its whole budget inside the first recursive property of a large spec and never
-     * reaches a change two levels below the root.
+     * Places changes under their paths, breadth-first so that the shortest path to each change comes first.
+     *
+     * <p>Two phases. The first visits every pair at most once, which is linear in the size of the schema graph
+     * and guarantees that a change reachable from the root is reported at least once, however deep it sits.
+     * The second spends a bounded budget on further paths to the same changes (an address schema used for both
+     * billing and shipping is reported under both), without re-entering a schema already on the path.
      */
     private void emit(Node root, List<Rel> out, boolean breaking) {
+        Set<String> placed = new HashSet<>();
+        Set<Node> visited = new HashSet<>();
         java.util.ArrayDeque<Frame> queue = new java.util.ArrayDeque<>();
+        queue.add(new Frame(root, FieldPath.ROOT, null));
+        visited.add(root);
+        while (!queue.isEmpty()) {
+            Frame frame = queue.poll();
+            if (!place(frame, out, breaking, placed)) {
+                return;
+            }
+            for (Edge e : frame.node().edges) {
+                if (flag(e.child(), breaking) && visited.add(e.child())) {
+                    queue.add(new Frame(e.child(), frame.path() + e.suffix(), frame));
+                }
+            }
+        }
+
         queue.add(new Frame(root, FieldPath.ROOT, null));
         int steps = 0;
         while (!queue.isEmpty()) {
@@ -189,23 +212,34 @@ final class SchemaDiff {
                 return;
             }
             Frame frame = queue.poll();
-            for (Rel rel : frame.node().local) {
-                if (rel.breaking() != breaking) {
-                    continue;
-                }
-                if (out.size() >= MAX_CHANGES_PER_PAIR) {
-                    truncated = true;
-                    return;
-                }
-                out.add(rel.under(frame.path()));
+            if (!place(frame, out, breaking, placed)) {
+                return;
             }
             for (Edge e : frame.node().edges) {
-                // skip subtrees with nothing of this class, and do not re-enter a schema already on this path
                 if (flag(e.child(), breaking) && !frame.above(e.child())) {
                     queue.add(new Frame(e.child(), frame.path() + e.suffix(), frame));
                 }
             }
         }
+    }
+
+    /** Adds the frame's own changes of the wanted class; false when the cap is reached. */
+    private boolean place(Frame frame, List<Rel> out, boolean breaking, Set<String> placed) {
+        for (Rel rel : frame.node().local) {
+            if (rel.breaking() != breaking) {
+                continue;
+            }
+            Rel located = rel.under(frame.path());
+            if (!placed.add(located.kind() + " " + located.field())) {
+                continue;
+            }
+            if (out.size() >= MAX_CHANGES_PER_PAIR + (breaking ? 0 : breakingPlaced)) {
+                truncated = true;
+                return false;
+            }
+            out.add(located);
+        }
+        return true;
     }
 
     private void edge(Node from, String childPath, Schema a, Schema b) {
