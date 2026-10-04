@@ -27,6 +27,8 @@ Traffic shows who **sends** a request field and who **calls** an operation. It d
 | Response status code removed | `potential` | Clients that call the operation. |
 | Added optional request field, added response field, widened request enum | none (safe) | Reported as safe; no impact computed. |
 
+Where traffic cannot answer the observed question after all, the row **falls back to `potential` with a note** rather than claim an observation it does not have. This happens for header and cookie parameters (traffic keeps headers only for client identity), for a query parameter's type (a query string carries text only), and for an enum narrowing when the sent values were not captured. It never goes the other way.
+
 Rules that follow:
 
 1. A report row has either an `observed_affected` block or a `potentially_affected` block, never both, never a sum. The field names differ on purpose so the two cannot be merged by accident.
@@ -93,7 +95,7 @@ Design intent, as testable properties:
 - `NONE_OBSERVED` is not "safe". It always ships next to its confidence bound (§7).
 - If `w < stale_days`, DORMANT cannot occur and the report notes the window is shorter than `stale_days`.
 
-**Ranking** inside a severity tier: `k_recent` desc, then `last_seen` desc, then `requests` desc, then spec order (so output is deterministic).
+**Ranking** of breaking changes: observed rows before potential rows; then severity; then `k_recent` desc, `last_seen` desc, `requests` desc, spec order (so output is deterministic). Observed rows come first because a potential row lists every caller of the operation, most of whom do not depend on the changed part. See the amendment log: this ordering was chosen on dev seeds and the test seeds did not confirm that it is better than severity-first.
 
 Severity applies to both evidence classes with the same ladder, but a `potential` row is displayed as "potential <severity>" and is never counted in the same summary bucket as an `observed` row.
 
@@ -111,11 +113,11 @@ Confidence is derived, not asserted. Two numbers are always reported, plus a tie
 - `medium`: same with recall >= 0.90,
 - `low`: below that.
 
-Until E2 has run, `tier = "uncalibrated"` and only (a) and (b) are shown. Thresholds are inserted via the amendment log with a link to the E2 result.
+**Thresholds from E2** (see amendment log): both targets are already met at 100 requests per operation, the smallest count E2 measured, so the rule gives `high` for *n* >= 100 and `low` below, and `medium` never occurs. In other words the rule as pre-registered turned out too lenient to be informative: fields with *p* >= 0.01 are mostly common fields, which are found almost immediately. The tier is reported because it was promised; **the numbers in (a) and (b) are what to read.**
 
 ## 8. Spec-only baseline
 
-What a diff tool gives you without traffic: every breaking change is treated alike. Baseline rank = number of operations touched (desc), then spec order. It exists so E3 can measure whether usage data changes the ranking for the better. The baseline implementation lives in `axon-core` as a ranker with the same interface as the real one.
+What a diff tool gives you without traffic: every breaking change is treated alike. Baseline rank = number of operations touched (desc), then spec order. "Operations touched" by a change is the number of operations that show the same edit, meaning the same source schema, kind and field. It exists so E3 can measure whether usage data changes the ranking for the better. The baseline implementation lives in `axon-core` as a ranker with the same interface as the real one.
 
 ## 9. Observed contract
 
@@ -146,8 +148,18 @@ Drift compares the observed contract with the **candidate-independent** current 
 
 The explorer and diff parse OpenAPI 3.0 and 3.1 JSON/YAML. A construct that is recognised but not modelled (for example `discriminator` mapping semantics, `callbacks`, `links`, external `$ref` to remote URLs) produces an `unsupported` entry with its location and reason. It is **never silently ignored**, and the diff marks any operation touching it as `partially_analysed`.
 
+`oneOf`, `anyOf` and `discriminator` are a middle case: they are modelled, loosely, as the union of their variants (a field is required only if every variant requires it). They are listed with `handling: approximated` and flag the operation as `approximated` instead. "X or null" is exact and is not flagged.
+
+Not modelled and not listed per occurrence, by design: value constraints (`minLength`, `maximum`, `pattern`, ...), `default`, `format`, response headers, `security`. E1b shows what this costs against `oasdiff`.
+
 ## Amendment log
 
 | Date | Change | Reason | Commit |
 |---|---|---|---|
-| 2026-10-03 | Initial version | M0 | (this commit) |
+| 2026-10-03 | Initial version | M0 | `4dcbf4e` |
+| 2026-10-04 | §2: fallback to `potential` with a note when traffic cannot answer the observed question (header/cookie parameters, query parameter types, uncaptured enum values). | Found while implementing the impact engine; the original table assumed every request-side change was observable. | `f2b9603` |
+| 2026-10-04 | New change kinds (request body added/removed/required, response field made optional/required, media type added/removed); report schema 0.2. | The diff found changes the M0 kind list had no name for. | `2a9b0f9` |
+| 2026-10-04 | §11: `approximated` distinguished from `partially_analysed`. | Marking every operation that reaches a `oneOf` as partially analysed would have flagged most of a large spec and said nothing. | `dc2a327` |
+| 2026-10-04 | §6: ranking puts observed rows before potential rows (was: severity first). | **Chosen on E3 dev seeds 1-20** (tau 0.74 vs 0.65 at 7 days). **Not confirmed on test seeds 101-200** (tau 0.69 vs 0.71; top-5 precision 0.875 vs 0.845), and worse on the held-out heavy tail (0.63 vs 0.70). Kept as shipped because the rule forbids re-tuning on test data; flagged as an open question in evaluation.md. | `e9e4276` |
+| 2026-10-04 | §7c: tier thresholds set from E2: `high` at >= 100 requests per operation, `medium` unreachable. | E2 dev curve: pooled recall of fields with *p* >= 0.01 is 0.992 at 100 requests. The pre-registered rule is too lenient; said so in §7. | `fb91099` |
+| 2026-10-04 | §8: "operations touched" defined as operations sharing the same source schema edit. | The M0 text did not say how a per-operation change touches several operations. | `f2b9603` |
