@@ -34,6 +34,10 @@
             <goals><goal>shade</goal></goals>
             <configuration>
               <createDependencyReducedPom>false</createDependencyReducedPom>
+              <!-- Keep the plain jar as the main artifact. Replacing it made a rebuild without "clean" shade
+                   the previous shaded jar again and keep stale axon-core classes. -->
+              <shadedArtifactAttached>true</shadedArtifactAttached>
+              <shadedClassifierName>all</shadedClassifierName>
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                   <mainClass>io.github.shrishaanth.axon.eval.EvalMain</mainClass>

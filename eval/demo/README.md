@@ -51,11 +51,11 @@ The raw HAR (50 MB) contains request values and is not committed. `usage.jsonl` 
 ## Reproduce
 
 ```bash
-mvn -q -DskipTests package
+mvn -q -DskipTests clean package
 ```
 
 ```bash
-java -jar axon-eval/target/axon-eval-0.1.0-SNAPSHOT.jar demo-service 8087
+java -jar axon-eval/target/axon-eval-0.1.0-SNAPSHOT-all.jar demo-service 8087
 ```
 
 ```bash
@@ -63,7 +63,7 @@ mitmdump --mode regular -p 8089 -w flows.mitm -q
 ```
 
 ```bash
-java -jar axon-eval/target/axon-eval-0.1.0-SNAPSHOT.jar demo-clients http://127.0.0.1:8087 eval/demo/truth.json 127.0.0.1:8089
+java -jar axon-eval/target/axon-eval-0.1.0-SNAPSHOT-all.jar demo-clients http://127.0.0.1:8087 eval/demo/truth.json 127.0.0.1:8089
 ```
 
 Stop the proxy, then:
@@ -73,11 +73,11 @@ mitmdump -nr flows.mitm --set hardump=demo.har -q
 ```
 
 ```bash
-java -jar axon-cli/target/axon-cli-0.1.0-SNAPSHOT.jar sanitise --har demo.har --spec eval/demo/recipes-v1.yaml --identity-header X-Client-Id --salt axon-demo --time-header X-Demo-Time --out eval/demo/usage.jsonl
+java -jar axon-cli/target/axon-cli-0.1.0-SNAPSHOT-all.jar sanitise --har demo.har --spec eval/demo/recipes-v1.yaml --identity-header X-Client-Id --salt axon-demo --time-header X-Demo-Time --out eval/demo/usage.jsonl
 ```
 
 ```bash
-java -jar axon-cli/target/axon-cli-0.1.0-SNAPSHOT.jar impact --baseline eval/demo/recipes-v1.yaml --candidate eval/demo/recipes-v2.yaml --usage eval/demo/usage.jsonl --identity-header X-Client-Id --out eval/demo/report.json
+java -jar axon-cli/target/axon-cli-0.1.0-SNAPSHOT-all.jar impact --baseline eval/demo/recipes-v1.yaml --candidate eval/demo/recipes-v2.yaml --usage eval/demo/usage.jsonl --identity-header X-Client-Id --out eval/demo/report.json
 ```
 
 ```bash
