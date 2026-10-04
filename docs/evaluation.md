@@ -99,7 +99,7 @@ Dev seeds: 1-20. Test seeds: 101-200. Parameters (population, exponent, cohort c
 
 ## Results
 
-Run on 2026-10-04. Raw files are under [`eval/results/`](../eval/results); every number below can be traced to one. E4 belongs to M5 and has not run.
+Run on 2026-10-04. Raw files are under [`eval/results/`](../eval/results); every number below can be traced to one.
 
 | Experiment | Status | One-line result |
 |---|---|---|
@@ -109,7 +109,7 @@ Run on 2026-10-04. Raw files are under [`eval/results/`](../eval/results); every
 | E2 learning curve | run | Field recall 0.93 at 100 requests, 0.998 at 100,000; follows the predicted curve |
 | E2 drift detection | run | Undocumented fields and statuses found by 10,000 requests; rare type mismatches need more |
 | E3 impact accuracy | run | Ranking tau 0.69 against 0.48 (volume), -0.03 (spec-only), 0.00 (random) |
-| E4 ingestion and replay | not run | M5 |
+| E4 ingestion and replay | run, except the 10-million replay | 4,700 events/s in batches of 1,000; 111/s one at a time; replay of 1 million events in 4 minutes, identical to live |
 
 ### Three things the evaluation broke
 
@@ -275,6 +275,34 @@ Test seeds 101-200: 100 worlds, 1,546 breaking changes, 1,445 with a defined tru
 
 Three of four clients on a potential row are not affected, and the row's severity is more often wrong than right, nearly always too high (267 rows rated HIGH have no reader at all). The label "potential" is doing real work; a potential CRITICAL should be read as "many callers", not "many broken clients". Finding out who reads a response field needs something traffic does not contain.
 
+### E4: ingestion and replay
+
+One machine holds everything: the driver (one thread), the API and Postgres 17 in Docker with default settings. Windows 11, 12 logical processors, JVM with a 4 GB limit. Traffic is the real demo capture repeated, with new client pseudonyms and a one-day shift per repetition so that the counter table keeps growing. Ten minutes per configuration, over HTTP. Raw: [`eval/results/e4/e4.json`](../eval/results/e4/e4.json).
+
+| Events per request | Sustained events/s | Requests | p50 / p95 / p99 latency | Counter rows at end |
+|---|---|---|---|---|
+| 1 (the row-at-a-time baseline) | **111** | 66,769 | 8 / 14 / 19 ms | 68,313 |
+| 100 | **1,920** | 15,607 | 24 / 57 / 115 ms | 738,017 |
+| 1,000 | **4,743** | 2,847 | 149 / 366 / 566 ms | 928,870 |
+
+Batching buys a factor of 43 over one event per request. Each request is one transaction that inserts the events and upserts their counters.
+
+| Replay of | Time | Events/s | Counter rows | Counters equal to live ingestion |
+|---|---|---|---|---|
+| 100,000 events | 16.9 s | 5,913 | 95,363 | yes |
+| 1,000,000 events | 246 s | 4,062 | 603,772 | yes |
+
+Replay rebuilt exactly the counters that live ingestion had produced, compared by a fingerprint over every row. That property is also asserted in the integration tests.
+
+What these numbers are not:
+
+- **Not a capacity claim.** A development laptop with a 4 GB JVM, not a 512 MB instance. The deployed service was not measured.
+- **The batch-of-100 run stalled.** It took 813 s instead of 600: one or more requests blocked for about 200 s in total. The rate above is over the full 813 s. The cause was not established (no such stall in the other runs; p99 was 115 ms). An unrelated container was restarting in a loop on the same Docker daemon during the run, which may be it or may not.
+- **Replay of 10 million events was not run.** The method lists it; at the measured rate it would take about 40 minutes and roughly 10 GB of disk on a machine with 28 GB free. Logged as a deviation.
+- **Peak memory was not measured in a useful way.** The sampled heap (about 390 MB) is of a JVM that also held the driver and had no pressure to collect. The server does start and serve the demo workload with `-Xmx256m`, which was checked by hand, not benchmarked.
+- **One writer at a time per workspace.** Ingest takes a per-workspace lock, so these are single-stream rates; several workspaces would run in parallel, one workspace would not go faster with more senders.
+- Throughput fell as the counter table grew (replay: 5,900/s at 100,000 events, 4,100/s at a million). Longer runs would be slower.
+
 ### What I would say in an interview
 
 - The diff is a competent subset of `oasdiff`, not a rival to it.
@@ -296,3 +324,4 @@ Three of four clients on a potential row are not affected, and the row's severit
 | 2026-10-04 | E2: 30 days and six specs; up to six operations per world; requests generated per operation. | Makes 100,000 requests per operation affordable. Written in eval/generator.md before the test run. | `a8323aa` |
 | 2026-10-04 | E3: 20 edits per world made by the E1a mutator; windows are the last 1, 7 and 30 days of a 30-day run; two extra comparators (client count, severity-first). Share error compares Axon's share of clients seen with the true share of the population. | Details the method left open, fixed before the test run. | `e5f64c2` |
 | 2026-10-04 | E3: ranking order changed on dev seeds (observed first). Not confirmed on test. | See metrics.md amendment log and the E3 results. | `e9e4276` |
+| 2026-10-04 | E4: replay sizes 10^5 and 10^6 only; 10^7 not run. Batch size 1 serves as the row-at-a-time baseline. Traffic is the demo capture repeated with varied clients and days, not the simulator. | Disk and time on the development machine; the demo capture exercises the same code path with real event shapes. | `ba3fcdc` |

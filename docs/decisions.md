@@ -70,9 +70,9 @@ Targets: Vercel (UI) and Render free tier (API, 512 MB).
 | M2 | Diff engine and E1 | compared with `oasdiff` ✔ (E1c labels pending) |
 | M3 | **Batch slice:** HAR → observed profile → impact on one real change | core idea works end to end ✔ |
 | M4 | Drift, inference, E2/E3 | learning curve and impact accuracy published ✔ |
-| M5 | Live ingest endpoint, replay, E4 | throughput and replay measured |
-| M6 | Web UI with five views | usable end to end |
-| M7 | CLI gate, README with screenshots, architecture doc | **releasable** |
+| M5 | Live ingest endpoint, replay, E4 | throughput and replay measured ✔ (10-million replay not run) |
+| M6 | Web UI with five views | usable end to end ✔ (live mode checked at the API, not clicked through with file uploads) |
+| M7 | CLI gate, README with screenshots, architecture doc | **releasable** ✔ (publishing the jar is the author's step) |
 | M8 | Stretch: conformance, negative tests, workflow tests | optional |
 | M9 | Stretch: lint-style design checks | optional |
 
