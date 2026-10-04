@@ -1,6 +1,6 @@
 {
   "schema_version" : "0.2",
-  "generated_at" : "2026-10-04T00:32:11.285533700Z",
+  "generated_at" : "2026-10-04T01:43:59.698144Z",
   "inputs" : {
     "baseline" : {
       "path" : "eval/demo/recipes-v1.yaml",
@@ -298,34 +298,6 @@
     }
   }, {
     "id" : "c6",
-    "kind" : "request_field_added_optional",
-    "breaking" : false,
-    "operation" : {
-      "method" : "POST",
-      "path" : "/recipes",
-      "operation_id" : "createRecipe"
-    },
-    "location" : {
-      "part" : "request.body",
-      "media_type" : "application/json",
-      "field" : "$.cuisine"
-    },
-    "description" : "Field $.cuisine in the request body of POST /recipes added (optional).",
-    "to" : "optional",
-    "source" : "/components/schemas/NewRecipe",
-    "evidence" : "none",
-    "severity" : null,
-    "rank" : null,
-    "spec_only_rank" : null,
-    "confidence" : {
-      "events_in_scope" : 1136,
-      "window_days" : 59.89912037037037,
-      "min_detectable_rate_per_day" : 0.050084207939119864,
-      "unseen_rate_upper_95" : 0.0026336142061788026,
-      "tier" : "high"
-    }
-  }, {
-    "id" : "c7",
     "kind" : "request_field_type_changed",
     "breaking" : true,
     "operation" : {
@@ -372,7 +344,7 @@
       "tier" : "high"
     }
   }, {
-    "id" : "c8",
+    "id" : "c7",
     "kind" : "request_enum_narrowed",
     "breaking" : true,
     "operation" : {
@@ -415,6 +387,34 @@
     "rank" : 3,
     "spec_only_rank" : 9,
     "operations_touched" : 2,
+    "confidence" : {
+      "events_in_scope" : 1136,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.0026336142061788026,
+      "tier" : "high"
+    }
+  }, {
+    "id" : "c8",
+    "kind" : "request_field_added_optional",
+    "breaking" : false,
+    "operation" : {
+      "method" : "POST",
+      "path" : "/recipes",
+      "operation_id" : "createRecipe"
+    },
+    "location" : {
+      "part" : "request.body",
+      "media_type" : "application/json",
+      "field" : "$.cuisine"
+    },
+    "description" : "Field $.cuisine in the request body of POST /recipes added (optional).",
+    "to" : "optional",
+    "source" : "/components/schemas/NewRecipe",
+    "evidence" : "none",
+    "severity" : null,
+    "rank" : null,
+    "spec_only_rank" : null,
     "confidence" : {
       "events_in_scope" : 1136,
       "window_days" : 59.89912037037037,
@@ -758,34 +758,6 @@
     }
   }, {
     "id" : "c17",
-    "kind" : "request_field_added_optional",
-    "breaking" : false,
-    "operation" : {
-      "method" : "PUT",
-      "path" : "/recipes/{id}",
-      "operation_id" : "updateRecipe"
-    },
-    "location" : {
-      "part" : "request.body",
-      "media_type" : "application/json",
-      "field" : "$.cuisine"
-    },
-    "description" : "Field $.cuisine in the request body of PUT /recipes/{id} added (optional).",
-    "to" : "optional",
-    "source" : "/components/schemas/NewRecipe",
-    "evidence" : "none",
-    "severity" : null,
-    "rank" : null,
-    "spec_only_rank" : null,
-    "confidence" : {
-      "events_in_scope" : 20,
-      "window_days" : 59.89912037037037,
-      "min_detectable_rate_per_day" : 0.050084207939119864,
-      "unseen_rate_upper_95" : 0.13910834066826516,
-      "tier" : "low"
-    }
-  }, {
-    "id" : "c18",
     "kind" : "request_field_type_changed",
     "breaking" : true,
     "operation" : {
@@ -824,7 +796,7 @@
       "tier" : "low"
     }
   }, {
-    "id" : "c19",
+    "id" : "c18",
     "kind" : "request_enum_narrowed",
     "breaking" : true,
     "operation" : {
@@ -855,6 +827,34 @@
     "rank" : 10,
     "spec_only_rank" : 13,
     "operations_touched" : 2,
+    "confidence" : {
+      "events_in_scope" : 20,
+      "window_days" : 59.89912037037037,
+      "min_detectable_rate_per_day" : 0.050084207939119864,
+      "unseen_rate_upper_95" : 0.13910834066826516,
+      "tier" : "low"
+    }
+  }, {
+    "id" : "c19",
+    "kind" : "request_field_added_optional",
+    "breaking" : false,
+    "operation" : {
+      "method" : "PUT",
+      "path" : "/recipes/{id}",
+      "operation_id" : "updateRecipe"
+    },
+    "location" : {
+      "part" : "request.body",
+      "media_type" : "application/json",
+      "field" : "$.cuisine"
+    },
+    "description" : "Field $.cuisine in the request body of PUT /recipes/{id} added (optional).",
+    "to" : "optional",
+    "source" : "/components/schemas/NewRecipe",
+    "evidence" : "none",
+    "severity" : null,
+    "rank" : null,
+    "spec_only_rank" : null,
     "confidence" : {
       "events_in_scope" : 20,
       "window_days" : 59.89912037037037,

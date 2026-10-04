@@ -1,0 +1,602 @@
+{
+ "apisguru-01": {
+  "kind": "request-property-pattern-changed",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "apisguru-02": {
+  "kind": "response-property-pattern-changed",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "apisguru-03": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "apisguru-04": {
+  "kind": "request_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "apisguru-05": {
+  "kind": "response-property-pattern-changed",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "apisguru-06": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "apisguru-07": {
+  "kind": "response-property-max-length-increased",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "apisguru-08": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "apisguru-09": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "apisguru-10": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "apisguru-11": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "apisguru-12": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "apisguru-13": {
+  "kind": "request_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "apisguru-14": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "apisguru-15": {
+  "kind": "request_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "apisguru-16": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "apisguru-17": {
+  "kind": "request-property-pattern-changed",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "apisguru-18": {
+  "kind": "response_enum_widened",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "apisguru-19": {
+  "kind": "response-property-max-length-unset",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "apisguru-20": {
+  "kind": "request-parameter-max-items-set",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "apisguru-21": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "apisguru-22": {
+  "kind": "request-property-pattern-changed",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "apisguru-23": {
+  "kind": "operation_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "apisguru-24": {
+  "kind": "request_field_type_changed",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "apisguru-25": {
+  "kind": "request_enum_narrowed",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "github-01": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "github-02": {
+  "kind": "response_field_made_optional",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "github-03": {
+  "kind": "response_field_type_changed",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "github-04": {
+  "kind": "response_field_made_optional",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "github-05": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "github-06": {
+  "kind": "request-parameter-type-changed:format",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "github-07": {
+  "kind": "request_field_type_changed",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "github-08": {
+  "kind": "response_field_type_changed",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "github-09": {
+  "kind": "response_enum_widened",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "github-10": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "github-11": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "github-12": {
+  "kind": "response_field_type_changed",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "github-13": {
+  "kind": "response_enum_widened",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "github-14": {
+  "kind": "response_field_made_optional",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "github-15": {
+  "kind": "response_field_type_changed",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "github-16": {
+  "kind": "response_field_made_optional",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "github-17": {
+  "kind": "request_body_made_required",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "github-18": {
+  "kind": "response_field_type_changed",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "github-19": {
+  "kind": "request_field_added_required",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "github-20": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "github-21": {
+  "kind": "request-body-one-of-removed",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "github-22": {
+  "kind": "request_enum_narrowed",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "github-23": {
+  "kind": "response_field_type_changed",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "github-24": {
+  "kind": "request_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "github-25": {
+  "kind": "request_field_made_required",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "stripe-01": {
+  "kind": "response_enum_widened",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "stripe-02": {
+  "kind": "response_field_type_changed",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "stripe-03": {
+  "kind": "response_enum_widened",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "stripe-04": {
+  "kind": "response_enum_widened",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "stripe-05": {
+  "kind": "response_enum_widened",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "stripe-06": {
+  "kind": "response_enum_widened",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "stripe-07": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "stripe-08": {
+  "kind": "response_enum_widened",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "stripe-09": {
+  "kind": "response_enum_widened",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "stripe-10": {
+  "kind": "response_enum_widened",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "stripe-11": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "stripe-12": {
+  "kind": "response_enum_widened",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "stripe-13": {
+  "kind": "response-property-any-of-added",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "stripe-14": {
+  "kind": "response_enum_widened",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "stripe-15": {
+  "kind": "response_enum_widened",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "stripe-16": {
+  "kind": "response_enum_widened",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "stripe-17": {
+  "kind": "response-property-any-of-added",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "stripe-18": {
+  "kind": "response_enum_widened",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "stripe-19": {
+  "kind": "response_enum_widened",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "stripe-20": {
+  "kind": "response_enum_widened",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "stripe-21": {
+  "kind": "response-property-any-of-added",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "stripe-22": {
+  "kind": "response-property-any-of-added",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "stripe-23": {
+  "kind": "response_enum_widened",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "stripe-24": {
+  "kind": "response-property-any-of-added",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "stripe-25": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "twilio-01": {
+  "kind": "response-property-type-changed:format",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "twilio-02": {
+  "kind": "operation_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "twilio-03": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "twilio-04": {
+  "kind": "response-property-type-changed:format",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "twilio-05": {
+  "kind": "response-property-type-changed:format",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "twilio-06": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "twilio-07": {
+  "kind": "response-property-type-changed:format",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "twilio-08": {
+  "kind": "response-property-type-changed:format",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "twilio-09": {
+  "kind": "response-property-type-changed:format",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "twilio-10": {
+  "kind": "response-property-type-changed:format",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "twilio-11": {
+  "kind": "response-property-type-changed:format",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "twilio-12": {
+  "kind": "response-property-type-changed:format",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "twilio-13": {
+  "kind": "response_enum_widened",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "twilio-14": {
+  "kind": "response_field_removed",
+  "axon_breaking": true,
+  "oasdiff_breaking": false,
+  "described_by": "axon"
+ },
+ "twilio-15": {
+  "kind": "response-property-type-changed:format",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "twilio-16": {
+  "kind": "response-property-type-changed:format",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "twilio-17": {
+  "kind": "response-property-type-changed:format",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "twilio-18": {
+  "kind": "response-property-type-changed:format",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "twilio-19": {
+  "kind": "response-property-type-changed:format",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "twilio-20": {
+  "kind": "response_enum_widened",
+  "axon_breaking": true,
+  "oasdiff_breaking": true,
+  "described_by": "axon"
+ },
+ "twilio-21": {
+  "kind": "response-property-type-changed:format",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "twilio-22": {
+  "kind": "response-property-type-changed:format",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "twilio-23": {
+  "kind": "response-property-type-changed:format",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "twilio-24": {
+  "kind": "response-property-type-changed:format",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ },
+ "twilio-25": {
+  "kind": "response-property-type-changed:format",
+  "axon_breaking": false,
+  "oasdiff_breaking": true,
+  "described_by": "oasdiff"
+ }
+}

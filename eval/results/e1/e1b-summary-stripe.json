@@ -1,0 +1,351 @@
+{
+  "oasdiff" : "oasdiff version 1.33.0",
+  "key" : "(operation, change kind, response status); breaking only",
+  "by_source" : {
+    "stripe" : {
+      "pairs" : 50,
+      "pairs_with_tool_error" : 0,
+      "pairs_where_neither_reports_breaking" : 38,
+      "pairs_with_truncated_axon_output" : 5,
+      "agree" : 2547,
+      "axon_only" : 837,
+      "oasdiff_only" : 1364,
+      "oasdiff_only_of_kinds_axon_models" : 826,
+      "precision_vs_oasdiff" : 0.7526595744680851,
+      "recall_vs_oasdiff" : 0.6512400920480695,
+      "recall_vs_oasdiff_on_modelled_kinds" : 0.755114141713608,
+      "jaccard" : 0.5364363942712721,
+      "axon_seconds" : 47.769,
+      "oasdiff_seconds" : 124.53
+    }
+  },
+  "all" : {
+    "pairs" : 50,
+    "pairs_with_tool_error" : 0,
+    "pairs_where_neither_reports_breaking" : 38,
+    "pairs_with_truncated_axon_output" : 5,
+    "agree" : 2547,
+    "axon_only" : 837,
+    "oasdiff_only" : 1364,
+    "oasdiff_only_of_kinds_axon_models" : 826,
+    "precision_vs_oasdiff" : 0.7526595744680851,
+    "recall_vs_oasdiff" : 0.6512400920480695,
+    "recall_vs_oasdiff_on_modelled_kinds" : 0.755114141713608,
+    "jaccard" : 0.5364363942712721,
+    "axon_seconds" : 47.769,
+    "oasdiff_seconds" : 124.53
+  },
+  "disagreement_classes" : [ {
+    "class" : "axon-only | response_field_removed | oasdiff rates it non-breaking (response-optional-property-removed)",
+    "count" : 837,
+    "examples" : [ {
+      "class" : "axon-only | response_field_removed | oasdiff rates it non-breaking (response-optional-property-removed)",
+      "source" : "stripe",
+      "base" : "stripe/049-dd3a380ab7cb.json",
+      "revision" : "stripe/050-a13e5211fc74.json",
+      "tool" : "axon",
+      "operation" : "DELETE /v1/accounts/{}",
+      "kind" : "response_field_removed",
+      "id" : "response_field_removed",
+      "status" : "default",
+      "text" : "Field $.error.payment_method.kr_market in the response default of DELETE /v1/accounts/{account} removed.",
+      "other_tool_on_operation" : [ "response-optional-property-removed: removed the optional property `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/card/generated_from/anyOf[subschema #1: payment_method_card_generated_card]/setup_attempt/anyOf[subschema #2: PaymentFlowsSetupIntentSetupAttempt]/payment_method_details/bancontact/generated_sepa_debit_mandate/anyOf[subschema #2: Mandate]/payment_method_details/kr_market` from the response with the `default` status", "response-optional-property-removed: removed the optional property `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/card/generated_from/anyOf[subschema #1: payment_method_card_generated_card]/setup_attempt/anyOf[subschema #2: PaymentFlowsSetupIntentSetupAttempt]/payment_method_details/kr_market` from the response with the `default` status", "response-optional-property-removed: removed the optional property `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/kr_market` from the response with the `default` status", "response-optional-property-removed: removed the optional property `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/sepa_debit/generated_from/anyOf[subschema #1: sepa_debit_generated_from]/charge/anyOf[subschema #2: Charge]/payment_method_details/anyOf[subschema #1: payment_method_details]/kr_market` from the response with the `default` status", "response-optional-property-removed: removed the optional property `error/payment_intent/payment_method_options/anyOf[subschema #1: PaymentIntentPaymentMethodOptions]/kr_market` from the response with the `default` status", "response-property-enum-value-removed: removed the `kr_market` enum value from the `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/type` response property for the response status `default`" ]
+    }, {
+      "class" : "axon-only | response_field_removed | oasdiff rates it non-breaking (response-optional-property-removed)",
+      "source" : "stripe",
+      "base" : "stripe/049-dd3a380ab7cb.json",
+      "revision" : "stripe/050-a13e5211fc74.json",
+      "tool" : "axon",
+      "operation" : "DELETE /v1/accounts/{}/bank_accounts/{}",
+      "kind" : "response_field_removed",
+      "id" : "response_field_removed",
+      "status" : "default",
+      "text" : "Field $.error.payment_method.kr_market in the response default of DELETE /v1/accounts/{account}/bank_accounts/{id} removed.",
+      "other_tool_on_operation" : [ "response-optional-property-removed: removed the optional property `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/card/generated_from/anyOf[subschema #1: payment_method_card_generated_card]/setup_attempt/anyOf[subschema #2: PaymentFlowsSetupIntentSetupAttempt]/payment_method_details/bancontact/generated_sepa_debit_mandate/anyOf[subschema #2: Mandate]/payment_method_details/kr_market` from the response with the `default` status", "response-optional-property-removed: removed the optional property `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/card/generated_from/anyOf[subschema #1: payment_method_card_generated_card]/setup_attempt/anyOf[subschema #2: PaymentFlowsSetupIntentSetupAttempt]/payment_method_details/kr_market` from the response with the `default` status", "response-optional-property-removed: removed the optional property `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/kr_market` from the response with the `default` status", "response-optional-property-removed: removed the optional property `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/sepa_debit/generated_from/anyOf[subschema #1: sepa_debit_generated_from]/charge/anyOf[subschema #2: Charge]/payment_method_details/anyOf[subschema #1: payment_method_details]/kr_market` from the response with the `default` status", "response-optional-property-removed: removed the optional property `error/payment_intent/payment_method_options/anyOf[subschema #1: PaymentIntentPaymentMethodOptions]/kr_market` from the response with the `default` status", "response-property-enum-value-removed: removed the `kr_market` enum value from the `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/type` response property for the response status `default`" ]
+    }, {
+      "class" : "axon-only | response_field_removed | oasdiff rates it non-breaking (response-optional-property-removed)",
+      "source" : "stripe",
+      "base" : "stripe/049-dd3a380ab7cb.json",
+      "revision" : "stripe/050-a13e5211fc74.json",
+      "tool" : "axon",
+      "operation" : "DELETE /v1/accounts/{}/external_accounts/{}",
+      "kind" : "response_field_removed",
+      "id" : "response_field_removed",
+      "status" : "default",
+      "text" : "Field $.error.payment_method.kr_market in the response default of DELETE /v1/accounts/{account}/external_accounts/{id} removed.",
+      "other_tool_on_operation" : [ "response-optional-property-removed: removed the optional property `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/card/generated_from/anyOf[subschema #1: payment_method_card_generated_card]/setup_attempt/anyOf[subschema #2: PaymentFlowsSetupIntentSetupAttempt]/payment_method_details/bancontact/generated_sepa_debit_mandate/anyOf[subschema #2: Mandate]/payment_method_details/kr_market` from the response with the `default` status", "response-optional-property-removed: removed the optional property `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/card/generated_from/anyOf[subschema #1: payment_method_card_generated_card]/setup_attempt/anyOf[subschema #2: PaymentFlowsSetupIntentSetupAttempt]/payment_method_details/kr_market` from the response with the `default` status", "response-optional-property-removed: removed the optional property `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/kr_market` from the response with the `default` status", "response-optional-property-removed: removed the optional property `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/sepa_debit/generated_from/anyOf[subschema #1: sepa_debit_generated_from]/charge/anyOf[subschema #2: Charge]/payment_method_details/anyOf[subschema #1: payment_method_details]/kr_market` from the response with the `default` status", "response-optional-property-removed: removed the optional property `error/payment_intent/payment_method_options/anyOf[subschema #1: PaymentIntentPaymentMethodOptions]/kr_market` from the response with the `default` status", "response-property-enum-value-removed: removed the `kr_market` enum value from the `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/type` response property for the response status `default`" ]
+    }, {
+      "class" : "axon-only | response_field_removed | oasdiff rates it non-breaking (response-optional-property-removed)",
+      "source" : "stripe",
+      "base" : "stripe/049-dd3a380ab7cb.json",
+      "revision" : "stripe/050-a13e5211fc74.json",
+      "tool" : "axon",
+      "operation" : "DELETE /v1/accounts/{}/people/{}",
+      "kind" : "response_field_removed",
+      "id" : "response_field_removed",
+      "status" : "default",
+      "text" : "Field $.error.payment_method.kr_market in the response default of DELETE /v1/accounts/{account}/people/{person} removed.",
+      "other_tool_on_operation" : [ "response-optional-property-removed: removed the optional property `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/card/generated_from/anyOf[subschema #1: payment_method_card_generated_card]/setup_attempt/anyOf[subschema #2: PaymentFlowsSetupIntentSetupAttempt]/payment_method_details/bancontact/generated_sepa_debit_mandate/anyOf[subschema #2: Mandate]/payment_method_details/kr_market` from the response with the `default` status", "response-optional-property-removed: removed the optional property `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/card/generated_from/anyOf[subschema #1: payment_method_card_generated_card]/setup_attempt/anyOf[subschema #2: PaymentFlowsSetupIntentSetupAttempt]/payment_method_details/kr_market` from the response with the `default` status", "response-optional-property-removed: removed the optional property `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/kr_market` from the response with the `default` status", "response-optional-property-removed: removed the optional property `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/sepa_debit/generated_from/anyOf[subschema #1: sepa_debit_generated_from]/charge/anyOf[subschema #2: Charge]/payment_method_details/anyOf[subschema #1: payment_method_details]/kr_market` from the response with the `default` status", "response-optional-property-removed: removed the optional property `error/payment_intent/payment_method_options/anyOf[subschema #1: PaymentIntentPaymentMethodOptions]/kr_market` from the response with the `default` status", "response-property-enum-value-removed: removed the `kr_market` enum value from the `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/type` response property for the response status `default`" ]
+    }, {
+      "class" : "axon-only | response_field_removed | oasdiff rates it non-breaking (response-optional-property-removed)",
+      "source" : "stripe",
+      "base" : "stripe/049-dd3a380ab7cb.json",
+      "revision" : "stripe/050-a13e5211fc74.json",
+      "tool" : "axon",
+      "operation" : "DELETE /v1/accounts/{}/persons/{}",
+      "kind" : "response_field_removed",
+      "id" : "response_field_removed",
+      "status" : "default",
+      "text" : "Field $.error.payment_method.kr_market in the response default of DELETE /v1/accounts/{account}/persons/{person} removed.",
+      "other_tool_on_operation" : [ "response-optional-property-removed: removed the optional property `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/card/generated_from/anyOf[subschema #1: payment_method_card_generated_card]/setup_attempt/anyOf[subschema #2: PaymentFlowsSetupIntentSetupAttempt]/payment_method_details/bancontact/generated_sepa_debit_mandate/anyOf[subschema #2: Mandate]/payment_method_details/kr_market` from the response with the `default` status", "response-optional-property-removed: removed the optional property `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/card/generated_from/anyOf[subschema #1: payment_method_card_generated_card]/setup_attempt/anyOf[subschema #2: PaymentFlowsSetupIntentSetupAttempt]/payment_method_details/kr_market` from the response with the `default` status", "response-optional-property-removed: removed the optional property `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/kr_market` from the response with the `default` status", "response-optional-property-removed: removed the optional property `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/sepa_debit/generated_from/anyOf[subschema #1: sepa_debit_generated_from]/charge/anyOf[subschema #2: Charge]/payment_method_details/anyOf[subschema #1: payment_method_details]/kr_market` from the response with the `default` status", "response-optional-property-removed: removed the optional property `error/payment_intent/payment_method_options/anyOf[subschema #1: PaymentIntentPaymentMethodOptions]/kr_market` from the response with the `default` status", "response-property-enum-value-removed: removed the `kr_market` enum value from the `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/type` response property for the response status `default`" ]
+    } ]
+  }, {
+    "class" : "oasdiff-only | response_enum_widened (response-property-enum-value-added) | Axon reports nothing for the operation",
+    "count" : 819,
+    "examples" : [ {
+      "class" : "oasdiff-only | response_enum_widened (response-property-enum-value-added) | Axon reports nothing for the operation",
+      "source" : "stripe",
+      "base" : "stripe/032-cf807e2323af.json",
+      "revision" : "stripe/033-4e334fdc857c.json",
+      "tool" : "oasdiff",
+      "operation" : "DELETE /v1/accounts/{}",
+      "kind" : "response_enum_widened",
+      "id" : "response-property-enum-value-added",
+      "status" : "default",
+      "text" : "added the new `paypal` enum value to the `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/sepa_debit/generated_from/anyOf[subschema #1: sepa_debit_generated_from]/charge/anyOf[subschema #2: Charge]/application_fee/anyOf[subschema #2: PlatformFee]/balance_transaction/anyOf[subschema #2: BalanceTransaction]/source/anyOf[subschema #6: Dispute]/payment_method_details/type` response property for the response status `default`",
+      "other_tool_on_operation" : [ ]
+    }, {
+      "class" : "oasdiff-only | response_enum_widened (response-property-enum-value-added) | Axon reports nothing for the operation",
+      "source" : "stripe",
+      "base" : "stripe/032-cf807e2323af.json",
+      "revision" : "stripe/033-4e334fdc857c.json",
+      "tool" : "oasdiff",
+      "operation" : "DELETE /v1/accounts/{}/bank_accounts/{}",
+      "kind" : "response_enum_widened",
+      "id" : "response-property-enum-value-added",
+      "status" : "default",
+      "text" : "added the new `paypal` enum value to the `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/sepa_debit/generated_from/anyOf[subschema #1: sepa_debit_generated_from]/charge/anyOf[subschema #2: Charge]/application_fee/anyOf[subschema #2: PlatformFee]/balance_transaction/anyOf[subschema #2: BalanceTransaction]/source/anyOf[subschema #6: Dispute]/payment_method_details/type` response property for the response status `default`",
+      "other_tool_on_operation" : [ ]
+    }, {
+      "class" : "oasdiff-only | response_enum_widened (response-property-enum-value-added) | Axon reports nothing for the operation",
+      "source" : "stripe",
+      "base" : "stripe/032-cf807e2323af.json",
+      "revision" : "stripe/033-4e334fdc857c.json",
+      "tool" : "oasdiff",
+      "operation" : "DELETE /v1/accounts/{}/external_accounts/{}",
+      "kind" : "response_enum_widened",
+      "id" : "response-property-enum-value-added",
+      "status" : "default",
+      "text" : "added the new `paypal` enum value to the `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/sepa_debit/generated_from/anyOf[subschema #1: sepa_debit_generated_from]/charge/anyOf[subschema #2: Charge]/application_fee/anyOf[subschema #2: PlatformFee]/balance_transaction/anyOf[subschema #2: BalanceTransaction]/source/anyOf[subschema #6: Dispute]/payment_method_details/type` response property for the response status `default`",
+      "other_tool_on_operation" : [ ]
+    }, {
+      "class" : "oasdiff-only | response_enum_widened (response-property-enum-value-added) | Axon reports nothing for the operation",
+      "source" : "stripe",
+      "base" : "stripe/032-cf807e2323af.json",
+      "revision" : "stripe/033-4e334fdc857c.json",
+      "tool" : "oasdiff",
+      "operation" : "DELETE /v1/accounts/{}/people/{}",
+      "kind" : "response_enum_widened",
+      "id" : "response-property-enum-value-added",
+      "status" : "default",
+      "text" : "added the new `paypal` enum value to the `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/sepa_debit/generated_from/anyOf[subschema #1: sepa_debit_generated_from]/charge/anyOf[subschema #2: Charge]/application_fee/anyOf[subschema #2: PlatformFee]/balance_transaction/anyOf[subschema #2: BalanceTransaction]/source/anyOf[subschema #6: Dispute]/payment_method_details/type` response property for the response status `default`",
+      "other_tool_on_operation" : [ ]
+    }, {
+      "class" : "oasdiff-only | response_enum_widened (response-property-enum-value-added) | Axon reports nothing for the operation",
+      "source" : "stripe",
+      "base" : "stripe/032-cf807e2323af.json",
+      "revision" : "stripe/033-4e334fdc857c.json",
+      "tool" : "oasdiff",
+      "operation" : "DELETE /v1/accounts/{}/persons/{}",
+      "kind" : "response_enum_widened",
+      "id" : "response-property-enum-value-added",
+      "status" : "default",
+      "text" : "added the new `paypal` enum value to the `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/sepa_debit/generated_from/anyOf[subschema #1: sepa_debit_generated_from]/charge/anyOf[subschema #2: Charge]/application_fee/anyOf[subschema #2: PlatformFee]/balance_transaction/anyOf[subschema #2: BalanceTransaction]/source/anyOf[subschema #6: Dispute]/payment_method_details/type` response property for the response status `default`",
+      "other_tool_on_operation" : [ ]
+    } ]
+  }, {
+    "class" : "oasdiff-only | not modelled by Axon | response-property-any-of-added",
+    "count" : 534,
+    "examples" : [ {
+      "class" : "oasdiff-only | not modelled by Axon | response-property-any-of-added",
+      "source" : "stripe",
+      "base" : "stripe/006-9dec34c36eaa.json",
+      "revision" : "stripe/007-3c46b98ebe32.json",
+      "tool" : "oasdiff",
+      "operation" : "DELETE /v1/accounts/{}",
+      "kind" : "unmodelled",
+      "id" : "response-property-any-of-added",
+      "status" : "",
+      "text" : "added `#/components/schemas/invoice_setting_customer_rendering_options` to the `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/rendering_options` response property `anyOf` list for the response status `default`",
+      "other_tool_on_operation" : [ ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | response-property-any-of-added",
+      "source" : "stripe",
+      "base" : "stripe/006-9dec34c36eaa.json",
+      "revision" : "stripe/007-3c46b98ebe32.json",
+      "tool" : "oasdiff",
+      "operation" : "DELETE /v1/accounts/{}/bank_accounts/{}",
+      "kind" : "unmodelled",
+      "id" : "response-property-any-of-added",
+      "status" : "",
+      "text" : "added `#/components/schemas/invoice_setting_customer_rendering_options` to the `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/rendering_options` response property `anyOf` list for the response status `default`",
+      "other_tool_on_operation" : [ ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | response-property-any-of-added",
+      "source" : "stripe",
+      "base" : "stripe/006-9dec34c36eaa.json",
+      "revision" : "stripe/007-3c46b98ebe32.json",
+      "tool" : "oasdiff",
+      "operation" : "DELETE /v1/accounts/{}/external_accounts/{}",
+      "kind" : "unmodelled",
+      "id" : "response-property-any-of-added",
+      "status" : "",
+      "text" : "added `#/components/schemas/invoice_setting_customer_rendering_options` to the `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/rendering_options` response property `anyOf` list for the response status `default`",
+      "other_tool_on_operation" : [ ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | response-property-any-of-added",
+      "source" : "stripe",
+      "base" : "stripe/006-9dec34c36eaa.json",
+      "revision" : "stripe/007-3c46b98ebe32.json",
+      "tool" : "oasdiff",
+      "operation" : "DELETE /v1/accounts/{}/people/{}",
+      "kind" : "unmodelled",
+      "id" : "response-property-any-of-added",
+      "status" : "",
+      "text" : "added `#/components/schemas/invoice_setting_customer_rendering_options` to the `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/rendering_options` response property `anyOf` list for the response status `default`",
+      "other_tool_on_operation" : [ ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | response-property-any-of-added",
+      "source" : "stripe",
+      "base" : "stripe/006-9dec34c36eaa.json",
+      "revision" : "stripe/007-3c46b98ebe32.json",
+      "tool" : "oasdiff",
+      "operation" : "DELETE /v1/accounts/{}/persons/{}",
+      "kind" : "unmodelled",
+      "id" : "response-property-any-of-added",
+      "status" : "",
+      "text" : "added `#/components/schemas/invoice_setting_customer_rendering_options` to the `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/rendering_options` response property `anyOf` list for the response status `default`",
+      "other_tool_on_operation" : [ ]
+    } ]
+  }, {
+    "class" : "oasdiff-only | response_enum_widened (response-property-enum-value-added) | Axon reports other changes for the operation",
+    "count" : 7,
+    "examples" : [ {
+      "class" : "oasdiff-only | response_enum_widened (response-property-enum-value-added) | Axon reports other changes for the operation",
+      "source" : "stripe",
+      "base" : "stripe/032-cf807e2323af.json",
+      "revision" : "stripe/033-4e334fdc857c.json",
+      "tool" : "oasdiff",
+      "operation" : "GET /v1/charges/{}/dispute",
+      "kind" : "response_enum_widened",
+      "id" : "response-property-enum-value-added",
+      "status" : "default",
+      "text" : "added the new `paypal` enum value to the `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/sepa_debit/generated_from/anyOf[subschema #1: sepa_debit_generated_from]/charge/anyOf[subschema #2: Charge]/application_fee/anyOf[subschema #2: PlatformFee]/balance_transaction/anyOf[subschema #2: BalanceTransaction]/source/anyOf[subschema #6: Dispute]/payment_method_details/type` response property for the response status `default`",
+      "other_tool_on_operation" : [ "response_enum_widened!: Field $.payment_method_details.type in the response 200 of GET /v1/charges/{charge}/dispute allows more values.", "response_field_added: Field $.payment_method_details.paypal in the response 200 of GET /v1/charges/{charge}/dispute added." ]
+    }, {
+      "class" : "oasdiff-only | response_enum_widened (response-property-enum-value-added) | Axon reports other changes for the operation",
+      "source" : "stripe",
+      "base" : "stripe/032-cf807e2323af.json",
+      "revision" : "stripe/033-4e334fdc857c.json",
+      "tool" : "oasdiff",
+      "operation" : "GET /v1/disputes",
+      "kind" : "response_enum_widened",
+      "id" : "response-property-enum-value-added",
+      "status" : "default",
+      "text" : "added the new `paypal` enum value to the `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/sepa_debit/generated_from/anyOf[subschema #1: sepa_debit_generated_from]/charge/anyOf[subschema #2: Charge]/application_fee/anyOf[subschema #2: PlatformFee]/balance_transaction/anyOf[subschema #2: BalanceTransaction]/source/anyOf[subschema #6: Dispute]/payment_method_details/type` response property for the response status `default`",
+      "other_tool_on_operation" : [ "response_enum_widened!: Field $.data[].payment_method_details.type in the response 200 of GET /v1/disputes allows more values.", "response_field_added: Field $.data[].payment_method_details.paypal in the response 200 of GET /v1/disputes added." ]
+    }, {
+      "class" : "oasdiff-only | response_enum_widened (response-property-enum-value-added) | Axon reports other changes for the operation",
+      "source" : "stripe",
+      "base" : "stripe/032-cf807e2323af.json",
+      "revision" : "stripe/033-4e334fdc857c.json",
+      "tool" : "oasdiff",
+      "operation" : "GET /v1/disputes/{}",
+      "kind" : "response_enum_widened",
+      "id" : "response-property-enum-value-added",
+      "status" : "default",
+      "text" : "added the new `paypal` enum value to the `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/sepa_debit/generated_from/anyOf[subschema #1: sepa_debit_generated_from]/charge/anyOf[subschema #2: Charge]/application_fee/anyOf[subschema #2: PlatformFee]/balance_transaction/anyOf[subschema #2: BalanceTransaction]/source/anyOf[subschema #6: Dispute]/payment_method_details/type` response property for the response status `default`",
+      "other_tool_on_operation" : [ "response_enum_widened!: Field $.payment_method_details.type in the response 200 of GET /v1/disputes/{dispute} allows more values.", "response_field_added: Field $.payment_method_details.paypal in the response 200 of GET /v1/disputes/{dispute} added." ]
+    }, {
+      "class" : "oasdiff-only | response_enum_widened (response-property-enum-value-added) | Axon reports other changes for the operation",
+      "source" : "stripe",
+      "base" : "stripe/032-cf807e2323af.json",
+      "revision" : "stripe/033-4e334fdc857c.json",
+      "tool" : "oasdiff",
+      "operation" : "POST /v1/charges/{}/dispute",
+      "kind" : "response_enum_widened",
+      "id" : "response-property-enum-value-added",
+      "status" : "default",
+      "text" : "added the new `paypal` enum value to the `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/sepa_debit/generated_from/anyOf[subschema #1: sepa_debit_generated_from]/charge/anyOf[subschema #2: Charge]/application_fee/anyOf[subschema #2: PlatformFee]/balance_transaction/anyOf[subschema #2: BalanceTransaction]/source/anyOf[subschema #6: Dispute]/payment_method_details/type` response property for the response status `default`",
+      "other_tool_on_operation" : [ "response_enum_widened!: Field $.payment_method_details.type in the response 200 of POST /v1/charges/{charge}/dispute allows more values.", "response_field_added: Field $.payment_method_details.paypal in the response 200 of POST /v1/charges/{charge}/dispute added." ]
+    }, {
+      "class" : "oasdiff-only | response_enum_widened (response-property-enum-value-added) | Axon reports other changes for the operation",
+      "source" : "stripe",
+      "base" : "stripe/032-cf807e2323af.json",
+      "revision" : "stripe/033-4e334fdc857c.json",
+      "tool" : "oasdiff",
+      "operation" : "POST /v1/charges/{}/dispute/close",
+      "kind" : "response_enum_widened",
+      "id" : "response-property-enum-value-added",
+      "status" : "default",
+      "text" : "added the new `paypal` enum value to the `error/payment_intent/customer/anyOf[subschema #2: Customer]/invoice_settings/default_payment_method/anyOf[subschema #2: PaymentMethod]/sepa_debit/generated_from/anyOf[subschema #1: sepa_debit_generated_from]/charge/anyOf[subschema #2: Charge]/application_fee/anyOf[subschema #2: PlatformFee]/balance_transaction/anyOf[subschema #2: BalanceTransaction]/source/anyOf[subschema #6: Dispute]/payment_method_details/type` response property for the response status `default`",
+      "other_tool_on_operation" : [ "response_enum_widened!: Field $.payment_method_details.type in the response 200 of POST /v1/charges/{charge}/dispute/close allows more values.", "response_field_added: Field $.payment_method_details.paypal in the response 200 of POST /v1/charges/{charge}/dispute/close added." ]
+    } ]
+  }, {
+    "class" : "oasdiff-only | not modelled by Axon | request-property-any-of-removed",
+    "count" : 2,
+    "examples" : [ {
+      "class" : "oasdiff-only | not modelled by Axon | request-property-any-of-removed",
+      "source" : "stripe",
+      "base" : "stripe/006-9dec34c36eaa.json",
+      "revision" : "stripe/007-3c46b98ebe32.json",
+      "tool" : "oasdiff",
+      "operation" : "POST /v1/customers",
+      "kind" : "unmodelled",
+      "id" : "request-property-any-of-removed",
+      "status" : "",
+      "text" : "removed `subschema #1: rendering_options_param` from the `invoice_settings/rendering_options` request property `anyOf` list",
+      "other_tool_on_operation" : [ ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | request-property-any-of-removed",
+      "source" : "stripe",
+      "base" : "stripe/006-9dec34c36eaa.json",
+      "revision" : "stripe/007-3c46b98ebe32.json",
+      "tool" : "oasdiff",
+      "operation" : "POST /v1/customers/{}",
+      "kind" : "unmodelled",
+      "id" : "request-property-any-of-removed",
+      "status" : "",
+      "text" : "removed `subschema #1: rendering_options_param` from the `invoice_settings/rendering_options` request property `anyOf` list",
+      "other_tool_on_operation" : [ ]
+    } ]
+  }, {
+    "class" : "oasdiff-only | not modelled by Axon | response-property-max-length-unset",
+    "count" : 2,
+    "examples" : [ {
+      "class" : "oasdiff-only | not modelled by Axon | response-property-max-length-unset",
+      "source" : "stripe",
+      "base" : "stripe/015-855c1c2ebb88.json",
+      "revision" : "stripe/016-35a32d43e470.json",
+      "tool" : "oasdiff",
+      "operation" : "GET /v1/entitlements/active_entitlements",
+      "kind" : "unmodelled",
+      "id" : "response-property-max-length-unset",
+      "status" : "",
+      "text" : "the `data/items/feature` response property's maxLength was unset from `5000` for the response status `200`",
+      "other_tool_on_operation" : [ "response_field_type_changed!: Field $.data[].feature in the response 200 of GET /v1/entitlements/active_entitlements changed type from string to object|string.", "response_field_added: Field $.data[].feature.active in the response 200 of GET /v1/entitlements/active_entitlements added.", "response_field_added: Field $.data[].feature.id in the response 200 of GET /v1/entitlements/active_entitlements added.", "response_field_added: Field $.data[].feature.livemode in the response 200 of GET /v1/entitlements/active_entitlements added.", "response_field_added: Field $.data[].feature.lookup_key in the response 200 of GET /v1/entitlements/active_entitlements added.", "response_field_added: Field $.data[].feature.metadata in the response 200 of GET /v1/entitlements/active_entitlements added.", "response_field_added: Field $.data[].feature.name in the response 200 of GET /v1/entitlements/active_entitlements added.", "response_field_added: Field $.data[].feature.object in the response 200 of GET /v1/entitlements/active_entitlements added." ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | response-property-max-length-unset",
+      "source" : "stripe",
+      "base" : "stripe/015-855c1c2ebb88.json",
+      "revision" : "stripe/016-35a32d43e470.json",
+      "tool" : "oasdiff",
+      "operation" : "GET /v1/entitlements/active_entitlements/{}",
+      "kind" : "unmodelled",
+      "id" : "response-property-max-length-unset",
+      "status" : "",
+      "text" : "the `feature` response property's maxLength was unset from `5000` for the response status `200`",
+      "other_tool_on_operation" : [ "response_field_type_changed!: Field $.feature in the response 200 of GET /v1/entitlements/active_entitlements/{id} changed type from string to object|string.", "response_field_added: Field $.feature.active in the response 200 of GET /v1/entitlements/active_entitlements/{id} added.", "response_field_added: Field $.feature.id in the response 200 of GET /v1/entitlements/active_entitlements/{id} added.", "response_field_added: Field $.feature.livemode in the response 200 of GET /v1/entitlements/active_entitlements/{id} added.", "response_field_added: Field $.feature.lookup_key in the response 200 of GET /v1/entitlements/active_entitlements/{id} added.", "response_field_added: Field $.feature.metadata in the response 200 of GET /v1/entitlements/active_entitlements/{id} added.", "response_field_added: Field $.feature.name in the response 200 of GET /v1/entitlements/active_entitlements/{id} added.", "response_field_added: Field $.feature.object in the response 200 of GET /v1/entitlements/active_entitlements/{id} added." ]
+    } ]
+  } ]
+}

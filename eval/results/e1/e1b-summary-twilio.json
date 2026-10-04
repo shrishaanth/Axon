@@ -1,0 +1,207 @@
+{
+  "oasdiff" : "oasdiff version 1.33.0",
+  "key" : "(operation, change kind, response status); breaking only",
+  "by_source" : {
+    "twilio" : {
+      "pairs" : 50,
+      "pairs_with_tool_error" : 0,
+      "pairs_where_neither_reports_breaking" : 37,
+      "pairs_with_truncated_axon_output" : 0,
+      "agree" : 105,
+      "axon_only" : 8,
+      "oasdiff_only" : 115,
+      "oasdiff_only_of_kinds_axon_models" : 0,
+      "precision_vs_oasdiff" : 0.9292035398230089,
+      "recall_vs_oasdiff" : 0.4772727272727273,
+      "recall_vs_oasdiff_on_modelled_kinds" : 1.0,
+      "jaccard" : 0.4605263157894737,
+      "axon_seconds" : 2.537,
+      "oasdiff_seconds" : 33.208
+    }
+  },
+  "all" : {
+    "pairs" : 50,
+    "pairs_with_tool_error" : 0,
+    "pairs_where_neither_reports_breaking" : 37,
+    "pairs_with_truncated_axon_output" : 0,
+    "agree" : 105,
+    "axon_only" : 8,
+    "oasdiff_only" : 115,
+    "oasdiff_only_of_kinds_axon_models" : 0,
+    "precision_vs_oasdiff" : 0.9292035398230089,
+    "recall_vs_oasdiff" : 0.4772727272727273,
+    "recall_vs_oasdiff_on_modelled_kinds" : 1.0,
+    "jaccard" : 0.4605263157894737,
+    "axon_seconds" : 2.537,
+    "oasdiff_seconds" : 33.208
+  },
+  "disagreement_classes" : [ {
+    "class" : "oasdiff-only | not modelled by Axon | response-property-type-changed:format",
+    "count" : 112,
+    "examples" : [ {
+      "class" : "oasdiff-only | not modelled by Axon | response-property-type-changed:format",
+      "source" : "twilio",
+      "base" : "twilio/005-c31cb81bb5fa.json",
+      "revision" : "twilio/006-bfcd919beeff.json",
+      "tool" : "oasdiff",
+      "operation" : "GET /2010-04-01/Accounts.json",
+      "kind" : "unmodelled",
+      "id" : "response-property-type-changed:format",
+      "status" : "",
+      "text" : "the `accounts/items/uri` response's property `format` changed from `uri` to `none` for status `200`",
+      "other_tool_on_operation" : [ ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | response-property-type-changed:format",
+      "source" : "twilio",
+      "base" : "twilio/005-c31cb81bb5fa.json",
+      "revision" : "twilio/006-bfcd919beeff.json",
+      "tool" : "oasdiff",
+      "operation" : "GET /2010-04-01/Accounts/{}.json",
+      "kind" : "unmodelled",
+      "id" : "response-property-type-changed:format",
+      "status" : "",
+      "text" : "the `uri` response's property `format` changed from `uri` to `none` for status `200`",
+      "other_tool_on_operation" : [ ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | response-property-type-changed:format",
+      "source" : "twilio",
+      "base" : "twilio/005-c31cb81bb5fa.json",
+      "revision" : "twilio/006-bfcd919beeff.json",
+      "tool" : "oasdiff",
+      "operation" : "GET /2010-04-01/Accounts/{}/Addresses.json",
+      "kind" : "unmodelled",
+      "id" : "response-property-type-changed:format",
+      "status" : "",
+      "text" : "the `addresses/items/uri` response's property `format` changed from `uri` to `none` for status `200`",
+      "other_tool_on_operation" : [ ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | response-property-type-changed:format",
+      "source" : "twilio",
+      "base" : "twilio/005-c31cb81bb5fa.json",
+      "revision" : "twilio/006-bfcd919beeff.json",
+      "tool" : "oasdiff",
+      "operation" : "GET /2010-04-01/Accounts/{}/Addresses/{}.json",
+      "kind" : "unmodelled",
+      "id" : "response-property-type-changed:format",
+      "status" : "",
+      "text" : "the `uri` response's property `format` changed from `uri` to `none` for status `200`",
+      "other_tool_on_operation" : [ ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | response-property-type-changed:format",
+      "source" : "twilio",
+      "base" : "twilio/005-c31cb81bb5fa.json",
+      "revision" : "twilio/006-bfcd919beeff.json",
+      "tool" : "oasdiff",
+      "operation" : "GET /2010-04-01/Accounts/{}/Addresses/{}/DependentPhoneNumbers.json",
+      "kind" : "unmodelled",
+      "id" : "response-property-type-changed:format",
+      "status" : "",
+      "text" : "the `dependent_phone_numbers/items/uri` response's property `format` changed from `uri` to `none` for status `200`",
+      "other_tool_on_operation" : [ ]
+    } ]
+  }, {
+    "class" : "axon-only | response_field_removed | oasdiff rates it non-breaking (response-optional-property-removed)",
+    "count" : 8,
+    "examples" : [ {
+      "class" : "axon-only | response_field_removed | oasdiff rates it non-breaking (response-optional-property-removed)",
+      "source" : "twilio",
+      "base" : "twilio/039-91c257db5235.json",
+      "revision" : "twilio/040-314015713378.json",
+      "tool" : "axon",
+      "operation" : "GET /2010-04-01/Accounts/{}/Messages.json",
+      "kind" : "response_field_removed",
+      "id" : "response_field_removed",
+      "status" : "200",
+      "text" : "Field $.messages[].tags in the response 200 of GET /2010-04-01/Accounts/{AccountSid}/Messages.json removed.",
+      "other_tool_on_operation" : [ "response-optional-property-removed: removed the optional property `messages/items/tags` from the response with the `200` status" ]
+    }, {
+      "class" : "axon-only | response_field_removed | oasdiff rates it non-breaking (response-optional-property-removed)",
+      "source" : "twilio",
+      "base" : "twilio/039-91c257db5235.json",
+      "revision" : "twilio/040-314015713378.json",
+      "tool" : "axon",
+      "operation" : "GET /2010-04-01/Accounts/{}/Messages/{}.json",
+      "kind" : "response_field_removed",
+      "id" : "response_field_removed",
+      "status" : "200",
+      "text" : "Field $.tags in the response 200 of GET /2010-04-01/Accounts/{AccountSid}/Messages/{Sid}.json removed.",
+      "other_tool_on_operation" : [ "response-optional-property-removed: removed the optional property `tags` from the response with the `200` status" ]
+    }, {
+      "class" : "axon-only | response_field_removed | oasdiff rates it non-breaking (response-optional-property-removed)",
+      "source" : "twilio",
+      "base" : "twilio/039-91c257db5235.json",
+      "revision" : "twilio/040-314015713378.json",
+      "tool" : "axon",
+      "operation" : "POST /2010-04-01/Accounts/{}/Messages.json",
+      "kind" : "response_field_removed",
+      "id" : "response_field_removed",
+      "status" : "201",
+      "text" : "Field $.tags in the response 201 of POST /2010-04-01/Accounts/{AccountSid}/Messages.json removed.",
+      "other_tool_on_operation" : [ "request-property-removed!: removed the request property `Tags`", "response-optional-property-removed: removed the optional property `tags` from the response with the `201` status" ]
+    }, {
+      "class" : "axon-only | response_field_removed | oasdiff rates it non-breaking (response-optional-property-removed)",
+      "source" : "twilio",
+      "base" : "twilio/039-91c257db5235.json",
+      "revision" : "twilio/040-314015713378.json",
+      "tool" : "axon",
+      "operation" : "POST /2010-04-01/Accounts/{}/Messages/{}.json",
+      "kind" : "response_field_removed",
+      "id" : "response_field_removed",
+      "status" : "200",
+      "text" : "Field $.tags in the response 200 of POST /2010-04-01/Accounts/{AccountSid}/Messages/{Sid}.json removed.",
+      "other_tool_on_operation" : [ "response-optional-property-removed: removed the optional property `tags` from the response with the `200` status" ]
+    }, {
+      "class" : "axon-only | response_field_removed | oasdiff rates it non-breaking (response-optional-property-removed)",
+      "source" : "twilio",
+      "base" : "twilio/044-96611ec0cc05.json",
+      "revision" : "twilio/045-496e1df3c4f3.json",
+      "tool" : "axon",
+      "operation" : "GET /2010-04-01/Accounts/{}/AuthorizedConnectApps.json",
+      "kind" : "response_field_removed",
+      "id" : "response_field_removed",
+      "status" : "200",
+      "text" : "Field $.authorized_connect_apps[].date_created in the response 200 of GET /2010-04-01/Accounts/{AccountSid}/AuthorizedConnectApps.json removed.",
+      "other_tool_on_operation" : [ "response-optional-property-removed: removed the optional property `authorized_connect_apps/items/date_created` from the response with the `200` status", "response-optional-property-removed: removed the optional property `authorized_connect_apps/items/date_updated` from the response with the `200` status" ]
+    } ]
+  }, {
+    "class" : "oasdiff-only | not modelled by Axon | request-property-type-changed:format",
+    "count" : 3,
+    "examples" : [ {
+      "class" : "oasdiff-only | not modelled by Axon | request-property-type-changed:format",
+      "source" : "twilio",
+      "base" : "twilio/002-981a215e2590.json",
+      "revision" : "twilio/003-783430bd19ef.json",
+      "tool" : "oasdiff",
+      "operation" : "POST /2010-04-01/Accounts/{}/Calls.json",
+      "kind" : "unmodelled",
+      "id" : "request-property-type-changed:format",
+      "status" : "",
+      "text" : "the `From` request property `format` changed from `none` to `endpoint`",
+      "other_tool_on_operation" : [ "response_field_type_changed: Field $.status in the response 201 of POST /2010-04-01/Accounts/{AccountSid}/Calls.json changed type from null|string to string." ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | request-property-type-changed:format",
+      "source" : "twilio",
+      "base" : "twilio/002-981a215e2590.json",
+      "revision" : "twilio/003-783430bd19ef.json",
+      "tool" : "oasdiff",
+      "operation" : "POST /2010-04-01/Accounts/{}/Calls/{}.json",
+      "kind" : "unmodelled",
+      "id" : "request-property-type-changed:format",
+      "status" : "",
+      "text" : "the `Twiml` request property `format` changed from `none` to `twiml`",
+      "other_tool_on_operation" : [ "response_field_type_changed: Field $.status in the response 200 of POST /2010-04-01/Accounts/{AccountSid}/Calls/{Sid}.json changed type from null|string to string." ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | request-property-type-changed:format",
+      "source" : "twilio",
+      "base" : "twilio/002-981a215e2590.json",
+      "revision" : "twilio/003-783430bd19ef.json",
+      "tool" : "oasdiff",
+      "operation" : "POST /2010-04-01/Accounts/{}/Conferences/{}/Participants.json",
+      "kind" : "unmodelled",
+      "id" : "request-property-type-changed:format",
+      "status" : "",
+      "text" : "the `From` request property `format` changed from `none` to `endpoint`",
+      "other_tool_on_operation" : [ "response_field_type_changed: Field $.status in the response 201 of POST /2010-04-01/Accounts/{AccountSid}/Conferences/{ConferenceSid}/Participants.json changed type from null|string to string." ]
+    } ]
+  } ]
+}

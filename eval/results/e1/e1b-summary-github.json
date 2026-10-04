@@ -1,0 +1,447 @@
+{
+  "oasdiff" : "oasdiff version 1.33.0",
+  "key" : "(operation, change kind, response status); breaking only",
+  "by_source" : {
+    "github" : {
+      "pairs" : 50,
+      "pairs_with_tool_error" : 0,
+      "pairs_where_neither_reports_breaking" : 33,
+      "pairs_with_truncated_axon_output" : 0,
+      "agree" : 63,
+      "axon_only" : 19,
+      "oasdiff_only" : 42,
+      "oasdiff_only_of_kinds_axon_models" : 7,
+      "precision_vs_oasdiff" : 0.7682926829268293,
+      "recall_vs_oasdiff" : 0.6,
+      "recall_vs_oasdiff_on_modelled_kinds" : 0.9,
+      "jaccard" : 0.5080645161290323,
+      "axon_seconds" : 10.506,
+      "oasdiff_seconds" : 145.446
+    }
+  },
+  "all" : {
+    "pairs" : 50,
+    "pairs_with_tool_error" : 0,
+    "pairs_where_neither_reports_breaking" : 33,
+    "pairs_with_truncated_axon_output" : 0,
+    "agree" : 63,
+    "axon_only" : 19,
+    "oasdiff_only" : 42,
+    "oasdiff_only_of_kinds_axon_models" : 7,
+    "precision_vs_oasdiff" : 0.7682926829268293,
+    "recall_vs_oasdiff" : 0.6,
+    "recall_vs_oasdiff_on_modelled_kinds" : 0.9,
+    "jaccard" : 0.5080645161290323,
+    "axon_seconds" : 10.506,
+    "oasdiff_seconds" : 145.446
+  },
+  "disagreement_classes" : [ {
+    "class" : "oasdiff-only | not modelled by Axon | request-parameter-type-changed:format",
+    "count" : 22,
+    "examples" : [ {
+      "class" : "oasdiff-only | not modelled by Axon | request-parameter-type-changed:format",
+      "source" : "github",
+      "base" : "github/012-6e8a8518e2e2.json",
+      "revision" : "github/013-5237a2c29ac6.json",
+      "tool" : "oasdiff",
+      "operation" : "DELETE /gists/{}/comments/{}",
+      "kind" : "unmodelled",
+      "id" : "request-parameter-type-changed:format",
+      "status" : "",
+      "text" : "for the `path` request parameter `comment_id`, the `format` was changed from `none` to `int64`",
+      "other_tool_on_operation" : [ ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | request-parameter-type-changed:format",
+      "source" : "github",
+      "base" : "github/012-6e8a8518e2e2.json",
+      "revision" : "github/013-5237a2c29ac6.json",
+      "tool" : "oasdiff",
+      "operation" : "DELETE /repos/{}/{}/comments/{}",
+      "kind" : "unmodelled",
+      "id" : "request-parameter-type-changed:format",
+      "status" : "",
+      "text" : "for the `path` request parameter `comment_id`, the `format` was changed from `none` to `int64`",
+      "other_tool_on_operation" : [ ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | request-parameter-type-changed:format",
+      "source" : "github",
+      "base" : "github/012-6e8a8518e2e2.json",
+      "revision" : "github/013-5237a2c29ac6.json",
+      "tool" : "oasdiff",
+      "operation" : "DELETE /repos/{}/{}/comments/{}/reactions/{}",
+      "kind" : "unmodelled",
+      "id" : "request-parameter-type-changed:format",
+      "status" : "",
+      "text" : "for the `path` request parameter `comment_id`, the `format` was changed from `none` to `int64`",
+      "other_tool_on_operation" : [ ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | request-parameter-type-changed:format",
+      "source" : "github",
+      "base" : "github/012-6e8a8518e2e2.json",
+      "revision" : "github/013-5237a2c29ac6.json",
+      "tool" : "oasdiff",
+      "operation" : "DELETE /repos/{}/{}/issues/comments/{}",
+      "kind" : "unmodelled",
+      "id" : "request-parameter-type-changed:format",
+      "status" : "",
+      "text" : "for the `path` request parameter `comment_id`, the `format` was changed from `none` to `int64`",
+      "other_tool_on_operation" : [ ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | request-parameter-type-changed:format",
+      "source" : "github",
+      "base" : "github/012-6e8a8518e2e2.json",
+      "revision" : "github/013-5237a2c29ac6.json",
+      "tool" : "oasdiff",
+      "operation" : "DELETE /repos/{}/{}/issues/comments/{}/reactions/{}",
+      "kind" : "unmodelled",
+      "id" : "request-parameter-type-changed:format",
+      "status" : "",
+      "text" : "for the `path` request parameter `comment_id`, the `format` was changed from `none` to `int64`",
+      "other_tool_on_operation" : [ ]
+    } ]
+  }, {
+    "class" : "axon-only | response_field_removed | oasdiff rates it non-breaking (response-optional-property-removed)",
+    "count" : 12,
+    "examples" : [ {
+      "class" : "axon-only | response_field_removed | oasdiff rates it non-breaking (response-optional-property-removed)",
+      "source" : "github",
+      "base" : "github/019-129d610a96aa.json",
+      "revision" : "github/020-ae492d449da9.json",
+      "tool" : "axon",
+      "operation" : "GET /repos/{}/{}/contents/{}",
+      "kind" : "response_field_removed",
+      "id" : "response_field_removed",
+      "status" : "200",
+      "text" : "Field $.entries[].content in the response 200 of GET /repos/{owner}/{repo}/contents/{path} removed.",
+      "other_tool_on_operation" : [ "response-property-became-optional!: the response property `content` became optional for the status `200`", "response-optional-property-added: added the optional property `content` to the response with the `200` status", "response-optional-property-removed: removed the optional property `entries/items/content` from the response with the `200` status" ]
+    }, {
+      "class" : "axon-only | response_field_removed | oasdiff rates it non-breaking (response-optional-property-removed)",
+      "source" : "github",
+      "base" : "github/028-6649960e56a1.json",
+      "revision" : "github/029-227e87514267.json",
+      "tool" : "axon",
+      "operation" : "GET /orgs/{}",
+      "kind" : "response_field_removed",
+      "id" : "response_field_removed",
+      "status" : "200",
+      "text" : "Field $.collaborators in the response 200 of GET /orgs/{org} removed.",
+      "other_tool_on_operation" : [ "response-optional-property-removed: removed the optional property `collaborators` from the response with the `200` status" ]
+    }, {
+      "class" : "axon-only | response_field_removed | oasdiff rates it non-breaking (response-optional-property-removed)",
+      "source" : "github",
+      "base" : "github/028-6649960e56a1.json",
+      "revision" : "github/029-227e87514267.json",
+      "tool" : "axon",
+      "operation" : "PATCH /orgs/{}",
+      "kind" : "response_field_removed",
+      "id" : "response_field_removed",
+      "status" : "200",
+      "text" : "Field $.collaborators in the response 200 of PATCH /orgs/{org} removed.",
+      "other_tool_on_operation" : [ "response-optional-property-removed: removed the optional property `collaborators` from the response with the `200` status" ]
+    }, {
+      "class" : "axon-only | response_field_removed | oasdiff rates it non-breaking (response-optional-property-removed)",
+      "source" : "github",
+      "base" : "github/031-e73e358d7540.json",
+      "revision" : "github/032-d1dadab7e606.json",
+      "tool" : "axon",
+      "operation" : "GET /gists/{}",
+      "kind" : "response_field_removed",
+      "id" : "response_field_removed",
+      "status" : "200",
+      "text" : "Field $.forks[].user.suspended_at in the response 200 of GET /gists/{gist_id} removed.",
+      "other_tool_on_operation" : [ "response-optional-property-added: added the optional property `fork_of/owner/user_view_type` to the response with the `200` status", "response-optional-property-added: added the optional property `fork_of/user/user_view_type` to the response with the `200` status", "response-optional-property-added: added the optional property `forks/items/user/user_view_type` to the response with the `200` status", "response-optional-property-added: added the optional property `history/items/user/user_view_type` to the response with the `200` status", "response-optional-property-added: added the optional property `owner/user_view_type` to the response with the `200` status", "response-optional-property-removed: removed the optional property `forks/items/user/suspended_at` from the response with the `200` status" ]
+    }, {
+      "class" : "axon-only | response_field_removed | oasdiff rates it non-breaking (response-optional-property-removed)",
+      "source" : "github",
+      "base" : "github/031-e73e358d7540.json",
+      "revision" : "github/032-d1dadab7e606.json",
+      "tool" : "axon",
+      "operation" : "GET /gists/{}/forks",
+      "kind" : "response_field_removed",
+      "id" : "response_field_removed",
+      "status" : "200",
+      "text" : "Field $[].forks[].user.suspended_at in the response 200 of GET /gists/{gist_id}/forks removed.",
+      "other_tool_on_operation" : [ "response-optional-property-added: added the optional property `items/fork_of/owner/user_view_type` to the response with the `200` status", "response-optional-property-added: added the optional property `items/fork_of/user/user_view_type` to the response with the `200` status", "response-optional-property-added: added the optional property `items/forks/items/user/user_view_type` to the response with the `200` status", "response-optional-property-added: added the optional property `items/history/items/user/user_view_type` to the response with the `200` status", "response-optional-property-added: added the optional property `items/owner/user_view_type` to the response with the `200` status", "response-optional-property-removed: removed the optional property `items/forks/items/user/suspended_at` from the response with the `200` status" ]
+    } ]
+  }, {
+    "class" : "oasdiff-only | not modelled by Axon | request-body-one-of-removed",
+    "count" : 9,
+    "examples" : [ {
+      "class" : "oasdiff-only | not modelled by Axon | request-body-one-of-removed",
+      "source" : "github",
+      "base" : "github/008-a506eabf317d.json",
+      "revision" : "github/009-8ad34a0b04c9.json",
+      "tool" : "oasdiff",
+      "operation" : "DELETE /user/emails",
+      "kind" : "unmodelled",
+      "id" : "request-body-one-of-removed",
+      "status" : "",
+      "text" : "removed `subschema #1, subschema #2` from the request body `oneOf` list",
+      "other_tool_on_operation" : [ ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | request-body-one-of-removed",
+      "source" : "github",
+      "base" : "github/008-a506eabf317d.json",
+      "revision" : "github/009-8ad34a0b04c9.json",
+      "tool" : "oasdiff",
+      "operation" : "POST /user/emails",
+      "kind" : "unmodelled",
+      "id" : "request-body-one-of-removed",
+      "status" : "",
+      "text" : "removed `subschema #1, subschema #2` from the request body `oneOf` list",
+      "other_tool_on_operation" : [ ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | request-body-one-of-removed",
+      "source" : "github",
+      "base" : "github/024-fae193bbf6d8.json",
+      "revision" : "github/025-4ee99a019a65.json",
+      "tool" : "oasdiff",
+      "operation" : "DELETE /repos/{}/{}/branches/{}/protection/restrictions/apps",
+      "kind" : "unmodelled",
+      "id" : "request-body-one-of-removed",
+      "status" : "",
+      "text" : "removed `subschema #1, subschema #2` from the request body `oneOf` list",
+      "other_tool_on_operation" : [ "request_body_made_required!: Request body of DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps became required.", "request_field_type_changed!: Field $ in the request body of DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps changed type from array|object to object.", "request_field_made_required!: Field $.apps in the request body of DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps became required." ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | request-body-one-of-removed",
+      "source" : "github",
+      "base" : "github/024-fae193bbf6d8.json",
+      "revision" : "github/025-4ee99a019a65.json",
+      "tool" : "oasdiff",
+      "operation" : "DELETE /repos/{}/{}/branches/{}/protection/restrictions/users",
+      "kind" : "unmodelled",
+      "id" : "request-body-one-of-removed",
+      "status" : "",
+      "text" : "removed `subschema #1, subschema #2` from the request body `oneOf` list",
+      "other_tool_on_operation" : [ "request_body_made_required!: Request body of DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users became required.", "request_field_type_changed!: Field $ in the request body of DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users changed type from array|object to object.", "request_field_made_required!: Field $.users in the request body of DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users became required." ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | request-body-one-of-removed",
+      "source" : "github",
+      "base" : "github/024-fae193bbf6d8.json",
+      "revision" : "github/025-4ee99a019a65.json",
+      "tool" : "oasdiff",
+      "operation" : "POST /repos/{}/{}/branches/{}/protection/restrictions/apps",
+      "kind" : "unmodelled",
+      "id" : "request-body-one-of-removed",
+      "status" : "",
+      "text" : "removed `subschema #1, subschema #2` from the request body `oneOf` list",
+      "other_tool_on_operation" : [ "request_body_made_required!: Request body of POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps became required.", "request_field_type_changed!: Field $ in the request body of POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps changed type from array|object to object.", "request_field_made_required!: Field $.apps in the request body of POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps became required." ]
+    } ]
+  }, {
+    "class" : "axon-only | request_field_made_required | oasdiff reports other changes for the operation",
+    "count" : 6,
+    "examples" : [ {
+      "class" : "axon-only | request_field_made_required | oasdiff reports other changes for the operation",
+      "source" : "github",
+      "base" : "github/024-fae193bbf6d8.json",
+      "revision" : "github/025-4ee99a019a65.json",
+      "tool" : "axon",
+      "operation" : "DELETE /repos/{}/{}/branches/{}/protection/restrictions/apps",
+      "kind" : "request_field_made_required",
+      "id" : "request_field_made_required",
+      "status" : "",
+      "text" : "Field $.apps in the request body of DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps became required.",
+      "other_tool_on_operation" : [ "new-required-request-property!: added the new required request property `apps`", "request-body-became-required!: request body became required", "request-body-one-of-removed!: removed `subschema #1, subschema #2` from the request body `oneOf` list", "request-body-type-changed!: the request's body `type` changed from `any` to `object`" ]
+    }, {
+      "class" : "axon-only | request_field_made_required | oasdiff reports other changes for the operation",
+      "source" : "github",
+      "base" : "github/024-fae193bbf6d8.json",
+      "revision" : "github/025-4ee99a019a65.json",
+      "tool" : "axon",
+      "operation" : "DELETE /repos/{}/{}/branches/{}/protection/restrictions/users",
+      "kind" : "request_field_made_required",
+      "id" : "request_field_made_required",
+      "status" : "",
+      "text" : "Field $.users in the request body of DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users became required.",
+      "other_tool_on_operation" : [ "new-required-request-property!: added the new required request property `users`", "request-body-became-required!: request body became required", "request-body-one-of-removed!: removed `subschema #1, subschema #2` from the request body `oneOf` list", "request-body-type-changed!: the request's body `type` changed from `any` to `object`" ]
+    }, {
+      "class" : "axon-only | request_field_made_required | oasdiff reports other changes for the operation",
+      "source" : "github",
+      "base" : "github/024-fae193bbf6d8.json",
+      "revision" : "github/025-4ee99a019a65.json",
+      "tool" : "axon",
+      "operation" : "POST /repos/{}/{}/branches/{}/protection/restrictions/apps",
+      "kind" : "request_field_made_required",
+      "id" : "request_field_made_required",
+      "status" : "",
+      "text" : "Field $.apps in the request body of POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps became required.",
+      "other_tool_on_operation" : [ "new-required-request-property!: added the new required request property `apps`", "request-body-became-required!: request body became required", "request-body-one-of-removed!: removed `subschema #1, subschema #2` from the request body `oneOf` list", "request-body-type-changed!: the request's body `type` changed from `any` to `object`" ]
+    }, {
+      "class" : "axon-only | request_field_made_required | oasdiff reports other changes for the operation",
+      "source" : "github",
+      "base" : "github/024-fae193bbf6d8.json",
+      "revision" : "github/025-4ee99a019a65.json",
+      "tool" : "axon",
+      "operation" : "POST /repos/{}/{}/branches/{}/protection/restrictions/users",
+      "kind" : "request_field_made_required",
+      "id" : "request_field_made_required",
+      "status" : "",
+      "text" : "Field $.users in the request body of POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users became required.",
+      "other_tool_on_operation" : [ "new-required-request-property!: added the new required request property `users`", "request-body-became-required!: request body became required", "request-body-one-of-removed!: removed `subschema #1, subschema #2` from the request body `oneOf` list", "request-body-type-changed!: the request's body `type` changed from `any` to `object`" ]
+    }, {
+      "class" : "axon-only | request_field_made_required | oasdiff reports other changes for the operation",
+      "source" : "github",
+      "base" : "github/024-fae193bbf6d8.json",
+      "revision" : "github/025-4ee99a019a65.json",
+      "tool" : "axon",
+      "operation" : "PUT /repos/{}/{}/branches/{}/protection/restrictions/apps",
+      "kind" : "request_field_made_required",
+      "id" : "request_field_made_required",
+      "status" : "",
+      "text" : "Field $.apps in the request body of PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps became required.",
+      "other_tool_on_operation" : [ "new-required-request-property!: added the new required request property `apps`", "request-body-became-required!: request body became required", "request-body-one-of-removed!: removed `subschema #1, subschema #2` from the request body `oneOf` list", "request-body-type-changed!: the request's body `type` changed from `any` to `object`" ]
+    } ]
+  }, {
+    "class" : "oasdiff-only | request_field_added_required (new-required-request-property) | Axon reports other changes for the operation",
+    "count" : 6,
+    "examples" : [ {
+      "class" : "oasdiff-only | request_field_added_required (new-required-request-property) | Axon reports other changes for the operation",
+      "source" : "github",
+      "base" : "github/024-fae193bbf6d8.json",
+      "revision" : "github/025-4ee99a019a65.json",
+      "tool" : "oasdiff",
+      "operation" : "DELETE /repos/{}/{}/branches/{}/protection/restrictions/apps",
+      "kind" : "request_field_added_required",
+      "id" : "new-required-request-property",
+      "status" : "",
+      "text" : "added the new required request property `apps`",
+      "other_tool_on_operation" : [ "request_body_made_required!: Request body of DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps became required.", "request_field_type_changed!: Field $ in the request body of DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps changed type from array|object to object.", "request_field_made_required!: Field $.apps in the request body of DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps became required." ]
+    }, {
+      "class" : "oasdiff-only | request_field_added_required (new-required-request-property) | Axon reports other changes for the operation",
+      "source" : "github",
+      "base" : "github/024-fae193bbf6d8.json",
+      "revision" : "github/025-4ee99a019a65.json",
+      "tool" : "oasdiff",
+      "operation" : "DELETE /repos/{}/{}/branches/{}/protection/restrictions/users",
+      "kind" : "request_field_added_required",
+      "id" : "new-required-request-property",
+      "status" : "",
+      "text" : "added the new required request property `users`",
+      "other_tool_on_operation" : [ "request_body_made_required!: Request body of DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users became required.", "request_field_type_changed!: Field $ in the request body of DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users changed type from array|object to object.", "request_field_made_required!: Field $.users in the request body of DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users became required." ]
+    }, {
+      "class" : "oasdiff-only | request_field_added_required (new-required-request-property) | Axon reports other changes for the operation",
+      "source" : "github",
+      "base" : "github/024-fae193bbf6d8.json",
+      "revision" : "github/025-4ee99a019a65.json",
+      "tool" : "oasdiff",
+      "operation" : "POST /repos/{}/{}/branches/{}/protection/restrictions/apps",
+      "kind" : "request_field_added_required",
+      "id" : "new-required-request-property",
+      "status" : "",
+      "text" : "added the new required request property `apps`",
+      "other_tool_on_operation" : [ "request_body_made_required!: Request body of POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps became required.", "request_field_type_changed!: Field $ in the request body of POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps changed type from array|object to object.", "request_field_made_required!: Field $.apps in the request body of POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps became required." ]
+    }, {
+      "class" : "oasdiff-only | request_field_added_required (new-required-request-property) | Axon reports other changes for the operation",
+      "source" : "github",
+      "base" : "github/024-fae193bbf6d8.json",
+      "revision" : "github/025-4ee99a019a65.json",
+      "tool" : "oasdiff",
+      "operation" : "POST /repos/{}/{}/branches/{}/protection/restrictions/users",
+      "kind" : "request_field_added_required",
+      "id" : "new-required-request-property",
+      "status" : "",
+      "text" : "added the new required request property `users`",
+      "other_tool_on_operation" : [ "request_body_made_required!: Request body of POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users became required.", "request_field_type_changed!: Field $ in the request body of POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users changed type from array|object to object.", "request_field_made_required!: Field $.users in the request body of POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users became required." ]
+    }, {
+      "class" : "oasdiff-only | request_field_added_required (new-required-request-property) | Axon reports other changes for the operation",
+      "source" : "github",
+      "base" : "github/024-fae193bbf6d8.json",
+      "revision" : "github/025-4ee99a019a65.json",
+      "tool" : "oasdiff",
+      "operation" : "PUT /repos/{}/{}/branches/{}/protection/restrictions/apps",
+      "kind" : "request_field_added_required",
+      "id" : "new-required-request-property",
+      "status" : "",
+      "text" : "added the new required request property `apps`",
+      "other_tool_on_operation" : [ "request_body_made_required!: Request body of PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps became required.", "request_field_type_changed!: Field $ in the request body of PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps changed type from array|object to object.", "request_field_made_required!: Field $.apps in the request body of PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps became required." ]
+    } ]
+  }, {
+    "class" : "oasdiff-only | not modelled by Axon | response-body-any-of-added",
+    "count" : 2,
+    "examples" : [ {
+      "class" : "oasdiff-only | not modelled by Axon | response-body-any-of-added",
+      "source" : "github",
+      "base" : "github/031-e73e358d7540.json",
+      "revision" : "github/032-d1dadab7e606.json",
+      "tool" : "oasdiff",
+      "operation" : "GET /repos/{}/{}/stargazers",
+      "kind" : "unmodelled",
+      "id" : "response-body-any-of-added",
+      "status" : "",
+      "text" : "added `subschema #1, subschema #2` to the response body `anyOf` list for the response status `200`",
+      "other_tool_on_operation" : [ "response_field_added: Field $[].user_view_type in the response 200 of GET /repos/{owner}/{repo}/stargazers added." ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | response-body-any-of-added",
+      "source" : "github",
+      "base" : "github/031-e73e358d7540.json",
+      "revision" : "github/032-d1dadab7e606.json",
+      "tool" : "oasdiff",
+      "operation" : "GET /users/{}/starred",
+      "kind" : "unmodelled",
+      "id" : "response-body-any-of-added",
+      "status" : "",
+      "text" : "added `subschema #1, subschema #2` to the response body `anyOf` list for the response status `200`",
+      "other_tool_on_operation" : [ "response_field_added: Field $[].repo.owner.user_view_type in the response 200 of GET /users/{username}/starred added." ]
+    } ]
+  }, {
+    "class" : "oasdiff-only | not modelled by Axon | response-body-wrapped-in-one-of-original-preserved",
+    "count" : 2,
+    "examples" : [ {
+      "class" : "oasdiff-only | not modelled by Axon | response-body-wrapped-in-one-of-original-preserved",
+      "source" : "github",
+      "base" : "github/003-b384a45cab10.json",
+      "revision" : "github/004-d3b0e7f40fff.json",
+      "tool" : "oasdiff",
+      "operation" : "POST /repos/{}/{}/git/blobs",
+      "kind" : "unmodelled",
+      "id" : "response-body-wrapped-in-one-of-original-preserved",
+      "status" : "",
+      "text" : "the response body was restructured into a oneOf, keeping the original schema as one of the alternatives",
+      "other_tool_on_operation" : [ "response_field_made_optional!: Field $.message in the response 422 of POST /repos/{owner}/{repo}/git/blobs became optional.", "response_field_made_optional!: Field $.documentation_url in the response 422 of POST /repos/{owner}/{repo}/git/blobs became optional.", "response_field_added: Field $.status in the response 422 of POST /repos/{owner}/{repo}/git/blobs added.", "response_field_added: Field $.metadata in the response 422 of POST /repos/{owner}/{repo}/git/blobs added." ]
+    }, {
+      "class" : "oasdiff-only | not modelled by Axon | response-body-wrapped-in-one-of-original-preserved",
+      "source" : "github",
+      "base" : "github/003-b384a45cab10.json",
+      "revision" : "github/004-d3b0e7f40fff.json",
+      "tool" : "oasdiff",
+      "operation" : "PUT /repos/{}/{}/contents/{}",
+      "kind" : "unmodelled",
+      "id" : "response-body-wrapped-in-one-of-original-preserved",
+      "status" : "",
+      "text" : "the response body was restructured into a oneOf, keeping the original schema as one of the alternatives",
+      "other_tool_on_operation" : [ "response_field_added: Field $.metadata in the response 409 of PUT /repos/{owner}/{repo}/contents/{path} added." ]
+    } ]
+  }, {
+    "class" : "axon-only | response_field_made_optional | oasdiff reports other changes for the operation",
+    "count" : 1,
+    "examples" : [ {
+      "class" : "axon-only | response_field_made_optional | oasdiff reports other changes for the operation",
+      "source" : "github",
+      "base" : "github/003-b384a45cab10.json",
+      "revision" : "github/004-d3b0e7f40fff.json",
+      "tool" : "axon",
+      "operation" : "POST /repos/{}/{}/git/blobs",
+      "kind" : "response_field_made_optional",
+      "id" : "response_field_made_optional",
+      "status" : "422",
+      "text" : "Field $.message in the response 422 of POST /repos/{owner}/{repo}/git/blobs became optional.",
+      "other_tool_on_operation" : [ "response-body-wrapped-in-one-of-original-preserved!: the response body was restructured into a oneOf, keeping the original schema as one of the alternatives" ]
+    } ]
+  }, {
+    "class" : "oasdiff-only | response_field_made_optional (response-property-became-optional) | Axon reports other changes for the operation",
+    "count" : 1,
+    "examples" : [ {
+      "class" : "oasdiff-only | response_field_made_optional (response-property-became-optional) | Axon reports other changes for the operation",
+      "source" : "github",
+      "base" : "github/019-129d610a96aa.json",
+      "revision" : "github/020-ae492d449da9.json",
+      "tool" : "oasdiff",
+      "operation" : "GET /repos/{}/{}/contents/{}",
+      "kind" : "response_field_made_optional",
+      "id" : "response-property-became-optional",
+      "status" : "200",
+      "text" : "the response property `content` became optional for the status `200`",
+      "other_tool_on_operation" : [ "response_field_removed!: Field $.entries[].content in the response 200 of GET /repos/{owner}/{repo}/contents/{path} removed.", "response_field_added: Field $.content in the response 200 of GET /repos/{owner}/{repo}/contents/{path} added." ]
+    } ]
+  } ]
+}

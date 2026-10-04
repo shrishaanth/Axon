@@ -75,8 +75,8 @@ c2  GET /users/{id}  response field `legacy_id` removed   evidence: potential
     severity DORMANT    rank 2   spec-only rank 1
 ```
 
-The spec-only baseline puts `c2` first because it touches more operations; usage ranking puts `c1` first because 18 of 24 active clients send the field. Contrasts like this one are what E3 measures.
+The spec-only baseline puts `c2` first because it touches more operations; usage ranking puts `c1` first because 18 of 24 active clients send the field. Contrasts like this one are what E3 measures. (Illustrative numbers; a real report is in [`eval/demo/report.json`](../eval/demo/report.json).)
 
 ### Versioning
 
-`schema_version` is `"0.1"` until M7. Breaking changes to either schema before then are allowed but must be logged in the amendment tables of the docs that depend on them.
+`schema_version` is `"0.2"` (0.1 was the M0 draft; 0.2 added change kinds, `source`, `approximated`, `evidence_note`, `operations_touched` and `handling`). Breaking changes to either schema before then are allowed but must be logged in the amendment tables of the docs that depend on them.
