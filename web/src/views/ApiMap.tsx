@@ -49,7 +49,7 @@ export function ApiMap({ bundle }: { bundle: Bundle }) {
     if (!container.current) return;
     const colors: Record<State, string> = {
       breaking_observed: css("--critical"),
-      breaking_potential: css("--serious"),
+      breaking_potential: css("--critical"),
       changed_safe: css("--observed"),
       unchanged: css("--never"),
     };
@@ -85,7 +85,12 @@ export function ApiMap({ bundle }: { bundle: Bundle }) {
           data: {
             id: o.key,
             label: o.key,
-            color: colors[o.state],
+            // Two fills only (red, blue), which the palette validator passes in both modes. "Potential" is a
+            // dashed red ring, as potential is dashed everywhere else; "unchanged" is a grey ring.
+            color: o.state === "breaking_observed" || o.state === "changed_safe" ? colors[o.state] : css("--surface-1"),
+            ring: o.state === "breaking_observed" || o.state === "changed_safe" ? css("--surface-1") : colors[o.state],
+            dash: o.state === "breaking_potential" ? "dashed" : "solid",
+            ringWidth: o.state === "breaking_observed" || o.state === "changed_safe" ? 2 : 3,
             size: 22 + 40 * (Math.log(o.calls + 1) / Math.log(max + 1)),
           },
         })),
@@ -105,8 +110,9 @@ export function ApiMap({ bundle }: { bundle: Bundle }) {
             "text-margin-y": 5,
             "text-wrap": "wrap",
             "text-max-width": "120px",
-            "border-width": 2,
-            "border-color": css("--surface-1"),
+            "border-width": "data(ringWidth)",
+            "border-color": "data(ring)",
+            "border-style": "data(dash)" as never,
           },
         },
         {
@@ -151,8 +157,8 @@ export function ApiMap({ bundle }: { bundle: Bundle }) {
           <span key={s} className="key">
             <span className="swatch" style={{
               borderRadius: "50%",
-              background: s === "breaking_observed" ? "var(--critical)" : s === "breaking_potential" ? "var(--serious)"
-                : s === "changed_safe" ? "var(--observed)" : "var(--never)",
+              background: s === "breaking_observed" ? "var(--critical)" : s === "changed_safe" ? "var(--observed)" : "transparent",
+              border: s === "breaking_potential" ? "2px dashed var(--critical)" : s === "unchanged" ? "2px solid var(--never)" : undefined,
             }} />
             {STATE_TEXT[s]} ({operations.filter((o) => o.state === s).length})
           </span>
