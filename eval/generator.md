@@ -51,7 +51,7 @@ A cohort fixes, for all its clients:
 
 ## Specs
 
-The generator runs over the demo spec and five public specs picked by a fixed rule from the M1 sample (first five, in sample order, with 5-60 operations, at least three JSON request bodies of three or more properties, and no operation flagged approximated or partially analysed). The chosen files are listed in each result file. World `seed` uses spec number `seed mod 6`.
+The generator runs over the demo spec and five public specs picked by a fixed rule from the M1 sample (first five, in sample order, with 5-60 operations, at least three JSON request bodies of three or more properties, no operation flagged approximated or partially analysed, and no path template containing `#` or `?`, which some AWS-style specs use and which cannot be told apart from a URL fragment or query in traffic). The chosen files are listed in each result file. World `seed` uses spec number `seed mod 6`.
 
 ## Known unrealism
 

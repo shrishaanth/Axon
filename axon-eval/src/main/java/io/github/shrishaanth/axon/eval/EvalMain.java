@@ -19,6 +19,8 @@ public final class EvalMain {
             case "memory" -> MemoryProbe.main(rest);
             case "e1a" -> MutationExperiment.main(rest);
             case "e1b" -> HistoryAgreement.main(rest);
+            case "e2" -> io.github.shrishaanth.axon.eval.sim.E2Experiment.main(rest);
+            case "e3" -> io.github.shrishaanth.axon.eval.sim.E3Experiment.main(rest);
             case "demo-service" -> io.github.shrishaanth.axon.eval.demo.DemoService.main(rest);
             case "demo-clients" -> io.github.shrishaanth.axon.eval.demo.DemoClients.main(rest);
             default -> {
